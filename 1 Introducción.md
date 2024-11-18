@@ -4,7 +4,9 @@ https://react.new/
 
 Tengo vinculada mi cuenta GitHub a la cuenta codesandbox.
 
-https://codesandbox.io/p/sandbox/javascript-refresher-start-rytt3j
+-1 https://codesandbox.io/p/sandbox/javascript-refresher-start-rytt3j
+
+-2 https://codesandbox.io/p/sandbox/react-vs-vanilla-demo-uc08fv
 
 ## La etiqueta script.
 
