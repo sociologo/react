@@ -1,6 +1,6 @@
 # REACT
 
-https://codesandbox.io/
+https://react.new/
 
 Tengo vinculada mi cuenta GitHub a la cuenta codesandbox.
 
