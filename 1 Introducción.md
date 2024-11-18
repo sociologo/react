@@ -1,6 +1,6 @@
 # Nuestro primer codigo React
 
-```
+```jsx
 const content = [
   [
     "React is extremely popular",
