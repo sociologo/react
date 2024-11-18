@@ -14,3 +14,6 @@ npm notice To update run: npm install -g npm@10.9.0
 npm notice
 PS C:\Users\chris\OneDrive\Documentos\GitHub\react\01-starting-project>
 ```
+```
+PS C:\Users\chris\OneDrive\Documentos\GitHub\react\01-starting-project> npm run dev
+```
