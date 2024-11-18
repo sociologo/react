@@ -1,4 +1,4 @@
-# Repaso a JavaScript
+# Repaso a JavaScript lecciones 15-34
 
 ## La etiqueta script.
 
