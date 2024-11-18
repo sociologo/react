@@ -16,9 +16,9 @@ React: Se utiliza para construir aplicaciones web más estructuradas y mantenibl
 JavaScript: Utiliza una sintaxis estándar que puede ser ejecutada por cualquier navegador web.\
 React: Utiliza JSX (JavaScript XML), una extensión de sintaxis que permite escribir HTML dentro de JavaScript. JSX facilita la creación de componentes React al combinar la lógica de renderizado con la estructura de la UI.
 
-- Componentes:\
-JavaScript: No tiene un sistema de componentes incorporado. Los desarrolladores deben crear y gestionar manualmente la estructura y el estado de la UI.\
-React: Introduce el concepto de componentes, que son bloques de construcción reutilizables de la UI. Cada componente puede tener su propio estado y lógica de renderizado.
+- **Componentes**:\
+JavaScript: **No tiene un sistema de componentes** incorporado. Los desarrolladores deben crear y gestionar manualmente la estructura y el estado de la UI.\
+React: Introduce el concepto de **componentes**, que son bloques de construcción reutilizables de la UI. Cada **componente** puede tener su propio estado y lógica de renderizado.
 
 - Actualización del DOM:\
 JavaScript: Las actualizaciones del DOM pueden ser costosas y complejas, especialmente en aplicaciones grandes.\
