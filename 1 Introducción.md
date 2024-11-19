@@ -18,3 +18,77 @@ La etiqueta <script> en HTML se utiliza para incrustar o enlazar scripts de clie
 
 ![image](https://github.com/user-attachments/assets/de360015-55c1-4480-8518-913c9b9ea24e)
 
+## Sobre la Sintaxis de las Funciones Flecha
+
+Al trabajar con funciones flecha, tienes un par de “atajos de sintaxis” disponibles.
+
+Lo más importante es que debes conocer las siguientes alternativas:
+
+Omitir los paréntesis de la lista de parámetros
+
+Si tu función flecha toma exactamente un parámetro, puedes omitir los paréntesis envolventes.
+
+En lugar de
+
+```JavaScript
+(userName) => { ... }
+```
+
+puedes escribir
+
+```JavaScript
+userName => { ... }
+```
+
+Ten en cuenta:
+
+Si tu función no toma parámetros, no debes omitir los paréntesis - () => { ... } es la única forma correcta en ese caso.
+
+Si tu función toma más de un parámetro, tampoco debes omitir los paréntesis - userName, userAge => { ... } sería inválido, 
+
+```JavaScript
+((userName, userAge) => { ... }) es correcto.
+```
+
+Omitir las llaves del cuerpo de la función
+
+Si tu función flecha no contiene otra lógica más que una declaración de retorno, puedes omitir las llaves y la palabra clave return.
+
+En lugar de
+
+```JavaScript
+number => { 
+  return number * 3;
+}
+```
+
+puedes escribir
+
+```JavaScript
+number => number * 3;
+```
+
+El siguiente código sería inválido:
+
+```JavaScript
+number => return number * 3; // inválido porque también se debe omitir la palabra clave return
+number => if (number === 2) { return 5 }; // inválido porque las declaraciones if no pueden ser retornadas
+```
+
+Caso especial: Solo devolver un objeto
+
+Si optas por la alternativa más corta explicada en el punto 2 y estás tratando de devolver un objeto de JavaScript, podrías terminar con el siguiente código inválido:
+
+```JavaScript
+number => { age: number }; // tratando de devolver un objeto
+```
+
+Este código sería inválido porque JavaScript trata las llaves como envolventes del cuerpo de la función (no como código que crea un objeto JS).
+
+Para “decirle” a JavaScript que se debe crear (y devolver) un objeto en su lugar, el código debe ajustarse así:
+
+```JavaScript
+number => ({ age: number }); // envolviendo el objeto en paréntesis adicionales
+```
+
+Al envolver el objeto y sus llaves con un par adicional de paréntesis, JavaScript entiende que las llaves no están allí para definir el cuerpo de la función, sino para crear un objeto. Por lo tanto, ese objeto se devuelve.
