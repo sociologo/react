@@ -92,3 +92,41 @@ number => ({ age: number }); // envolviendo el objeto en paréntesis adicionales
 ```
 
 Al envolver el objeto y sus llaves con un par adicional de paréntesis, JavaScript entiende que las llaves no están allí para definir el cuerpo de la función, sino para crear un objeto. Por lo tanto, ese objeto se devuelve.
+
+
+## findIndex
+
+La función **findIndex** busca el índice del elemento 'ajedrez' en el array. En este caso, 'ajedrez' está en el índice 1, por lo que index será 1 y se imprimirá 1.
+
+```
+const hobbies = ['futbol','ajedrez','bici'];
+console.log(hobbies[2]);
+
+hobbies.push('reading');
+console.log(hobbies);
+
+const index = hobbies.findIndex((item) => {
+    return item === 'ajedrez';
+});
+console.log(index);
+```
+
+```
+const index = hobbies.findIndex((item) => item === 'ajedrez');
+```
+
+## map
+
+Aquí, la función map se utiliza para crear un nuevo array llamado editedHobbies. La función map aplica la función proporcionada a cada elemento del array hobbies. En este caso, la función toma cada item del array hobbies y le añade un signo de exclamación ('!'). Así, cada elemento del nuevo array editedHobbies será el correspondiente elemento de hobbies con un '!' añadido al final.
+
+```
+const editedHobbies = hobbies.map((item) => item + '!');
+console.log(editedHobbies)
+```
+
+Aquí, la función map se utiliza para crear un nuevo array llamado editedHobbies2. La función map aplica la función proporcionada a cada elemento del array hobbies. En este caso, la función toma cada item del array hobbies y lo transforma en un objeto con una propiedad text cuyo valor es el item. Así, cada elemento del nuevo array editedHobbies2 será un objeto con una propiedad text.
+```
+const editedHobbies2 = hobbies.map((item) => ({text: item}));
+console.log(editedHobbies)
+```
+
