@@ -12,7 +12,7 @@ Tengo vinculada mi cuenta GitHub a la cuenta codesandbox.
 
 La etiqueta <script> en HTML se utiliza para incrustar o enlazar scripts de cliente, como JavaScript, dentro de una página web. Nosotros la usaremos para los segundo.
 ```
-<script src="mi-script.js"></script>
+<script src="/assets/scripts/app.js"></script>
 ```
 ![image](https://github.com/user-attachments/assets/560aa670-e0f5-4eae-91e4-7c8c46434dd4)
 
