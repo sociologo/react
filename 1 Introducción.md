@@ -14,3 +14,7 @@ La etiqueta <script> en HTML se utiliza para incrustar o enlazar scripts de clie
 ```
 <script src="mi-script.js"></script>
 ```
+![image](https://github.com/user-attachments/assets/560aa670-e0f5-4eae-91e4-7c8c46434dd4)
+
+![image](https://github.com/user-attachments/assets/de360015-55c1-4480-8518-913c9b9ea24e)
+
