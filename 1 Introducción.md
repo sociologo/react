@@ -200,6 +200,72 @@ La función aún se llamaría así:
 storeOrder({id: 5, currency: 'USD', amount: 15.99}); // ¡un argumento/valor!
 ```
 
+## El operador de propagación (...)
+
+Supongamos que queremos fusionar los arrays cursos y alumno en una nueva llamada mergedCursos:
+
+```JavaScript
+const cursos = ['Anatomia','Biologia'];
+const newCursos = ['Matematicas'];
+
+// Nos vemos tentados a hacer esto:
+
+const mergedCursos = [cursos, newCursos];
+console.log(mergedCursos);
+
+// Pero al hacer ello nos creara un array anidado. Para evitarlo debemos utilizar el operador de propagacion:
+
+const mergedCursos = [...cursos, ...newCursos];
+console.log(mergedCursos);
+```
+
+Tambien lo utilizamos para objetos:
+
+```JavaScript
+const alumno = {
+  name: 'Max',
+  age: 34
+};
+
+const extendedUser = {
+  isAdmin: True,
+  ...user
+}
+
+console.log(extendedUser);
+```
+
+## Estructuras de control
+
+### if
+
+### for
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
