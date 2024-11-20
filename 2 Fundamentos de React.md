@@ -62,6 +62,8 @@ En resumen, los componentes en React te permiten construir interfaces de usuario
 
 # Nuestro primer componente
 
+**App.jsx**
+
 ```JavaScript
 function App() {
   return (
@@ -82,6 +84,16 @@ function App() {
 
 export default App;
 ```
+
+## Reglas
+
+Un componente de React debe seguir las siguientes reglas:
+
+1 El nombre de la funcion debe comenzar con una mayuscula
+
+2 La funcion debe retornar un contenido renderizable, esto es, contenido que react pueda desplegar en el navegador.
+
+
 
 
 
