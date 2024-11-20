@@ -130,9 +130,10 @@ const editedHobbies2 = hobbies.map((item) => ({text: item}));
 console.log(editedHobbies)
 ```
 
-## Destructing
+## Desestructuración
 
-```
+Es una técnica llamada destructuring assignment (asignación por desestructuración) en JavaScript. Esta técnica permite extraer valores de arrays u objetos y asignarlos a variables de una manera más concisa y legible.
+```JavaScript
 const userNameData = ['Max', 'Carl'];
 
 const firstName = userNameData[0];
@@ -143,7 +144,9 @@ const [firstName, lastName] = ['Max', 'Carl'];
 console.log(firstName);
 console.log(lastName);
 ```
-```
+
+El siguiente código utiliza la asignación por desestructuración para extraer propiedades de un objeto y asignarlas a variables:
+```JavaScript
 const user = {
   name: 'Max',
   age: 34
@@ -161,8 +164,41 @@ console.log(userName);
 console.log(age);
 ```
 
+### Desestructuración en listas de parámetros de funciones
 
+La sintaxis de desestructuración explicada en la lección anterior también se puede usar en listas de parámetros de funciones.
 
+Por ejemplo, si una función acepta un parámetro que contendrá un objeto, se puede desestructurar para “extraer” las propiedades del objeto y hacerlas disponibles como variables de ámbito local (es decir, variables disponibles solo dentro del cuerpo de la función).
+
+Aquí tienes un ejemplo:
+
+```JavaScript
+function storeOrder(order) {
+  localStorage.setItem('id', order.id);
+  localStorage.setItem('currency', order.currency);
+}
+```
+
+En lugar de acceder a las propiedades del pedido mediante la “notación de punto” dentro del cuerpo de la función storeOrder, podrías usar la desestructuración así:
+
+```JavaScript
+function storeOrder({id, currency}) { // desestructuración
+  localStorage.setItem('id', id);
+  localStorage.setItem('currency', currency);
+}
+```
+
+La sintaxis de desestructuración es la misma que se enseñó en la lección anterior, solo que sin crear una constante o variable manualmente.
+
+En su lugar, id y currency se “extraen” del objeto entrante (es decir, el objeto pasado como argumento a storeOrder).
+
+Es muy importante entender que storeOrder sigue aceptando solo un parámetro en este ejemplo. No acepta dos parámetros. En su lugar, es un solo parámetro: un objeto que luego se desestructura internamente.
+
+La función aún se llamaría así:
+
+```JavaScript
+storeOrder({id: 5, currency: 'USD', amount: 15.99}); // ¡un argumento/valor!
+```
 
 
 
