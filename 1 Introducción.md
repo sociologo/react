@@ -130,3 +130,27 @@ const editedHobbies2 = hobbies.map((item) => ({text: item}));
 console.log(editedHobbies)
 ```
 
+## Destructing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
