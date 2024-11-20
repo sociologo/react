@@ -239,7 +239,53 @@ console.log(extendedUser);
 
 ### if
 
+```JavaScript
+const password = prompt('Your password');
+
+if (password === 'Hello') {
+  console.log('Hello works');
+} else if (password === 'Hello') {
+  console.log('hello works');
+} else {
+  console.log('Access not granted.');
+} 
+```
+
+
 ### for
+
+```JavaScript
+const hobbies = ['Sports','Cooking'];
+
+for (const hobby of hobbies) {
+  console.log(hobby);
+}
+```
+
+## El DOM
+
+El DOM (Document Object Model) es una interfaz de programación que permite a los scripts (como JavaScript) interactuar con el contenido, la estructura y el estilo de los documentos web. Aquí tienes una descripción más detallada:
+
+¿Qué es el DOM?
+Estructura en Árbol: El DOM representa un documento HTML o XML como una estructura en árbol, donde cada nodo del árbol es un objeto que representa una parte del documento. Por ejemplo, un nodo puede representar un elemento HTML, un atributo o un texto.
+Acceso y Manipulación: Con el DOM, JavaScript puede acceder y manipular todos los elementos y atributos de un documento HTML. Esto incluye cambiar el contenido de los elementos, modificar sus estilos CSS, agregar o eliminar elementos y atributos, y reaccionar a eventos del usuario.
+Eventos: El DOM permite asociar eventos a los elementos del documento. Por ejemplo, puedes hacer que una función JavaScript se ejecute cuando un usuario hace clic en un botón.
+
+En React, el DOM tradicional no es tan relevante debido a la forma en que React maneja la actualización y manipulación de la interfaz de usuario. Aquí te explico por qué:
+
+Virtual DOM
+Virtual DOM: React utiliza un concepto llamado Virtual DOM. El Virtual DOM es una representación en memoria del DOM real. Cuando el estado de una aplicación cambia, React primero actualiza el Virtual DOM en lugar del DOM real.
+Reconciliación: React compara el Virtual DOM con una copia anterior del mismo (un proceso llamado “reconciliación”) para determinar qué partes del DOM real necesitan ser actualizadas. Esto minimiza las manipulaciones directas del DOM, que son costosas en términos de rendimiento.
+Eficiencia: Al actualizar solo las partes del DOM que han cambiado, React mejora significativamente el rendimiento de la aplicación. Las actualizaciones del DOM real pueden ser lentas, pero al usar el Virtual DOM, React puede hacer estas actualizaciones de manera más eficiente.
+Declarativo vs. Imperativo
+Enfoque Declarativo: React promueve un enfoque declarativo para construir interfaces de usuario. En lugar de manipular el DOM directamente (enfoque imperativo), los desarrolladores describen cómo debería verse la interfaz de usuario en función del estado de la aplicación. React se encarga de actualizar el DOM para que coincida con esta descripción.
+Componentes: React organiza la interfaz de usuario en componentes reutilizables. Cada componente puede tener su propio estado y lógica, y React se encarga de renderizar estos componentes y actualizar el DOM según sea necesario.
+
+## Paso de funciones como variables a otras funciones Voy aca
+
+## Funciones dentro de funciones
+
+## Valores por referencia y primitivos
 
 
 
