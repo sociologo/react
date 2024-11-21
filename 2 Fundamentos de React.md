@@ -167,13 +167,13 @@ function CoreConcept(props){
 
 - 3 JSX: Dentro de la función, se retorna un bloque de JSX (JavaScript XML). JSX es una extensión de la sintaxis de JavaScript que permite escribir HTML dentro de JavaScript.
 
-- 4 Elemento `<li>`: El componente retorna un elemento de lista (<li>), que es un elemento HTML utilizado para representar un ítem en una lista.
+- 4 Elemento `<li>`: El componente retorna un elemento de lista (`<li>`), que es un elemento HTML utilizado para representar un ítem en una lista.
 
-- 5 Elemento `<img>`: Dentro del <li>, hay una etiqueta de imagen (<img>). Los atributos src y alt están presentes pero no tienen valores específicos en este ejemplo. src define la ruta de la imagen y alt proporciona un texto alternativo para la imagen.
+- 5 Elemento `<img>`: Dentro del `<li>`, hay una etiqueta de imagen (`<img>`). Los atributos src y alt están presentes pero no tienen valores específicos en este ejemplo. src define la ruta de la imagen y alt proporciona un texto alternativo para la imagen.
 
-- 6 Elemento `<h3>`: Después de la imagen, hay un encabezado de nivel 3 (<h3>), que contiene el texto “TITLE”. En una implementación real, este texto probablemente sería dinámico, basado en props.
+- 6 Elemento `<h3>`: Después de la imagen, hay un encabezado de nivel 3 (`<h3>`), que contiene el texto “TITLE”. En una implementación real, este texto probablemente sería dinámico, basado en props.
 
-- 7 Elemento `<p>`: Finalmente, hay un párrafo (<p>) con el texto “DESCRIPTION”. Al igual que el título, este texto también sería dinámico en una implementación real.
+- 7 Elemento `<p>`: Finalmente, hay un párrafo (`<p>`) con el texto “DESCRIPTION”. Al igual que el título, este texto también sería dinámico en una implementación real.
 
 Este componente es bastante básico y sirve como plantilla para un ítem de lista que incluye una imagen, un título y una descripción. En una aplicación real, podrías pasar props para personalizar el src de la imagen, el alt de la imagen, el título y la descripción.
 
