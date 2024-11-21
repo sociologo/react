@@ -103,9 +103,7 @@ La función Math.random() en JavaScript devuelve un número de coma flotante pse
 
 En React, los props (abreviatura de “properties”) son una forma de pasar datos de un componente a otro. Los props permiten que los componentes sean reutilizables y dinámicos, ya que puedes cambiar su comportamiento y apariencia según los datos que les pases.
 
-¿Qué son los Props?
-
-Pasar Datos: Los props se utilizan para pasar datos desde un componente padre a un componente hijo. Esto permite que el componente hijo acceda a esos datos y los utilice para renderizar contenido dinámico.
+Los props se utilizan para pasar datos desde un componente padre a un componente hijo. Esto permite que el componente hijo acceda a esos datos y los utilice para renderizar contenido dinámico.
 Inmutables: Los props son inmutables, lo que significa que un componente no puede cambiar sus propios props. Esto asegura que los datos fluyan en una sola dirección, de arriba hacia abajo, lo que se conoce como “flujo de datos unidireccional”.
 
 Sintaxis Similar a HTML: Los props se pasan a los componentes de manera similar a los atributos HTML. Por ejemplo:
