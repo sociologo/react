@@ -99,7 +99,7 @@ Un componente de React debe seguir las siguientes reglas:
 
 La función Math.random() en JavaScript devuelve un número de coma flotante pseudo-aleatorio comprendido en el rango de 0 (incluido) a 1 (excluido). Esto significa que el valor devuelto puede ser 0, pero siempre será menor que 1.
 
-## 44 Props
+## 44 45 Props
 
 En React, los props (abreviatura de “properties”) son una forma de pasar datos de un componente a otro. Los props permiten que los componentes sean reutilizables y dinámicos, ya que puedes cambiar su comportamiento y apariencia según los datos que les pases.
 
@@ -146,6 +146,32 @@ Ventajas de Usar Props
 - Reutilización: Los componentes pueden ser reutilizados con diferentes datos, lo que reduce la duplicación de código.
 - Modularidad: Facilitan la creación de componentes modulares y mantenibles.
 - Claridad: Ayudan a mantener un flujo de datos claro y predecible en la aplicación.
+
+Analicemos el siguiente componente:
+
+```Javascript
+function CoreConcept(props){
+   return (
+      <li>
+         <img src="..." alt="..." />
+         <h3>TITLE</h3>
+         <p>DESCRIPTION</p>
+      </li>
+   );
+}
+```
+
+Definición de la función: CoreConcept es una función de componente en React. Los componentes de función son una forma de definir componentes en React utilizando funciones de JavaScript.
+Parámetro props: La función recibe un parámetro llamado props, que es un objeto que contiene todas las propiedades que se pasan al componente desde su padre.
+JSX: Dentro de la función, se retorna un bloque de JSX (JavaScript XML). JSX es una extensión de la sintaxis de JavaScript que permite escribir HTML dentro de JavaScript.
+Elemento <li>: El componente retorna un elemento de lista (<li>), que es un elemento HTML utilizado para representar un ítem en una lista.
+Elemento <img>: Dentro del <li>, hay una etiqueta de imagen (<img>). Los atributos src y alt están presentes pero no tienen valores específicos en este ejemplo. src define la ruta de la imagen y alt proporciona un texto alternativo para la imagen.
+Elemento <h3>: Después de la imagen, hay un encabezado de nivel 3 (<h3>), que contiene el texto “TITLE”. En una implementación real, este texto probablemente sería dinámico, basado en props.
+Elemento <p>: Finalmente, hay un párrafo (<p>) con el texto “DESCRIPTION”. Al igual que el título, este texto también sería dinámico en una implementación real.
+Este componente es bastante básico y sirve como plantilla para un ítem de lista que incluye una imagen, un título y una descripción. En una aplicación real, podrías pasar props para personalizar el src de la imagen, el alt de la imagen, el título y la descripción.
+
+
+
 
 **Los props son fundamentales en React porque permiten que los componentes sean flexibles y reutilizables. Al pasar datos a través de props, puedes crear componentes genéricos que se adapten a diferentes situaciones y datos.**
 
