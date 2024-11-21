@@ -99,6 +99,59 @@ Un componente de React debe seguir las siguientes reglas:
 
 La función Math.random() en JavaScript devuelve un número de coma flotante pseudo-aleatorio comprendido en el rango de 0 (incluido) a 1 (excluido). Esto significa que el valor devuelto puede ser 0, pero siempre será menor que 1.
 
+## 44 Props
 
+En React, los props (abreviatura de “properties”) son una forma de pasar datos de un componente a otro. Los props permiten que los componentes sean reutilizables y dinámicos, ya que puedes cambiar su comportamiento y apariencia según los datos que les pases.
+
+¿Qué son los Props?
+
+Pasar Datos: Los props se utilizan para pasar datos desde un componente padre a un componente hijo. Esto permite que el componente hijo acceda a esos datos y los utilice para renderizar contenido dinámico.
+Inmutables: Los props son inmutables, lo que significa que un componente no puede cambiar sus propios props. Esto asegura que los datos fluyan en una sola dirección, de arriba hacia abajo, lo que se conoce como “flujo de datos unidireccional”.
+
+Sintaxis Similar a HTML: Los props se pasan a los componentes de manera similar a los atributos HTML. Por ejemplo:
+
+```JavaScript
+function App() {
+  return <Greeting name="Max" />;
+}
+
+function Greeting(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+```
+
+Ejemplo de Uso de Props
+
+Supongamos que tienes un componente Greeting que necesita mostrar un mensaje de saludo personalizado:
+
+```JavaScript
+function Greeting(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+```
+
+Puedes pasarle un prop name desde el componente padre App:
+
+```JavaScript
+function App() {
+  return <Greeting name="Max" />;
+}
+```
+
+En este ejemplo:
+
+El componente Greeting recibe un prop llamado name.
+
+Dentro del componente Greeting, puedes acceder a props.name para mostrar el nombre pasado desde el componente App.
+
+Ventajas de Usar Props
+
+- Reutilización: Los componentes pueden ser reutilizados con diferentes datos, lo que reduce la duplicación de código.
+- Modularidad: Facilitan la creación de componentes modulares y mantenibles.
+- Claridad: Ayudan a mantener un flujo de datos claro y predecible en la aplicación.
+
+Importancia de los Props
+
+Los props son fundamentales en React porque permiten que los componentes sean flexibles y reutilizables. Al pasar datos a través de props, puedes crear componentes genéricos que se adapten a diferentes situaciones y datos.
 
 
