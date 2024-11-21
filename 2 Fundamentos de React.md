@@ -255,5 +255,5 @@ En resumen, la primera instancia pasa las propiedades de manera explícita y det
 <CoreConcept {...CORE_CONCEPTS[3]}/>  
 ```
 
-
+## 47
 
