@@ -101,6 +101,8 @@ La función Math.random() en JavaScript devuelve un número de coma flotante pse
 
 ## 44 45 Props
 
+### Intro
+
 En React, los props (abreviatura de “properties”) son una forma de pasar datos de un componente a otro. Los props permiten que los componentes sean reutilizables y dinámicos, ya que puedes cambiar su comportamiento y apariencia según los datos que les pases.
 
 Los props se utilizan para pasar datos desde un componente padre a un componente hijo. Esto permite que el componente hijo acceda a esos datos y los utilice para renderizar contenido dinámico. Los props son inmutables, lo que significa que un componente no puede cambiar sus propios props. Esto asegura que los datos fluyan en una sola dirección, de arriba hacia abajo, lo que se conoce como “flujo de datos unidireccional”.
@@ -147,7 +149,9 @@ Ventajas de Usar Props
 - Modularidad: Facilitan la creación de componentes modulares y mantenibles.
 - Claridad: Ayudan a mantener un flujo de datos claro y predecible en la aplicación.
 
-Analicemos el siguiente componente:
+**Los props son fundamentales en React porque permiten que los componentes sean flexibles y reutilizables. Al pasar datos a través de props, puedes crear componentes genéricos que se adapten a diferentes situaciones y datos.**
+
+### Ejemplo: Analicemos el siguiente componente:
 
 ```Javascript
 function CoreConcept(props){
@@ -180,6 +184,6 @@ Este componente es bastante básico y sirve como plantilla para un ítem de list
 
 
 
-**Los props son fundamentales en React porque permiten que los componentes sean flexibles y reutilizables. Al pasar datos a través de props, puedes crear componentes genéricos que se adapten a diferentes situaciones y datos.**
+
 
 
