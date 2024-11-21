@@ -103,10 +103,9 @@ La función Math.random() en JavaScript devuelve un número de coma flotante pse
 
 En React, los props (abreviatura de “properties”) son una forma de pasar datos de un componente a otro. Los props permiten que los componentes sean reutilizables y dinámicos, ya que puedes cambiar su comportamiento y apariencia según los datos que les pases.
 
-Los props se utilizan para pasar datos desde un componente padre a un componente hijo. Esto permite que el componente hijo acceda a esos datos y los utilice para renderizar contenido dinámico.
-Inmutables: Los props son inmutables, lo que significa que un componente no puede cambiar sus propios props. Esto asegura que los datos fluyan en una sola dirección, de arriba hacia abajo, lo que se conoce como “flujo de datos unidireccional”.
+Los props se utilizan para pasar datos desde un componente padre a un componente hijo. Esto permite que el componente hijo acceda a esos datos y los utilice para renderizar contenido dinámico. Los props son inmutables, lo que significa que un componente no puede cambiar sus propios props. Esto asegura que los datos fluyan en una sola dirección, de arriba hacia abajo, lo que se conoce como “flujo de datos unidireccional”.
 
-Sintaxis Similar a HTML: Los props se pasan a los componentes de manera similar a los atributos HTML. Por ejemplo:
+Los props poseeen una sintaxis similar a HTML. Por ejemplo:
 
 ```JavaScript
 function App() {
@@ -148,8 +147,6 @@ Ventajas de Usar Props
 - Modularidad: Facilitan la creación de componentes modulares y mantenibles.
 - Claridad: Ayudan a mantener un flujo de datos claro y predecible en la aplicación.
 
-Importancia de los Props
-
-Los props son fundamentales en React porque permiten que los componentes sean flexibles y reutilizables. Al pasar datos a través de props, puedes crear componentes genéricos que se adapten a diferentes situaciones y datos.
+**Los props son fundamentales en React porque permiten que los componentes sean flexibles y reutilizables. Al pasar datos a través de props, puedes crear componentes genéricos que se adapten a diferentes situaciones y datos.**
 
 
