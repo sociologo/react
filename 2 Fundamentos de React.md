@@ -93,6 +93,8 @@ Un componente de React debe seguir las siguientes reglas:
 
 2 La funcion debe retornar un contenido renderizable, esto es, contenido que react pueda desplegar en el navegador.
 
+## 43 Contenido dinamico en una web
+
 
 
 
