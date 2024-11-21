@@ -167,7 +167,7 @@ function CoreConcept(props){
 
 - 3 JSX: Dentro de la función, se retorna un bloque de JSX (JavaScript XML). JSX es una extensión de la sintaxis de JavaScript que permite escribir HTML dentro de JavaScript.
 
-- 4 Elemento <li>: El componente retorna un elemento de lista (<li>), que es un elemento HTML utilizado para representar un ítem en una lista.
+- 4 Elemento `<li>`: El componente retorna un elemento de lista (<li>), que es un elemento HTML utilizado para representar un ítem en una lista.
 
 - 5 Elemento <img>: Dentro del <li>, hay una etiqueta de imagen (<img>). Los atributos src y alt están presentes pero no tienen valores específicos en este ejemplo. src define la ruta de la imagen y alt proporciona un texto alternativo para la imagen.
 
