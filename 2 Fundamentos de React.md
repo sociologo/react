@@ -62,28 +62,26 @@ En resumen, los componentes en React te permiten construir interfaces de usuario
 
 # Nuestro primer componente
 
-**App.jsx**
-
 ```JavaScript
-function App() {
-  return (
-    <div>
-      <header>
-        <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-        <h1>SOCIOLAB</h1>
-        <p>
-            Bienvenido a la pagina oficial de sociolab!
-        </p>
-      </header>
-      <main>
-        <h2>Time to get started!</h2>
-      </main>
-    </div>
-  );
-}
+function Header() {
 
-export default App;
+   const description = reactDescriptions[genRandomInt(2)];
+
+   return (
+      <header>
+         <img src={reactImg} alt="Stylized atom" />
+         <h1>
+            React Essentials
+         </h1>
+         <p>
+            {description} Fundamental React concepts you will need for almost any app you are going to build!
+         </p>
+      </header>
+   );
+}
 ```
+
+![image](https://github.com/user-attachments/assets/699b69b9-a6b5-4620-bb6c-ae2831a0a510)
 
 ## Reglas
 
