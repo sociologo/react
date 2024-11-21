@@ -207,12 +207,53 @@ export const CORE_CONCEPTS = [
 ];
 ```
 
+En los componentes CoreConcept1 y CoreConcept2, la diferencia principal radica en cómo se manejan las propiedades (props).
 
+En CoreConcept1, las propiedades se agrupan en un solo objeto llamado props. Dentro del componente, se accede a cada propiedad utilizando la notación de punto, es decir, props.propertyName. Este enfoque puede ser menos intuitivo y más verboso, ya que requiere referirse constantemente al objeto props para acceder a cada propiedad individual.
 
+Por otro lado, en CoreConcept2, las propiedades se **desestructuran** directamente en los parámetros de la función. Esto significa que las propiedades se extraen del objeto props y se pueden usar directamente sin necesidad de prefijos adicionales. Este método es más limpio y conciso, facilitando la lectura y el mantenimiento del código. La desestructuración de props en los parámetros de la función es una práctica recomendada en React, ya que mejora la claridad y la simplicidad del código.
 
+En resumen, mientras que CoreConcept1 utiliza un enfoque más tradicional y explícito para manejar props, CoreConcept2 adopta una técnica más moderna y eficiente mediante la **desestructuración**, lo que resulta en un código más claro y fácil de entender.
 
+```Javascript
+function CoreConcept1({props}){
+   return (
+      <li>
+         <img src = {props.image} alt = {props.title} />
+         <h3>{props.title}</h3>
+         <p>{props.description}</p>
+      </li>
+   );
+}
+function CoreConcept2({image, title, description}){
+   return (
+      <li>
+         <img src = {image} alt = {title} />
+         <h3>{title}</h3>
+         <p>{description}</p>
+      </li>
+   );
+}
+```
 
+Se están creando instancias del componente CoreConcept y se están pasando propiedades (props) de dos maneras diferentes.
 
+Primera instancia de CoreConcept: Aquí, las propiedades title, description e image se pasan explícitamente al componente CoreConcept utilizando valores específicos del array CORE_CONCEPTS. Cada propiedad se asigna individualmente a partir del primer objeto en el array (CORE_CONCEPTS[0]).
+
+Siguientes instancias de CoreConcept: En las siguientes tres instancias, se utiliza la sintaxis de desestructuración con el operador de propagación (...). Esto significa que todas las propiedades del objeto correspondiente en el array CORE_CONCEPTS se pasan automáticamente al componente CoreConcept. Por ejemplo, {...CORE_CONCEPTS[1]} pasa todas las propiedades del segundo objeto en el array (CORE_CONCEPTS[1]) al componente CoreConcept.
+
+En resumen, la primera instancia pasa las propiedades de manera explícita y detallada, mientras que las siguientes instancias utilizan la desestructuración para pasar todas las propiedades de los objetos correspondientes de manera más concisa y eficiente. Esto hace que el código sea más limpio y fácil de mantener, especialmente cuando se trabaja con múltiples propiedades.
+
+```Javascript
+<CoreConcept                  
+  title = {CORE_CONCEPTS[0].title}
+  description = {CORE_CONCEPTS[0].description} 
+  image = {CORE_CONCEPTS[0].image}                
+/>
+<CoreConcept {...CORE_CONCEPTS[1]}/>
+<CoreConcept {...CORE_CONCEPTS[2]}/>
+<CoreConcept {...CORE_CONCEPTS[3]}/>  
+```
 
 
 
