@@ -128,6 +128,12 @@ En resumen, estos códigos juntos crean una estructura de aplicación React que 
 **App.jsx**
 
 ```Javascript
+import {CORE_CONCEPTS} from "./data.js";
+import reactImg from './assets/react-core-concepts.png';
+import componentsImg from './assets/components.png';
+
+// ... (código omitido)
+
 function CoreConcept({image, title, description}){
    return (
       <li>
