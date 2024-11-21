@@ -95,6 +95,7 @@ Un componente de React debe seguir las siguientes reglas:
 
 ## 43 Contenido dinamico en una web
 
+![image](https://github.com/user-attachments/assets/bae63692-bffe-42ca-9fb2-ebea39f3f166)
 
 
 
