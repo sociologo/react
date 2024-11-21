@@ -105,41 +105,7 @@ En React, los props (abreviatura de “properties”) son una forma de pasar dat
 
 Los props se utilizan para pasar datos desde un componente padre a un componente hijo. Esto permite que el componente hijo acceda a esos datos y los utilice para renderizar contenido dinámico. Los props son inmutables, lo que significa que un componente no puede cambiar sus propios props. Esto asegura que los datos fluyan en una sola dirección, de arriba hacia abajo, lo que se conoce como “flujo de datos unidireccional”.
 
-Los props poseeen una sintaxis similar a HTML. Por ejemplo:
-
-```JavaScript
-function App() {
-  return <Greeting name="Max" />;
-}
-
-function Greeting(props) {
-  return <h1>Hello, {props.name}!</h1>;
-}
-```
-
-Ejemplo de Uso de Props
-
-Supongamos que tienes un componente Greeting que necesita mostrar un mensaje de saludo personalizado:
-
-```JavaScript
-function Greeting(props) {
-  return <h1>Hello, {props.name}!</h1>;
-}
-```
-
-Puedes pasarle un prop name desde el componente padre App:
-
-```JavaScript
-function App() {
-  return <Greeting name="Max" />;
-}
-```
-
-En este ejemplo:
-
-El componente Greeting recibe un prop llamado name.
-
-Dentro del componente Greeting, puedes acceder a props.name para mostrar el nombre pasado desde el componente App.
+Los props poseeen una sintaxis similar a HTML. 
 
 Ventajas de Usar Props
 
@@ -151,33 +117,92 @@ Ventajas de Usar Props
 
 ### Ejemplo: Analicemos el siguiente componente:
 
+El archivo **App.jsx** define dos componentes principales: **CoreConcept** y **App**. El componente **CoreConcept** es un componente funcional que recibe props (propiedades) como parámetros y los utiliza para renderizar un ítem de lista (`<li>`) con una imagen, un título y una descripción. Este componente es reutilizable y se puede personalizar pasando diferentes valores de props.
+
+El componente **App** es el componente principal de la aplicación. Dentro de este componente, se estructura la página con un encabezado (`<Header />`), una sección principal (`<main>`) y una subsección específica para los **Core Concepts**. En esta subsección, se utiliza una lista (`<ul>`) para mostrar varios componentes **CoreConcept**, cada uno con diferentes datos provenientes de un array llamado **CORE_CONCEPTS**.
+
+El archivo data.js define y exporta el array **CORE_CONCEPTS**, que contiene objetos con información sobre conceptos clave de React. Cada objeto incluye una imagen, un título y una descripción. Estas propiedades se importan y utilizan en el componente **App** para renderizar dinámicamente los componentes CoreConcept.
+
+En resumen, estos códigos juntos crean una estructura de aplicación React que muestra una lista de conceptos clave, cada uno con su propia imagen, título y descripción, utilizando componentes reutilizables y datos dinámicos.
+
+**App.jsx**
+
 ```Javascript
-function CoreConcept(props){
+function CoreConcept({image, title, description}){
    return (
       <li>
-         <img src="..." alt="..." />
-         <h3>TITLE</h3>
-         <p>DESCRIPTION</p>
+         <img src = {image} alt = {title} />
+         <h3>{title}</h3>
+         <p>{description}</p>
       </li>
+   );
+}
+
+function App() {
+   return (
+      <div>
+         <Header />
+         <main>
+            <section id = 'core-concepts'>
+               <h2>
+                  Core Concepts
+               </h2>
+                  <ul>
+                     <CoreConcept                  
+                        title = {CORE_CONCEPTS[0].title}
+                        description = {CORE_CONCEPTS[0].description} 
+                        image = {CORE_CONCEPTS[0].image}                
+                     />
+                     <CoreConcept {...CORE_CONCEPTS[1]}/>
+                     <CoreConcept {...CORE_CONCEPTS[2]}/>
+                     <CoreConcept {...CORE_CONCEPTS[3]}/>                   
+                  </ul>              
+            </section>
+            <h2>Time to get started!</h2>
+         </main>
+      </div>
    );
 }
 ```
 
-- 1 Definición de la función: CoreConcept es una función de componente en React. Los componentes de función son una forma de definir componentes en React utilizando funciones de JavaScript.
+**data.js**
 
-- 2 Parámetro props: La función recibe un parámetro llamado props, que es un objeto que contiene todas las propiedades que se pasan al componente desde su padre.
+```Javascript
+import componentsImg from './assets/components.png';
+import propsImg from './assets/config.png';
+import jsxImg from './assets/jsx-ui.png';
+import stateImg from './assets/state-mgmt.png';
 
-- 3 JSX: Dentro de la función, se retorna un bloque de JSX (JavaScript XML). JSX es una extensión de la sintaxis de JavaScript que permite escribir HTML dentro de JavaScript.
+export const CORE_CONCEPTS = [
+   {
+      image: componentsImg,
+      title: 'Components',
+      description:
+         'The core UI building block - compose the user interface by combining multiple components.',
+   },
+   {
+      image: jsxImg,
+      title: 'JSX',
+      description:
+         'Return (potentially dynamic) HTML(ish) code to define the actual markup that will be rendered.',
+   },
+   {
+      image: propsImg,
+      title: 'Props',
+      description:
+         'Make components configurable (and therefore reusable) by passing input data to them.',
+   },
+   {
+      image: stateImg,
+      title: 'State',
+      description:
+         'React-managed data which, when changed, causes the component to re-render & the UI to update.',
+   },
+];
+```
 
-- 4 Elemento `<li>`: El componente retorna un elemento de lista (`<li>`), que es un elemento HTML utilizado para representar un ítem en una lista.
 
-- 5 Elemento `<img>`: Dentro del `<li>`, hay una etiqueta de imagen (`<img>`). Los atributos src y alt están presentes pero no tienen valores específicos en este ejemplo. src define la ruta de la imagen y alt proporciona un texto alternativo para la imagen.
 
-- 6 Elemento `<h3>`: Después de la imagen, hay un encabezado de nivel 3 (`<h3>`), que contiene el texto “TITLE”. En una implementación real, este texto probablemente sería dinámico, basado en props.
-
-- 7 Elemento `<p>`: Finalmente, hay un párrafo (`<p>`) con el texto “DESCRIPTION”. Al igual que el título, este texto también sería dinámico en una implementación real.
-
-Este componente es bastante básico y sirve como plantilla para un ítem de lista que incluye una imagen, un título y una descripción. En una aplicación real, podrías pasar props para personalizar el src de la imagen, el alt de la imagen, el título y la descripción.
 
 
 
