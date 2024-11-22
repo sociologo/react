@@ -445,6 +445,13 @@ Produce una salida de este tipo:
 ![image](https://github.com/user-attachments/assets/7ecd8f25-df7e-4d07-9085-c6d0d432d356)
 
 ***
+### Ejemplo de reaccion aventos
+
+
+
+
+
+***
 
 Volviendo a nuestro proyecto:
 
