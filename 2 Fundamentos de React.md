@@ -257,6 +257,17 @@ En resumen, la primera instancia pasa las propiedades de manera explícita y det
 
 ## 47 Almacenar Componentes en Archivos y Usar una Buena Estructura de Proyecto
 
+No se recomienda tener todos los componentes de una aplicación React en un mismo archivo por varias razones:
+
+- Mantenimiento y Legibilidad: Tener todos los componentes en un solo archivo puede hacer que el código sea difícil de leer y mantener. Dividir los componentes en archivos separados facilita la navegación y comprensión del código.
+
+- Reutilización: Al separar los componentes en archivos individuales, es más fácil reutilizarlos en diferentes partes de la aplicación o incluso en otros proyectos.
+
+- Modularidad: La modularidad es un principio clave en el desarrollo de software. Al dividir los componentes, cada uno puede ser desarrollado, probado y depurado de manera independiente.
+
+- Colaboración: En equipos de desarrollo, tener componentes separados permite que varios desarrolladores trabajen en diferentes partes de la aplicación simultáneamente sin conflictos.
+
+- Rendimiento: Aunque no es un problema común, tener un archivo muy grande puede afectar el rendimiento del editor de código y las herramientas de desarrollo.
 
 
 
