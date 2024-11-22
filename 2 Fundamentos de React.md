@@ -255,6 +255,10 @@ En resumen, la primera instancia pasa las propiedades de manera explícita y det
 <CoreConcept {...CORE_CONCEPTS[3]}/>  
 ```
 
+el proyecto luce asi:
+
+![image](https://github.com/user-attachments/assets/06a6366f-bd76-456a-9cd3-0ef0d1677b3d)
+
 ## 47 48 Organizando correctamente componentes y csss.
 
 ### Componentes
@@ -289,7 +293,55 @@ En React, export default se utiliza para exportar un único valor o componente c
 
 ### CSS
 
+En React, es conveniente organizar tanto los componentes como los archivos CSS en carpetas separadas por varias razones:
 
+Modularidad y Mantenibilidad: Al tener cada componente en su propia carpeta junto con su archivo CSS, se facilita la gestión y el mantenimiento del código. Cada carpeta actúa como un módulo independiente, lo que hace más sencillo localizar y modificar componentes específicos sin afectar otros.
+
+Reutilización: Los componentes bien organizados y encapsulados en sus propias carpetas pueden ser reutilizados en diferentes partes de la aplicación o incluso en otros proyectos. Esto promueve la reutilización de código y reduce la duplicación.
+
+Escalabilidad: A medida que la aplicación crece, tener una estructura de carpetas clara y organizada ayuda a mantener el proyecto manejable. Es más fácil agregar nuevos componentes y estilos sin que el proyecto se vuelva caótico.
+
+Separación de Preocupaciones: Mantener los archivos CSS junto con sus componentes correspondientes asegura que los estilos están directamente relacionados con el componente que afectan. Esto sigue el principio de separación de preocupaciones, donde cada parte del código tiene una responsabilidad específica.
+
+Colaboración en Equipo: En equipos de desarrollo, una estructura de carpetas bien definida facilita la colaboración. Los desarrolladores pueden trabajar en diferentes componentes simultáneamente sin interferir con el trabajo de otros.
+
+Crearemos una carpeta Header dentro de la carpeta components en la que almacenaremos tanto el componente como el css relacionado al header, ajustando las rutas de importacion en **App.jsx**.
+
+![image](https://github.com/user-attachments/assets/5a412976-536a-4ef4-95a5-e61afefe6b3c)
+![image](https://github.com/user-attachments/assets/1ae3035f-aeec-4dcd-8c30-89ad6d27f23f)
+![image](https://github.com/user-attachments/assets/b89c56ed-46f1-4da5-ab0f-544ef4dbec27)
+
+49 children
+
+En React, children es una prop especial que permite a los componentes anidar otros componentes o elementos dentro de ellos. Básicamente, children representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente.
+
+Por ejemplo, si tienes un componente **Card **y lo usas de esta manera:
+
+```JavaScript
+<Card>
+  <h2>Título</h2>
+  <p>Este es el contenido de la tarjeta.</p>
+</Card>
+```
+
+El contenido 
+```JavaScript
+<h2>Título</h2>
+<p>Este es el contenido de la tarjeta.</p> 
+```
+se pasa al componente **Card** como **children**. Dentro del componente **Card**, puedes acceder a **children** y renderizarlo donde lo necesites:
+
+```JavaScript
+const Card = ({ children }) => {
+  return (
+    <div className="card">
+      {children}
+    </div>
+  );
+};
+```
+
+Esto permite crear componentes más flexibles y reutilizables, ya que puedes definir el contenido de un componente desde fuera, en lugar de tenerlo fijo dentro del componente.
 
 
 
