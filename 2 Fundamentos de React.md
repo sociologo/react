@@ -255,7 +255,9 @@ En resumen, la primera instancia pasa las propiedades de manera explícita y det
 <CoreConcept {...CORE_CONCEPTS[3]}/>  
 ```
 
-## 47 Almacenar Componentes en Archivos y Usar una Buena Estructura de Proyecto
+## 47 48 Organizando correctamente componentes y csss.
+
+### Componentes
 
 No se recomienda tener todos los componentes de una aplicación React en un mismo archivo por varias razones:
 
@@ -284,6 +286,8 @@ En React, export default se utiliza para exportar un único valor o componente c
 ![image](https://github.com/user-attachments/assets/b5e02383-c891-4254-a367-67fb6219fe3e)
 
 ![image](https://github.com/user-attachments/assets/31a1d1da-d517-48e0-8974-3f113cb845cc)
+
+### CSS
 
 
 
