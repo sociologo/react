@@ -311,7 +311,9 @@ Crearemos una carpeta Header dentro de la carpeta components en la que almacenar
 ![image](https://github.com/user-attachments/assets/1ae3035f-aeec-4dcd-8c30-89ad6d27f23f)
 ![image](https://github.com/user-attachments/assets/b89c56ed-46f1-4da5-ab0f-544ef4dbec27)
 
-49 children
+## 49 La propiedad especial "children" y composicion de componentes
+
+### children
 
 En React, children es una prop especial que permite a los componentes anidar otros componentes o elementos dentro de ellos. Básicamente, children representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente.
 
@@ -343,7 +345,108 @@ const Card = ({ children }) => {
 
 Esto permite crear componentes más flexibles y reutilizables, ya que puedes definir el contenido de un componente desde fuera, en lugar de tenerlo fijo dentro del componente.
 
+### Composición de componentes
 
+En el contexto de React, la composición de componentes es una técnica que permite construir interfaces de usuario complejas a partir de componentes más pequeños y reutilizables. En lugar de crear un único componente grande que haga todo, se divide la funcionalidad en componentes más pequeños y se combinan para formar la interfaz deseada12.
+
+La composición de componentes se basa en el principio de que los componentes pueden contener otros componentes como hijos, lo que permite una estructura jerárquica y modular. Aquí tienes un ejemplo simple:
+
+```JavaScript
+// Header.js
+const Header = () => {
+  return <header><h1>Mi Aplicación</h1></header>;
+};
+
+// Footer.js
+const Footer = () => {
+  return <footer><p>© 2024 Mi Aplicación</p></footer>;
+};
+
+// App.js
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+
+const App = () => {
+  return (
+    <div>
+      <Header />
+      <main>
+        <p>Bienvenido a mi aplicación.</p>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default App;
+```
+
+En este ejemplo, App es el componente principal que compone otros dos componentes (Header y Footer). Esto hace que el código sea más modular y fácil de mantener.
+
+La composición de componentes es preferida sobre la herencia en React porque permite una mayor flexibilidad y reutilización del código. Al usar la composición, puedes crear componentes más específicos y reutilizables que se pueden combinar de diferentes maneras para construir interfaces complejas.
+
+### Ejemplo:
+```JavaScript
+// App.js
+import React from 'react';
+import Card from './Card';
+
+function App() {
+  return (
+    <div id="app">
+      <h1>Available Experts</h1>
+      <Card name="Anthony Blake">
+        <p>
+          Blake is a professor of Computer Science at the University of Illinois.
+        </p>
+        <p>
+          <a href="mailto:blake@example.com">Email Anthony</a>
+        </p>
+      </Card>
+
+      <Card name="Maria Miles">
+        <p>
+          Maria is a professor of Computer Science at the University of Illinois.
+        </p>
+        <p>
+          <a href="mailto:maria@example.com">Email Maria</a>
+        </p>
+      </Card>
+    </div>
+  );
+}
+
+export default App;
+```
+
+El siguiente componente:
+```JavaScript
+// Card.js
+import React from 'react';
+import './Card.css'; // Asegúrate de tener un archivo CSS para los estilos
+
+const Card = ({ name, children }) => {
+  return (
+    <div className="card">
+      <h2>{name}</h2>
+      <div className="card-content">
+        {children}
+      </div>
+    </div>
+  );
+};
+
+export default Card;
+```
+
+Produce una salida de este tipo:
+![image](https://github.com/user-attachments/assets/7ecd8f25-df7e-4d07-9085-c6d0d432d356)
+
+
+***
+
+Crearemos un nuevo componente llamado **TabButton.jsx** en la carpeta de **componentes**
 
 
 
