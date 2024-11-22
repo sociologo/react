@@ -269,8 +269,11 @@ No se recomienda tener todos los componentes de una aplicación React en un mism
 
 - Rendimiento: Aunque no es un problema común, tener un archivo muy grande puede afectar el rendimiento del editor de código y las herramientas de desarrollo.
 
+Estructura original de archivos:
 
+![image](https://github.com/user-attachments/assets/ff00d5a2-1148-458c-a36b-87dce9c616b3)
 
+Creamos una carpeta llamada **components** donde iran todos nuestros componentes:
 
 
 
