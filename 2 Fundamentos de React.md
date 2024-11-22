@@ -279,6 +279,13 @@ Debemo añadir la declaracion de exportacion **export default** para poder impor
 
 En React, export default se utiliza para exportar un único valor o componente como la exportación predeterminada de un módulo. Esto significa que cuando importas ese módulo, puedes darle cualquier nombre al valor importado sin necesidad de usar llaves.
 
+![image](https://github.com/user-attachments/assets/57b320ad-0a5e-45e4-bbe7-b9671d9baf0c)
+
+![image](https://github.com/user-attachments/assets/b5e02383-c891-4254-a367-67fb6219fe3e)
+
+![image](https://github.com/user-attachments/assets/31a1d1da-d517-48e0-8974-3f113cb845cc)
+
+
 
 
 
