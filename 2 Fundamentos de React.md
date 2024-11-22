@@ -441,10 +441,12 @@ export default Card;
 ```
 
 Produce una salida de este tipo:
+
 ![image](https://github.com/user-attachments/assets/7ecd8f25-df7e-4d07-9085-c6d0d432d356)
 
-
 ***
+
+Volviendo a nuestro proyecto:
 
 Crearemos un nuevo componente llamado **TabButton.jsx** en la carpeta de **componentes**
 
