@@ -30,7 +30,7 @@ function App() {
             <section id="examples">
                <h2>Ejemplos</h2>
                <menu>
-                  <TabButton onSelect={handleSelect}>Components</TabButton>
+                  <TabButton onSelect={() => handleSelect}>Components</TabButton>
                   <TabButton onSelect={handleSelect}>JSX</TabButton>
                   <TabButton onSelect={handleSelect}>Props</TabButton>
                   <TabButton onSelect={handleSelect}>State</TabButton>                  
