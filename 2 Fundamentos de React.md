@@ -679,7 +679,90 @@ export default Counter;
 
 En este ejemplo, el componente Counter tiene un **state** count que se incrementa cada vez que se hace clic en el botón. React vuelve a renderizar el componente cada vez que el estado cambia, mostrando el nuevo valor de count.
 
+### Hooks
 
+Los hooks en React son una característica introducida en la versión 16.8 que permite usar el **state** y otras funcionalidades de React en componentes funcionales, sin necesidad de escribir componentes de clase. Los hooks simplifican la lógica de los componentes y facilitan la reutilización de código.
+
+Principales Hooks en React
+
+1 useState: Permite agregar estado local a un componente funcional.
+
+```JavaScript
+import React, { useState } from 'react';
+
+function Contador() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Has hecho clic {count} veces</p>
+      <button onClick={() => setCount(count + 1)}>Haz clic aquí</button>
+    </div>
+  );
+}
+```
+
+2 useEffect: Permite realizar efectos secundarios en componentes funcionales, como suscribirse a datos, realizar solicitudes de red o manipular el DOM.
+
+```JavaScript
+import React, { useEffect, useState } from 'react';
+
+function Ejemplo() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => setData(data));
+  }, []); // El array vacío significa que este efecto se ejecuta solo una vez
+
+  return (
+    <div>
+      <p>Datos: {data}</p>
+    </div>
+  );
+}
+```
+
+3 useContext: Permite acceder a valores de contexto en componentes funcionales.
+
+```JavaScript
+import React, { useContext } from 'react';
+const MiContexto = React.createContext();
+
+function Componente() {
+  const valor = useContext(MiContexto);
+  return <div>{valor}</div>;
+}
+```
+
+#### Reglas de los Hooks
+
+1 Llamar hooks solo en el nivel superior: No llames hooks dentro de loops, condiciones o funciones anidadas.
+
+2 Llamar hooks solo desde funciones de React: Usa hooks solo en componentes funcionales o en tus propios hooks personalizados.
+
+Hooks Personalizados
+
+Puedes crear tus propios hooks para reutilizar lógica de estado entre componentes. Un hook personalizado es simplemente una función de JavaScript cuyo nombre comienza con “use” y que puede llamar a otros hooks.
+
+```JavaScript
+import { useState, useEffect } from 'react';
+
+function useFetch(url) {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch(url)
+      .then(response => response.json())
+      .then(data => setData(data));
+  }, [url]);
+
+  return data;
+}
+```
+
+Los hooks han revolucionado la forma de escribir componentes en React, haciendo el código más limpio y fácil de entender.
 
 
 
