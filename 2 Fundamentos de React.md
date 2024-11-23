@@ -558,7 +558,6 @@ export const user = {
 };
 
 function App() {
-  // Your goal: This function should be called WITH A VALUE for name when the <button> is clicked
   function handleCreateUser(name) {
     user.name = name;
   }
@@ -568,10 +567,8 @@ function App() {
       <h1>User Login</h1>
       <p>
         <label>Name</label>
-        {/* You don't need to do anything with this input! You'll learn how to handle user input later */}
         <input type="text" />
       </p>
-
       <p id="actions">
         <button>Create User</button>
       </p>
@@ -582,7 +579,121 @@ function App() {
 export default App;
 ```
 
+Debes ingresar la siguiente linea:
+
+```JavaScript
+<button onClick={() => handleCreateUser('Christian Castro')}>Create User</button>
+```
+En el lugar que se indica:
+
+```JavaScript
+export const user = {
+  name: '',
+};
+
+function App() {
+  function handleCreateUser(name) {
+    user.name = name;
+  }
+
+  return (
+    <div id="app">
+      <h1>User Login</h1>
+      <p>
+        <label>Name</label>
+        <input type="text" />
+      </p>
+      <p id="actions">
+        <button onClick={() => handleCreateUser('Christian Castro')}>Create User</button>
+      </p>
+    </div>
+  );
+}
+
+export default App;
+```
 ***
+
+## El concepto de State
+
+En React, el **state** es un objeto que permite a los componentes mantener y gestionar datos que pueden cambiar a lo largo del tiempo. A diferencia de las props, que son inmutables y se pasan desde componentes padres a hijos, el **state** es mutable y es local a cada componente.
+
+Características del State en React:
+
+- Local y Encapsulado: El state es local al componente en el que se define. Esto significa que cada componente puede tener su propio estado independiente de otros componentes.
+
+- Dinámico: El state puede cambiar en respuesta a eventos del usuario, solicitudes de red, o cualquier otra interacción. Cuando el state cambia, React vuelve a renderizar el componente para reflejar los nuevos datos.
+
+- Inicialización: El state se inicializa en el constructor de una clase o usando el hook useState en componentes funcionales.
+
+```JavaScript
+// En un componente de clase
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+}
+
+// En un componente funcional
+import React, { useState } from 'react';
+
+function MyComponent() {
+  const [count, setCount] = useState(0);
+}
+```
+
+Actualización: Para actualizar el state, se utiliza el método setState en componentes de clase o la función setCount (o similar) en componentes funcionales.
+
+```JavaScript
+// En un componente de clase
+this.setState({ count: this.state.count + 1 });
+
+// En un componente funcional
+setCount(count + 1);
+```
+
+Ejemplo Práctico
+
+Aquí tienes un ejemplo simple de un componente que utiliza state para contar clics en un botón:
+
+```JavaScript
+import React, { useState } from 'react';
+
+function Counter() {
+
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Has hecho clic {count} veces</p>
+      <button onClick={() => setCount(count + 1)}>
+        Haz clic aquí
+      </button>
+    </div>
+  );
+}
+
+export default Counter;
+```
+
+En este ejemplo, el componente Counter tiene un **state** count que se incrementa cada vez que se hace clic en el botón. React vuelve a renderizar el componente cada vez que el estado cambia, mostrando el nuevo valor de count.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***
+
 
 Volviendo a nuestro proyecto:
 
