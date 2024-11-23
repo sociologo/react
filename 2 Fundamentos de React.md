@@ -764,8 +764,48 @@ function useFetch(url) {
 
 Los hooks han revolucionado la forma de escribir componentes en React, haciendo el código más limpio y fácil de entender.
 
+***
 
+## Ejercicio
 
+Estás trabajando en una parte de una tienda en línea donde se debe mostrar un precio con descuento en la pantalla una vez que el usuario haga clic en un botón.
+
+Tu tarea es agregar un listener de eventos para escuchar los clics en el botón que ya está incluido en el componente App.
+
+Al hacer clic en el botón, el precio debe cambiar de $100 a $75.
+
+Agrega un valor de **state** a la función del componente App existente y asegúrate de que el valor del **state** se actualice tanto al hacer clic en el botón como al mostrarse como parte del código JSX.
+
+```JavaScript
+export default function App() {
+    return (
+        <div>
+            <p data-testid="price">$100</p>
+            <button>Apply Discount</button>
+        </div>
+    );
+}
+```
+
+```JavaScript
+import React from 'react';
+export default function App() {
+    // Inicializar el estado del precio
+    const [price, setPrice] = React.useState(100);
+
+    // Función para manejar el clic en el botón
+    const handleClick = () => {
+        setPrice(75);
+    };
+
+    return (
+        <div>
+            <p data-testid="price">${price}</p>
+            <button onClick={handleClick}>Apply Discount</button>
+        </div>
+    );
+}
+```
 
 
 
