@@ -448,8 +448,139 @@ Produce una salida de este tipo:
 ### Ejemplo de reaccion aventos
 
 
+***
+
+### Ejercicio
+
+// Your goal is to change the email, password and loggedIn values when the button in the App component is pressed
+// Change them to any values of your choice (except loggedIn => that should be changed to true)
+// You DON'T need to fetch the values entered into the <input /> fields
+// You'll learn about that later in the course - for the moment, those fields are just there to look good :-)
+```JavaScript
+export const user = {
+  email: '',
+  password: '',
+  loggedIn: false,
+};
+
+function App() {
+  return (
+    <div id="app">
+      <h1>User Login</h1>
+      <p>
+        <label>Email</label>
+        {/* You don't need to do anything with those inputs! You'll learn how to handle user input later */}
+        <input type="email" />
+      </p>
+
+      <p>
+        <label>Password</label>
+        {/* You don't need to do anything with those inputs! You'll learn how to handle user input later */}
+        <input type="password" />
+      </p>
+
+      <p id="actions">
+        <button>Login</button>
+      </p>
+    </div>
+  );
+}
+
+export default App;
+```
+
+Tu tarea es trabajar en un componente de “Inicio de Sesión de Usuario” que ya ha sido preparado por un colega.
+
+El objetivo es actualizar los datos almacenados en el objeto user existente con algunos datos ficticios una vez que se presione el botón “Login” en el componente App.
+
+Las propiedades email y password en el objeto user deben establecerse en cualquier valor de cadena no vacío de tu elección. El campo loggedIn debe establecerse en true.
+
+Importante: No necesitas obtener los valores ingresados en los campos <input> - puedes simplemente ignorar esos campos por ahora. 
 
 
+```JavaScript
+// user.js
+export const user = {
+  email: '',
+  password: '',
+  loggedIn: false,
+};
+
+// App.js
+import React from 'react';
+import { user } from './user';
+
+function App() {
+  const handleLogin = () => {
+    user.email = 'dummy@example.com';
+    user.password = 'dummyPassword';
+    user.loggedIn = true;
+    console.log('User logged in:', user);
+  };
+
+  return (
+    <div id="app">
+      <h1>User Login</h1>
+      <p>
+        <label>Email</label>
+        <input type="email" />
+      </p>
+
+      <p>
+        <label>Password</label>
+        <input type="password" />
+      </p>
+
+      <p id="actions">
+        <button onClick={handleLogin}>Login</button>
+      </p>
+    </div>
+  );
+}
+
+export default App;
+```
+***
+
+### ejemplo
+
+Configuración de Manejadores de Eventos
+
+Tu tarea es editar el `<button>` en el componente App de manera que la función handleCreateUser ya definida se llame con un valor para name.
+
+Por lo tanto, no debes codificar directamente el valor que se debe asignar a user.name en la función handleCreateUser, sino que debes pasarlo como un valor para el parámetro name cuando ocurra un evento de clic en el `<button>`.
+
+No tienes que preocuparte por ningún valor que pueda ingresarse en el campo `<input>` - está ahí solo con fines decorativos.
+
+```JavaScript
+export const user = {
+  name: '',
+};
+
+function App() {
+  // Your goal: This function should be called WITH A VALUE for name when the <button> is clicked
+  function handleCreateUser(name) {
+    user.name = name;
+  }
+
+  return (
+    <div id="app">
+      <h1>User Login</h1>
+      <p>
+        <label>Name</label>
+        {/* You don't need to do anything with this input! You'll learn how to handle user input later */}
+        <input type="text" />
+      </p>
+
+      <p id="actions">
+        <button>Create User</button>
+      </p>
+    </div>
+  );
+}
+
+export default App;
+```
 
 ***
 
