@@ -908,7 +908,52 @@ export default function TabButton({children, onSelect}) {
 }
 ```
 
+El prop children de React se utiliza para pasar contenido dinámico a los componentes TabButton.
 
+```javascript
+export default function TabButton({children, onSelect}) {
+   return (
+      <li>
+         <button onClick={onSelect}>
+            {children}
+         </button>
+      </li>
+   );
+}
+```
+
+El componente TabButton es una función que acepta dos props: children y onSelect. El prop children representa el contenido que se pasará entre las etiquetas de apertura y cierre del componente TabButton. El prop onSelect es una función que se ejecutará cuando se haga clic en el botón.
+
+```javascript
+<menu>
+   <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+   <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+   <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+   <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+</menu>
+```
+
+En este fragmento de código, se utiliza el componente TabButton varias veces dentro de un elemento <menu>. Cada instancia de TabButton recibe una función onSelect diferente y un contenido diferente como children. Por ejemplo, el primer TabButton tiene onSelect={() => handleSelect('components')} y children es el texto "Components".
+
+Renderizado del Contenido: Dentro del componente TabButton, el contenido pasado como children se renderiza dentro del botón:
+
+```javascript
+<button onClick={onSelect}>
+   {children}
+</button>
+```
+
+Esto significa que el texto "Components", "JSX", "Props" y "State" se mostrará dentro de los botones correspondientes. Cuando se hace clic en un botón, se ejecuta la función onSelect asociada, que en este caso llama a handleSelect con el argumento correspondiente.
+
+```javascript
+const [selectedTopic, setSelectedTopic] = useState('components');
+
+function handleSelect(selectedButton) {
+  setSelectedTopic(selectedButton);
+}
+```
+
+En resumen, el prop children permite que el componente TabButton sea flexible y reutilizable, ya que puede mostrar diferentes contenidos y ejecutar diferentes funciones de clic según sea necesario.
 
 
 
