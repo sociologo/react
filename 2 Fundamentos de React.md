@@ -821,35 +821,80 @@ export default function App() {
 
 Crearemos un nuevo componente llamado **TabButton.jsx** en la carpeta de **componentes**
 
-```Javascript
-import TabButton from './components/TabButton.jsx';
+### App.jsx
 
-<section id = "examples">
-   <h2>Ejemplos</h2>
-   <menu>
-      <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
-      <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-      <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-      <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
-   </menu>
-      <div id = 'tab-content'>
-         <h3>
-            {EXAMPLES[selectedTopic].title}
-         </h3>
-         <p>
-            {EXAMPLES[selectedTopic].description}
-         </p>
-         <pre>
-            <code>
-               {EXAMPLES[selectedTopic].code}
-            </code>
-         </pre>
+La siguiente **section** sección define una estructura HTML que incluye un menú de botones de pestañas (TabButton) y un área de contenido que muestra información basada en la pestaña seleccionada. El componente `<section>` con el id="examples" contiene un encabezado `<h2>` titulado "Ejemplos". Dentro de esta sección, hay un elemento `<menu>` que contiene varios componentes TabButton, cada uno con un onSelect que llama a la función handleSelect con diferentes argumentos ('components', 'jsx', 'props', 'state'). Estos botones permiten al usuario seleccionar diferentes temas.
+
+Cuando se selecciona un tema, el contenido correspondiente se muestra en el `<div id="tab-content">`. Este `<div>` contiene un encabezado `<h3>` que muestra el título del ejemplo seleccionado ({EXAMPLES[selectedTopic].title}), un párrafo `<p>` que muestra la descripción ({EXAMPLES[selectedTopic].description}), y un bloque de código `<pre><code>` que muestra el código del ejemplo ({EXAMPLES[selectedTopic].code}). La variable selectedTopic determina qué contenido se muestra, y EXAMPLES es un objeto que contiene los datos de los ejemplos.
+
+```Javascript
+import {useState} from 'react';
+import {CORE_CONCEPTS} from "./data.js";
+import Header from './components/Header/Header.jsx';
+import CoreConcept from './components/CoreConcepts.jsx';
+import TabButton from './components/TabButton.jsx';
+import {EXAMPLES} from './data.js';
+
+function App() {
+
+   const [selectedTopic, setSelectedTopic] = useState('components');
+
+   function handleSelect(selectedButton) {
+      setSelectedTopic(selectedButton);
+   }
+
+   return (
+      <div>
+         <Header />
+         <main>
+            <section id = 'core-concepts'>
+               <h2>
+                  Core Concepts
+               </h2>
+                  <ul>
+                     <CoreConcept                  
+                        title = {CORE_CONCEPTS[0].title}
+                        description = {CORE_CONCEPTS[0].description} 
+                        image = {CORE_CONCEPTS[0].image}                
+                     />
+                     <CoreConcept {...CORE_CONCEPTS[1]}/>
+                     <CoreConcept {...CORE_CONCEPTS[2]}/>
+                     <CoreConcept {...CORE_CONCEPTS[3]}/>                   
+                  </ul>              
+            </section>
+            <section id = "examples">
+               <h2>Ejemplos</h2>
+               <menu>
+                  <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+                  <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+                  <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+                  <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+               </menu>
+                  <div id = 'tab-content'>
+                     <h3>
+                        {EXAMPLES[selectedTopic].title}
+                     </h3>
+                     <p>
+                        {EXAMPLES[selectedTopic].description}
+                     </p>
+                     <pre>
+                        <code>
+                           {EXAMPLES[selectedTopic].code}
+                        </code>
+                     </pre>
+                  </div>
+            </section>
+         </main>
       </div>
-</section>
+   );
+}
+
+export default App;
 ```
 
-
 El componente TabButton es una función que recibe dos props: children y onSelect. Este componente devuelve un elemento de lista (`<li>`) que contiene un botón (`<button>`). El botón tiene un manejador de eventos onClick que se establece en la función onSelect pasada como prop. Esto significa que cuando se hace clic en el botón, se ejecutará la función onSelect. El contenido del botón se define mediante el prop children, que permite que cualquier contenido pasado entre las etiquetas de apertura y cierre del componente TabButton se renderice dentro del botón. Este diseño hace que el componente sea flexible y reutilizable, permitiendo que diferentes contenidos y funciones de clic se pasen según sea necesario.
+
+### TabButton.jsx
 
 ```Javascript
 export default function TabButton({children, onSelect}) {
