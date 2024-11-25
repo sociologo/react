@@ -817,7 +817,11 @@ export default function App() {
 
 ***
 
-## 49- 55
+## Botones y contenidos dinámicos. 49- 55
+
+Lo que haremos en ésta sección será darle contenido dinámico a un cuadro de texto despues de darle click a su correspondiente botón en un menú como se muestra en la figura:
+
+![image](https://github.com/user-attachments/assets/3d02d38b-4458-4600-85a5-af08f56edb51)
 
 El archivo **App.jsx** define una aplicación que organiza y muestra contenido dinámico basado en la selección del usuario. Utiliza componentes reutilizables como **TabButton.jsx** para crear un menú de navegación que permite cambiar entre diferentes temas. La aplicación gestiona el estado para determinar qué contenido mostrar, y renderiza la información correspondiente en función de la selección del usuario. Este diseño modular y flexible facilita la actualización y expansión del contenido de la aplicación.
 
@@ -888,7 +892,7 @@ function App() {
 export default App;
 ```
 
-La **`<section>`** define una estructura HTML que incluye un menú de botones de pestañas (TabButton) y un área de contenido que muestra información basada en la pestaña seleccionada. El componente `<section>` con el id="examples" contiene un encabezado `<h2>` titulado "Ejemplos". Dentro de esta sección, hay un elemento `<menu>` que contiene varios componentes TabButton, cada uno con un onSelect que llama a la función handleSelect con diferentes argumentos ('components', 'jsx', 'props', 'state'). Estos botones permiten al usuario seleccionar diferentes temas.
+La segunda `<section>` define una estructura HTML que incluye un menú de botones de pestañas (TabButton) y un área de contenido que muestra información basada en la pestaña seleccionada. Dentro de esta `<section>`, hay un elemento `<menu>` que contiene varios componentes TabButton, cada uno con un **onSelect** que llama a la función handleSelect con diferentes argumentos ('components', 'jsx', 'props', 'state'). Estos botones permiten al usuario seleccionar diferentes temas.
 
 Cuando se selecciona un tema, el contenido correspondiente se muestra en el `<div id="tab-content">`. Este `<div>` contiene un encabezado `<h3>` que muestra el título del ejemplo seleccionado (`{EXAMPLES[selectedTopic].title}`), un párrafo `<p>` que muestra la descripción (`{EXAMPLES[selectedTopic].description}`), y un bloque de código `<pre><code>` que muestra el código del ejemplo (`{EXAMPLES[selectedTopic].code}`). La variable selectedTopic determina qué contenido se muestra, y EXAMPLES es un objeto que contiene los datos de los ejemplos.
 
@@ -923,11 +927,13 @@ El componente TabButton es una función que recibe dos props: children y onSelec
 
 El prop children de React se utiliza para pasar contenido dinámico a los componentes TabButton.
 
+Dentro del componente TabButton, el contenido pasado como children se renderiza dentro del botón. Esto significa que el texto "Components", "JSX", "Props" y "State" se mostrará dentro de los botones correspondientes. Cuando se hace clic en un botón, se ejecuta la función onSelect asociada, que en este caso llama a handleSelect con el argumento correspondiente.
+
 ```javascript
 export default function TabButton({children, onSelect}) {
    return (
       <li>
-         <button onClick={onSelect}>
+         <button onClick = {onSelect}>
             {children}
          </button>
       </li>
@@ -935,7 +941,9 @@ export default function TabButton({children, onSelect}) {
 }
 ```
 
-El componente TabButton es una función que acepta dos props: children y onSelect. El prop children representa el contenido que se pasará entre las etiquetas de apertura y cierre del componente TabButton. El prop onSelect es una función que se ejecutará cuando se haga clic en el botón.
+El componente TabButton es una función que acepta dos props: children y onSelect. El prop **children** representa el contenido que se pasará entre las etiquetas de apertura y cierre del componente TabButton. El prop **onSelect** es una función que se ejecutará cuando se haga clic en el botón.
+
+En  el siguiente fragmento de código, se utiliza el componente TabButton varias veces dentro de un elemento `<menu>`. Cada instancia de TabButton recibe una función **onSelect** diferente y un contenido diferente como **children**. Por ejemplo, el primer TabButton tiene `onSelect={() => handleSelect('components')}` y children es el texto "Components".
 
 ```javascript
 <menu>
@@ -946,18 +954,6 @@ El componente TabButton es una función que acepta dos props: children y onSelec
 </menu>
 ```
 
-En este fragmento de código, se utiliza el componente TabButton varias veces dentro de un elemento <menu>. Cada instancia de TabButton recibe una función onSelect diferente y un contenido diferente como children. Por ejemplo, el primer TabButton tiene onSelect={() => handleSelect('components')} y children es el texto "Components".
-
-Renderizado del Contenido: Dentro del componente TabButton, el contenido pasado como children se renderiza dentro del botón:
-
-```javascript
-<button onClick={onSelect}>
-   {children}
-</button>
-```
-
-Esto significa que el texto "Components", "JSX", "Props" y "State" se mostrará dentro de los botones correspondientes. Cuando se hace clic en un botón, se ejecuta la función onSelect asociada, que en este caso llama a handleSelect con el argumento correspondiente.
-
 ```javascript
 const [selectedTopic, setSelectedTopic] = useState('components');
 
@@ -966,7 +962,7 @@ function handleSelect(selectedButton) {
 }
 ```
 
-En resumen, el prop children permite que el componente TabButton sea flexible y reutilizable, ya que puede mostrar diferentes contenidos y ejecutar diferentes funciones de clic según sea necesario.
+El prop children permite que el componente TabButton sea flexible y reutilizable, ya que puede mostrar diferentes contenidos y ejecutar diferentes funciones de clic según sea necesario.
 
 
 
