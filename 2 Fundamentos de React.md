@@ -954,7 +954,7 @@ En  el siguiente fragmento de código, se utiliza el componente TabButton varias
 </menu>
 ```
 
-### La funcción handleSelect
+### La función handleSelect
 
 ```javascript
 const [selectedTopic, setSelectedTopic] = useState('components');
@@ -964,6 +964,7 @@ function handleSelect(selectedButton) {
 }
 ```
 
+lo que un no entiendo es como selectedButton apunta especificamente a cada uno de los valores: Components, JSX, Props y State.
 
 
 
