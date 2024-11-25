@@ -817,8 +817,7 @@ export default function App() {
 
 ***
 
-
-Volviendo a nuestro proyecto:
+## 49- 55
 
 Crearemos un nuevo componente llamado **TabButton.jsx** en la carpeta de **componentes**
 
