@@ -822,6 +822,8 @@ export default function App() {
 Crearemos un nuevo componente llamado **TabButton.jsx** en la carpeta de **componentes**
 
 ```Javascript
+import TabButton from './components/TabButton.jsx';
+
 <section id = "examples">
    <h2>Ejemplos</h2>
    <menu>
@@ -846,8 +848,17 @@ Crearemos un nuevo componente llamado **TabButton.jsx** en la carpeta de **compo
 </section>
 ```
 
-
-
+```
+export default function TabButton({children, onSelect}) {
+   return (
+      <li>
+         <button onClick = {onSelect}>
+            {children}
+         </button>
+      </li>
+   );
+}
+```
 
 
 
