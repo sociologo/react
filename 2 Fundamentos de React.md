@@ -848,7 +848,7 @@ import TabButton from './components/TabButton.jsx';
 </section>
 ```
 
-```
+```Javascript
 export default function TabButton({children, onSelect}) {
    return (
       <li>
