@@ -819,13 +819,9 @@ export default function App() {
 
 ## 49- 55
 
-El archivo **App.jsx** en React define una aplicación que organiza y muestra contenido dinámico basado en la selección del usuario. Utiliza componentes reutilizables como **TabButton.jsx** para crear un menú de navegación que permite cambiar entre diferentes temas. La aplicación gestiona el estado para determinar qué contenido mostrar, y renderiza la información correspondiente en función de la selección del usuario. Este diseño modular y flexible facilita la actualización y expansión del contenido de la aplicación.
+El archivo **App.jsx** define una aplicación que organiza y muestra contenido dinámico basado en la selección del usuario. Utiliza componentes reutilizables como **TabButton.jsx** para crear un menú de navegación que permite cambiar entre diferentes temas. La aplicación gestiona el estado para determinar qué contenido mostrar, y renderiza la información correspondiente en función de la selección del usuario. Este diseño modular y flexible facilita la actualización y expansión del contenido de la aplicación.
 
 ### App.jsx
-
-La siguiente **section** define una estructura HTML que incluye un menú de botones de pestañas (TabButton) y un área de contenido que muestra información basada en la pestaña seleccionada. El componente `<section>` con el id="examples" contiene un encabezado `<h2>` titulado "Ejemplos". Dentro de esta sección, hay un elemento `<menu>` que contiene varios componentes TabButton, cada uno con un onSelect que llama a la función handleSelect con diferentes argumentos ('components', 'jsx', 'props', 'state'). Estos botones permiten al usuario seleccionar diferentes temas.
-
-Cuando se selecciona un tema, el contenido correspondiente se muestra en el `<div id="tab-content">`. Este `<div>` contiene un encabezado `<h3>` que muestra el título del ejemplo seleccionado (`{EXAMPLES[selectedTopic].title}`), un párrafo `<p>` que muestra la descripción (`{EXAMPLES[selectedTopic].description}`), y un bloque de código `<pre><code>` que muestra el código del ejemplo (`{EXAMPLES[selectedTopic].code}`). La variable selectedTopic determina qué contenido se muestra, y EXAMPLES es un objeto que contiene los datos de los ejemplos.
 
 ```Javascript
 import {useState} from 'react';
@@ -891,6 +887,10 @@ function App() {
 
 export default App;
 ```
+
+La siguiente **section** define una estructura HTML que incluye un menú de botones de pestañas (TabButton) y un área de contenido que muestra información basada en la pestaña seleccionada. El componente `<section>` con el id="examples" contiene un encabezado `<h2>` titulado "Ejemplos". Dentro de esta sección, hay un elemento `<menu>` que contiene varios componentes TabButton, cada uno con un onSelect que llama a la función handleSelect con diferentes argumentos ('components', 'jsx', 'props', 'state'). Estos botones permiten al usuario seleccionar diferentes temas.
+
+Cuando se selecciona un tema, el contenido correspondiente se muestra en el `<div id="tab-content">`. Este `<div>` contiene un encabezado `<h3>` que muestra el título del ejemplo seleccionado (`{EXAMPLES[selectedTopic].title}`), un párrafo `<p>` que muestra la descripción (`{EXAMPLES[selectedTopic].description}`), y un bloque de código `<pre><code>` que muestra el código del ejemplo (`{EXAMPLES[selectedTopic].code}`). La variable selectedTopic determina qué contenido se muestra, y EXAMPLES es un objeto que contiene los datos de los ejemplos.
 
 ```Javascript
 <menu>
