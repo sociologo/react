@@ -848,6 +848,9 @@ import TabButton from './components/TabButton.jsx';
 </section>
 ```
 
+
+El componente TabButton es una función que recibe dos props: children y onSelect. Este componente devuelve un elemento de lista (`<li>`) que contiene un botón (`<button>`). El botón tiene un manejador de eventos onClick que se establece en la función onSelect pasada como prop. Esto significa que cuando se hace clic en el botón, se ejecutará la función onSelect. El contenido del botón se define mediante el prop children, que permite que cualquier contenido pasado entre las etiquetas de apertura y cierre del componente TabButton se renderice dentro del botón. Este diseño hace que el componente sea flexible y reutilizable, permitiendo que diferentes contenidos y funciones de clic se pasen según sea necesario.
+
 ```Javascript
 export default function TabButton({children, onSelect}) {
    return (
