@@ -954,6 +954,8 @@ En  el siguiente fragmento de código, se utiliza el componente TabButton varias
 </menu>
 ```
 
+### La funcción handleSelect
+
 ```javascript
 const [selectedTopic, setSelectedTopic] = useState('components');
 
