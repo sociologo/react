@@ -819,7 +819,7 @@ export default function App() {
 
 ## 49- 55
 
-Crearemos un nuevo componente llamado **TabButton.jsx** en la carpeta de **componentes**
+El archivo **App.jsx** en React define una aplicación que organiza y muestra contenido dinámico basado en la selección del usuario. Utiliza componentes reutilizables como **TabButton.jsx** para crear un menú de navegación que permite cambiar entre diferentes temas. La aplicación gestiona el estado para determinar qué contenido mostrar, y renderiza la información correspondiente en función de la selección del usuario. Este diseño modular y flexible facilita la actualización y expansión del contenido de la aplicación.
 
 ### App.jsx
 
