@@ -2,6 +2,11 @@
 
 https://react.new/
 
+```
+cd \Users\chris\OneDrive\Documentos\GitHub\react\01-starting-project
+\Users\chris\OneDrive\Documentos\GitHub\react\01-starting-project> npm run dev
+```
+
 Tengo vinculada mi cuenta GitHub a la cuenta codesandbox.
 
 React es una biblioteca de JavaScript desarrollada por Facebook para construir interfaces de usuario (UI). Se utiliza principalmente para desarrollar aplicaciones web de una sola página (SPA) y aplicaciones móviles. React permite a los desarrolladores crear componentes reutilizables que gestionan su propio estado, lo que facilita la construcción de interfaces de usuario complejas y dinámicas.
