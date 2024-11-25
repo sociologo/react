@@ -30,7 +30,7 @@ export const CORE_CONCEPTS = [
    },
 ];
 
-   export const EXAMPLES = {
+export const EXAMPLES = {
    components: {
       title: 'Components',
       description:
@@ -38,7 +38,7 @@ export const CORE_CONCEPTS = [
       code: `
          function Welcome() {
          return <h1>Hello, World!</h1>;
-         }`,
+      }`,
    },
    jsx: {
       title: 'JSX',
@@ -49,7 +49,7 @@ export const CORE_CONCEPTS = [
          <h1>Welcome {userName}</h1>
          <p>Time to learn React!</p>
          </div>`,
-         },
+      },
    props: {
       title: 'Props',
       description:
@@ -58,25 +58,26 @@ export const CORE_CONCEPTS = [
          function Welcome(props) {
          return <h1>Hello, {props.name}</h1>;
          }`,
-         },
+      },
    state: {
       title: 'State',
       description:
          'State allows React components to change their output over time in response to user actions, network responses, and anything else.',
       code: `
          function Counter() {
+
          const [isVisible, setIsVisible] = useState(false);
 
-            function handleClick() {
-               setIsVisible(true);
-            }
+         function handleClick() {
+            setIsVisible(true);
+         }
 
-            return (
-               <div>
-                  <button onClick={handleClick}>Show Details</button>
-                  {isVisible && <p>Amazing details!</p>}
-               </div>
-            );
-            }`,
-         },
+         return (
+            <div>
+               <button onClick={handleClick}>Show Details</button>
+               {isVisible && <p>Amazing details!</p>}
+            </div>
+         );
+      }`,
+   },
 };
