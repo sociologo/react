@@ -888,17 +888,33 @@ function App() {
 export default App;
 ```
 
-La siguiente **section** define una estructura HTML que incluye un menú de botones de pestañas (TabButton) y un área de contenido que muestra información basada en la pestaña seleccionada. El componente `<section>` con el id="examples" contiene un encabezado `<h2>` titulado "Ejemplos". Dentro de esta sección, hay un elemento `<menu>` que contiene varios componentes TabButton, cada uno con un onSelect que llama a la función handleSelect con diferentes argumentos ('components', 'jsx', 'props', 'state'). Estos botones permiten al usuario seleccionar diferentes temas.
+La **`<section>`** define una estructura HTML que incluye un menú de botones de pestañas (TabButton) y un área de contenido que muestra información basada en la pestaña seleccionada. El componente `<section>` con el id="examples" contiene un encabezado `<h2>` titulado "Ejemplos". Dentro de esta sección, hay un elemento `<menu>` que contiene varios componentes TabButton, cada uno con un onSelect que llama a la función handleSelect con diferentes argumentos ('components', 'jsx', 'props', 'state'). Estos botones permiten al usuario seleccionar diferentes temas.
 
 Cuando se selecciona un tema, el contenido correspondiente se muestra en el `<div id="tab-content">`. Este `<div>` contiene un encabezado `<h3>` que muestra el título del ejemplo seleccionado (`{EXAMPLES[selectedTopic].title}`), un párrafo `<p>` que muestra la descripción (`{EXAMPLES[selectedTopic].description}`), y un bloque de código `<pre><code>` que muestra el código del ejemplo (`{EXAMPLES[selectedTopic].code}`). La variable selectedTopic determina qué contenido se muestra, y EXAMPLES es un objeto que contiene los datos de los ejemplos.
 
 ```Javascript
-<menu>
-  <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
-  <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-  <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-  <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
-</menu>
+<section id = "examples">
+   <h2>Ejemplos</h2>
+   <menu>
+      <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+      <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+      <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+      <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+   </menu>
+      <div id = 'tab-content'>
+         <h3>
+            {EXAMPLES[selectedTopic].title}
+         </h3>
+         <p>
+            {EXAMPLES[selectedTopic].description}
+         </p>
+         <pre>
+            <code>
+               {EXAMPLES[selectedTopic].code}
+            </code>
+         </pre>
+      </div>
+</section>
 ```
 
 ### TabButton.jsx
