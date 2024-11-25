@@ -923,9 +923,11 @@ Cuando se selecciona un tema, el contenido correspondiente se muestra en el `<di
 
 ### TabButton.jsx
 
+El componente TabButton es una función que acepta dos props: children y onSelect. El prop **children** representa el contenido que se pasará entre las etiquetas de apertura y cierre del componente TabButton. El prop **onSelect** es una función que se ejecutará cuando se haga clic en el botón.
+
 El componente TabButton es una función que recibe dos props: children y onSelect. Este componente devuelve un elemento de lista (`<li>`) que contiene un botón (`<button>`). El botón tiene un manejador de eventos onClick que se establece en la función onSelect pasada como prop. Esto significa que cuando se hace clic en el botón, se ejecutará la función onSelect. El contenido del botón se define mediante el prop children, que permite que cualquier contenido pasado entre las etiquetas de apertura y cierre del componente TabButton se renderice dentro del botón. Este diseño hace que el componente sea flexible y reutilizable, permitiendo que diferentes contenidos y funciones de clic se pasen según sea necesario.
 
-El prop children de React se utiliza para pasar contenido dinámico a los componentes TabButton.
+El prop children de React se utiliza para pasar contenido dinámico a los componentes TabButton. El prop children permite que el componente TabButton sea flexible y reutilizable, ya que puede mostrar diferentes contenidos y ejecutar diferentes funciones de clic según sea necesario.
 
 Dentro del componente TabButton, el contenido pasado como children se renderiza dentro del botón. Esto significa que el texto "Components", "JSX", "Props" y "State" se mostrará dentro de los botones correspondientes. Cuando se hace clic en un botón, se ejecuta la función onSelect asociada, que en este caso llama a handleSelect con el argumento correspondiente.
 
@@ -940,8 +942,6 @@ export default function TabButton({children, onSelect}) {
    );
 }
 ```
-
-El componente TabButton es una función que acepta dos props: children y onSelect. El prop **children** representa el contenido que se pasará entre las etiquetas de apertura y cierre del componente TabButton. El prop **onSelect** es una función que se ejecutará cuando se haga clic en el botón.
 
 En  el siguiente fragmento de código, se utiliza el componente TabButton varias veces dentro de un elemento `<menu>`. Cada instancia de TabButton recibe una función **onSelect** diferente y un contenido diferente como **children**. Por ejemplo, el primer TabButton tiene `onSelect={() => handleSelect('components')}` y children es el texto "Components".
 
@@ -962,7 +962,7 @@ function handleSelect(selectedButton) {
 }
 ```
 
-El prop children permite que el componente TabButton sea flexible y reutilizable, ya que puede mostrar diferentes contenidos y ejecutar diferentes funciones de clic según sea necesario.
+
 
 
 
