@@ -1,9 +1,6 @@
 <p align="center">
-  <![image](https://github.com/user-attachments/assets/21c670d0-f481-4cdf-ba1a-6ae4a0544401)
- alt="image" width="60%">
+  <img src="https://github.com/user-attachments/assets/63b6eaa8-5b80-4f64-9285-705612903b16" alt="image" width="60%">
 </p>
-
-
 
 # Componentes
 
