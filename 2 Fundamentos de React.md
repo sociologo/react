@@ -1,7 +1,9 @@
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c4ddf05c-f018-486c-af59-820e149301a1" alt="image" width="60%">
+  <![image](https://github.com/user-attachments/assets/21c670d0-f481-4cdf-ba1a-6ae4a0544401)
+ alt="image" width="60%">
 </p>
 
+![Uploading image.png…]()
 
 # Componentes
 
