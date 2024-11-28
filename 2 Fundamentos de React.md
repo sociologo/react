@@ -3,7 +3,7 @@
  alt="image" width="60%">
 </p>
 
-![Uploading image.png…]()
+
 
 # Componentes
 
