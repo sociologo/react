@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/c4ddf05c-f018-486c-af59-820e149301a1)
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c4ddf05c-f018-486c-af59-820e149301a1" alt="image" width="60%">
 </p>
