@@ -326,11 +326,11 @@ Crearemos una carpeta Header dentro de la carpeta components en la que almacenar
 
 ### 5 La propiedad especial children y composición de componentes.
 
-### children
+### children: definicion
 
-En React, children es una prop especial que permite a los componentes anidar otros componentes o elementos dentro de ellos. Básicamente, children representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente.
+En React, **children** es una **prop** especial que permite a los componentes anidar otros componentes o elementos dentro de ellos. Básicamente, children representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente.
 
-Por ejemplo, si tienes un componente **Card **y lo usas de esta manera:
+Por ejemplo, si tienes un componente **Card** y lo usas de esta manera:
 
 ```JavaScript
 <Card>
@@ -339,7 +339,8 @@ Por ejemplo, si tienes un componente **Card **y lo usas de esta manera:
 </Card>
 ```
 
-El contenido 
+El contenido:
+
 ```JavaScript
 <h2>Título</h2>
 <p>Este es el contenido de la tarjeta.</p> 
@@ -357,6 +358,8 @@ const Card = ({ children }) => {
 ```
 
 Esto permite crear componentes más flexibles y reutilizables, ya que puedes definir el contenido de un componente desde fuera, en lugar de tenerlo fijo dentro del componente.
+
+Es un concepto complejo.
 
 ### Composición de componentes
 
