@@ -8,8 +8,8 @@
 
 * [1 Componentes](#1-Componentes)
   * [11 Caracteristicas](#11-Caracteristicas)
-* [5 La propiedad especial "children" y composición de componentes](#5-La-propiedad-especial-children-y-composición-de-componentes)
-
+* [5 El concepto de children](#5-El-concepto-de-children)
+* [6 El concepto de State](#6-El-concepto-de-State)
 
 
 ## 1 Componentes
@@ -324,9 +324,9 @@ Crearemos una carpeta Header dentro de la carpeta components en la que almacenar
 ![image](https://github.com/user-attachments/assets/1ae3035f-aeec-4dcd-8c30-89ad6d27f23f)
 ![image](https://github.com/user-attachments/assets/b89c56ed-46f1-4da5-ab0f-544ef4dbec27)
 
-### 5 La propiedad especial children y composición de componentes.
 
-### children: definicion
+
+# 5 El concepto de children
 
 En React, **children** es una **prop** especial que permite a los componentes anidar otros componentes o elementos dentro de ellos. Básicamente, children representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente.
 
@@ -361,7 +361,7 @@ Esto permite crear componentes más flexibles y reutilizables, ya que puedes def
 
 Es un concepto complejo.
 
-### Composición de componentes
+#### 52 Composición de componentes: definicion
 
 En el contexto de React, la composición de componentes es una técnica que permite construir interfaces de usuario complejas a partir de componentes más pequeños y reutilizables. En lugar de crear un único componente grande que haga todo, se divide la funcionalidad en componentes más pequeños y se combinan para formar la interfaz deseada12.
 
@@ -402,7 +402,8 @@ En este ejemplo, App es el componente principal que compone otros dos componente
 
 La composición de componentes es preferida sobre la herencia en React porque permite una mayor flexibilidad y reutilización del código. Al usar la composición, puedes crear componentes más específicos y reutilizables que se pueden combinar de diferentes maneras para construir interfaces complejas.
 
-### Ejemplo:
+#### 53 Ejemplo:
+
 ```JavaScript
 // App.js
 import React from 'react';
@@ -460,13 +461,7 @@ Produce una salida de este tipo:
 
 ![image](https://github.com/user-attachments/assets/7ecd8f25-df7e-4d07-9085-c6d0d432d356)
 
-***
-### Ejemplo de reaccion aventos
-
-
-***
-
-### Ejercicio
+#### 54 Ejemplo de reaccion aventos
 
 // Your goal is to change the email, password and loggedIn values when the button in the App component is pressed
 // Change them to any values of your choice (except loggedIn => that should be changed to true)
@@ -558,7 +553,7 @@ export default App;
 ```
 ***
 
-### ejemplo
+#### 55 Ejemplo
 
 Configuración de Manejadores de Eventos
 
@@ -630,7 +625,7 @@ export default App;
 ```
 ***
 
-## El concepto de State
+# 6 El concepto de State
 
 En React, el **state** es un objeto que permite a los componentes mantener y gestionar datos que pueden cambiar a lo largo del tiempo. A diferencia de las props, que son inmutables y se pasan desde componentes padres a hijos, el **state** es mutable y es local a cada componente.
 
