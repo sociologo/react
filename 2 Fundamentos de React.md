@@ -822,56 +822,29 @@ export default function App() {
 
 # 8 Botones y contenidos dinámicos.
 
-Lo que haremos en ésta sección será darle contenido dinámico a un cuadro de texto despues de darle click a su correspondiente botón en un menú como se muestra en la figura:
+***
+
+## El botón
+
+Construiremos una sección interactiva, por lo que daremos contenido dinámico a un cuadro de texto despues de dar click a su correspondiente botón en un menú como se muestra en la figura:
 
 ![image](https://github.com/user-attachments/assets/3d02d38b-4458-4600-85a5-af08f56edb51)
 
 El archivo **App.jsx** define una aplicación que organiza y muestra contenido dinámico basado en la selección del usuario. Utiliza componentes reutilizables como **TabButton.jsx** para crear un menú de navegación que permite cambiar entre diferentes temas. La aplicación gestiona el estado para determinar qué contenido mostrar, y renderiza la información correspondiente en función de la selección del usuario. Este diseño modular y flexible facilita la actualización y expansión del contenido de la aplicación.
 
-### App.jsx
+Veamos el siguiente fragmento de código del archivo App.jsx:
+
+### 81 App.jsx
 
 ```Javascript
-import {useState} from 'react';
-import {CORE_CONCEPTS} from "./data.js";
-import Header from './components/Header/Header.jsx';
-import CoreConcept from './components/CoreConcepts.jsx';
-import TabButton from './components/TabButton.jsx';
-import {EXAMPLES} from './data.js';
-
-function App() {
-
-   const [selectedTopic, setSelectedTopic] = useState('components');
-
-   function handleSelect(selectedButton) {
-      setSelectedTopic(selectedButton);
-   }
-
-   return (
-      <div>
-         <Header />
-         <main>
-            <section id = 'core-concepts'>
-               <h2>
-                  Core Concepts
-               </h2>
-                  <ul>
-                     <CoreConcept                  
-                        title = {CORE_CONCEPTS[0].title}
-                        description = {CORE_CONCEPTS[0].description} 
-                        image = {CORE_CONCEPTS[0].image}                
-                     />
-                     <CoreConcept {...CORE_CONCEPTS[1]}/>
-                     <CoreConcept {...CORE_CONCEPTS[2]}/>
-                     <CoreConcept {...CORE_CONCEPTS[3]}/>                   
-                  </ul>              
-            </section>
+// some code
             <section id = "examples">
                <h2>Ejemplos</h2>
                <menu>
                   <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
                   <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
                   <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-                  <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+                  <TabButton onSelect={() => handleSelect('state')}>State</TabButton>               
                </menu>
                   <div id = 'tab-content'>
                      <h3>
@@ -887,48 +860,20 @@ function App() {
                      </pre>
                   </div>
             </section>
-         </main>
-      </div>
-   );
-}
-
-export default App;
+// some code
 ```
 
-La segunda `<section>` define una estructura HTML que incluye un menú de botones de pestañas (TabButton) y un área de contenido que muestra información basada en la pestaña seleccionada. Dentro de esta `<section>`, hay un elemento `<menu>` que contiene varios componentes TabButton, cada uno con un **onSelect** que llama a la función handleSelect con diferentes argumentos ('components', 'jsx', 'props', 'state'). Estos botones permiten al usuario seleccionar diferentes temas.
+La `<section>` define una estructura HTML que incluye un menú de botones de pestañas (TabButton) y un área de contenido que muestra información basada en la pestaña seleccionada. Dentro de esta `<section>`, hay un elemento `<menu>` que contiene varios componentes TabButton, cada uno con un **onSelect** que llama a la función handleSelect con diferentes argumentos ('components', 'jsx', 'props', 'state'). Estos botones permiten al usuario seleccionar diferentes temas.
 
-Cuando se selecciona un tema, el contenido correspondiente se muestra en el `<div id="tab-content">`. Este `<div>` contiene un encabezado `<h3>` que muestra el título del ejemplo seleccionado (`{EXAMPLES[selectedTopic].title}`), un párrafo `<p>` que muestra la descripción (`{EXAMPLES[selectedTopic].description}`), y un bloque de código `<pre><code>` que muestra el código del ejemplo (`{EXAMPLES[selectedTopic].code}`). La variable selectedTopic determina qué contenido se muestra, y EXAMPLES es un objeto que contiene los datos de los ejemplos.
+Cuando se selecciona un tema, el contenido correspondiente se muestra en el `<div id="tab-content">`. Este `<div>` contiene un encabezado `<h3>` que muestra el título del ejemplo seleccionado (`{EXAMPLES[selectedTopic].title}`), un párrafo `<p>` que muestra su descripción (`{EXAMPLES[selectedTopic].description}`), y un bloque de código `<pre><code>` que muestra el código del ejemplo (`{EXAMPLES[selectedTopic].code}`). La variable **selectedTopic** determina qué contenido se muestra, y EXAMPLES es un objeto que contiene los datos de los ejemplos.
 
-```Javascript
-<section id = "examples">
-   <h2>Ejemplos</h2>
-   <menu>
-      <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
-      <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-      <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-      <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
-   </menu>
-      <div id = 'tab-content'>
-         <h3>
-            {EXAMPLES[selectedTopic].title}
-         </h3>
-         <p>
-            {EXAMPLES[selectedTopic].description}
-         </p>
-         <pre>
-            <code>
-               {EXAMPLES[selectedTopic].code}
-            </code>
-         </pre>
-      </div>
-</section>
-```
+Necesitamos ahora construir un componente TabButton que despliegue los botones de seleccion y ejerza la accion de despliegue de contenido:
 
-### TabButton.jsx
+### 82 TabButton.jsx
 
-El componente TabButton es una función que acepta dos props: children y onSelect. El prop **children** representa el contenido que se pasará entre las etiquetas de apertura y cierre del componente TabButton. El prop **onSelect** es una función que se ejecutará cuando se haga clic en el botón.
+El componente TabButton es una función que recibe dos props: **children** y **onSelect**. El prop **children** representa el contenido que se pasará entre las etiquetas de apertura y cierre del componente TabButton. El prop **onSelect** es una función que se ejecutará cuando se haga clic en el botón.
 
-El componente TabButton es una función que recibe dos props: children y onSelect. Este componente devuelve un elemento de lista (`<li>`) que contiene un botón (`<button>`). El botón tiene un manejador de eventos onClick que se establece en la función onSelect pasada como prop. Esto significa que cuando se hace clic en el botón, se ejecutará la función onSelect. El contenido del botón se define mediante el prop children, que permite que cualquier contenido pasado entre las etiquetas de apertura y cierre del componente TabButton se renderice dentro del botón. Este diseño hace que el componente sea flexible y reutilizable, permitiendo que diferentes contenidos y funciones de clic se pasen según sea necesario.
+El componente TabButton devuelve un elemento de lista (`<li>`) que contiene un botón (`<button>`). El botón tiene un manejador de eventos onClick que se establece en la función onSelect pasada como prop. Esto significa que cuando se hace clic en el botón, se ejecutará la función **onSelect**. El contenido del botón se define mediante el prop children, que permite que **cualquier contenido pasado entre las etiquetas de apertura y cierre del componente TabButton se renderice dentro del botón**. Este diseño hace que el componente sea flexible y reutilizable, permitiendo que diferentes contenidos y funciones de clic se pasen según sea necesario.
 
 El prop children de React se utiliza para pasar contenido dinámico a los componentes TabButton. El prop children permite que el componente TabButton sea flexible y reutilizable, ya que puede mostrar diferentes contenidos y ejecutar diferentes funciones de clic según sea necesario.
 
@@ -946,7 +891,38 @@ export default function TabButton({children, onSelect}) {
 }
 ```
 
-En  el siguiente fragmento de código, se utiliza el componente TabButton varias veces dentro de un elemento `<menu>`. Cada instancia de TabButton recibe una función **onSelect** diferente y un contenido diferente como **children**. Por ejemplo, el primer TabButton tiene `onSelect={() => handleSelect('components')}` y children es el texto "Components".
+Lo que hemos visto es un tipo de composicion de componentes. (insertar ejercio entre 49 y 50)
+
+***
+
+## Dándole poder al botón
+
+Recordemos que en React escribimos codigo **declarativo** y NO **imperativo** como en  javascript común, por lo que no interactuaremos con el DOM, dejaremos que React se encargue de eso utilizando el prop especial **onClick** sobre la función **onSelect**.
+
+La función `onSelect` es un manejador de eventos que se utiliza para capturar y manejar la selección de elementos en una interfaz de usuario. En el contexto de React, se emplea para gestionar la interacción del usuario con componentes que permiten la selección de opciones, como listas desplegables, menús, tablas, y otros elementos interactivos.
+
+La ventaja de definir estas funciones de manejador de eventos dentro de la función del componente es que de esta manera tienen acceso a las **props** y **states** del componente.
+
+### 83 la función handleSelect()
+
+La función utiliza el hook **useState** para declarar una variable de estado llamada **selectedTopic** y una función para actualizarla llamada **setSelectedTopic**. El valor inicial de **selectedTopic** es **'components'**.
+
+Función manejadora: La función **handleSelect** toma un parámetro **selectedButton**. Dentro de esta función, se llama a **setSelectedTopic** con **selectedButton** como argumento. Esto actualiza el estado **selectedTopic** con el valor de **selectedButton**.
+
+Este código define un estado inicial para **selectedTopic** y proporciona una función **handleSelect** que puede actualizar ese estado cuando se selecciona un nuevo botón o elemento. Esto es útil para manejar la lógica de selección en una interfaz de usuario, permitiendo que el componente reaccione a las interacciones del usuario y actualice en consecuencia su estado .
+
+```javascript
+const [selectedTopic, setSelectedTopic] = useState('components');
+function handleSelect(selectedButton) {
+  setSelectedTopic(selectedButton);
+}
+```
+
+El fragmento de código App.jsx define un menú que contiene varios botones de pestaña (TabButton). Cada botón de pestaña tiene un manejador de eventos onSelect que se activa cuando el usuario selecciona ese botón. El manejador de eventos onSelect está configurado para llamar a la función handleSelect con un argumento específico que representa el tema seleccionado (por ejemplo, 'components', 'jsx', 'props', 'state').
+
+Cuando un usuario selecciona uno de estos botones de pestaña, la función handleSelect se ejecuta con el argumento correspondiente, actualizando así el estado selectedTopic con el valor del botón seleccionado. Esto permite que la aplicación reaccione a la selección del usuario y actualice la interfaz de usuario en consecuencia, mostrando el contenido relevante para el tema seleccionado.
+
+Este código configura un menú interactivo donde cada botón de pestaña puede cambiar el estado de la aplicación al ser seleccionado, permitiendo una navegación dinámica entre diferentes temas.
 
 ```javascript
 <menu>
@@ -957,17 +933,12 @@ En  el siguiente fragmento de código, se utiliza el componente TabButton varias
 </menu>
 ```
 
-### La función handleSelect
+#### insertar ejercicio entre 51 y 52.
 
-```javascript
-const [selectedTopic, setSelectedTopic] = useState('components');
 
-function handleSelect(selectedButton) {
-  setSelectedTopic(selectedButton);
-}
-```
 
-lo que un no entiendo es como selectedButton apunta especificamente a cada uno de los valores: Components, JSX, Props y State.
+
+
 
 
 
