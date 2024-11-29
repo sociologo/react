@@ -935,18 +935,91 @@ Este código configura un menú interactivo donde cada botón de pestaña puede 
 
 #### insertar ejercicio entre 51 y 52.
 
+#### insertar ejercicio entre 52 y 53.
 
+### 84 El funcionamiento de los componentes en react.
 
+Por defecto, React solo ejecutará una funcion **componente** UNA SOLA VEZ cuando por primera vez encuentre algo en el codigo. Luego, ninguna de la funciones de ejecutara de nuevo. Es por eso que resulta fundamental comprender en React el concepto de **state**.
 
+# 9 El concepto de state.
 
+En React, el concepto de **state** es fundamental para crear componentes interactivos y dinámicos. El **state** es un objeto que almacena datos que pueden cambiar a lo largo del ciclo de vida de un componente. Estos datos pueden ser cualquier cosa, desde valores simples como números y cadenas, hasta objetos más complejos y arreglos.
 
+Detalles Generales del state en React:
 
+-1 Inicialización: El estado se inicializa en el constructor de un componente de clase o mediante el hook useState en componentes funcionales. Este estado inicial puede ser cualquier valor que necesite el componente para empezar.
 
+-2 Actualización: El estado se puede actualizar mediante la función setState en componentes de clase o la función de actualización proporcionada por useState en componentes funcionales. Cada vez que el estado cambia, React vuelve a renderizar el componente para reflejar los nuevos datos.
 
+-3 Reactividad: La principal ventaja del estado es que permite que los componentes reaccionen a cambios en los datos. Cuando el estado cambia, React actualiza automáticamente la interfaz de usuario para reflejar estos cambios, lo que facilita la creación de aplicaciones interactivas.
 
+-4 Encapsulación: El estado es privado y completamente controlado por el componente en el que se define. Esto significa que otros componentes no pueden modificar directamente el estado de un componente, lo que ayuda a mantener la integridad de los datos y la lógica de la aplicación.
 
+-5 Propagación de Datos: Aunque el estado es privado para cada componente, se puede pasar como propiedades (props) a componentes hijos. Esto permite que los componentes padres controlen el estado y lo compartan con sus hijos de manera controlada.
 
+-6 Ciclo de Vida: En componentes de clase, el estado puede ser manipulado en varios métodos del ciclo de vida, como componentDidMount, componentDidUpdate y componentWillUnmount. En componentes funcionales, los hooks como useEffect permiten manejar efectos secundarios relacionados con el estado.
 
+-7 Optimización: React optimiza las actualizaciones del estado para minimizar el número de renderizaciones y mejorar el rendimiento. Utiliza un algoritmo de reconciliación para determinar los cambios mínimos necesarios en el DOM.
+
+El estado en React es una herramienta poderosa que permite a los desarrolladores crear interfaces de usuario dinámicas y reactivas, manteniendo al mismo tiempo una estructura de datos clara y controlada.
+
+## useState
+
+Todas las funciones que comienzan con use en React son react **Hooks**
+
+## Reglas de los hooks en React
+
+Los hooks en React deben seguir ciertas reglas para funcionar correctamente y evitar errores. Aquí tienes las reglas principales:
+
+- 1 Llamar hooks solo en el nivel superior: No llames hooks dentro de loops, condiciones o funciones anidadas. Deben ser llamados en el nivel superior de tu componente para asegurar que se ejecuten en el mismo orden en cada renderizado.
+
+- 2 Llamar hooks solo desde funciones de React: Usa hooks solo dentro de componentes funcionales de React o desde tus propios hooks personalizados. No los llames desde funciones JavaScript normales.
+
+- 3 Usar el prefijo "use": Todos los hooks deben comenzar con el prefijo "use" (por ejemplo, useState, useEffect). Esto es una convención que ayuda a identificar que una función es un hook y permite a React aplicar las reglas de hooks.
+
+- 4 No usar hooks condicionalmente: Asegúrate de que los hooks se llamen en el mismo orden cada vez que se renderiza un componente. No los llames dentro de bloques condicionales (if, else, switch, etc.).
+
+- 5 Mantener la consistencia en el orden de los hooks: La consistencia en el orden de los hooks es crucial para que React pueda asociar correctamente el estado y los efectos con los componentes.
+
+Estas reglas aseguran que los hooks funcionen de manera predecible y eficiente, permitiendo a React gestionar el estado y los efectos de los componentes de manera correcta.
+
+## useState
+
+`useState` es un hook en React que permite a los componentes funcionales tener un estado interno. Antes de los hooks, solo los componentes de clase podían tener estado. Con `useState`, los componentes funcionales pueden gestionar y actualizar su propio estado.
+
+¿Cómo funciona `useState`?
+
+- 1 Inicialización del Estado: Cuando llamas a `useState`, pasas un valor inicial que se convierte en el estado inicial del componente. Este valor puede ser cualquier tipo de dato: un número, una cadena, un objeto, un arreglo, etc.
+
+- 2 Desestructuración: `useState` devuelve un arreglo con dos elementos:
+
+El primer elemento es el valor actual del estado.
+
+El segundo elemento es una función que se usa para actualizar el estado.
+
+- 3 Actualización del Estado: Para actualizar el estado, llamas a la función de actualización con el nuevo valor del estado. React se encarga de volver a renderizar el componente con el nuevo estado.
+
+Beneficios de `useState`
+
+- 1 Simplicidad: `useState` es fácil de usar y entender, lo que simplifica la gestión del estado en componentes funcionales.
+
+- 2 Encapsulación: El estado es privado para el componente en el que se define, lo que ayuda a mantener la lógica del estado encapsulada y modular.
+
+- 3 Reactividad: Cuando el estado cambia, React vuelve a renderizar el componente automáticamente, asegurando que la interfaz de usuario esté siempre sincronizada con el estado.
+
+Consideraciones
+
+- 1 Inmutabilidad: Es importante tratar el estado como inmutable. En lugar de modificar el estado directamente, siempre debes crear una nueva copia del estado con los cambios deseados.
+
+- 2 Asincronía: Las actualizaciones del estado pueden ser asincrónicas. React puede agrupar varias actualizaciones del estado para optimizar el rendimiento.
+
+En resumen, `useState` es una herramienta poderosa que permite a los componentes funcionales en React gestionar su propio estado de manera sencilla y eficiente.
+
+### insertar ejercicio entre 54 y 55
+
+# Desplegar data dinamica de un objeto JavaScript. 
+
+leccion 55
 
 
 
