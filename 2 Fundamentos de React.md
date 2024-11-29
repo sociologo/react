@@ -10,9 +10,9 @@
   * [11 Caracteristicas](#11-Caracteristicas)
 * [5 El concepto de children](#5-El-concepto-de-children)
 * [6 El concepto de State](#6-El-concepto-de-State)
+* [7 El concepto de Hook](#7-El-concepto-de-Hook)
 
-
-## 1 Componentes
+# 1 Componentes
 
 En React, un componente es una pieza reutilizable y autónoma de código que define una parte de la interfaz de usuario. Los componentes son los bloques de construcción fundamentales de una aplicación React. 
 
@@ -690,7 +690,8 @@ export default Counter;
 
 En este ejemplo, el componente Counter tiene un **state** count que se incrementa cada vez que se hace clic en el botón. React vuelve a renderizar el componente cada vez que el estado cambia, mostrando el nuevo valor de count.
 
-### Hooks
+# 7 El concepto de Hook
+
 
 Los hooks en React son una característica introducida en la versión 16.8 que permite usar el **state** y otras funcionalidades de React en componentes funcionales, sin necesidad de escribir componentes de clase. Los hooks simplifican la lógica de los componentes y facilitan la reutilización de código.
 
