@@ -8,7 +8,7 @@
 
 * [1 Componentes](#1-Componentes)
   * [11 Caracteristicas](#11-Caracteristicas)
-* [5 La propiedad especial "children" y composición de componentes](#5-La-propiedad-especial-"children"-y-composición-de-componentes)
+* [5 La propiedad especial "children" y composición de componentes](#5-La-propiedad-especial-children-y-composición-de-componentes)
 
 
 
@@ -324,7 +324,7 @@ Crearemos una carpeta Header dentro de la carpeta components en la que almacenar
 ![image](https://github.com/user-attachments/assets/1ae3035f-aeec-4dcd-8c30-89ad6d27f23f)
 ![image](https://github.com/user-attachments/assets/b89c56ed-46f1-4da5-ab0f-544ef4dbec27)
 
-### 5 La propiedad especial "children" y composición de componentes.
+### 5 La propiedad especial children y composición de componentes.
 
 ### children
 
