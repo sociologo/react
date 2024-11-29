@@ -7,17 +7,35 @@
 ## Índice
 
 * [1 Componentes](#1-Componentes)
-  * [11 Caracteristicas](#11-Caracteristicas)
-* [5 El concepto de children](#5-El-concepto-de-children)
-* [6 El concepto de State](#6-El-concepto-de-State)
-* [7 El concepto de Hook](#7-El-concepto-de-Hook)
-* [8 Botones y contenidos dinámicos](#8-Botones-y-contenidos-dinámicos)
+  * [11 Características](#11-Caracteristicas)
+  * [12 Tipos de Componentes](#12-Tipos-de-Componentes)
+  * [13 Ejemplo](#13-Ejemplo)
+  * [14 Ventajas de Usar Componentes](#14-Ventajas-de-Usar-Componentes)
+  * [15 Nuestro primer componente](#15 Nuestro-primer-componente)
+  * [16 Reglas](#16-Reglas)
+* [Digresion Contenido dinamico en una web](#Digresion-Contenido-dinamico-en-una-web)
+* [2 Props](#2-Props)
+  * [21 Intro](#21-Intro)
+  * [22 Ejemplo](#22-Ejemplo)
+* [Digresión Organizando correctamente componentes y css](#Digresión-Organizando-correctamente-componentes-y-css)
+  * [21 Componentes](#21 Componentes)
+  * [22 CSS](#22 CSS)
+* [3 El concepto de children](#3 El concepto de children)
+  * [31 Introducción](#31 Introducción)
+  * [32 Composición de componentes definición](#32 Composición de componentes definición)
+  * [33 Ejemplo](#33 Ejemplo)
+  * [34 Ejemplo de reacción a eventos](#34 Ejemplo de reacción a eventos)
+  * [35 Ejemplo](#35 Ejemplo)
+ 
+
+
+
 
 # 1 Componentes
 
 En React, un componente es una pieza reutilizable y autónoma de código que define una parte de la interfaz de usuario. Los componentes son los bloques de construcción fundamentales de una aplicación React. 
 
-### 11 Caracteristicas
+## 11 Caracteristicas
 
 - Reutilizable y Autónomo: Un componente es una unidad de código que puede ser reutilizada en diferentes partes de una aplicación o incluso en diferentes proyectos. Cada componente es autónomo, lo que significa que maneja su propio estado y lógica.
 
@@ -25,7 +43,7 @@ En React, un componente es una pieza reutilizable y autónoma de código que def
 
 - Jerarquía de Componentes: Los componentes pueden ser pequeños, como un botón, o grandes, como una página completa. Puedes combinar componentes pequeños para formar componentes más grandes, creando una jerarquía de componentes que define la estructura de la interfaz de usuario.
 
-## Tipos de Componentes
+## 12 Tipos de Componentes
 
 - Componentes Funcionales: Son funciones de JavaScript que aceptan props (propiedades) como argumento y devuelven elementos de React. Son más simples y se utilizan comúnmente con hooks para manejar el estado y los efectos secundarios.
 
@@ -45,7 +63,7 @@ class Greeting extends React.Component {
 }
 ```
 
-## Ejemplo
+## 13 Ejemplo
 
 Ejemplo simple de un componente funcional en React:
 
@@ -64,7 +82,7 @@ WelcomeMessage es un componente funcional que acepta una prop name.
 
 El componente devuelve un elemento h1 que muestra un mensaje de bienvenida utilizando la prop name.
 
-## Ventajas de Usar Componentes
+## 14 Ventajas de Usar Componentes
 
 - Reutilización: Puedes reutilizar componentes en diferentes partes de tu aplicación, lo que reduce la duplicación de código.
 
@@ -74,7 +92,7 @@ El componente devuelve un elemento h1 que muestra un mensaje de bienvenida utili
 
 En resumen, los componentes en React te permiten construir interfaces de usuario de manera eficiente y organizada, aprovechando la reutilización y la modularidad del código.
 
-# Nuestro primer componente
+# 15 Nuestro primer componente
 
 ```JavaScript
 function Header() {
@@ -97,7 +115,7 @@ function Header() {
 
 ![image](https://github.com/user-attachments/assets/699b69b9-a6b5-4620-bb6c-ae2831a0a510)
 
-## Reglas
+## 16 Reglas
 
 Un componente de React debe seguir las siguientes reglas:
 
@@ -105,13 +123,15 @@ Un componente de React debe seguir las siguientes reglas:
 
 2 La funcion debe retornar un contenido renderizable, esto es, contenido que react pueda desplegar en el navegador.
 
-## 43 Contenido dinamico en una web
+# Digresion Contenido dinamico en una web
 
 ![image](https://github.com/user-attachments/assets/bae63692-bffe-42ca-9fb2-ebea39f3f166)
 
 La función Math.random() en JavaScript devuelve un número de coma flotante pseudo-aleatorio comprendido en el rango de 0 (incluido) a 1 (excluido). Esto significa que el valor devuelto puede ser 0, pero siempre será menor que 1.
 
-## 44 45 Props
+## Props
+
+lecciones 44 y 45
 
 ### Intro
 
@@ -275,6 +295,8 @@ el proyecto luce asi:
 
 ## 47 48 Organizando correctamente componentes y csss.
 
+lecciones 47 y 48
+
 ### Componentes
 
 No se recomienda tener todos los componentes de una aplicación React en un mismo archivo por varias razones:
@@ -327,7 +349,9 @@ Crearemos una carpeta Header dentro de la carpeta components en la que almacenar
 
 
 
-# 5 El concepto de children
+# 3 El concepto de children
+
+## Introducción
 
 En React, **children** es una **prop** especial que permite a los componentes anidar otros componentes o elementos dentro de ellos. Básicamente, children representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente.
 
