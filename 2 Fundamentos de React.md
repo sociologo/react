@@ -11,6 +11,7 @@
 * [5 El concepto de children](#5-El-concepto-de-children)
 * [6 El concepto de State](#6-El-concepto-de-State)
 * [7 El concepto de Hook](#7-El-concepto-de-Hook)
+* [8 Botones y contenidos dinámicos](#8-Botones-y-contenidos-dinámicos)
 
 # 1 Componentes
 
@@ -692,7 +693,6 @@ En este ejemplo, el componente Counter tiene un **state** count que se increment
 
 # 7 El concepto de Hook
 
-
 Los hooks en React son una característica introducida en la versión 16.8 que permite usar el **state** y otras funcionalidades de React en componentes funcionales, sin necesidad de escribir componentes de clase. Los hooks simplifican la lógica de los componentes y facilitan la reutilización de código.
 
 Principales Hooks en React
@@ -820,16 +820,7 @@ export default function App() {
 ```
 
 
-
-
-
-
-
-
-
-***
-
-## Botones y contenidos dinámicos. 49- 55
+# 8 Botones y contenidos dinámicos.
 
 Lo que haremos en ésta sección será darle contenido dinámico a un cuadro de texto despues de darle click a su correspondiente botón en un menú como se muestra en la figura:
 
