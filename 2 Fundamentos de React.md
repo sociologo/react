@@ -39,7 +39,7 @@
 * [7 El concepto de state](#7-El-concepto-de-state)
   * [71 useState](#71-useState)
   * [72 Reglas de los hooks en React](#72-Reglas-de-los-hooks-en-React)
-  * [73 useState](#73 useState)
+  * [73 useState](#73-useState)
   * [74 Desplegar data dinámica de un objeto JavaScript](#74-Desplegar-data-dinámica-de-un-objeto-JavaScript)
 
  
