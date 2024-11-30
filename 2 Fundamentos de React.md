@@ -359,7 +359,7 @@ Crearemos una carpeta Header dentro de la carpeta components en la que almacenar
 ![image](https://github.com/user-attachments/assets/b89c56ed-46f1-4da5-ab0f-544ef4dbec27)
 
 # 3 El concepto de children
-
+49
 ## 31 Introducción
 
 En React, **children** es una **prop** especial que permite a los componentes anidar otros dentro de ellos. Básicamente, **children** representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente.
@@ -370,42 +370,9 @@ Es un concepto complejo.
 
 ## 32 Composición de componentes
 
-En el contexto de React, la composición de componentes es una técnica que permite construir interfaces de usuario complejas a partir de componentes más pequeños y reutilizables. En lugar de crear un único componente grande que haga todo, se divide la funcionalidad en componentes más pequeños y se combinan para formar la interfaz deseada12.
+En el contexto de React, la composición de componentes es una técnica que permite construir interfaces de usuario complejas a partir de componentes más pequeños y reutilizables. En lugar de crear un único componente grande que haga todo, se divide la funcionalidad en componentes más pequeños y se combinan para formar la interfaz deseada.
 
-La composición de componentes se basa en el principio de que los componentes pueden contener otros componentes como hijos, lo que permite una estructura jerárquica y modular. Aquí tienes un ejemplo simple:
-
-```JavaScript
-// Header.js
-const Header = () => {
-  return <header><h1>Mi Aplicación</h1></header>;
-};
-
-// Footer.js
-const Footer = () => {
-  return <footer><p>© 2024 Mi Aplicación</p></footer>;
-};
-
-// App.js
-import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
-
-const App = () => {
-  return (
-    <div>
-      <Header />
-      <main>
-        <p>Bienvenido a mi aplicación.</p>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default App;
-```
-
-En este ejemplo, App es el componente principal que compone otros dos componentes (Header y Footer). Esto hace que el código sea más modular y fácil de mantener.
+La composición de componentes se basa en el principio de que los componentes pueden contener otros componentes como hijos, lo que permite una estructura jerárquica y modular. 
 
 La composición de componentes es preferida sobre la herencia en React porque permite una mayor flexibilidad y reutilización del código. Al usar la composición, puedes crear componentes más específicos y reutilizables que se pueden combinar de diferentes maneras para construir interfaces complejas.
 
