@@ -23,7 +23,7 @@
 * [3 El concepto de children](#3-El-concepto-de-children)
   * [31 Introducción](#31-Introducción)
   * [32 Composición de componentes](#32-Composición-de-componentes)
-  * [33 Ejemplo](#33-Ejemplo)
+  * [33 Reacción a eventos](#33-Reacción-a-eventos)
   * [34 Ejemplo de reacción a eventos](#34-Ejemplo-de-reacción-a-eventos)
   * [35 Ejemplo](#35-Ejemplo)
 * [4 El concepto de State](#4-El-concepto-de-State)
@@ -362,9 +362,7 @@ Crearemos una carpeta Header dentro de la carpeta components en la que almacenar
 49
 ## 31 Introducción
 
-En React, **children** es una **prop** especial que permite a los componentes anidar otros dentro de ellos. Básicamente, **children** representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente.
-
-Esto permite crear componentes más flexibles y reutilizables, ya que puedes definir el contenido de un componente desde fuera, en lugar de tenerlo fijo dentro del componente.
+En React, **children** es una **prop** especial que permite a los componentes anidar otros dentro de ellos. Básicamente, **children** representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente, contenido que puede ser una compleja estructura html que podemos llamar multiples veces con tal solo utilizar una sola etiqueta html. Esto permite crear componentes más flexibles y reutilizables.
 
 Observa el componente `TabButton.jsx`
 
@@ -390,6 +388,7 @@ ahora utilizamos el componente TabButton en App.jsx:
 
 App.jsx
 ```Javascript
+import TabButton from './components/TabButton.jsx';
 <menu>
   <TabButton>Components</TabButton>                 
 </menu>
@@ -403,85 +402,55 @@ App.jsx
 
 **Con `children` estamos ahorrando repetir líneas de código html.**
 
+existe otra forma de hacer esto y tambien debes conocerla.
+
+***
+
+ejercicio de composicion de componentes.
+
+La composición de componentes es preferida sobre la herencia en React porque permite una mayor flexibilidad y reutilización del código. 
+
 ## 32 Composición de componentes
 
-En el contexto de React, la composición de componentes es una técnica que permite construir interfaces de usuario complejas a partir de componentes más pequeños y reutilizables. En lugar de crear un único componente grande que haga todo, se divide la funcionalidad en componentes más pequeños y se combinan para formar la interfaz deseada.
+50
 
-La composición de componentes se basa en el principio de que los componentes pueden contener otros componentes como hijos, lo que permite una estructura jerárquica y modular. 
+Necesitamos ahora darle poder al click en los botones para que ejecuten la acción de mostrarnos un cuadro dinámico. 
 
-La composición de componentes es preferida sobre la herencia en React porque permite una mayor flexibilidad y reutilización del código. Al usar la composición, puedes crear componentes más específicos y reutilizables que se pueden combinar de diferentes maneras para construir interfaces complejas.
+`onClick` es un evento en React que se utiliza para manejar las acciones de clic del usuario en un elemento. Es similar al evento onclick en JavaScript, pero se usa dentro de componentes de React. 
 
-## 33 Ejemplo
-
-La tarea es crear un componente de tarjeta reutilizable que tome un nombre como entrada y, además, pueda incluirse en cualquier código JSX.
-
-Utilice el archivo Card.js ya existente para crear el componente Tarjeta allí. 
-
-El nombre de propiedad debe aparecer como un título dentro del componente Tarjeta, el código JSX empaquetado debe aparecer debajo de ese título.
-
-```JavaScript
-// App.js
-import React from 'react';
-import Card from './Card';
-
-function App() {
-  return (
-    <div id="app">
-      <h1>Available Experts</h1>
-      <Card name="Anthony Blake">
-        <p>
-          Blake is a professor of Computer Science at the University of Illinois.
-        </p>
-        <p>
-          <a href="mailto:blake@example.com">Email Anthony</a>
-        </p>
-      </Card>
-
-      <Card name="Maria Miles">
-        <p>
-          Maria is a professor of Computer Science at the University of Illinois.
-        </p>
-        <p>
-          <a href="mailto:maria@example.com">Email Maria</a>
-        </p>
-      </Card>
-    </div>
-  );
+```Javascript
+export default function TabButton({children, onSelect}) {
+   return (
+      <li>
+         <button onClick = {onSelect}>
+            {children}
+         </button>
+      </li>
+   );
 }
-
-export default App;
 ```
 
-El siguiente componente:
-```JavaScript
-// Card.js
-import React from 'react';
-import './Card.css'; // Asegúrate de tener un archivo CSS para los estilos
-
-const Card = ({ name, children }) => {
-  return (
-    <div className="card">
-      <h2>{name}</h2>
-      <div className="card-content">
-        {children}
-      </div>
-    </div>
-  );
-};
-
-export default Card;
+```Javascript
+<menu>
+  <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+  <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+  <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+  <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                 
+</menu>
 ```
 
-Produce una salida de este tipo:
+## 33 Reacción a eventos
 
-![image](https://github.com/user-attachments/assets/7ecd8f25-df7e-4d07-9085-c6d0d432d356)
+Construye un componente de "Inicio de sesión de usuario" que ya ha sido preparado por un colega.
 
-## 34 Ejemplo de reacción a eventos
+El objetivo es actualizar los datos almacenados en el objeto de usuario ya existente con algunos datos ficticios una vez que se presiona el botón "Iniciar sesión" en el componente de la aplicación.
 
-// Your goal is to change the email, password and loggedIn values when the button in the App component is pressed
-// Change them to any values of your choice (except loggedIn => that should be changed to true)
-// You DON'T need to fetch the values entered into the <input /> fields
-// You'll learn about that later in the course - for the moment, those fields are just there to look good :-)
+Las propiedades de correo electrónico y contraseña en el objeto de usuario deben establecerse en cualquier valor de cadena no vacío de su elección. El campo loggedIn debe establecerse en verdadero.
+
+Importante: No es necesario que recupere los valores ingresados ​​en los campos <input>; simplemente puede ignorar esos campos por ahora. Aprenderá a escuchar las pulsaciones de teclas y a obtener información del usuario más adelante en el curso.
+
+Su objetivo es cambiar los valores de correo electrónico, contraseña y inicio de sesión cuando se presiona el botón en el componente de la aplicación. Cámbielos a cualquier valor de su elección (excepto loggedIn => que debe cambiarse a verdadero). No es necesario recuperar los valores ingresados ​​en los campos <input />
+
 ```JavaScript
 export const user = {
   email: '',
@@ -495,16 +464,12 @@ function App() {
       <h1>User Login</h1>
       <p>
         <label>Email</label>
-        {/* You don't need to do anything with those inputs! You'll learn how to handle user input later */}
         <input type="email" />
       </p>
-
       <p>
         <label>Password</label>
-        {/* You don't need to do anything with those inputs! You'll learn how to handle user input later */}
         <input type="password" />
       </p>
-
       <p id="actions">
         <button>Login</button>
       </p>
@@ -515,58 +480,13 @@ function App() {
 export default App;
 ```
 
-Tu tarea es trabajar en un componente de “Inicio de Sesión de Usuario” que ya ha sido preparado por un colega.
+aca voy
 
-El objetivo es actualizar los datos almacenados en el objeto user existente con algunos datos ficticios una vez que se presione el botón “Login” en el componente App.
+Pasando argumentos personalizados a funciones de eventos.
 
-Las propiedades email y password en el objeto user deben establecerse en cualquier valor de cadena no vacío de tu elección. El campo loggedIn debe establecerse en true.
-
-Importante: No necesitas obtener los valores ingresados en los campos <input> - puedes simplemente ignorar esos campos por ahora. 
+52
 
 
-```JavaScript
-// user.js
-export const user = {
-  email: '',
-  password: '',
-  loggedIn: false,
-};
-
-// App.js
-import React from 'react';
-import { user } from './user';
-
-function App() {
-  const handleLogin = () => {
-    user.email = 'dummy@example.com';
-    user.password = 'dummyPassword';
-    user.loggedIn = true;
-    console.log('User logged in:', user);
-  };
-
-  return (
-    <div id="app">
-      <h1>User Login</h1>
-      <p>
-        <label>Email</label>
-        <input type="email" />
-      </p>
-
-      <p>
-        <label>Password</label>
-        <input type="password" />
-      </p>
-
-      <p id="actions">
-        <button onClick={handleLogin}>Login</button>
-      </p>
-    </div>
-  );
-}
-
-export default App;
-```
-***
 
 ## 35 Ejemplo
 
