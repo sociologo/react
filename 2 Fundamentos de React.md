@@ -22,7 +22,7 @@
   * [22 CSS](#22-CSS)
 * [3 El concepto de children](#3-El-concepto-de-children)
   * [31 Introducción](#31-Introducción)
-  * [32 Composición de componentes definición](#32-Composición-de-componentes-definición)
+  * [32 Composición de componentes](#32-Composición-de-componentes)
   * [33 Ejemplo](#33-Ejemplo)
   * [34 Ejemplo de reacción a eventos](#34-Ejemplo-de-reacción-a-eventos)
   * [35 Ejemplo](#35-Ejemplo)
@@ -368,7 +368,7 @@ Esto permite crear componentes más flexibles y reutilizables, ya que puedes def
 
 Es un concepto complejo.
 
-## 32 Composición de componentes definición
+## 32 Composición de componentes
 
 En el contexto de React, la composición de componentes es una técnica que permite construir interfaces de usuario complejas a partir de componentes más pequeños y reutilizables. En lugar de crear un único componente grande que haga todo, se divide la funcionalidad en componentes más pequeños y se combinan para formar la interfaz deseada12.
 
