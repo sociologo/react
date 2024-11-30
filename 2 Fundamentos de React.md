@@ -42,11 +42,6 @@
   * [73 useState](#73-useState)
   * [74 Desplegar data dinámica de un objeto JavaScript](#74-Desplegar-data-dinámica-de-un-objeto-JavaScript)
 
- 
-
-
-
-
 # 1 Componentes
 
 En React, un componente es una pieza reutilizable y autónoma de código que define una parte de la interfaz de usuario. Los componentes son los bloques de construcción fundamentales de una aplicación React. 
@@ -145,11 +140,11 @@ Un componente de React debe seguir las siguientes reglas:
 
 La función Math.random() en JavaScript devuelve un número de coma flotante pseudo-aleatorio comprendido en el rango de 0 (incluido) a 1 (excluido). Esto significa que el valor devuelto puede ser 0, pero siempre será menor que 1.
 
-## Props
+# 2 Props
 
 lecciones 44 y 45
 
-### Intro
+## 21 Intro
 
 En React, los props (abreviatura de “properties”) son una forma de pasar datos de un componente a otro. Los props permiten que los componentes sean reutilizables y dinámicos, ya que puedes cambiar su comportamiento y apariencia según los datos que les pases.
 
@@ -165,7 +160,7 @@ Ventajas de Usar Props
 
 **Los props son fundamentales en React porque permiten que los componentes sean flexibles y reutilizables. Al pasar datos a través de props, puedes crear componentes genéricos que se adapten a diferentes situaciones y datos.**
 
-### Ejemplo: Analicemos el siguiente componente:
+## 22 Ejemplo
 
 El archivo **App.jsx** define dos componentes principales: **CoreConcept** y **App**. El componente **CoreConcept** es un componente funcional que recibe props (propiedades) como parámetros y los utiliza para renderizar un ítem de lista (`<li>`) con una imagen, un título y una descripción. Este componente es reutilizable y se puede personalizar pasando diferentes valores de props.
 
@@ -309,11 +304,11 @@ el proyecto luce asi:
 
 ![image](https://github.com/user-attachments/assets/06a6366f-bd76-456a-9cd3-0ef0d1677b3d)
 
-## 47 48 Organizando correctamente componentes y csss.
+# Digresión Organizando correctamente componentes y css
 
 lecciones 47 y 48
 
-### Componentes
+## Componentes
 
 No se recomienda tener todos los componentes de una aplicación React en un mismo archivo por varias razones:
 
@@ -343,7 +338,7 @@ En React, export default se utiliza para exportar un único valor o componente c
 
 ![image](https://github.com/user-attachments/assets/31a1d1da-d517-48e0-8974-3f113cb845cc)
 
-### CSS
+## CSS
 
 En React, es conveniente organizar tanto los componentes como los archivos CSS en carpetas separadas por varias razones:
 
@@ -363,11 +358,9 @@ Crearemos una carpeta Header dentro de la carpeta components en la que almacenar
 ![image](https://github.com/user-attachments/assets/1ae3035f-aeec-4dcd-8c30-89ad6d27f23f)
 ![image](https://github.com/user-attachments/assets/b89c56ed-46f1-4da5-ab0f-544ef4dbec27)
 
-
-
 # 3 El concepto de children
 
-## Introducción
+## 31 Introducción
 
 En React, **children** es una **prop** especial que permite a los componentes anidar otros componentes o elementos dentro de ellos. Básicamente, children representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente.
 
@@ -402,7 +395,7 @@ Esto permite crear componentes más flexibles y reutilizables, ya que puedes def
 
 Es un concepto complejo.
 
-#### 52 Composición de componentes: definicion
+## 32 Composición de componentes definición
 
 En el contexto de React, la composición de componentes es una técnica que permite construir interfaces de usuario complejas a partir de componentes más pequeños y reutilizables. En lugar de crear un único componente grande que haga todo, se divide la funcionalidad en componentes más pequeños y se combinan para formar la interfaz deseada12.
 
@@ -443,7 +436,7 @@ En este ejemplo, App es el componente principal que compone otros dos componente
 
 La composición de componentes es preferida sobre la herencia en React porque permite una mayor flexibilidad y reutilización del código. Al usar la composición, puedes crear componentes más específicos y reutilizables que se pueden combinar de diferentes maneras para construir interfaces complejas.
 
-#### 53 Ejemplo:
+## 33 Ejemplo
 
 ```JavaScript
 // App.js
@@ -502,7 +495,7 @@ Produce una salida de este tipo:
 
 ![image](https://github.com/user-attachments/assets/7ecd8f25-df7e-4d07-9085-c6d0d432d356)
 
-#### 54 Ejemplo de reaccion aventos
+## 34 Ejemplo de reacción a eventos
 
 // Your goal is to change the email, password and loggedIn values when the button in the App component is pressed
 // Change them to any values of your choice (except loggedIn => that should be changed to true)
@@ -594,7 +587,7 @@ export default App;
 ```
 ***
 
-#### 55 Ejemplo
+## 35 Ejemplo
 
 Configuración de Manejadores de Eventos
 
@@ -666,7 +659,7 @@ export default App;
 ```
 ***
 
-# 6 El concepto de State
+# 4 El concepto de State
 
 En React, el **state** es un objeto que permite a los componentes mantener y gestionar datos que pueden cambiar a lo largo del tiempo. A diferencia de las props, que son inmutables y se pasan desde componentes padres a hijos, el **state** es mutable y es local a cada componente.
 
@@ -731,7 +724,7 @@ export default Counter;
 
 En este ejemplo, el componente Counter tiene un **state** count que se incrementa cada vez que se hace clic en el botón. React vuelve a renderizar el componente cada vez que el estado cambia, mostrando el nuevo valor de count.
 
-# 7 El concepto de Hook
+# 5 El concepto de Hook
 
 Los hooks en React son una característica introducida en la versión 16.8 que permite usar el **state** y otras funcionalidades de React en componentes funcionales, sin necesidad de escribir componentes de clase. Los hooks simplifican la lógica de los componentes y facilitan la reutilización de código.
 
@@ -788,7 +781,7 @@ function Componente() {
 }
 ```
 
-#### Reglas de los Hooks
+# 51 Reglas de los Hooks
 
 1 Llamar hooks solo en el nivel superior: No llames hooks dentro de loops, condiciones o funciones anidadas.
 
@@ -818,7 +811,7 @@ Los hooks han revolucionado la forma de escribir componentes en React, haciendo 
 
 ***
 
-## Ejercicio
+## 52 Ejercicio
 
 Estás trabajando en una parte de una tienda en línea donde se debe mostrar un precio con descuento en la pantalla una vez que el usuario haga clic en un botón.
 
@@ -859,12 +852,9 @@ export default function App() {
 }
 ```
 
+# 6 Botones y contenidos dinámicos
 
-# 8 Botones y contenidos dinámicos.
-
-***
-
-## El botón
+## 61 El botón
 
 Construiremos una sección interactiva, por lo que daremos contenido dinámico a un cuadro de texto despues de dar click a su correspondiente botón en un menú como se muestra en la figura:
 
@@ -874,7 +864,7 @@ El archivo **App.jsx** define una aplicación que organiza y muestra contenido d
 
 Veamos el siguiente fragmento de código del archivo App.jsx:
 
-### 81 App.jsx
+### 611 App.jsx
 
 ```Javascript
 // some code
@@ -909,7 +899,7 @@ Cuando se selecciona un tema, el contenido correspondiente se muestra en el `<di
 
 Necesitamos ahora construir un componente TabButton que despliegue los botones de seleccion y ejerza la accion de despliegue de contenido:
 
-### 82 TabButton.jsx
+### 612 TabButton.jsx
 
 El componente TabButton es una función que recibe dos props: **children** y **onSelect**. El prop **children** representa el contenido que se pasará entre las etiquetas de apertura y cierre del componente TabButton. El prop **onSelect** es una función que se ejecutará cuando se haga clic en el botón.
 
@@ -935,7 +925,7 @@ Lo que hemos visto es un tipo de composicion de componentes. (insertar ejercio e
 
 ***
 
-## Dándole poder al botón
+## 62 Dándole poder al botón
 
 Recordemos que en React escribimos codigo **declarativo** y NO **imperativo** como en  javascript común, por lo que no interactuaremos con el DOM, dejaremos que React se encargue de eso utilizando el prop especial **onClick** sobre la función **onSelect**.
 
@@ -943,7 +933,7 @@ La función `onSelect` es un manejador de eventos que se utiliza para capturar y
 
 La ventaja de definir estas funciones de manejador de eventos dentro de la función del componente es que de esta manera tienen acceso a las **props** y **states** del componente.
 
-### 83 la función handleSelect()
+### 621 La función handleSelect
 
 La función utiliza el hook **useState** para declarar una variable de estado llamada **selectedTopic** y una función para actualizarla llamada **setSelectedTopic**. El valor inicial de **selectedTopic** es **'components'**.
 
@@ -973,15 +963,13 @@ Este código configura un menú interactivo donde cada botón de pestaña puede 
 </menu>
 ```
 
-#### insertar ejercicio entre 51 y 52.
+insertar ejercicio entre 51 y 52.
 
-#### insertar ejercicio entre 52 y 53.
+insertar ejercicio entre 52 y 53.
 
-### 84 El funcionamiento de los componentes en react.
+# 7 El concepto de state
 
 Por defecto, React solo ejecutará una funcion **componente** UNA SOLA VEZ cuando por primera vez encuentre algo en el codigo. Luego, ninguna de la funciones de ejecutara de nuevo. Es por eso que resulta fundamental comprender en React el concepto de **state**.
-
-# 9 El concepto de state.
 
 En React, el concepto de **state** es fundamental para crear componentes interactivos y dinámicos. El **state** es un objeto que almacena datos que pueden cambiar a lo largo del ciclo de vida de un componente. Estos datos pueden ser cualquier cosa, desde valores simples como números y cadenas, hasta objetos más complejos y arreglos.
 
@@ -1003,11 +991,11 @@ Detalles Generales del state en React:
 
 El estado en React es una herramienta poderosa que permite a los desarrolladores crear interfaces de usuario dinámicas y reactivas, manteniendo al mismo tiempo una estructura de datos clara y controlada.
 
-## useState
+## 71 useState
 
 Todas las funciones que comienzan con use en React son react **Hooks**
 
-## Reglas de los hooks en React
+## 72 Reglas de los hooks en React
 
 Los hooks en React deben seguir ciertas reglas para funcionar correctamente y evitar errores. Aquí tienes las reglas principales:
 
@@ -1023,7 +1011,7 @@ Los hooks en React deben seguir ciertas reglas para funcionar correctamente y ev
 
 Estas reglas aseguran que los hooks funcionen de manera predecible y eficiente, permitiendo a React gestionar el estado y los efectos de los componentes de manera correcta.
 
-## useState
+## 73 useState
 
 `useState` es un hook en React que permite a los componentes funcionales tener un estado interno. Antes de los hooks, solo los componentes de clase podían tener estado. Con `useState`, los componentes funcionales pueden gestionar y actualizar su propio estado.
 
@@ -1055,9 +1043,9 @@ Consideraciones
 
 En resumen, `useState` es una herramienta poderosa que permite a los componentes funcionales en React gestionar su propio estado de manera sencilla y eficiente.
 
-### insertar ejercicio entre 54 y 55
+insertar ejercicio entre 54 y 55
 
-# Desplegar data dinamica de un objeto JavaScript. 
+# 74 Desplegar data dinámica de un objeto JavaScript
 
 leccion 55
 
