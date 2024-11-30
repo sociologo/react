@@ -32,7 +32,7 @@
   * [52 Ejercicio](#52-Ejercicio)
 * [6 Botones y contenidos dinámicos](#6-Botones-y-contenidos-dinámicos)
   * [61 El botón](#61-El-botón)
-    * [611 App.jsx](#611-App.jsx)
+    * [611 Appjsx](#611-Appjsx)
     * [612 TabButton.jsx](#612-TabButton.jsx)
   * [62 Dándole poder al botón](#62-Dándole-poder-al-botón)
     * [621 La función handleSelect](#621-La-función-handleSelect)
@@ -864,7 +864,7 @@ El archivo **App.jsx** define una aplicación que organiza y muestra contenido d
 
 Veamos el siguiente fragmento de código del archivo App.jsx:
 
-### 611 App.jsx
+### 611 Appjsx
 
 ```Javascript
 // some code
