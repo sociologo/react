@@ -378,6 +378,12 @@ La composición de componentes es preferida sobre la herencia en React porque pe
 
 ## 33 Ejemplo
 
+La tarea es crear un componente de tarjeta reutilizable que tome un nombre como entrada y, además, pueda incluirse en cualquier código JSX.
+
+Utilice el archivo Card.js ya existente para crear el componente Tarjeta allí. 
+
+El nombre de propiedad debe aparecer como un título dentro del componente Tarjeta, el código JSX empaquetado debe aparecer debajo de ese título.
+
 ```JavaScript
 // App.js
 import React from 'react';
