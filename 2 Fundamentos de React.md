@@ -781,7 +781,7 @@ function Componente() {
 }
 ```
 
-# 51 Reglas de los Hooks
+## 51 Reglas de los Hooks
 
 1 Llamar hooks solo en el nivel superior: No llames hooks dentro de loops, condiciones o funciones anidadas.
 
