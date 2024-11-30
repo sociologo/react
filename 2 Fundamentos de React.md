@@ -480,6 +480,26 @@ function App() {
 export default App;
 ```
 
+debes ingresar el siguiente codigo debajo de `function App() {`:
+
+```JavaScript
+const handleLogin = () => { 
+  user.email = 'usuario@ejemplo.com'; 
+  user.password = 'contraseña123'; 
+  user.loggedIn = true; 
+  console.log('Usuario actualizado:', user); 
+};
+```
+
+y modificar el button así:
+
+```JavaScript
+<button onClick={handleLogin}>Login</button>
+```
+
+
+
+
 aca voy
 
 Pasando argumentos personalizados a funciones de eventos.
