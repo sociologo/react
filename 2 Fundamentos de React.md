@@ -369,7 +369,7 @@ Esto permite crear componentes más flexibles y reutilizables, ya que puedes def
 Es un concepto complejo.
 
 TabButton.jsx
-```
+```Javascript
 export default function TabButton({children}) {
    return (
       <li>
@@ -382,13 +382,11 @@ export default function TabButton({children}) {
 ```
 
 App.jsx
-```
+```Javascript
 <menu>
   <TabButton>Components</TabButton>                 
 </menu>
 ```
-
-
 
 ## 32 Composición de componentes
 
