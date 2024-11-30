@@ -103,7 +103,7 @@ El componente devuelve un elemento h1 que muestra un mensaje de bienvenida utili
 
 En resumen, los componentes en React te permiten construir interfaces de usuario de manera eficiente y organizada, aprovechando la reutilización y la modularidad del código.
 
-# 15 Nuestro primer componente
+## 15 Nuestro primer componente
 
 ```JavaScript
 function Header() {
