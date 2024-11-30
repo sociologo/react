@@ -395,9 +395,9 @@ App.jsx
 </menu>
 ```
 
--1  `TabButton` se utiliza dentro de un elemento `<menu>`.
+- 1  `TabButton` se utiliza dentro de un elemento `<menu>`.
 
--2 El texto `Components` se pasa como `children` al componente `TabButton`, por lo que se mostrará dentro del botón.
+- 2 El texto `Components` se pasa como `children` al componente `TabButton`, por lo que se mostrará dentro del botón.
 
 `TabButton` es el componente que hemos definido y utilizado en el código. Este componente es flexible y puede envolver cualquier contenido que se le pase como `children`.
 
