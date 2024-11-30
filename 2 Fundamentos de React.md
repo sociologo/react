@@ -24,8 +24,8 @@
   * [31 Introducción](#31-Introducción)
   * [32 Composición de componentes](#32-Composición-de-componentes)
   * [33 Reacción a eventos](#33-Reacción-a-eventos)
-  * [34 Ejemplo de reacción a eventos](#34-Ejemplo-de-reacción-a-eventos)
-  * [35 Ejemplo](#35-Ejemplo)
+  * [33 Ejemplo de reacción a eventos](#33-Ejemplo-de-reacción-a-eventos)
+  * [34 Ejemplo](#34-Ejemplo)
 * [4 El concepto de State](#4-El-concepto-de-State)
 * [5 El concepto de Hook](#5-El-concepto-de-Hook)
   * [51 Reglas de los Hooks](#51-Reglas-de-los-Hooks)
@@ -439,7 +439,7 @@ export default function TabButton({children, onSelect}) {
 </menu>
 ```
 
-## 33 Reacción a eventos
+## 33 Ejemplo de reacción a eventos
 
 Construye un componente de "Inicio de sesión de usuario" que ya ha sido preparado por un colega.
 
@@ -508,7 +508,7 @@ Pasando argumentos personalizados a funciones de eventos.
 
 
 
-## 35 Ejemplo
+## 34 Ejemplo
 
 Configuración de Manejadores de Eventos
 
