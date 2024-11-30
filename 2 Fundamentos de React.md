@@ -366,9 +366,8 @@ En React, **children** es una **prop** especial que permite a los componentes an
 
 Esto permite crear componentes más flexibles y reutilizables, ya que puedes definir el contenido de un componente desde fuera, en lugar de tenerlo fijo dentro del componente.
 
-Es un concepto complejo.
+Observa el componente `TabButton.jsx`
 
-TabButton.jsx
 ```Javascript
 export default function TabButton({children}) {
    return (
@@ -381,12 +380,28 @@ export default function TabButton({children}) {
 }
 ```
 
+- 1 `TabButton` es un componente funcional que recibe `children` como prop.
+
+- 2 Dentro del componente, se retorna un elemento `<li>` que contiene un botón (`<button>`).
+
+- 3 `{children}` se coloca dentro del botón, lo que permite que cualquier contenido pasado como `children` se muestre dentro del botón.
+
+ahora utilizamos el componente TabButton en App.jsx:
+
 App.jsx
 ```Javascript
 <menu>
   <TabButton>Components</TabButton>                 
 </menu>
 ```
+
+-1  `TabButton` se utiliza dentro de un elemento `<menu>`.
+
+-2 El texto `Components` se pasa como `children` al componente `TabButton`, por lo que se mostrará dentro del botón.
+
+`TabButton` es el componente que hemos definido y utilizado en el código. Este componente es flexible y puede envolver cualquier contenido que se le pase como `children`.
+
+**Con `children` estamos ahorrando repetir líneas de código html.**
 
 ## 32 Composición de componentes
 
