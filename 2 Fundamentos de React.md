@@ -33,7 +33,7 @@
 * [6 Botones y contenidos dinámicos](#6-Botones-y-contenidos-dinámicos)
   * [61 El botón](#61-El-botón)
     * [611 App.jsx](#611-Appjsx)
-    * [612 TabButton.jsx](#612-TabButton.jsx)
+    * [612 TabButton.jsx](#612-TabButtonjsx)
   * [62 Dándole poder al botón](#62-Dándole-poder-al-botón)
     * [621 La función handleSelect](#621-La-función-handleSelect)
 * [7 El concepto de state](#7-El-concepto-de-state)
@@ -899,7 +899,7 @@ Cuando se selecciona un tema, el contenido correspondiente se muestra en el `<di
 
 Necesitamos ahora construir un componente TabButton que despliegue los botones de seleccion y ejerza la accion de despliegue de contenido:
 
-### 612 TabButton.jsx
+### 612 TabButtonjsx
 
 El componente TabButton es una función que recibe dos props: **children** y **onSelect**. El prop **children** representa el contenido que se pasará entre las etiquetas de apertura y cierre del componente TabButton. El prop **onSelect** es una función que se ejecutará cuando se haga clic en el botón.
 
