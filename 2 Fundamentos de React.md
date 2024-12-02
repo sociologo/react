@@ -457,6 +457,43 @@ Utilice el archivo Card.js ya existente para crear el componente Card allí.
 
 El nombre **prop** debe aparecer como un título dentro del componente Card, el código JSX empaquetado debe aparecer debajo de ese título.
 
+
+
+App.js
+```Javascript
+import Card from './Card';
+
+function App() {
+   return (
+      <div id="app">
+         <h1>Available Experts</h1>
+         <Card name="Anthony Blake">
+         <p>
+            Blake is a professor of Computer Science at the University of
+            Illinois.
+         </p>
+         <p>
+            <a href="mailto:blake@example.com">Email Anthony</a>
+         </p>
+         </Card>
+
+         <Card name="Maria Miles">
+         <p>
+            Maria is a professor of Computer Science at the University of
+            Illinois.
+         </p>
+         <p>
+            <a href="mailto:blake@example.com">Email Maria</a>
+         </p>
+         </Card>
+      </div>
+   );
+}
+
+export default App;
+```
+
+La respuesta es:
 Card.js
 ```Javascript
 // Card.js
@@ -464,54 +501,18 @@ import React from 'react';
 import './Card.css'; // Asegúrate de tener un archivo CSS para los estilos
 
 const Card = ({ name, children }) => {
-  return (
-    <div className="card">
-      <h2>{name}</h2>
-      <div className="card-content">
-        {children}
+   return (
+      <div className="card">
+         <h2>{name}</h2>
+         <div className="card-content">
+         {children}
+         </div>
       </div>
-    </div>
-  );
+   );
 };
 
 export default Card;
 ```
-
-App.js
-```Javascript
-import Card from './Card';
-
-function App() {
-  return (
-    <div id="app">
-      <h1>Available Experts</h1>
-      <Card name="Anthony Blake">
-        <p>
-          Blake is a professor of Computer Science at the University of
-          Illinois.
-        </p>
-        <p>
-          <a href="mailto:blake@example.com">Email Anthony</a>
-        </p>
-      </Card>
-
-      <Card name="Maria Miles">
-        <p>
-          Maria is a professor of Computer Science at the University of
-          Illinois.
-        </p>
-        <p>
-          <a href="mailto:blake@example.com">Email Maria</a>
-        </p>
-      </Card>
-    </div>
-  );
-}
-
-export default App;
-```
-
-
 
 ***
 
