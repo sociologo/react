@@ -642,9 +642,57 @@ El objetivo es actualizar los datos almacenados en el objeto `user` ya existente
 
 Las propiedades email y password en el objeto user deben establecerse con cualquier valor de cadena no vacío. El campo loggedIn debe establecerse en verdadero.
 
-Importante: No es necesario que recupere los valores ingresados ​​en los campos <input>.
-
 Debe cambiar los valores de email, password y loggedIn cuando se presiona el botón en el componente App.
+
+```JavaScript
+export const user = {
+   email: '',
+   password: '',
+   loggedIn: false,
+ };
+ 
+ function App() {
+   return (
+   <div id="app">
+      <h1>User Login</h1>
+      <p>
+         <label>Email</label>
+         {/* You don't need to do anything with those inputs! You'll learn how to handle user input later */}
+         <input type="email" />
+      </p>
+
+      <p>
+         <label>Password</label>
+         {/* You don't need to do anything with those inputs! You'll learn how to handle user input later */}
+         <input type="password" />
+      </p>
+
+      <p id="actions">
+         <button>Login</button>
+      </p>
+   </div>
+   );
+}
+ 
+export default App;
+```
+
+debes ingresar el siguiente codigo debajo de `function App() {`:
+
+```JavaScript
+const handleLogin = () => { 
+      user.email = 'usuario@ejemplo.com'; 
+      user.password = 'contraseña123'; 
+      user.loggedIn = true; 
+      console.log('Usuario actualizado:', user); 
+   };
+```
+
+y modificar el button así:
+
+```JavaScript
+<button onClick={handleLogin}>Login</button>
+```
 
 ```JavaScript
 export const user = {
@@ -685,22 +733,7 @@ function App() {
 export default App;
 ```
 
-debes ingresar el siguiente codigo debajo de `function App() {`:
 
-```JavaScript
-const handleLogin = () => { 
-      user.email = 'usuario@ejemplo.com'; 
-      user.password = 'contraseña123'; 
-      user.loggedIn = true; 
-      console.log('Usuario actualizado:', user); 
-   };
-```
-
-y modificar el button así:
-
-```JavaScript
-<button onClick={handleLogin}>Login</button>
-```
 
 
 
