@@ -572,25 +572,13 @@ No queremos código imperativo como éste, no queremos interactuar con el DOM pu
 
 Pasar funciones como valores a las **props**
 
-Hemos dicho de que la funcion handleClick que se declarara dentro de la funcion de componente ira sin los parentesis pues la necesitamos como valor. Requeriremos de esta propiedad pues ahora queremos cambiar el contenido desplegado debajo de la fila de botones para acceder a uno distinto cada vez que se selecciona un boton. 
+Hemos dicho de que la función **handleClick** que se declarara dentro de la función de componente irá sin los paréntesis pues la necesitamos como valor. Requeriremos de ésta propiedad pues ahora queremos cambiar el contenido desplegado debajo de la fila de botones para acceder a uno distinto cada vez que se selecciona un botón. 
 
-App.jsx
-```Javascript
-import TabButton from './components/TabButton.jsx';
-<section id = "examples">
-   <h2>Ejemplos</h2>
-   <menu>
-      <TabButton>Components</TabButton>           
-   </menu>
-   // Contenido dinamico
-</section>
-```
+Para ello necesitamos escuchar los clicks dentro de nuestro componente personalizado **TabButton**, porque debes manejar el evento en el componente que también administra los datos que se deben cambiar.
 
-Para ello necesitamos escuchar los clicks dentro de nuestro componente personalizado, porque debes manejar el evento en el componente que también administra los datos que se deben cambiar.
+La pregunta es, cómo le damos poder de acción, capacidad de ejecutar algo a la selección del botón? La respuesta es entregándole una **función como valor** al elemento **onClick** del componente (**handleClick**). Esto lo lograremon ingresando un segundo parámetro **prop** a la función de componente **TabButton** llamado **onSelect**.
 
-La pregunta es, cómo le damos poder de acción, capacidad de ejecutar algo a la selección del botón? La respuesta es entregándole una **función como valor** al elemento onClick del componente. Esto lo lograremon ingresando un segundo parametro prop a la función de componente TabButton llamado onSelect.
-
-Luego pasaremos un puntero llamado handSelect a la prop onSelect.
+Luego pasaremos 'el puntero' **handSelect** a la prop **onSelect**.
 
 La funcion onSelect se activara cuando el boton sea clickeado y es la que le dara vida al componente dinamico.
 
