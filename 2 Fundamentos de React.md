@@ -584,11 +584,6 @@ La funcion onSelect se activara cuando el boton sea clickeado y es la que le dar
 
 ```Javascript
 export default function TabButton({children, onSelect}) {
-
-   function onSelect() {
-      console.log('Hello world');
-   }
-
    return (
       <li>
          <button onClick = {onSelect}>
@@ -607,8 +602,8 @@ import TabButton from './components/TabButton.jsx';
 
 function App() {
 
-   function handleSelect() {
-      console.log('Hola Mundo');
+   function onSelect() {
+      console.log('Hello world');
    }
 
    return (
