@@ -527,8 +527,80 @@ Necesitamos ahora darle poder al click en los botones para que ejecuten la acci�
 
 `onClick` es un evento en React que se utiliza para manejar las acciones de clic del usuario en un elemento. Es similar al evento onclick en JavaScript, pero se usa dentro de componentes de React. 
 
+Modificaremos nuestro componente para añadir el prop receptor de eventos **onClick** al elemento button entregandole la funcion onSelect que se declarara dentro de la funcion de componente sin los parentesis pues la necesitamos como valor:
+
+```Javascript
+export default function TabButton({children}) {
+   return (
+      <li>
+         <button>
+            {children}
+         </button>
+      </li>
+   );
+}
+```
+
+a:
+
+```Javascript
+export default function TabButton({children}) {
+
+   function handleClick() {
+      console.log('Hello world');
+   }
+
+   return (
+      <li>
+         <button onClick = {handleClick}>
+            {children}
+         </button>
+      </li>
+   );
+}
+```
+
+Notemos en en JavaScrip podriamos escribir:
+
+```Javascript
+document.querySelector('button').addEventListener('click', () => {})
+```
+
+No queremos código imperativo como éste, no queremos interactuar con el DOM pues queremos que React lo haga. Es por ello que escribimos código declarativo.
+
+51
+
+Pasar funciones como valores a las **props**
+
+Hemos dicho de que la funcion handleClick que se declarara dentro de la funcion de componente ira sin los parentesis pues la necesitamos como valor. Requeriremos de esta propiedad pues ahora queremos cambiar el contenido desplegado debajo de la fila de botones para acceder a uno distinto cada vez que se selecciona un boton. 
+
+App.jsx
+```Javascript
+import TabButton from './components/TabButton.jsx';
+<section id = "examples">
+   <h2>Ejemplos</h2>
+   <menu>
+      <TabButton>Components</TabButton>           
+   </menu>
+   // Contenido dinamico
+</section>
+```
+
+Para ello necesitamos escuchar los clicks dentro de nuestro componente personalizado, porque debes manejar el evento en el componente que también administra los datos que se deben cambiar.
+
+La pregunta es, cómo le damos poder de acción, capacidad de ejecutar algo a la selección del botón? La respuesta es entregándole una **función como valor** al elemento onClick del componente. Esto lo lograremon ingresando un segundo parametro prop a la función de componente TabButton llamado onSelect.
+
+Luego pasaremos un puntero llamado handSelect a la prop onSelect.
+
+La funcion onSelect se activara cuando el boton sea clickeado y es la que le dara vida al componente dinamico.
+
 ```Javascript
 export default function TabButton({children, onSelect}) {
+
+   function onSelect() {
+      console.log('Hello world');
+   }
+
    return (
       <li>
          <button onClick = {onSelect}>
@@ -539,14 +611,45 @@ export default function TabButton({children, onSelect}) {
 }
 ```
 
+La funcion **onSelect()** la definiremos en **App.js**:
+
+App.jsx
 ```Javascript
-<menu>
-  <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
-  <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-  <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-  <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                 
-</menu>
+import TabButton from './components/TabButton.jsx';
+
+function App() {
+
+   function handleSelect() {
+      console.log('Hola Mundo');
+   }
+
+   return (
+      <div>
+         <Header />
+         <main>
+
+         // codigo aca
+
+            <section id = "examples">
+               <h2>Ejemplos</h2>
+               <menu>
+                  <TabButton onSelect = {handleSelect}>Components</TabButton>
+                  <TabButton onSelect = {handleSelect}>JSX</TabButton>
+                  <TabButton onSelect = {handleSelect}>Props</TabButton>
+                  <TabButton onSelect = {handleSelect}>State</TabButton>               
+               </menu>
+               // Contenido dinamico
+            </section>
+
+         </main>
+      </div>
+   );
+}
+
+export default App;
 ```
+Ahora estamos preparados para cambiar la data en el contenido dinamico.
+
 
 ## 33 Ejemplo de reacción a eventos
 
