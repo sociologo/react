@@ -594,7 +594,7 @@ export default function TabButton({children, onSelect}) {
 }
 ```
 
-La funcion **onSelect()** la definiremos en **App.js**:
+La funcion **handSelect()** la definiremos en **App.js**:
 
 App.jsx
 ```Javascript
@@ -602,7 +602,7 @@ import TabButton from './components/TabButton.jsx';
 
 function App() {
 
-   function onSelect() {
+   function handSelect() {
       console.log('Hello world');
    }
 
