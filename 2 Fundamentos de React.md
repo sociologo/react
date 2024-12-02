@@ -676,7 +676,7 @@ export const user = {
  
 export default App;
 ```
-
+Respuesta:/
 debes ingresar el siguiente codigo debajo de `function App() {`:
 
 ```JavaScript
@@ -684,7 +684,6 @@ const handleLogin = () => {
       user.email = 'usuario@ejemplo.com'; 
       user.password = 'contraseña123'; 
       user.loggedIn = true; 
-      console.log('Usuario actualizado:', user); 
    };
 ```
 
@@ -694,6 +693,7 @@ y modificar el button así:
 <button onClick={handleLogin}>Login</button>
 ```
 
+El código quedaria entonces como:
 ```JavaScript
 export const user = {
       email: '',
