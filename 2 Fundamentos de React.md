@@ -457,8 +457,6 @@ Utilice el archivo Card.js ya existente para crear el componente Card allí.
 
 El nombre **prop** debe aparecer como un título dentro del componente Card, el código JSX empaquetado debe aparecer debajo de ese título.
 
-
-
 App.js
 ```Javascript
 import Card from './Card';
@@ -493,7 +491,12 @@ function App() {
 export default App;
 ```
 
+La salida debe verse así:
+
+![image](https://github.com/user-attachments/assets/27b2dc99-2e61-4a81-97ca-7baf88f0bb53)
+
 La respuesta es:
+
 Card.js
 ```Javascript
 // Card.js
@@ -515,7 +518,6 @@ export default Card;
 ```
 
 ***
-
 
 ## 32 Composición de componentes
 
