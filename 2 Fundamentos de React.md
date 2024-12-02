@@ -651,38 +651,38 @@ export const user = {
       email: '',
       password: '',
       loggedIn: false,
-   };
+};
    
-   function App() {
-      const handleLogin = () => { 
-      user.email = 'usuario@ejemplo.com'; 
-      user.password = 'contraseña123'; 
-      user.loggedIn = true; 
-      console.log('Usuario actualizado:', user); 
-   };
-      return (
-      <div id="app">
-         <h1>User Login</h1>
-         <p>
-            <label>Email</label>
-            {/* You don't need to do anything with those inputs! You'll learn how to handle user input later */}
-            <input type="email" />
-         </p>
-   
-         <p>
-            <label>Password</label>
-            {/* You don't need to do anything with those inputs! You'll learn how to handle user input later */}
-            <input type="password" />
-         </p>
-   
-         <p id="actions">
-            <button onClick={handleLogin}>Login</button>
-         </p>
-      </div>
-      );
-   }
+function App() {
+  const handleLogin = () => { 
+  user.email = 'usuario@ejemplo.com'; 
+  user.password = 'contraseña123'; 
+  user.loggedIn = true; 
+  console.log('Usuario actualizado:', user); 
+};
+  return (
+  <div id="app">
+     <h1>User Login</h1>
+     <p>
+        <label>Email</label>
+        {/* You don't need to do anything with those inputs! You'll learn how to handle user input later */}
+        <input type="email" />
+     </p>
+
+     <p>
+        <label>Password</label>
+        {/* You don't need to do anything with those inputs! You'll learn how to handle user input later */}
+        <input type="password" />
+     </p>
+
+     <p id="actions">
+        <button onClick={handleLogin}>Login</button>
+     </p>
+  </div>
+  );
+}
  
- export default App;
+export default App;
 ```
 
 debes ingresar el siguiente codigo debajo de `function App() {`:
