@@ -706,7 +706,6 @@ function App() {
   user.email = 'usuario@ejemplo.com'; 
   user.password = 'contraseña123'; 
   user.loggedIn = true; 
-  console.log('Usuario actualizado:', user); 
 };
   return (
   <div id="app">
