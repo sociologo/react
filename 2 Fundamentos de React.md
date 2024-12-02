@@ -636,54 +636,64 @@ Ahora estamos preparados para cambiar la data en el contenido dinamico.
 
 ## 33 Ejemplo de reacción a eventos
 
-Construye un componente de "Inicio de sesión de usuario" que ya ha sido preparado por un colega.
+Trabajaras sobre el componente "User Login" que ya ha sido preparado por un colega.
 
-El objetivo es actualizar los datos almacenados en el objeto de usuario ya existente con algunos datos ficticios una vez que se presiona el botón "Iniciar sesión" en el componente de la aplicación.
+El objetivo es actualizar los datos almacenados en el objeto `user` ya existente con algunos datos ficticios una vez que se presiona el botón "Login" en el componente `App`.
 
-Las propiedades de correo electrónico y contraseña en el objeto de usuario deben establecerse en cualquier valor de cadena no vacío de su elección. El campo loggedIn debe establecerse en verdadero.
+Las propiedades email y password en el objeto user deben establecerse con cualquier valor de cadena no vacío. El campo loggedIn debe establecerse en verdadero.
 
-Importante: No es necesario que recupere los valores ingresados ​​en los campos <input>; simplemente puede ignorar esos campos por ahora. Aprenderá a escuchar las pulsaciones de teclas y a obtener información del usuario más adelante en el curso.
+Importante: No es necesario que recupere los valores ingresados ​​en los campos <input>.
 
-Su objetivo es cambiar los valores de correo electrónico, contraseña y inicio de sesión cuando se presiona el botón en el componente de la aplicación. Cámbielos a cualquier valor de su elección (excepto loggedIn => que debe cambiarse a verdadero). No es necesario recuperar los valores ingresados ​​en los campos <input />
+Debe cambiar los valores de email, password y loggedIn cuando se presiona el botón en el componente App.
 
 ```JavaScript
 export const user = {
-  email: '',
-  password: '',
-  loggedIn: false,
-};
-
-function App() {
-  return (
-    <div id="app">
-      <h1>User Login</h1>
-      <p>
-        <label>Email</label>
-        <input type="email" />
-      </p>
-      <p>
-        <label>Password</label>
-        <input type="password" />
-      </p>
-      <p id="actions">
-        <button>Login</button>
-      </p>
-    </div>
-  );
-}
-
-export default App;
+      email: '',
+      password: '',
+      loggedIn: false,
+   };
+   
+   function App() {
+      const handleLogin = () => { 
+      user.email = 'usuario@ejemplo.com'; 
+      user.password = 'contraseña123'; 
+      user.loggedIn = true; 
+      console.log('Usuario actualizado:', user); 
+   };
+      return (
+      <div id="app">
+         <h1>User Login</h1>
+         <p>
+            <label>Email</label>
+            {/* You don't need to do anything with those inputs! You'll learn how to handle user input later */}
+            <input type="email" />
+         </p>
+   
+         <p>
+            <label>Password</label>
+            {/* You don't need to do anything with those inputs! You'll learn how to handle user input later */}
+            <input type="password" />
+         </p>
+   
+         <p id="actions">
+            <button onClick={handleLogin}>Login</button>
+         </p>
+      </div>
+      );
+   }
+ 
+ export default App;
 ```
 
 debes ingresar el siguiente codigo debajo de `function App() {`:
 
 ```JavaScript
 const handleLogin = () => { 
-  user.email = 'usuario@ejemplo.com'; 
-  user.password = 'contraseña123'; 
-  user.loggedIn = true; 
-  console.log('Usuario actualizado:', user); 
-};
+      user.email = 'usuario@ejemplo.com'; 
+      user.password = 'contraseña123'; 
+      user.loggedIn = true; 
+      console.log('Usuario actualizado:', user); 
+   };
 ```
 
 y modificar el button así:
