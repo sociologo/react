@@ -388,7 +388,7 @@ export default function TabButton({children}) {
 
 - 3 `{children}` se coloca dentro del botón, lo que permite que cualquier contenido pasado como `children` se muestre dentro del botón.
 
-ahora utilizamos el componente TabButton en App.jsx:
+ahora utilizamos el componente `TabButton` en `App.jsx`:
 
 App.jsx
 ```Javascript
