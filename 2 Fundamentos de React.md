@@ -366,6 +366,8 @@ Construiremos una sección interactiva, por lo que daremos contenido dinámico a
 
 ![image](https://github.com/user-attachments/assets/3d02d38b-4458-4600-85a5-af08f56edb51)
 
+Comenzaremos construyendo el botón y su funcionalidad.
+
 En React, **children** es una **prop** especial que permite a los componentes anidar otros dentro de ellos. En React, la prop **children** es una forma poderosa de componer componentes. Permite que un componente padre pase contenido a sus componentes hijos. Esto es especialmente útil para crear componentes reutilizables y flexibles. Básicamente, **children** representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente, contenido que puede ser una compleja estructura html que podemos llamar múltiples veces con tal solo utilizar una sola etiqueta html. 
 
 Observa el componente `TabButton.jsx`
@@ -376,6 +378,20 @@ export default function TabButton({children}) {
       <li>
          <button>
             {children}
+         </button>
+      </li>
+   );
+}
+```
+
+alternativamente podemos escribir:
+
+```Javascript
+export default function TabButton({props}) {
+   return (
+      <li>
+         <button>
+            {props.children}
          </button>
       </li>
    );
@@ -393,11 +409,14 @@ ahora utilizamos el componente `TabButton` en `App.jsx`:
 App.jsx
 ```Javascript
 import TabButton from './components/TabButton.jsx';
-<menu>
-  <TabButton>Components</TabButton>                 
-</menu>
+<section id = "examples">
+   <h2>Ejemplos</h2>
+   <menu>
+      <TabButton>Components</TabButton>           
+   </menu>
+</section>
 ```
-
+              
 - 1  `TabButton` se utiliza dentro de un elemento `<menu>`.
 
 - 2 El texto `Components` se pasa como `children` al componente `TabButton`, por lo que se mostrará dentro del botón.
@@ -406,8 +425,27 @@ import TabButton from './components/TabButton.jsx';
 
 **Con `children` estamos ahorrando repetir líneas de código html.**
 
-existe otra forma de hacer esto y tambien debes conocerla.
+Existe otra forma de hacer esto y también debes conocerla, la cual tiene sentido si tienes múltiples pequeñas piezas de información que deben ser pasadas a un componente. Añadiendo props extra en vez de solo envolver el contenido con los tags componentes significa mas trabajo.
 
+```Javascript
+export default function TabButton({label}) {
+   return (
+      <li>
+         <button>
+            {label}
+         </button>
+      </li>
+   );
+}
+```
+
+App.jsx
+```Javascript
+import TabButton from './components/TabButton.jsx';
+<menu>
+  <TabButton label = 'Components'>Components</TabButton>                 
+</menu>
+```
 ***
 
 ejercicio de composicion de componentes.
