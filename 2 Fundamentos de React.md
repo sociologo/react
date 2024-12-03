@@ -568,9 +568,9 @@ document.querySelector('button').addEventListener('click', () => {})
 
 No queremos código imperativo como éste, no queremos interactuar con el DOM pues queremos que React lo haga. Es por ello que escribimos código declarativo.
 
-51
+## 33 Pasar funciones como valores a las **props**
 
-Pasar funciones como valores a las **props**
+51
 
 Hemos dicho de que la función **handleClick** que se declarara dentro de la función de componente irá sin los paréntesis pues la necesitamos como valor. Requeriremos de ésta propiedad pues ahora queremos cambiar el contenido desplegado debajo de la fila de botones para acceder a uno distinto cada vez que se selecciona un botón. 
 
@@ -633,8 +633,7 @@ export default App;
 ```
 Ahora estamos preparados para cambiar la data en el contenido dinamico.
 
-
-## 33 Ejemplo de reacción a eventos
+## 34 Ejemplo de reacción a eventos
 
 Trabajaras sobre el componente "User Login" que ya ha sido preparado por un colega.
 
@@ -732,14 +731,7 @@ function App() {
 export default App;
 ```
 
-
-
-
-
-
-aca voy
-
-Pasando argumentos personalizados a funciones de eventos.
+## 35 Pasando argumentos personalizados a funciones de eventos.
 
 52
 
