@@ -821,6 +821,8 @@ Debes reemplazar la siguiente línea:
 
 # 4 El concepto de State
 
+53
+
 En React, el **state** es un objeto que permite a los componentes mantener y gestionar datos que pueden cambiar a lo largo del tiempo. A diferencia de las props, que son inmutables y se pasan desde componentes padres a hijos, el **state** es mutable y es local a cada componente.
 
 Características del State en React:
