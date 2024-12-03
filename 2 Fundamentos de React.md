@@ -32,6 +32,10 @@
   * [43 En nuestro proyecto](#43-En-nuestro-proyecto)
   * [44 Hooks](#44-Hooks)
   * [45 Reglas de los Hooks](#45-Reglas-de-los-Hooks)
+  * [46 Ejemplo Trabajando con State](#46-Ejemplo-Trabajando-con-State)
+
+***
+
 * [5 El concepto de Hook](#5-El-concepto-de-Hook)
   * [51 Reglas de los Hooks](#51-Reglas-de-los-Hooks)
   * [52 Ejercicio](#52-Ejercicio)
@@ -865,7 +869,7 @@ this.setState({ count: this.state.count + 1 });
 setCount(count + 1);
 ```
 
-## 42 Ejemplo Práctico
+## 42 Ejemplo
 
 Aquí tienes un ejemplo simple de un componente que utiliza state para contar clics en un botón:
 
@@ -897,6 +901,8 @@ En este ejemplo, el componente Counter tiene un **state** count que se increment
 ## 44 Hooks
 
 Los hooks en React son una característica introducida en la versión 16.8 que permite usar el **state** y otras funcionalidades de React en componentes funcionales, sin necesidad de escribir componentes de clase. Los hooks simplifican la lógica de los componentes y facilitan la reutilización de código.
+
+Todas las funciones en React que comienzan con `use` son **Hooks**.
 
 Principales Hooks en React
 
@@ -984,7 +990,7 @@ Los hooks han revolucionado la forma de escribir componentes en React, haciendo 
 ***
 
 
-## 52 Ejercicio
+## 46 Ejemplo Trabajando con State
 
 Estás trabajando en una parte de una tienda en línea donde se debe mostrar un precio con descuento en la pantalla una vez que el usuario haga clic en un botón.
 
