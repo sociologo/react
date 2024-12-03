@@ -27,6 +27,11 @@
   * [33 Ejemplo de reacción a eventos](#33-Ejemplo-de-reacción-a-eventos)
   * [34 Ejemplo](#34-Ejemplo)
 * [4 El concepto de State](#4-El-concepto-de-State)
+  * [41 Teoria](#41-Teoria)
+  * [42 Ejemplo Práctico](#42-Ejemplo-Práctico)
+  * [43 En nuestro proyecto](#43-En-nuestro-proyecto)
+  * [44 Hooks](#44-Hooks)
+  * [45 Reglas de los Hooks](#45-Reglas-de-los-Hooks)
 * [5 El concepto de Hook](#5-El-concepto-de-Hook)
   * [51 Reglas de los Hooks](#51-Reglas-de-los-Hooks)
   * [52 Ejercicio](#52-Ejercicio)
@@ -821,7 +826,7 @@ Debes reemplazar la siguiente línea:
 
 53-54-55
 
-## Teoria
+## 41 Teoria
 
 En React, el **state** es un objeto que permite a los componentes mantener y gestionar datos que pueden cambiar a lo largo del tiempo. A diferencia de las props, que son inmutables y se pasan desde componentes padres a hijos, el **state** es mutable y es local a cada componente.
 
@@ -860,7 +865,7 @@ this.setState({ count: this.state.count + 1 });
 setCount(count + 1);
 ```
 
-Ejemplo Práctico
+## 42 Ejemplo Práctico
 
 Aquí tienes un ejemplo simple de un componente que utiliza state para contar clics en un botón:
 
@@ -887,9 +892,9 @@ export default Counter;
 En este ejemplo, el componente Counter tiene un **state** count que se incrementa cada vez que se hace clic en el botón. React vuelve a renderizar el componente cada vez que el estado cambia, mostrando el nuevo valor de count.
 
 
-## En nuestro proyecto
+## 43 En nuestro proyecto
 
-# 5 El concepto de Hook
+## 44 Hooks
 
 Los hooks en React son una característica introducida en la versión 16.8 que permite usar el **state** y otras funcionalidades de React en componentes funcionales, sin necesidad de escribir componentes de clase. Los hooks simplifican la lógica de los componentes y facilitan la reutilización de código.
 
@@ -946,7 +951,7 @@ function Componente() {
 }
 ```
 
-## 51 Reglas de los Hooks
+## 45 Reglas de los Hooks
 
 1 Llamar hooks solo en el nivel superior: No llames hooks dentro de loops, condiciones o funciones anidadas.
 
@@ -975,6 +980,9 @@ function useFetch(url) {
 Los hooks han revolucionado la forma de escribir componentes en React, haciendo el código más limpio y fácil de entender.
 
 ***
+***
+***
+
 
 ## 52 Ejercicio
 
