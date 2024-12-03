@@ -735,7 +735,44 @@ export default App;
 
 52
 
+Ahora, dependiendo sobre qué botón hagamos el click es que queremos que se despliegue el contenido dinámico.
 
+```JavaScript
+function handleSelect(selectedButton) {
+  setSelectedTopic(selectedButton);
+}
+```
+
+```JavaScript
+export default function TabButton({children, onSelect}) {
+   return (
+      <li>
+         <button onClick = {onSelect}>
+            {children}
+         </button>
+      </li>
+   );
+}
+```
+
+La línea de código `() => handleSelect('components')` es una función flecha en JavaScript que se utiliza como un manejador de eventos.
+
+- Función Flecha: `() => handleSelect('components')` es una función flecha que no toma ningún argumento (por eso los paréntesis vacíos ()).
+
+- Llamada a la Función: Dentro de la función flecha, se llama a la función handleSelect con el argumento 'components'.
+
+- Propósito: Esta función flecha se pasa como el manejador de eventos `onClick` para el botón en el componente `TabButton`. Cuando en el botón se hace clic, la función flecha se ejecuta, llamando a handleSelect('components').
+
+- Efecto: La función handleSelect toma el argumento selectedButton (en este caso, 'components') y lo pasa a `setSelectedTopic`, que actualiza el estado del componente con el nuevo tema seleccionado.
+
+```JavaScript
+<menu>
+  <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+  <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+  <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+  <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+</menu>
+```
 
 ## 34 Ejemplo
 
