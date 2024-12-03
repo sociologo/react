@@ -739,7 +739,7 @@ Ahora, dependiendo sobre qué botón hagamos el click es que queremos que se des
 
 ```JavaScript
 function handleSelect(selectedButton) {
-  setSelectedTopic(selectedButton);
+   console.log(selectedButton);
 }
 ```
 
@@ -755,32 +755,34 @@ export default function TabButton({children, onSelect}) {
 }
 ```
 
+La función flecha anónima será ahora el valor que se le pasa **como valor** al parametro onSelect del gatillador **onClick**.
+
 La línea de código `() => handleSelect('components')` es una función flecha en JavaScript que se utiliza como un manejador de eventos.
 
 - Función Flecha: `() => handleSelect('components')` es una función flecha que no toma ningún argumento (por eso los paréntesis vacíos ()).
 
 - Llamada a la Función: Dentro de la función flecha, se llama a la función handleSelect con el argumento 'components'.
 
-- Propósito: Esta función flecha se pasa como el manejador de eventos `onClick` para el botón en el componente `TabButton`. Cuando en el botón se hace clic, la función flecha se ejecuta, llamando a handleSelect('components').
+- Propósito: Esta función flecha se pasa como el manejador de eventos `onClick` para el botón en el componente `TabButton`. **Sólo cuando en el botón se hace click**, la función flecha se ejecuta, llamando a handleSelect('components').
 
 - Efecto: La función handleSelect toma el argumento selectedButton (en este caso, 'components') y lo pasa a `setSelectedTopic`, que actualiza el estado del componente con el nuevo tema seleccionado.
 
 ```JavaScript
 <menu>
-  <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
-  <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-  <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-  <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+   <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+   <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+   <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+   <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
 </menu>
 ```
 
-## 34 Ejemplo
+## 34 Ejemplo Configuración de Manejadores de Eventos
 
-Configuración de Manejadores de Eventos
 
-Tu tarea es editar el `<button>` en el componente App de manera que la función handleCreateUser ya definida se llame con un valor para name.
 
-Por lo tanto, no debes codificar directamente el valor que se debe asignar a user.name en la función handleCreateUser, sino que debes pasarlo como un valor para el parámetro name cuando ocurra un evento de clic en el `<button>`.
+Tu tarea es editar `<button>` en el componente `App` de manera que la función ya definida `handleCreateUser` se llame con un valor para `name`.
+
+Por lo tanto, no debes codificar directamente el valor que se debe asignar a `user.name` en la función `handleCreateUser`, sino que debes pasarlo como un valor para el parámetro `name` cuando ocurra un evento de clic en el `<button>`.
 
 No tienes que preocuparte por ningún valor que pueda ingresarse en el campo `<input>` - está ahí solo con fines decorativos.
 
@@ -811,40 +813,11 @@ function App() {
 export default App;
 ```
 
-Debes ingresar la siguiente linea:
+Debes reemplazar la siguiente línea:
 
 ```JavaScript
 <button onClick={() => handleCreateUser('Christian Castro')}>Create User</button>
 ```
-En el lugar que se indica:
-
-```JavaScript
-export const user = {
-  name: '',
-};
-
-function App() {
-  function handleCreateUser(name) {
-    user.name = name;
-  }
-
-  return (
-    <div id="app">
-      <h1>User Login</h1>
-      <p>
-        <label>Name</label>
-        <input type="text" />
-      </p>
-      <p id="actions">
-        <button onClick={() => handleCreateUser('Christian Castro')}>Create User</button>
-      </p>
-    </div>
-  );
-}
-
-export default App;
-```
-***
 
 # 4 El concepto de State
 
