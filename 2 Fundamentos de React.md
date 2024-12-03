@@ -776,9 +776,7 @@ La línea de código `() => handleSelect('components')` es una función flecha e
 </menu>
 ```
 
-## 34 Ejemplo Configuración de Manejadores de Eventos
-
-
+## 36 Ejemplo Configuración de Manejadores de Eventos
 
 Tu tarea es editar `<button>` en el componente `App` de manera que la función ya definida `handleCreateUser` se llame con un valor para `name`.
 
@@ -819,9 +817,11 @@ Debes reemplazar la siguiente línea:
 <button onClick={() => handleCreateUser('Christian Castro')}>Create User</button>
 ```
 
-# 4 El concepto de State
+# 4 El concepto de State y Hook
 
-53
+53-54-55
+
+## Teoria
 
 En React, el **state** es un objeto que permite a los componentes mantener y gestionar datos que pueden cambiar a lo largo del tiempo. A diferencia de las props, que son inmutables y se pasan desde componentes padres a hijos, el **state** es mutable y es local a cada componente.
 
@@ -885,6 +885,9 @@ export default Counter;
 ```
 
 En este ejemplo, el componente Counter tiene un **state** count que se incrementa cada vez que se hace clic en el botón. React vuelve a renderizar el componente cada vez que el estado cambia, mostrando el nuevo valor de count.
+
+
+## En nuestro proyecto
 
 # 5 El concepto de Hook
 
