@@ -33,6 +33,11 @@
   * [44 Hooks](#44-Hooks)
   * [45 Reglas de los Hooks](#45-Reglas-de-los-Hooks)
   * [46 Ejemplo Trabajando con State](#46-Ejemplo-Trabajando-con-State)
+  * [47 Entregando contenido de un data.js](#47-Entregando-contenido-de-un-datajs)
+
+
+
+    
 
 ***
 
@@ -1017,4 +1022,25 @@ export default function App() {
     );
 }
 ```
+
+## 47 Entregando contenido de un datajs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
