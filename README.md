@@ -2,7 +2,15 @@
 
 https://react.new/
 
+Una unica vez se debe instalar:
+
+```bash
+PS C:\Users\chris\OneDrive\Documentos\GitHub\react\01-starting-project> npm install 
 ```
+
+Para levantar el proyecto:
+
+```bash
 cd \Users\chris\OneDrive\Documentos\GitHub\react\01-starting-project
 \Users\chris\OneDrive\Documentos\GitHub\react\01-starting-project> npm run dev
 ```
