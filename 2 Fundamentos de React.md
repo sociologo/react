@@ -27,21 +27,12 @@
   * [33 Ejemplo de reacción a eventos](#33-Ejemplo-de-reacción-a-eventos)
   * [34 Ejemplo](#34-Ejemplo)
 * [4 El concepto de State y Hook](#4-El-concepto-de-State-y-Hook)
-  * [41 Teoria](#41-Teoria)
-  * [42 Ejemplo Práctico](#42-Ejemplo-Práctico)
-  * [43 En nuestro proyecto](#43-En-nuestro-proyecto)
-  * [44 Hooks](#44-Hooks)
-  * [45 Reglas de los Hooks](#45-Reglas-de-los-Hooks)
-  * [46 Ejemplo Trabajando con State](#46-Ejemplo-Trabajando-con-State)
-  * [47 Entregando contenido de un data.js](#47-Entregando-contenido-de-un-datajs)
-
-
-
-    
+  * [41 El problema](#41-El-problema)
+  * [42 Reglas de los Hooks](#42-Reglas-de-los-Hooks)
+  * [43 Ejemplo Trabajando con State](#43-Ejemplo-Trabajando-con-State)
+  * [44 Entregando contenido de un datajs](#44-Entregando-contenido-de-un-datajs)
 
 ***
-
-
 
 # 1 Componentes
 
