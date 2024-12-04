@@ -956,15 +956,64 @@ export default function App() {
 
 ## 44 Entregando contenido de un datajs
 
+Lo que deseamos ahora es entregarle a nuestra página web un contenido dinámico con más sentido. Para ello utilizaremos un archivo **data.js** estructurado de la siguiente manera:
 
+```JavaScript
+export const EXAMPLES = {
+   components: {
+      title: 'Components',
+      description: ,
+      code: ,
+   },
+   jsx: {
+      title: 'Components',
+      description: ,
+      code: ,
+   },
+   props: {
+      title: 'Components',
+      description: ,
+      code: ,
+   },
+   state: {
+      title: 'Components',
+      description: ,
+      code: ,
+   },
+};
+```
 
+```JavaScript
+import {EXAMPLES} from './data.js';
 
+<section id = "examples">
+   <h2>Ejemplos</h2>
+   <menu>
+      <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+      <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+      <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+      <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+   </menu>
+      <div id = 'tab-content'>
+         <h3>
+            {EXAMPLES[selectedTopic].title}
+         </h3>
+         <p>
+            {EXAMPLES[selectedTopic].description}
+         </p>
+         <pre>
+            <code>
+               {EXAMPLES[selectedTopic].code}
+            </code>
+         </pre>
+      </div>
+</section>
+```
 
+> Debemos ahora inicializar el estado con un parametro valido. Lo cambiamos a 
+> const [selectedTopic, setSelectedTopic] = useState('components');
 
-
-
-
-
+## 45 Renderización de contenido de forma condicional
 
 
 
