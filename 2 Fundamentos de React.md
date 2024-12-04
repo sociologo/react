@@ -822,180 +822,107 @@ Debes reemplazar la siguiente línea:
 
 53-54-55
 
-## 41 Teoria
+## 41 El problema.
+
+Necesitamos un componente dinamico que cambie cada vez que damos click en la funcion **onSelect** del componente **TabButton**
+
+Hagamos el intento de cargar contenido dinámico declarando una variable dentro de nuestro componente funcional **App**. Declaremos la variable `tabContent` (En React, así como en JavaScript en general, `let` es una palabra clave utilizada para declarar variables que pueden ser reasignadas. A diferencia de var, que tiene un alcance de función, let tiene un alcance de bloque, lo que significa que la variable solo está disponible dentro del bloque en el que se declara (por ejemplo, dentro de un if, for, o cualquier otro bloque de código delimitado por llaves {}).
+
+```JavaScript
+function App() {
+
+   let tabContent = 'Selecciona un boton';
+
+   function handleSelect(selectedButton) {
+      tabContent = selectedButton;
+      console.log(tabContent);
+   }
+```
+
+lo que en teoria deberia dar contenido dinamico a {tabContent} en:
+
+```JavaScript
+<section id = "examples">
+   <h2>Ejemplos</h2>
+   <menu>
+      <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+      <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+      <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+      <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+   </menu>
+   {tabContent}
+</section>
+```
+
+Así, cada vez que se selecciona un boton se deberia desplegar correspondientemente 'components', 'jsx', 'props' o 'state', pero el texto será: 'Selecciona un boton' y no cambiará. Sin embargo, si verificas en la consola presionando los diferentes botones (por `console.log(tabContent);`) ver[as que la funcion SI se esta ejecutando.
+
+El problema es que por defecto, los componentes en React solo se ejecutan una sola vez, cuando encuetra por primera vez un componente en el codigo.
+
+> LOS COMPONENTES ENREACT, POR DEFECTO SOLO SE EJECUTAN UNA SOLA VEZ.
+
+El codigo en:
+
+```JavaScript
+<section id = "examples">
+   <h2>Ejemplos</h2>
+   <menu>
+      <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+      <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+      <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+      <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+   </menu>
+   {tabContent}
+</section>
+```
+
+no se reevalua.
+
+> Para solucionar este problema utilizamos el objeto **state** y su funcion hook: **useState()** y  .
 
 En React, el **state** es un objeto que permite a los componentes mantener y gestionar datos que pueden cambiar a lo largo del tiempo. A diferencia de las props, que son inmutables y se pasan desde componentes padres a hijos, el **state** es mutable y es local a cada componente.
 
-Características del State en React:
-
-- Local y Encapsulado: El state es local al componente en el que se define. Esto significa que cada componente puede tener su propio estado independiente de otros componentes.
-
-- Dinámico: El state puede cambiar en respuesta a eventos del usuario, solicitudes de red, o cualquier otra interacción. Cuando el state cambia, React vuelve a renderizar el componente para reflejar los nuevos datos.
-
-- Inicialización: El state se inicializa en el constructor de una clase o usando el hook useState en componentes funcionales.
-
-```JavaScript
-// En un componente de clase
-class MyComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { count: 0 };
-  }
-}
-
-// En un componente funcional
-import React, { useState } from 'react';
-
-function MyComponent() {
-  const [count, setCount] = useState(0);
-}
-```
-
-Actualización: Para actualizar el state, se utiliza el método setState en componentes de clase o la función setCount (o similar) en componentes funcionales.
-
-```JavaScript
-// En un componente de clase
-this.setState({ count: this.state.count + 1 });
-
-// En un componente funcional
-setCount(count + 1);
-```
-
-## 42 Ejemplo
-
-Aquí tienes un ejemplo simple de un componente que utiliza state para contar clics en un botón:
-
-```JavaScript
-import React, { useState } from 'react';
-
-function Counter() {
-
-  const [count, setCount] = useState(0);
-
-  return (
-    <div>
-      <p>Has hecho clic {count} veces</p>
-      <button onClick={() => setCount(count + 1)}>
-        Haz clic aquí
-      </button>
-    </div>
-  );
-}
-
-export default Counter;
-```
-
-En este ejemplo, el componente Counter tiene un **state** count que se incrementa cada vez que se hace clic en el botón. React vuelve a renderizar el componente cada vez que el estado cambia, mostrando el nuevo valor de count.
-
-
-## 43 En nuestro proyecto
-
-Si hacemos un intento ingenuo de cargar contenido dinámico en nuestra página nos encontraremos con una sorpresa.
-
-Declaremos la variable `tabContent` (En React, así como en JavaScript en general, `let` es una palabra clave utilizada para declarar variables que pueden ser reasignadas. A diferencia de var, que tiene un alcance de función, let tiene un alcance de bloque, lo que significa que la variable solo está disponible dentro del bloque en el que se declara (por ejemplo, dentro de un if, for, o cualquier otro bloque de código delimitado por llaves {}).
-
-```JavaScript
-let tabContent = ''
-
-function handleSelect(selectedButton) {
-   console.log(selectedButton);
-}
-```
-
-
-## 44 Hooks
-
-Los hooks en React son una característica introducida en la versión 16.8 que permite usar el **state** y otras funcionalidades de React en componentes funcionales, sin necesidad de escribir componentes de clase. Los hooks simplifican la lógica de los componentes y facilitan la reutilización de código.
-
 Todas las funciones en React que comienzan con `use` son **Hooks**.
 
-Principales Hooks en React
+Cuando llamas a **useState**, obtienes dos elementos:
 
-1 useState: Permite agregar estado local a un componente funcional.
+- **Estado Actual**: Este es el valor actual del estado. Puedes usarlo para leer el estado en tu componente.
+- **Función para Actualizar el Estado**: Cuando la llamas con un nuevo valor, React vuelve a renderizar el componente con el nuevo estado.
 
-```JavaScript
-import React, { useState } from 'react';
-
-function Contador() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div>
-      <p>Has hecho clic {count} veces</p>
-      <button onClick={() => setCount(count + 1)}>Haz clic aquí</button>
-    </div>
-  );
-}
-```
-
-2 useEffect: Permite realizar efectos secundarios en componentes funcionales, como suscribirse a datos, realizar solicitudes de red o manipular el DOM.
+En nuestro ejercicio a la primera la llamaremos **selectedTopic** y a la segunda **setSelectedTopic** las que llamaremos por desestructuración. Con esto resolvemos el requerimiento para que la función handSelect vuelva a ser llamada.
 
 ```JavaScript
-import React, { useEffect, useState } from 'react';
+import {useState} from 'react';
+function App() {
 
-function Ejemplo() {
-  const [data, setData] = useState(null);
+   const [selectedTopic, setSelectedTopic] = useState('Selecciona un boton');
 
-  useEffect(() => {
-    fetch('https://api.example.com/data')
-      .then(response => response.json())
-      .then(data => setData(data));
-  }, []); // El array vacío significa que este efecto se ejecuta solo una vez
-
-  return (
-    <div>
-      <p>Datos: {data}</p>
-    </div>
-  );
-}
+   function handleSelect(selectedButton) {
+      setSelectedTopic(selectedButton);
+   }
 ```
-
-3 useContext: Permite acceder a valores de contexto en componentes funcionales.
 
 ```JavaScript
-import React, { useContext } from 'react';
-const MiContexto = React.createContext();
-
-function Componente() {
-  const valor = useContext(MiContexto);
-  return <div>{valor}</div>;
-}
+<section id = "examples">
+   <h2>Ejemplos</h2>
+   <menu>
+      <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+      <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+      <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+      <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+   </menu>
+   {selectedTopic}
+</section>
 ```
 
-## 45 Reglas de los Hooks
+useState('Selecciona un boton') es el estado inicial.
+
+## 42 Reglas de los Hooks
 
 1 Llamar hooks solo en el nivel superior: No llames hooks dentro de loops, condiciones o funciones anidadas.
 
 2 Llamar hooks solo desde funciones de React: Usa hooks solo en componentes funcionales o en tus propios hooks personalizados.
 
-Hooks Personalizados
-
-Puedes crear tus propios hooks para reutilizar lógica de estado entre componentes. Un hook personalizado es simplemente una función de JavaScript cuyo nombre comienza con “use” y que puede llamar a otros hooks.
-
-```JavaScript
-import { useState, useEffect } from 'react';
-
-function useFetch(url) {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch(url)
-      .then(response => response.json())
-      .then(data => setData(data));
-  }, [url]);
-
-  return data;
-}
-```
-
-Los hooks han revolucionado la forma de escribir componentes en React, haciendo el código más limpio y fácil de entender.
-
-***
-***
-***
-
-
-## 46 Ejemplo Trabajando con State
+## 43 Ejemplo Trabajando con State
 
 Estás trabajando en una parte de una tienda en línea donde se debe mostrar un precio con descuento en la pantalla una vez que el usuario haga clic en un botón.
 
@@ -1036,7 +963,7 @@ export default function App() {
 }
 ```
 
-## 47 Entregando contenido de un datajs
+## 44 Entregando contenido de un datajs
 
 
 
