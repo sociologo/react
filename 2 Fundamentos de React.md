@@ -890,6 +890,19 @@ En este ejemplo, el componente Counter tiene un **state** count que se increment
 
 ## 43 En nuestro proyecto
 
+Si hacemos un intento ingenuo de cargar contenido dinámico en nuestra página nos encontraremos con una sorpresa.
+
+Declaremos la variable `tabContent` (En React, así como en JavaScript en general, `let` es una palabra clave utilizada para declarar variables que pueden ser reasignadas. A diferencia de var, que tiene un alcance de función, let tiene un alcance de bloque, lo que significa que la variable solo está disponible dentro del bloque en el que se declara (por ejemplo, dentro de un if, for, o cualquier otro bloque de código delimitado por llaves {}).
+
+```JavaScript
+let tabContent = ''
+
+function handleSelect(selectedButton) {
+   console.log(selectedButton);
+}
+```
+
+
 ## 44 Hooks
 
 Los hooks en React son una característica introducida en la versión 16.8 que permite usar el **state** y otras funcionalidades de React en componentes funcionales, sin necesidad de escribir componentes de clase. Los hooks simplifican la lógica de los componentes y facilitan la reutilización de código.
