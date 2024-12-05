@@ -1167,12 +1167,15 @@ Estás trabajando en una parte de una aplicación web que es responsable de most
 Por lo tanto, tu tarea es mostrar condicionalmente un cuadro de advertencia una vez que un usuario haya hecho clic en un botón específico. Dentro de ese cuadro de diálogo de advertencia, otro botón permite a los usuarios descartar la advertencia (es decir, eliminar el cuadro de advertencia de la pantalla).
 
 La aplicación finalizada debe mostrar esta interfaz de usuario, si aún no se ha hecho clic en el <button>:
+![image](https://github.com/user-attachments/assets/c8da23ef-739a-46ba-8f5f-75514e45a6d5)
 
 Y esta interfaz de usuario, una vez que se hizo clic en el botón:
+![image](https://github.com/user-attachments/assets/6ddd080e-01ae-4fad-8a64-40162411b41a)
 
 Una vez que se hizo clic en el botón "Continuar", el cuadro de advertencia debe eliminarse nuevamente:
+![image](https://github.com/user-attachments/assets/ff33e1ce-5ff5-4848-ac7c-2a6eb9a788c8)
 
-Para esta tarea, debes reaccionar a los clics en ambos elementos <button> que forman parte del código de inicio. El segundo botón, fuera del <div> con el id="alert", debe mostrar el <div id="alert"> (y todo su contenido). El botón dentro de ese <div> debe ocultarlo nuevamente (es decir, eliminarlo del DOM).
+Para esta tarea, debes reaccionar a los clics en ambos elementos `<button>` que forman parte del código de inicio. El segundo botón, fuera del `<div>` con el `id="alert"`, debe mostrar el `<div id="alert">` (y todo su contenido). El botón dentro de ese `<div>` debe ocultarlo nuevamente (es decir, eliminarlo del DOM).
 
 Depende de usted si desea utilizar una expresión ternaria o almacenar el código JSX que se muestra de manera condicional en una variable.
 
@@ -1180,14 +1183,6 @@ Importante: en este editor de código de Udemy, puede recibir un error si utiliz
 
 ```JavaScript
 import React from 'react';
-
-// IMPORTANT:
-// In this Udemy environment, you CAN'T import & use useState like this:
-// import { useState } from 'react'
-// Instead, import & use it like this:
-// import React from 'react';
-// React.useState(...)
-
 // don't change the Component name "App"
 export default function App() {
     return (
@@ -1203,8 +1198,31 @@ export default function App() {
 }
 ```
 
+```JavaScript
+import React, { useState } from 'react'; 
 
-
+export default function App() { 
+   const [showAlert, setShowAlert] = useState(false);
+   const handleShowAlert = () => { setShowAlert(true);   
+   }; 
+   const handleHideAlert = () => { 
+      setShowAlert(false);
+   }; 
+      
+   return ( 
+      <div> 
+         {showAlert && ( 
+            <div data-testid="alert" id="alert"> 
+            <h2>Are you sure?</h2> 
+            <p>These changes can't be reverted!</p> 
+            <button onClick={handleHideAlert}>Proceed</button> 
+            </div> 
+            )} 
+            <button onClick={handleShowAlert}>Delete</button> 
+      </div> 
+   ); 
+}
+```
 
 
 
