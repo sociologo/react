@@ -42,7 +42,7 @@
 * [6 Entregando estilos en forma condicional](#6-Entregando-estilos-en-forma-condicional)
   * [61 Ejercicio](#61-Ejercicio)
 
-* [7 Generación dinámica de datos de listas](#7-Generación-dinámica-de-datos-de-listas)
+* [7 Generación dinámica de datos de listas. El método map](#7-Generación-dinámica-de-datos-de-listas.-El-método-map)
 
 ***
 
@@ -1305,7 +1305,7 @@ export default function App() {
 }
 ```
 
-# 7 Generación dinámica de datos de listas
+# 7 Generación dinámica de datos de listas. El método map
 
 
 
