@@ -33,7 +33,7 @@
   * [44 Entregando contenido de un datajs](#44-Entregando-contenido-de-un-datajs)
 
 * [5 Renderización de contenido de forma condicional](#5-Renderización-de-contenido-de-forma-condicional)
-  * [51 Utilizando dos operadores ternarios dejando useState vacío](#51-Utilizando-dos-operadores-ternarios-dejando useState vacío)
+  * [51 Utilizando dos operadores ternarios dejando useState vacío](#51-Utilizando-dos-operadores-ternarios-dejando-useState-vacío)
   * [52 Integrando la funcionalidad en un solo operador tenario](#52-Integrando-la-funcionalidad-en-un-solo-operador-tenario)
   * [53 Utilizando el operador y lógico de javascript](#53-Utilizando-el-operador-y-lógico-de-javascript)
   * [54 Utilizando una variable const](#54-Utilizando-una-variable-const)
