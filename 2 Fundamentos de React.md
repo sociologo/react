@@ -1025,13 +1025,13 @@ import {EXAMPLES} from './data.js';
 > Debemos ahora inicializar el estado con un parametro valido. Lo cambiamos a 
 > const [selectedTopic, setSelectedTopic] = useState('components');
 
-## 45 Renderización de contenido de forma condicional
+# 5 Renderización de contenido de forma condicional
 
-Ocurre un problema al iniciar la aplicación. Lo que sucede es que queremos que se despliegue el contenido dinámico sólo y sólo si hemos presionado un botón para aquello. Si no es así, queremos que se despliegue otro contendido o ninguno.
+Ocurre un problema al iniciar la aplicación. Lo que sucede es que queremos que se despliegue el contenido dinámico sólo y sólo si hemos presionado un botón para aquello. Si no es así, queremos que se despliegue otro contendido o ninguno. Queremos que se despliegue al inicio: 'Por favor, selecciona un item'.
 
 Tenemos varias alternativas:
 
-### Desplegando un mensaje: 'Por favor, selecciona un item' al inicio:
+## 51 Utilizando dos operadores ternarios dejando useState vacío
   
 ```JavaScript
 <div id = 'tab-content'>
@@ -1076,7 +1076,7 @@ const [selectedTopic, setSelectedTopic] = useState();
 ) : null}
 ```
 
-- 2 Integrando la funcionalidad en un solo operador tenario:
+## 52 Integrando la funcionalidad en un solo operador tenario
 
 ```JavaScript
 const [selectedTopic, setSelectedTopic] = useState();
@@ -1101,7 +1101,7 @@ const [selectedTopic, setSelectedTopic] = useState();
 )}
 ```
 
-- 3 Utilizando el operador && de javascript:
+## 53 Utilizando el operador y lógico de javascript
   
 Si la expresión a la izquierda del && es true, entonces el elemento a la derecha del && se renderiza. Si la expresión a la izquierda es false, el elemento a la derecha no se renderiza.
 
@@ -1129,7 +1129,7 @@ const [selectedTopic, setSelectedTopic] = useState();
 )}
 ```  
 
-- 4 Utilizando una variable const.
+## 54 Utilizando una variable const 
 
 Recordemos que en react el codigo jsx puede ser usado como variable o constante.
 
@@ -1172,7 +1172,7 @@ if (selectedTopic) {
 </section>
 ```
 
-### Ejercicio.
+## 55 Ejercicio
 
 Estás trabajando en una parte de una aplicación web que es responsable de mostrar una advertencia cuando un usuario está a punto de realizar una acción peligrosa.
 
@@ -1236,11 +1236,11 @@ export default function App() {
 }
 ```
 
-## 46 Entregando estilos en forma condicional.
+# 6 Entregando estilos en forma condicional
 
 Queremos entregarle un estilo a cada boton una vez haya sido seleccionado, 
 
-### Ejercicio
+## 61 Ejercicio
 
 Tu tarea es aplicar dinámicamente una clase CSS (activa) al elemento <p>Style me</p> en la aplicación React proporcionada.
 
@@ -1305,7 +1305,36 @@ export default function App() {
 }
 ```
 
-58. Generación dinámica de datos de listas
+# 7 Generación dinámica de datos de listas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
