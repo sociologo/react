@@ -1015,6 +1015,206 @@ import {EXAMPLES} from './data.js';
 
 ## 45 Renderización de contenido de forma condicional
 
+Ocurre un problema al iniciar la aplicación. Lo que sucede es que queremos que se despliegue el contenido dinámico sólo y sólo si hemos presionado un botón para aquello. Si no es así, queremos que se despliegue otro contendido o ninguno.
+
+Tenemos varias alternativas:
+
+### Desplegando un mensaje: 'Por favor, selecciona un item' al inicio:
+  
+```JavaScript
+<div id = 'tab-content'>
+   <p>Por favor, selecciona un item</p>
+   <h3>
+      {EXAMPLES[selectedTopic].title}
+   </h3>
+   <p>
+      {EXAMPLES[selectedTopic].description}
+   </p>
+   <pre>
+      <code>
+         {EXAMPLES[selectedTopic].code}
+      </code>
+   </pre>
+</div>
+```
+
+- 1 Utilizando dos operadores ternarios dejando useState vacío:
+
+```JavaScript
+const [selectedTopic, setSelectedTopic] = useState();
+
+// some code
+
+{!selectedTopic ? <p>Por favor, selecciona un item.</p> : null}
+{selectedTopic ? (
+  <div id = 'tab-content'>
+     <p>Por favor, selecciona un item</p>
+     <h3>
+        {EXAMPLES[selectedTopic].title}
+     </h3>
+     <p>
+        {EXAMPLES[selectedTopic].description}
+     </p>
+     <pre>
+        <code>
+           {EXAMPLES[selectedTopic].code}
+        </code>
+     </pre>
+  </div>
+) : null}
+```
+
+- 2 Integrando la funcionalidad en un solo operador tenario:
+
+```JavaScript
+const [selectedTopic, setSelectedTopic] = useState();
+
+// some code
+
+{!selectedTopic ? <p>Por favor, selecciona un item.</p> :
+(<div id = 'tab-content'>
+     <p>Por favor, selecciona un item</p>
+     <h3>
+        {EXAMPLES[selectedTopic].title}
+     </h3>
+     <p>
+        {EXAMPLES[selectedTopic].description}
+     </p>
+     <pre>
+        <code>
+           {EXAMPLES[selectedTopic].code}
+        </code>
+     </pre>
+  </div>
+)}
+```
+
+- 3 Utilizando el operador && de javascript:
+  
+Si la expresión a la izquierda del && es true, entonces el elemento a la derecha del && se renderiza. Si la expresión a la izquierda es false, el elemento a la derecha no se renderiza.
+
+```JavaScript
+const [selectedTopic, setSelectedTopic] = useState();
+
+// some code
+
+{!selectedTopic && <p>Por favor, selecciona un item.</p>}
+{selectedTopic && (
+  <div id = 'tab-content'>
+     <p>Por favor, selecciona un item</p>
+     <h3>
+        {EXAMPLES[selectedTopic].title}
+     </h3>
+     <p>
+        {EXAMPLES[selectedTopic].description}
+     </p>
+     <pre>
+        <code>
+           {EXAMPLES[selectedTopic].code}
+        </code>
+     </pre>
+  </div>
+)}
+```  
+
+- 4 Utilizando una variable.
+
+Recordemos que en react el codigo jsx puede ser usado como variable o constante.
+
+```JavaScript
+const [selectedTopic, setSelectedTopic] = useState();
+
+// some code
+
+let tabContent = <p>Por favor, selecciona un item.</p>;
+if (selectedTopic) {
+  tabContent = (
+    <div id = 'tab-content'>
+       <p>Por favor, selecciona un item</p>
+       <h3>
+          {EXAMPLES[selectedTopic].title}
+       </h3>
+       <p>
+          {EXAMPLES[selectedTopic].description}
+       </p>
+       <pre>
+          <code>
+             {EXAMPLES[selectedTopic].code}
+          </code>
+       </pre>
+    </div>
+);
+}
+
+// some code
+
+<section id = "examples">
+   <h2>Ejemplos</h2>
+   <menu>
+      <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+      <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+      <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+      <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+   </menu>
+   {tabContent}
+</section>
+```
+
+### Ejercicio.
+
+Estás trabajando en una parte de una aplicación web que es responsable de mostrar una advertencia cuando un usuario está a punto de realizar una acción peligrosa.
+
+Por lo tanto, tu tarea es mostrar condicionalmente un cuadro de advertencia una vez que un usuario haya hecho clic en un botón específico. Dentro de ese cuadro de diálogo de advertencia, otro botón permite a los usuarios descartar la advertencia (es decir, eliminar el cuadro de advertencia de la pantalla).
+
+La aplicación finalizada debe mostrar esta interfaz de usuario, si aún no se ha hecho clic en el <button>:
+
+Y esta interfaz de usuario, una vez que se hizo clic en el botón:
+
+Una vez que se hizo clic en el botón "Continuar", el cuadro de advertencia debe eliminarse nuevamente:
+
+Para esta tarea, debes reaccionar a los clics en ambos elementos <button> que forman parte del código de inicio. El segundo botón, fuera del <div> con el id="alert", debe mostrar el <div id="alert"> (y todo su contenido). El botón dentro de ese <div> debe ocultarlo nuevamente (es decir, eliminarlo del DOM).
+
+Depende de usted si desea utilizar una expresión ternaria o almacenar el código JSX que se muestra de manera condicional en una variable.
+
+Importante: en este editor de código de Udemy, puede recibir un error si utiliza useState(). ¡Use React.useState() en su lugar!
+
+```JavaScript
+import React from 'react';
+
+// IMPORTANT:
+// In this Udemy environment, you CAN'T import & use useState like this:
+// import { useState } from 'react'
+// Instead, import & use it like this:
+// import React from 'react';
+// React.useState(...)
+
+// don't change the Component name "App"
+export default function App() {
+    return (
+      <div>
+        <div data-testid="alert" id="alert">
+          <h2>Are you sure?</h2>
+          <p>These changes can't be reverted!</p>
+          <button>Proceed</button>
+        </div>
+        <button>Delete</button>
+      </div>    
+    );
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
