@@ -32,6 +32,18 @@
   * [43 Ejemplo Trabajando con State](#43-Ejemplo-Trabajando-con-State)
   * [44 Entregando contenido de un datajs](#44-Entregando-contenido-de-un-datajs)
 
+* [5 Renderización de contenido de forma condicional](#5-Renderización-de-contenido-de-forma-condicional)
+  * [51 Utilizando dos operadores ternarios dejando useState vacío](#51-Utilizando-dos-operadores-ternarios-dejando useState vacío)
+  * [52 Integrando la funcionalidad en un solo operador tenario](#52-Integrando-la-funcionalidad-en-un-solo-operador-tenario)
+  * [53 Utilizando el operador y lógico de javascript](#53-Utilizando-el-operador-y-lógico-de-javascript)
+  * [54 Utilizando una variable const](#54-Utilizando-una-variable-const)
+  * [55 Ejercicio](#55-Ejercicio)
+
+* [6 Entregando estilos en forma condicional](#6-Entregando-estilos-en-forma-condicional)
+  * [61 Ejercicio](#61-Ejercicio)
+
+* [7 Generación dinámica de datos de listas](#7-Generación-dinámica-de-datos-de-listas)
+
 ***
 
 # 1 Componentes
@@ -1117,7 +1129,7 @@ const [selectedTopic, setSelectedTopic] = useState();
 )}
 ```  
 
-- 4 Utilizando una variable.
+- 4 Utilizando una variable const.
 
 Recordemos que en react el codigo jsx puede ser usado como variable o constante.
 
