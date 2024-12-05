@@ -1307,8 +1307,16 @@ export default function App() {
 
 # 7 Generación dinámica de datos de listas El método map
 
+## Ejercicio
 
+Contenido de lista dinámica
+Estás trabajando en una aplicación web de "Lista de tareas pendientes" y tu tarea es generar una lista de elementos de tareas pendientes ficticios de forma dinámica. Para esta tarea, se ha preparado un componente de tareas pendientes, aunque aún debes agregarle algo de código para recibir y generar el texto de la tarea pendiente.
 
+Para ser más precisos: en el componente de la aplicación, debes transformar la matriz DUMMY_TODOS que se te proporciona (¡la cual no debe modificarse!) en una lista de elementos JSX (elementos <Todo> para ser precisos). Cada elemento del componente de tareas pendientes debe recibir y generar el texto de la tarea pendiente a través de una propiedad llamada texto.
+
+La interfaz de usuario final debería verse así:
+
+![image](https://github.com/user-attachments/assets/ded81425-ee8e-4eb3-84bb-d6a633163ee8)
 
 
 
