@@ -1224,21 +1224,76 @@ export default function App() {
 }
 ```
 
+## 46 Entregando estilos en forma condicional.
 
+Queremos entregarle un estilo a cada boton una vez haya sido seleccionado, 
 
+### Ejercicio
 
+Tu tarea es aplicar dinámicamente una clase CSS (activa) al elemento <p>Style me</p> en la aplicación React proporcionada.
 
+La clase debe aplicarse cuando se hace clic en el botón <button> por primera vez.
 
+Así es como debería verse la aplicación terminada ANTES de hacer clic en el botón:
 
+Así es como debería verse DESPUÉS de hacer clic en el botón:
 
+Importante: usa React.useState() en lugar de solo useState(), ya que este último puede causar problemas en este entorno de código de Udemy.
 
+```JavaScript
+import React from 'react';
 
+// don't change the Component name "App"
+export default function App() {
+    return (
+        <div>
+            <p>Style me!</p>
+            <button>Toggle style</button>
+        </div>
+    );
+}
+```
 
+```JavaScript
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 3rem;
+    background-color: #2d2c2c;
+    color: #959090;
+    text-align: center;
+}
 
+.active {
+    color: red;
+}
+```
 
+Solucion:
 
+```JavaScript
+import React, { useState } from 'react';
 
+// don't change the Component name "App"
+export default function App() {
+   // Estado para manejar la clase CSS
+   const [isActive, setIsActive] = useState(false);
 
+   // Función para alternar la clase CSS
+   const toggleClass = () => {
+      setIsActive(!isActive);
+   };
+
+   return (
+      <div>
+         <p className={isActive ? 'active' : ''}>Style me!</p>
+         <button onClick={toggleClass}>Toggle style</button>
+      </div>
+   );
+}
+```
+
+58. Generación dinámica de datos de listas
 
 
 
