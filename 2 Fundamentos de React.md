@@ -6,6 +6,8 @@
 
 ## Índice
 
+Sección 35-59
+
 * [1 Componentes](#1-Componentes)
   * [11 Características](#11-Caracteristicas)
   * [12 Tipos de Componentes](#12-Tipos-de-Componentes)
@@ -45,6 +47,8 @@
 * [7 Generación dinámica de datos de listas. El método map](#7-Generación-dinámica-de-datos-de-listas-El-método-map)
 
 ***
+
+Sección 4 60-69
 
 # 1 Componentes
 
