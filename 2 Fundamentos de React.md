@@ -1478,7 +1478,9 @@ import React from 'react';
 export default function Todo({ texto }) { 
    return <li>{texto}</li>; 
 }
+```
 
+```JavaScript
 import React from 'react';
 import Todo from './Todo';
 
@@ -1488,9 +1490,7 @@ export const DUMMY_TODOS = [
   'Practice React',
   'Profit!'
 ];
-```
 
-```JavaScript
 // don't change the Component name "App"
 export default function App() {
   return (
