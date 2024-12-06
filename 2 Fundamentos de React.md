@@ -45,7 +45,11 @@ Sección 35-59
   * [61 Ejercicio](#61-Ejercicio)
 
 * [7 Generación dinámica de datos de listas. El método map](#7-Generación-dinámica-de-datos-de-listas-El-método-map)
-
+  * [71 El metodo map](#71-El-metodo-map)
+  * [72 Añadiendo la prop key](#72-Añadiendo-la-prop-key)
+  * [73 Ejercicio Contenido de lista dinámica](#73-Ejercicio-Contenido-de-lista-dinámica)
+ 
+    
 ***
 
 Sección 4 60-69
