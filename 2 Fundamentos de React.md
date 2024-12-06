@@ -1307,6 +1307,18 @@ export default function App() {
 
 # 7 Generación dinámica de datos de listas El método map
 
+## El metodo map
+
+El método **map()** en JavaScript es una función de los arrays que permite crear un nuevo array con los resultados de aplicar una función a cada uno de los elementos del array original. Es una herramienta muy poderosa y comúnmente utilizada en la programación funcional.
+
+Características del método map()
+
+- 1 No modifica el array original: map() crea un nuevo array y no cambia el array sobre el que se llama.
+
+- 2 Función de callback: Toma una función de callback como argumento. Esta función se ejecuta una vez por cada elemento del array.
+
+- 3 Nuevo array: Devuelve un nuevo array con los resultados de aplicar la función de callback a cada elemento del array original.
+
 ## Ejercicio
 
 Contenido de lista dinámica
