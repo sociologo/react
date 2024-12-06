@@ -1307,30 +1307,201 @@ export default function App() {
 
 # 7 Generación dinámica de datos de listas El método map
 
-## El metodo map
+Nos encontramos con unos problemas en el siguiente bloque:
+
+![image](https://github.com/user-attachments/assets/f470c85f-7b7c-4a72-965a-a97170771b3f)
+
+Aparte de estar repitiendo tres veces una línea de código, sucede que si modificamos en algo la estructura de datos de data.js, nuestra página web se rompe. 
+
+```JavaScript
+<section id = 'core-concepts'>
+   <h2>
+      Core Concepts
+   </h2>
+      <ul>
+         <CoreConcept                  
+            title = {CORE_CONCEPTS[0].title}
+            description = {CORE_CONCEPTS[0].description} 
+            image = {CORE_CONCEPTS[0].image}                
+         />
+         <CoreConcept {...CORE_CONCEPTS[1]}/>
+         <CoreConcept {...CORE_CONCEPTS[2]}/>
+         <CoreConcept {...CORE_CONCEPTS[3]}/>                   
+      </ul>              
+</section>
+```
+
+Sería ideal si el número de elementos **CoreConcepts** pudiese derivarse dinamicamente del numero de elementos del array CORE_CONCEPTS. JSX es capaz de producir un array de elementos html, por lo que podemos transformar el array de elementos del array CORE_CONCEPTS en un array de elementos JSX. Eso lo podemos lograr con la ayuda de la funcion map de JavaScript.
+
+## 71 El metodo map
 
 El método **map()** en JavaScript es una función de los arrays que permite crear un nuevo array con los resultados de aplicar una función a cada uno de los elementos del array original. Es una herramienta muy poderosa y comúnmente utilizada en la programación funcional.
 
 Características del método map()
 
-- 1 No modifica el array original: map() crea un nuevo array y no cambia el array sobre el que se llama.
+- 1 No modifica el array original: **map()** crea un nuevo array y no cambia el array sobre el que se llama.
 
 - 2 Función de callback: Toma una función de callback como argumento. Esta función se ejecuta una vez por cada elemento del array.
 
 - 3 Nuevo array: Devuelve un nuevo array con los resultados de aplicar la función de callback a cada elemento del array original.
 
-## Ejercicio
+Recordemos el componente **CoreConcept**:
 
-Contenido de lista dinámica
+```JavaScript
+export default function CoreConcept({image, title, description}){
+   return (
+      <li>
+         <img src = {image} alt = {title} />
+         <h3>{title}</h3>
+         <p>{description}</p>
+      </li>
+   );
+}
+```
+
+Podemos reemplazar el codigo:
+
+```JavaScript
+<section id = 'core-concepts'>
+   <h2>
+      Core Concepts
+   </h2>
+      <ul>
+         <CoreConcept                  
+            title = {CORE_CONCEPTS[0].title}
+            description = {CORE_CONCEPTS[0].description} 
+            image = {CORE_CONCEPTS[0].image}                
+         />
+         <CoreConcept {...CORE_CONCEPTS[1]}/>
+         <CoreConcept {...CORE_CONCEPTS[2]}/>
+         <CoreConcept {...CORE_CONCEPTS[3]}/>                   
+      </ul>              
+</section>
+```
+
+Por:
+
+```JavaScript
+<section id = 'core-concepts'>
+   <h2>
+   Core Concepts
+   </h2>
+   <ul>
+      {CORE_CONCEPTS.map((conceptItem) => (<CoreConcept {...conceptItem} />
+      ))}                  
+   </ul>              
+</section>
+```
+
+Desglose de la Línea de código: `CORE_CONCEPTS.map((conceptItem) => (...))`
+
+- CORE_CONCEPTS es un array que contiene elementos que deseas renderizar.
+
+- El método map() itera sobre cada elemento del array CORE_CONCEPTS y ejecuta la función de callback* proporcionada para cada elemento.
+
+- conceptItem es el parámetro que representa cada elemento del array CORE_CONCEPTS durante la iteración.
+
+Desglose de la Línea de código: <CoreConcept {...conceptItem} />:
+
+- Dentro de la función de callback, se está retornando un componente de React llamado CoreConcept.
+
+- {...conceptItem} es la sintaxis de "spread"** en JavaScript, que se utiliza para pasar todas las propiedades del objeto conceptItem como props al componente CoreConcept.
+
+Comportamiento
+
+- Iteración y Renderizado: Por cada elemento en el array CORE_CONCEPTS, se crea una instancia del componente CoreConcept con las propiedades del elemento actual (conceptItem) pasadas como props.
+
+- Props Dinámicas: La sintaxis de "spread" ({...conceptItem}) permite que todas las propiedades del objeto conceptItem se pasen al componente CoreConcept de manera dinámica.
+
+* Una función de callback es una función que se pasa como argumento a otra función y se ejecuta después de que la función principal haya completado su tarea. Las funciones de callback son una característica fundamental en JavaScript y se utilizan ampliamente para manejar operaciones asíncronas, como llamadas a APIs, temporizadores y eventos.
+
+** En JavaScript, el operador de propagación, conocido como "spread operator", se representa con tres puntos (...). Se utiliza para expandir elementos de un iterable (como un array o un objeto) en lugares donde se esperan múltiples elementos. Es una herramienta muy útil y versátil en la programación moderna de JavaScript.
+
+
+## 72 Añadiendo la prop key
+
+Aparece un problema. En la consola al ejecutar este codigo aparece el error: **'cada child en una lista deberia tener una unica prop 'key''**. Le añadimos una:
+
+```JavaScript
+<section id = 'core-concepts'>
+   <h2>
+   Core Concepts
+   </h2>
+   <ul>
+      {CORE_CONCEPTS.map((conceptItem) => (
+         <CoreConcept key = {conceptItem.title} {...conceptItem} />
+      ))}                  
+   </ul>              
+</section>
+```
+
+
+## 73 Ejercicio Contenido de lista dinámica
+
 Estás trabajando en una aplicación web de "Lista de tareas pendientes" y tu tarea es generar una lista de elementos de tareas pendientes ficticios de forma dinámica. Para esta tarea, se ha preparado un componente de tareas pendientes, aunque aún debes agregarle algo de código para recibir y generar el texto de la tarea pendiente.
 
+Todo.js
+```JavaScript
+import React from 'react';
+
+export default function Todo() {
+   return <li>...</li>;
+}
+```
+
 Para ser más precisos: en el componente de la aplicación, debes transformar la matriz DUMMY_TODOS que se te proporciona (¡la cual no debe modificarse!) en una lista de elementos JSX (elementos <Todo> para ser precisos). Cada elemento del componente de tareas pendientes debe recibir y generar el texto de la tarea pendiente a través de una propiedad llamada texto.
+
+```JavaScript
+import React from 'react';
+import Todo from './Todo'
+
+// don't remove the export keyword here!
+export const DUMMY_TODOS = [
+   'Learn React',
+   'Practice React',
+   'Profit!'
+];
+
+// don't change the Component name "App"
+export default function App() {
+}
+```
 
 La interfaz de usuario final debería verse así:
 
 ![image](https://github.com/user-attachments/assets/ded81425-ee8e-4eb3-84bb-d6a633163ee8)
 
+Respuesta:
 
+```JavaScript
+import React from 'react'; 
+export default function Todo({ texto }) { 
+   return <li>{texto}</li>; 
+}
+
+import React from 'react';
+import Todo from './Todo';
+
+// don't remove the export keyword here!
+export const DUMMY_TODOS = [
+  'Learn React',
+  'Practice React',
+  'Profit!'
+];
+```
+
+```JavaScript
+// don't change the Component name "App"
+export default function App() {
+  return (
+    <ul>
+      {DUMMY_TODOS.map((todo, index) => (
+        <Todo key={index} texto={todo} />
+      ))}
+    </ul>
+  );
+}
+```
 
 
 
