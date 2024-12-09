@@ -1576,7 +1576,109 @@ export default App;
 
 63-64-65-66
 
-estamos usando nuestro state simultaneamente en componnetes que no necesitan esta simunltaneidad. 
+Observemos que dentro de nuestra aplicacion App.js tenemos multiples reponsabilidades trabajando simultaneamente:
+
+- 1 Despliega los CORE_CONCEPTS y
+- 2 Administra los botones responsables del despliegue del contenido dinamico.
+- 3 Tambien tiene la particularidad de campiar el componente aleatorio del titulo {description} cada vez que damos click a un boton. esto ocurre porque estamos utilizando en State **selectedTopic** en el componente App
+
+Queremos tener la capacidad de identificar buenos lugares para nuestro componentes extra y ser capaz de dividir en componentes con responsabilidades especificas.
+
+Tenmos dos grandes bloques de codigo en los que podemos separar componentes. La primera, la seccion de los core concepsts y la de abajo que despliega botones y les entrega funcionalidad dinamica. Para ello construiremos los nuevos componentes llamados CoreConcepts.jsx y Examples.jsx respectivamente
+
+## El componente CoreConcepts.jsx
+
+```JavaScript
+import Coreconcepts from '/CoreConcepts.jsx';
+import {CORE_CONCEPTS} from '../data.js';
+
+export default function CoreConcepts() {
+  <section id = 'core-concepts'>
+     <h2>
+        Core Concepts
+     </h2>
+        <ul>
+           <CoreConcept                  
+              title = {CORE_CONCEPTS[0].title}
+              description = {CORE_CONCEPTS[0].description} 
+              image = {CORE_CONCEPTS[0].image}                
+           />
+           <CoreConcept {...CORE_CONCEPTS[1]}/>
+           <CoreConcept {...CORE_CONCEPTS[2]}/>
+           <CoreConcept {...CORE_CONCEPTS[3]}/>                   
+        </ul>              
+  </section>
+}
+```
+
+En la componente App.jsx obviamente quitamos las lineas:
+
+```JavaScript
+import Coreconcepts from '/CoreConcepts.jsx';
+import {CORE_CONCEPTS} from '../data.js';
+```
+
+y anadimos:
+
+```JavaScript
+import CoreConcepts from './components/CoreConcepts.jsx';
+```
+
+Reemplazando la seccion que hemos quitado con el tag <CoreConcepts />
+
+```JavaScript
+import {useState} from 'react';
+import Header from './components/Header/Header.jsx';
+import CoreConcepts from './components/CoreConcepts.jsx';
+import TabButton from './components/TabButton.jsx';
+import {EXAMPLES} from './data.js';
+
+function App() {
+
+   const [selectedTopic, setSelectedTopic] = useState('components');
+
+   function handleSelect(selectedButton) {
+      setSelectedTopic(selectedButton);
+   }
+
+   return (
+      <div>
+         <Header />
+         <main>
+            <Coreconcepts />
+            <section id = "examples">
+               <h2>Ejemplos</h2>
+               <menu>
+                  <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+                  <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+                  <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+                  <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+               </menu>
+                  <div id = 'tab-content'>
+                     <h3>
+                        {EXAMPLES[selectedTopic].title}
+                     </h3>
+                     <p>
+                        {EXAMPLES[selectedTopic].description}
+                     </p>
+                     <pre>
+                        <code>
+                           {EXAMPLES[selectedTopic].code}
+                        </code>
+                     </pre>
+                  </div>
+            </section>
+         </main>
+      </div>
+   );
+}
+
+export default App;
+```
+
+
+
+
 
 Añadiremos un componente Section.jsx con el que manipularemos la seccion de ejemplos.
 
