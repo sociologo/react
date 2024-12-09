@@ -1576,15 +1576,15 @@ export default App;
 
 63-64-65-66
 
-Observemos que dentro de nuestra aplicacion App.js tenemos multiples reponsabilidades trabajando simultaneamente:
+Observemos que dentro de nuestra aplicación App.js tenemos múltiples reponsabilidades trabajando simultáneamente:
 
 - 1 Despliega los CORE_CONCEPTS y
-- 2 Administra los botones responsables del despliegue del contenido dinamico.
-- 3 Tambien tiene la particularidad de campiar el componente aleatorio del titulo {description} cada vez que damos click a un boton. esto ocurre porque estamos utilizando en State **selectedTopic** en el componente App
+- 2 Administra los botones responsables del despliegue del contenido dinámico (los ejemplos).
+- 3 También tiene la particularidad de cambiar el componente aleatorio del título {description} cada vez que damos click a un botón. Esto ocurre porque estamos utilizando el State **selectedTopic** en el componente **App**.
 
-Queremos tener la capacidad de identificar buenos lugares para nuestro componentes extra y ser capaz de dividir en componentes con responsabilidades especificas.
+Queremos tener la capacidad de identificar buenos lugares para nuestros componentes en forma separada. Debemos ser capaces de dividir los componentes con responsabilidades específicas.
 
-Tenmos dos grandes bloques de codigo en los que podemos separar componentes. La primera, la seccion de los core concepsts y la de abajo que despliega botones y les entrega funcionalidad dinamica. Para ello construiremos los nuevos componentes llamados CoreConcepts.jsx y Examples.jsx respectivamente
+Tenemos dos grandes bloques de código en los que podemos separar componentes. El primero, la sección de los core concepts y el de abajo que despliega botones y les entrega funcionalidad dinámica a los ejemplos. Para ello construiremos los nuevos componentes llamados **CoreConcepts.jsx** y **Examples.jsx** respectivamente:
 
 ## El componente CoreConcepts.jsx
 
@@ -1593,21 +1593,18 @@ import Coreconcepts from '/CoreConcepts.jsx';
 import {CORE_CONCEPTS} from '../data.js';
 
 export default function CoreConcepts() {
-  <section id = 'core-concepts'>
-     <h2>
-        Core Concepts
-     </h2>
-        <ul>
-           <CoreConcept                  
-              title = {CORE_CONCEPTS[0].title}
-              description = {CORE_CONCEPTS[0].description} 
-              image = {CORE_CONCEPTS[0].image}                
-           />
-           <CoreConcept {...CORE_CONCEPTS[1]}/>
-           <CoreConcept {...CORE_CONCEPTS[2]}/>
-           <CoreConcept {...CORE_CONCEPTS[3]}/>                   
-        </ul>              
-  </section>
+   return (
+      <section id = 'core-concepts'>
+         <h2>
+            Core Concepts
+         </h2>
+         <ul>
+            {CORE_CONCEPTS.map((conceptItem) => (
+               <CoreConcept key = {conceptItem.title} {...conceptItem} />
+            ))}                    
+         </ul>              
+      </section>
+   );
 }
 ```
 
@@ -1676,15 +1673,48 @@ function App() {
 export default App;
 ```
 
+## El componente Examples.jsx
 
+Haremos algo similar al construir la funcion Examples  a la que debemos anadir la funcion handleSelect
 
+export default function Examples() {
+<section id = "examples">
+   <h2>Ejemplos</h2>
+   <menu>
+      <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+      <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+      <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+      <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+   </menu>
+      <div id = 'tab-content'>
+         <h3>
+            {EXAMPLES[selectedTopic].title}
+         </h3>
+         <p>
+            {EXAMPLES[selectedTopic].description}
+         </p>
+         <pre>
+            <code>
+               {EXAMPLES[selectedTopic].code}
+            </code>
+         </pre>
+      </div>
+</section>
+}
 
+# Los props no se reenvían automaticamente
+
+Debido a esto los estilos se pireden.
 
 Añadiremos un componente Section.jsx con el que manipularemos la seccion de ejemplos.
 
 Pero existe un propblema : el atributo id se nos pierde. Debemos usar un patron proxy props (...props), que aseguren que todos los props siguientes no sean anadidos manualmente.
 
-# ejercicio Forwarding Props
+## Los proxy props
+
+Utilizamos el operador spread (...props)
+
+### ejercicio Forwarding Props
 
 Su tarea es trabajar en el componente de `Input` de modo que devuelva un elemento `<textarea>` o un elemento `<input>`, dependiendo de si un prop `richText` sea establecido en `Input` como verdadero o falso.
 
@@ -1704,21 +1734,24 @@ Es decir, debería poder usarse así:
 
 La interfaz de usuario final debería verse así:
 
-# Simplificando el esquema de pestanas
 
-Construiremos un sistema de pestanas reutilizable: `Tabs.jsx`
+# Trabajando con multiples slots JSX. Estableciendo tipos de componentes dinamicamente
 
-Debemos anadir un slot adicional
+67
 
-# Estableciendo tipos de componentes dinamicamente
+El problema surge aca cuando nos vemos en la necesidad de utilizar multiples children. Para ello necesitamos un nuevo slot, que logramos estableciendo codigo jsx dentro de etiquetas.
 
-68
+
+
+
 
 # Estableciendo valores de props por defecto
 
+68
+
 La idea es hacer componentes altament reutilizables. 
 
-# Ejercicio Crear componentes flexibles
+## Ejercicio Crear componentes flexibles
 
 Tu tarea es crear un componente de botón personalizado y altamente reutilizable que se pueda usar de las siguientes maneras (consulte también el código en el archivo App.js):
 
