@@ -1517,28 +1517,43 @@ export default function App() {
 
 60-69
 
-# el JSX se puede reemplazar con un no JSX
+# el JSX es reemplazable
 
-En teoria de pueden escribir aplicaciones en React que no utilicen JSX, sino uno que utilice solo caracterisaticas standar de javascript.
+JSX es una caracteristica no standard, no esta soportado por el browser, por lo que JSX necesita de un **proceso de construccion** antes de desplegarse que ocurre entre bastidores que transforma y potencialmente optimiza nuestro codigo para que funciones en el browser.
 
-# las expresiones JSX deben tener un elemento padre
+Debes saber que en teoria se pueden escribir aplicaciones en React que no utilicen JSX, sino solo caracteristicas standard de javascript.
 
-En JavaScript, una función no puede devolver directamente dos valores como tampoco en React. Pero tener elementos adicionales en el DOM es redundante. Por ello podemos reeemplezar el div innecesario con una etiqueta <Fragment> o una etiqueta vacia, la cual no devuelve error alguno.
+Sin embargo, JSX es preferible
 
-# Ejercicio.
+# Las expresiones JSX deben tener un elemento padre
 
-Su tarea es editar el componente Resumen existente de modo que genere el siguiente contenido:
+A primera vista nuestra etiqueta <div> puede parecer redundante. Tener elementos adicionales en el DOM es redundante.
 
-<h1>Resumen</h1>
-<p>{texto}</p>
+Lo que sucede es que en el frangmento de nuestro codigo envuelto supuestamente innecesariamente por un <div>, estamos devolviendo varios valores. Recordemos de que en JavaScript, una función no puede devolver directamente dos valores como tampoco en React. 
 
-¡Dentro del componente Resumen, este contenido no debe estar incluido en ningún otro elemento HTML!
+Para solucionar esto, podemos reeemplezar el div innecesario con una etiqueta Fragment o una etiqueta vacia, la cual no devuelve error alguno.
+
+```JavaScript
+<Fragment>
+<Fragment>
+<>
+</>
+```
+
+# Ejercicio. Usando Fragments
+
+Su tarea es editar el componente `Summary` existente de modo que genere el siguiente contenido:
+
+<h1>Summary</h1>
+<p>{text}</p>
+
+¡Dentro del componente `Summary`, este contenido no debe estar incluido en ningún otro elemento HTML!
 
 Por ejemplo, este código sería incorrecto:
 
 <div>
-  <h1>Resumen</h1>
-  <p>{texto}</p>
+  <h1>Summary</h1>
+  <p>{text}</p>
 </div>
 
 ```JavaScript
@@ -1557,7 +1572,7 @@ function App() {
 export default App;
 ```
 
-# Dividir una App en sus diferentes responsabilidades
+# Dividir una App entre sus diferentes responsabilidades
 
 63-64-65-66
 
