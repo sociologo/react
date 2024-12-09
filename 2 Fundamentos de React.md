@@ -1511,17 +1511,19 @@ export default function App() {
 }
 ```
 
+***
+***
+***
+
 60-69
 
 # el JSX se puede reemplazar con un no JSX
-
 
 En teoria de pueden escribir aplicaciones en React que no utilicen JSX, sino uno que utilice solo caracterisaticas standar de javascript.
 
 # las expresiones JSX deben tener un elemento padre
 
 En JavaScript, una función no puede devolver directamente dos valores como tampoco en React. Pero tener elementos adicionales en el DOM es redundante. Por ello podemos reeemplezar el div innecesario con una etiqueta <Fragment> o una etiqueta vacia, la cual no devuelve error alguno.
-
 
 # Ejercicio.
 
@@ -1538,7 +1540,6 @@ Por ejemplo, este código sería incorrecto:
   <h1>Resumen</h1>
   <p>{texto}</p>
 </div>
-
 
 ```JavaScript
 function Summary({ text }) {
