@@ -1589,7 +1589,7 @@ Tenemos dos grandes bloques de código en los que podemos separar componentes. E
 ## El componente CoreConcepts.jsx
 
 ```JavaScript
-import Coreconcepts from '/CoreConcepts.jsx';
+import Coreconcepts from './CoreConcepts.jsx';
 import {CORE_CONCEPTS} from '../data.js';
 
 export default function CoreConcepts() {
@@ -1611,8 +1611,8 @@ export default function CoreConcepts() {
 En la componente App.jsx obviamente quitamos las lineas:
 
 ```JavaScript
-import Coreconcepts from '/CoreConcepts.jsx';
-import {CORE_CONCEPTS} from '../data.js';
+import Coreconcepts from './components/CoreConcepts.jsx';
+import {CORE_CONCEPTS} from './data.js';
 ```
 
 y anadimos:
@@ -1621,61 +1621,22 @@ y anadimos:
 import CoreConcepts from './components/CoreConcepts.jsx';
 ```
 
-Reemplazando la seccion que hemos quitado con el tag <CoreConcepts />
+Reemplazando la sección que hemos quitado con el tag <CoreConcepts />
 
 ```JavaScript
-import {useState} from 'react';
-import Header from './components/Header/Header.jsx';
-import CoreConcepts from './components/CoreConcepts.jsx';
-import TabButton from './components/TabButton.jsx';
-import {EXAMPLES} from './data.js';
-
-function App() {
-
-   const [selectedTopic, setSelectedTopic] = useState('components');
-
-   function handleSelect(selectedButton) {
-      setSelectedTopic(selectedButton);
-   }
-
    return (
-      <div>
+      <>
          <Header />
          <main>
             <Coreconcepts />
             <section id = "examples">
                <h2>Ejemplos</h2>
-               <menu>
-                  <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
-                  <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-                  <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-                  <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
-               </menu>
-                  <div id = 'tab-content'>
-                     <h3>
-                        {EXAMPLES[selectedTopic].title}
-                     </h3>
-                     <p>
-                        {EXAMPLES[selectedTopic].description}
-                     </p>
-                     <pre>
-                        <code>
-                           {EXAMPLES[selectedTopic].code}
-                        </code>
-                     </pre>
-                  </div>
-            </section>
-         </main>
-      </div>
-   );
-}
-
-export default App;
+               <menu>            
 ```
 
 ## El componente Examples.jsx
 
-Haremos algo similar al construir la funcion Examples  a la que debemos anadir la funcion handleSelect
+Haremos algo similar al construir la funcion Examples a la que debemos añadir la funcion handleSelect, el manejo del State:
 
 export default function Examples() {
 <section id = "examples">
