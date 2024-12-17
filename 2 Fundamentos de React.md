@@ -336,15 +336,15 @@ Idealmente cada componente debe estar en un archivo independiente. No se recomie
 
 - 5 **Rendimiento**: Aunque no es un problema común, tener un archivo muy grande puede afectar el rendimiento del editor de código y las herramientas de desarrollo.
 
-Creamos una carpeta llamada **components** donde irán los componentes **Header.jsx** y **CoreConcepts.jsx**:
+Creamos una carpeta llamada **components** donde irán los componentes **Header.jsx** y **Header.jsx**:
 
+**Header.jsx** \
 ![image](https://github.com/user-attachments/assets/b5e02383-c891-4254-a367-67fb6219fe3e)
 
+**Header.jsx** \
 ![image](https://github.com/user-attachments/assets/31a1d1da-d517-48e0-8974-3f113cb845cc)
 
-Debemos añadir la declaración de exportacion **export default** para poder importarla correctamente donde los necesitemos.
-
-
+Debemos añadir la declaración de exportacion **export default** para poder importarlos correctamente donde los necesitemos.
 
 
 
