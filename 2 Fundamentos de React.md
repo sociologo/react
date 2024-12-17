@@ -322,19 +322,21 @@ el proyecto luce asi:
 
 lecciones 47 y 48
 
-## Componentes
+### Componentes
 
-No se recomienda tener todos los componentes de una aplicación React en un mismo archivo por varias razones:
+leccion 47
 
-- Mantenimiento y Legibilidad: Tener todos los componentes en un solo archivo puede hacer que el código sea difícil de leer y mantener. Dividir los componentes en archivos separados facilita la navegación y comprensión del código.
+Idealmente cada componente debe estar en un archivo independiente. No se recomienda tener todos los componentes de una aplicación React en un mismo archivo por varias razones:
 
-- Reutilización: Al separar los componentes en archivos individuales, es más fácil reutilizarlos en diferentes partes de la aplicación o incluso en otros proyectos.
+- 1 **Mantenimiento y Legibilidad**: Tener todos los componentes en un solo archivo puede hacer que el código sea difícil de leer y mantener. Dividir los componentes en archivos separados facilita la navegación por y la comprensión del código.
 
-- Modularidad: La modularidad es un principio clave en el desarrollo de software. Al dividir los componentes, cada uno puede ser desarrollado, probado y depurado de manera independiente.
+- 2 **Reutilización**: Al separar los componentes en archivos individuales, es más fácil reutilizarlos en diferentes partes de la aplicación o incluso en otros proyectos.
 
-- Colaboración: En equipos de desarrollo, tener componentes separados permite que varios desarrolladores trabajen en diferentes partes de la aplicación simultáneamente sin conflictos.
+- 3 **Modularidad**: La modularidad es un principio clave en el desarrollo de software. Al dividir los componentes, cada uno puede ser desarrollado, probado y depurado de manera independiente.
 
-- Rendimiento: Aunque no es un problema común, tener un archivo muy grande puede afectar el rendimiento del editor de código y las herramientas de desarrollo.
+- 4 **Colaboración**: En equipos de desarrollo, tener componentes separados permite que varios desarrolladores trabajen en diferentes partes de la aplicación simultáneamente sin conflictos.
+
+- 5 **Rendimiento**: Aunque no es un problema común, tener un archivo muy grande puede afectar el rendimiento del editor de código y las herramientas de desarrollo.
 
 Estructura original de archivos:
 
@@ -352,7 +354,9 @@ En React, export default se utiliza para exportar un único valor o componente c
 
 ![image](https://github.com/user-attachments/assets/31a1d1da-d517-48e0-8974-3f113cb845cc)
 
-## CSS
+### CSS
+
+leccion 48
 
 En React, es conveniente organizar tanto los componentes como los archivos CSS en carpetas separadas por varias razones:
 
