@@ -318,11 +318,9 @@ el proyecto luce asi:
 
 ![image](https://github.com/user-attachments/assets/06a6366f-bd76-456a-9cd3-0ef0d1677b3d)
 
-## 3 Correcta organización de Componentes y CSSs
+## 3 Correcta organización de Componentes y CSS
 
-lecciones 47 y 48
-
-### Componentes
+### 31 Componentes
 
 leccion 47
 
@@ -354,7 +352,7 @@ En React, export default se utiliza para exportar un único valor o componente c
 
 ![image](https://github.com/user-attachments/assets/31a1d1da-d517-48e0-8974-3f113cb845cc)
 
-### CSS
+### 32 CSS
 
 leccion 48
 
@@ -377,7 +375,9 @@ Crearemos una carpeta Header dentro de la carpeta components en la que almacenar
 ![image](https://github.com/user-attachments/assets/b89c56ed-46f1-4da5-ab0f-544ef4dbec27)
 
 # 3 El concepto de children
-49
+
+leccion 48
+
 ## 31 Introducción
 
 Construiremos una sección interactiva, por lo que daremos contenido dinámico a un cuadro de texto después de dar click a su correspondiente botón en un menú como se muestra en la figura:
