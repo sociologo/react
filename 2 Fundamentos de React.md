@@ -19,11 +19,11 @@ Sección 35-59
 * [2 Props](#2-Props)
   * [21 Intro](#21-Intro)
   * [22 Ejemplo](#22-Ejemplo)
-* [Digresión Organizando correctamente componentes y css](#Digresión-Organizando-correctamente-componentes-y-css)
+
+* [3 Correcta organización de Componentes y CSSs](#3-Correcta-organización-de-Componentes-y-CSSs)
   * [21 Componentes](#21-Componentes)
   * [22 CSS](#22-CSS)
-* [3 Correcta organización de Componentes y CSSs](#3-Correcta-organización-de-Componentes-y-CSSs)
-
+    
 * [3 El concepto de children](#3-El-concepto-de-children)
   * [31 Introducción](#31-Introducción)
   * [32 Composición de componentes](#32-Composición-de-componentes)
