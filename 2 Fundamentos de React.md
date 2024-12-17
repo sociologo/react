@@ -336,11 +336,7 @@ Idealmente cada componente debe estar en un archivo independiente. No se recomie
 
 - 5 **Rendimiento**: Aunque no es un problema común, tener un archivo muy grande puede afectar el rendimiento del editor de código y las herramientas de desarrollo.
 
-Estructura original de archivos:
-
-![image](https://github.com/user-attachments/assets/ff00d5a2-1148-458c-a36b-87dce9c616b3)
-
-Creamos una carpeta llamada **components** donde iran todos nuestros componentes:
+Creamos una carpeta llamada **components** donde irán los componentes **CoreConcepts.jsx** y **Header.jsx**:
 
 ![image](https://github.com/user-attachments/assets/57b320ad-0a5e-45e4-bbe7-b9671d9baf0c)
 
