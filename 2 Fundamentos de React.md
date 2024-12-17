@@ -22,6 +22,8 @@ Sección 35-59
 * [Digresión Organizando correctamente componentes y css](#Digresión-Organizando-correctamente-componentes-y-css)
   * [21 Componentes](#21-Componentes)
   * [22 CSS](#22-CSS)
+* [3 Correcta organización de Componentes y CSSs](#3-Correcta-organización-de-Componentes-y-CSSs)
+
 * [3 El concepto de children](#3-El-concepto-de-children)
   * [31 Introducción](#31-Introducción)
   * [32 Composición de componentes](#32-Composición-de-componentes)
@@ -316,7 +318,7 @@ el proyecto luce asi:
 
 ![image](https://github.com/user-attachments/assets/06a6366f-bd76-456a-9cd3-0ef0d1677b3d)
 
-# Digresión Organizando correctamente componentes y css
+## 3 Correcta organización de Componentes y CSSs
 
 lecciones 47 y 48
 
