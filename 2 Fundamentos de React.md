@@ -27,11 +27,12 @@ Sección 35-59
     
 * [4 El concepto de children](#4-El-concepto-de-children)
   * [41 Introducción](#41-Introducción)
-  * [42 Composición de componentes](#42-Composición-de-componentes)
-  * [43 Pasar funciones como valores a las props](#43-Pasar-funciones-como-valores-a-las-props)
-  * [44 Ejemplo de reacción a eventos](#44-Ejemplo-de-reacción-a-eventos)
-  * [45 Pasando argumentos personalizados a funciones de eventos](#45-Pasando-argumentos-personalizados-a-funciones-de-eventos)
-  * [46 Ejemplo Configuración de Manejadores de Eventos](#46-Ejemplo-Configuración-de-Manejadores-de-Eventos)
+  * [42 Ejercicio de composición de componentes](#42-Ejercicio-de-composición-de-componentes)
+  * [43 Composición de componentes](#43-Composición-de-componentes)
+  * [44 Pasar funciones como valores a las props](#44-Pasar-funciones-como-valores-a-las-props)
+  * [45 Ejemplo de reacción a eventos](#45-Ejemplo-de-reacción-a-eventos)
+  * [46 Pasando argumentos personalizados a funciones de eventos](#46-Pasando-argumentos-personalizados-a-funciones-de-eventos)
+  * [47 Ejemplo Configuración de Manejadores de Eventos](#47-Ejemplo-Configuración-de-Manejadores-de-Eventos)
     
 * [5 El concepto de State y Hook](#4-El-concepto-de-State-y-Hook)
   * [51 El problema](#41-El-problema)
@@ -458,9 +459,7 @@ import TabButton from './components/TabButton.jsx';
 </menu>
 ```
 
-***
-
-ejercicio de composicion de componentes.
+## 42 Ejercicio de composición de componentes.
 
 Tu tarea es crear un componente Card reutilizable que tome un nombre como entrada y, además, pueda incluirse en cualquier código JSX.
 
@@ -530,7 +529,7 @@ export default Card;
 
 ***
 
-## 42 Composición de componentes
+## 43 Composición de componentes
 
 50
 
@@ -579,7 +578,7 @@ document.querySelector('button').addEventListener('click', () => {})
 
 No queremos código imperativo como éste, no queremos interactuar con el DOM pues queremos que React lo haga. Es por ello que escribimos código declarativo.
 
-## 43 Pasar funciones como valores a las **props**
+## 44 Pasar funciones como valores a las **props**
 
 51
 
@@ -644,7 +643,7 @@ export default App;
 ```
 Ahora estamos preparados para cambiar la data en el contenido dinamico.
 
-## 44 Ejemplo de reacción a eventos
+## 45 Ejemplo de reacción a eventos
 
 Trabajaras sobre el componente "User Login" que ya ha sido preparado por un colega.
 
@@ -742,7 +741,7 @@ function App() {
 export default App;
 ```
 
-## 45 Pasando argumentos personalizados a funciones de eventos.
+## 46 Pasando argumentos personalizados a funciones de eventos.
 
 52
 
@@ -787,7 +786,7 @@ La línea de código `() => handleSelect('components')` es una función flecha e
 </menu>
 ```
 
-## 46 Ejemplo Configuración de Manejadores de Eventos
+## 47 Ejemplo Configuración de Manejadores de Eventos
 
 Tu tarea es editar `<button>` en el componente `App` de manera que la función ya definida `handleCreateUser` se llame con un valor para `name`.
 
