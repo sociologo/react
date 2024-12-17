@@ -16,22 +16,25 @@ Sección 35-59
   * [15 Nuestro primer componente](#15-Nuestro-primer-componente)
   * [16 Reglas](#16-Reglas)
 * [Digresion Contenido dinamico en una web](#Digresion-Contenido-dinamico-en-una-web)
+  
 * [2 Props](#2-Props)
   * [21 Intro](#21-Intro)
   * [22 Ejemplo](#22-Ejemplo)
 
 * [3 Correcta organización de Componentes y CSS](#3-Correcta-organización-de-Componentes-y-CSS)
-  * [21 Componentes](#21-Componentes)
-  * [22 CSS](#22-CSS)
+  * [31 Componentes](#31-Componentes)
+  * [32 CSS](#32-CSS)
     
-* [3 El concepto de children](#3-El-concepto-de-children)
-  * [31 Introducción](#31-Introducción)
-  * [32 Composición de componentes](#32-Composición-de-componentes)
-  * [33 Reacción a eventos](#33-Reacción-a-eventos)
-  * [33 Ejemplo de reacción a eventos](#33-Ejemplo-de-reacción-a-eventos)
-  * [34 Ejemplo](#34-Ejemplo)
-* [4 El concepto de State y Hook](#4-El-concepto-de-State-y-Hook)
-  * [41 El problema](#41-El-problema)
+* [4 El concepto de children](#4-El-concepto-de-children)
+  * [41 Introducción](#41-Introducción)
+  * [42 Composición de componentes](#42-Composición-de-componentes)
+  * [43 Pasar funciones como valores a las props](#43-Pasar-funciones-como-valores-a-las-props)
+  * [44 Ejemplo de reacción a eventos](#44-Ejemplo-de-reacción-a-eventos)
+  * [45 Pasando argumentos personalizados a funciones de eventos](#45-Pasando-argumentos-personalizados-a-funciones-de-eventos)
+  * [46 Ejemplo Configuración de Manejadores de Eventos](#46-Ejemplo-Configuración-de-Manejadores-de-Eventos)
+    
+* [5 El concepto de State y Hook](#4-El-concepto-de-State-y-Hook)
+  * [51 El problema](#41-El-problema)
   * [42 Reglas de los Hooks](#42-Reglas-de-los-Hooks)
   * [43 Ejemplo Trabajando con State](#43-Ejemplo-Trabajando-con-State)
   * [44 Entregando contenido de un datajs](#44-Entregando-contenido-de-un-datajs)
@@ -838,7 +841,7 @@ Debes reemplazar la siguiente línea:
 
 53-54-55
 
-## 41 El problema.
+## 51 El problema.
 
 Necesitamos un componente dinamico que cambie cada vez que damos click en la funcion **onSelect** del componente **TabButton**
 
