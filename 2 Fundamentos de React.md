@@ -342,11 +342,11 @@ Estructura original de archivos:
 
 Creamos una carpeta llamada **components** donde iran todos nuestros componentes:
 
-Debemo añadir la declaracion de exportacion **export default** para poder importarla correctamente donde lo necesitemos.
+![image](https://github.com/user-attachments/assets/57b320ad-0a5e-45e4-bbe7-b9671d9baf0c)
+
+Debemos añadir la declaracion de exportacion **export default** para poder importarla correctamente donde lo necesitemos.
 
 En React, export default se utiliza para exportar un único valor o componente como la exportación predeterminada de un módulo. Esto significa que cuando importas ese módulo, puedes darle cualquier nombre al valor importado sin necesidad de usar llaves.
-
-![image](https://github.com/user-attachments/assets/57b320ad-0a5e-45e4-bbe7-b9671d9baf0c)
 
 ![image](https://github.com/user-attachments/assets/b5e02383-c891-4254-a367-67fb6219fe3e)
 
