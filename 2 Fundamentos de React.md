@@ -320,7 +320,7 @@ el proyecto luce asi:
 
 ## 3 Correcta organización de Componentes y CSS
 
-### 31 Componentes
+## 31 Componentes
 
 leccion 47
 
@@ -352,7 +352,7 @@ En React, export default se utiliza para exportar un único valor o componente c
 
 ![image](https://github.com/user-attachments/assets/31a1d1da-d517-48e0-8974-3f113cb845cc)
 
-### 32 CSS
+## 32 CSS
 
 leccion 48
 
