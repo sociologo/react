@@ -20,7 +20,7 @@ Sección 35-59
   * [21 Intro](#21-Intro)
   * [22 Ejemplo](#22-Ejemplo)
 
-* [3 Correcta organización de Componentes y CSSs](#3-Correcta-organización-de-Componentes-y-CSSs)
+* [3 Correcta organización de Componentes y CSS](#3-Correcta-organización-de-Componentes-y-CSS)
   * [21 Componentes](#21-Componentes)
   * [22 CSS](#22-CSS)
     
@@ -318,7 +318,7 @@ el proyecto luce asi:
 
 ![image](https://github.com/user-attachments/assets/06a6366f-bd76-456a-9cd3-0ef0d1677b3d)
 
-## 3 Correcta organización de Componentes y CSS
+# 3 Correcta organización de Componentes y CSS
 
 ## 31 Componentes
 
