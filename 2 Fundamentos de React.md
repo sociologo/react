@@ -381,7 +381,7 @@ Comenzaremos construyendo el botón y su funcionalidad.
 
 En React, **children** es una **prop** especial que permite a los componentes anidar otros dentro de ellos. En React, la prop **children** es una forma poderosa de componer componentes. Permite que un componente padre pase contenido a sus componentes hijos. Esto es especialmente útil para crear componentes reutilizables y flexibles. Básicamente, **children** representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente, contenido que puede ser una compleja estructura html que podemos llamar múltiples veces con tal solo utilizar una sola etiqueta html. 
 
-- 1 El componente `TabButton.jsx`
+- 1 El componente `TabButton.jsx` (desestructurando):
 
 ```Javascript
 export default function TabButton({children}) {
