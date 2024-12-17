@@ -341,12 +341,15 @@ Creamos una carpeta llamada **components** en la ruta /src donde irán los compo
 **Header.jsx** \
 ![image](https://github.com/user-attachments/assets/b5e02383-c891-4254-a367-67fb6219fe3e)
 
+Llamos a nuestro componente así:
+
+![image](https://github.com/user-attachments/assets/9ac3143b-5ed5-427b-86d8-2e83b2968233)
+
+
 **CoreConcepts.jsx** \
 ![image](https://github.com/user-attachments/assets/31a1d1da-d517-48e0-8974-3f113cb845cc)
 
 Debemos añadir la declaración de exportacion **export default** para poder importarlos correctamente donde los necesitemos.
-
-
 
 ## 32 CSS
 
