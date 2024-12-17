@@ -374,11 +374,11 @@ Crearemos una carpeta Header dentro de la carpeta components en la que almacenar
 ![image](https://github.com/user-attachments/assets/1ae3035f-aeec-4dcd-8c30-89ad6d27f23f)
 ![image](https://github.com/user-attachments/assets/b89c56ed-46f1-4da5-ab0f-544ef4dbec27)
 
-# 3 El concepto de children
+# 4 El concepto de children
 
 leccion 48
 
-## 31 Introducción
+## 41 Introducción
 
 Construiremos una sección interactiva, por lo que daremos contenido dinámico a un cuadro de texto después de dar click a su correspondiente botón en un menú como se muestra en la figura:
 
@@ -537,7 +537,7 @@ export default Card;
 
 ***
 
-## 32 Composición de componentes
+## 42 Composición de componentes
 
 50
 
@@ -586,7 +586,7 @@ document.querySelector('button').addEventListener('click', () => {})
 
 No queremos código imperativo como éste, no queremos interactuar con el DOM pues queremos que React lo haga. Es por ello que escribimos código declarativo.
 
-## 33 Pasar funciones como valores a las **props**
+## 43 Pasar funciones como valores a las **props**
 
 51
 
@@ -651,7 +651,7 @@ export default App;
 ```
 Ahora estamos preparados para cambiar la data en el contenido dinamico.
 
-## 34 Ejemplo de reacción a eventos
+## 44 Ejemplo de reacción a eventos
 
 Trabajaras sobre el componente "User Login" que ya ha sido preparado por un colega.
 
@@ -749,7 +749,7 @@ function App() {
 export default App;
 ```
 
-## 35 Pasando argumentos personalizados a funciones de eventos.
+## 45 Pasando argumentos personalizados a funciones de eventos.
 
 52
 
@@ -794,7 +794,7 @@ La línea de código `() => handleSelect('components')` es una función flecha e
 </menu>
 ```
 
-## 36 Ejemplo Configuración de Manejadores de Eventos
+## 46 Ejemplo Configuración de Manejadores de Eventos
 
 Tu tarea es editar `<button>` en el componente `App` de manera que la función ya definida `handleCreateUser` se llame con un valor para `name`.
 
@@ -835,7 +835,7 @@ Debes reemplazar la siguiente línea:
 <button onClick={() => handleCreateUser('Christian Castro')}>Create User</button>
 ```
 
-# 4 El concepto de State y Hook
+# 5 El concepto de State y Hook
 
 53-54-55
 
