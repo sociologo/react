@@ -336,17 +336,17 @@ Idealmente cada componente debe estar en un archivo independiente. No se recomie
 
 - 5 **Rendimiento**: Aunque no es un problema común, tener un archivo muy grande puede afectar el rendimiento del editor de código y las herramientas de desarrollo.
 
-Creamos una carpeta llamada **components** donde irán los componentes **CoreConcepts.jsx** y **Header.jsx**:
-
-![image](https://github.com/user-attachments/assets/57b320ad-0a5e-45e4-bbe7-b9671d9baf0c)
-
-Debemos añadir la declaracion de exportacion **export default** para poder importarla correctamente donde lo necesitemos.
-
-En React, export default se utiliza para exportar un único valor o componente como la exportación predeterminada de un módulo. Esto significa que cuando importas ese módulo, puedes darle cualquier nombre al valor importado sin necesidad de usar llaves.
+Creamos una carpeta llamada **components** donde irán los componentes **Header.jsx** y **CoreConcepts.jsx**:
 
 ![image](https://github.com/user-attachments/assets/b5e02383-c891-4254-a367-67fb6219fe3e)
 
 ![image](https://github.com/user-attachments/assets/31a1d1da-d517-48e0-8974-3f113cb845cc)
+
+Debemos añadir la declaración de exportacion **export default** para poder importarla correctamente donde los necesitemos.
+
+
+
+
 
 ## 32 CSS
 
