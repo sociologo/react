@@ -4,9 +4,9 @@
 
 # REACT: elementos del framework
 
-## Índice
+Sección 4
 
-Sección 35-59
+## Índice
 
 * [1 Componentes](#1-Componentes)
   * [11 Características](#11-Caracteristicas)
@@ -58,9 +58,138 @@ Sección 35-59
     
 ***
 
-Sección 4 60-69
-
 # 1 Componentes
+
+**60**
+
+**Un proyecto React no necesita obligatoriamente de codigo JSX. Puede ser construido exclusivamente con codigo standard JavaScript.**
+
+JSX se utiliza solo por razones de conveniencia. Es de esta manera que los dos codigos escritos en JSX y lenguaje standart JavaScript que se muestran a continuacion son equivalentes:
+
+```javascript
+<div id="content">
+   <p>Hola mundo!</p>
+</div>
+```
+
+```javascript
+React.createElement(
+   'div',
+   {id: 'content'},
+   React.createElement(
+      'p',
+      null,
+      'Hello World'
+   )
+);
+```
+
+JSX no es una caracteristica standard, no esta soportado por el navegador, por lo que el codigo JSX no es el que se ve directamente en el navegador. JSX necesita de un **proceso de compilacion** que trabaja tras bambalinas que lo cambia y optimiza para que pueda ser renderizable.
+
+**61**
+
+**Las expresiones JSX deben tener un elemento padre**
+
+En JavaScript no es posible retornar dos valores en una funcion, tampoco en JSX. Se deben agrupar en un solo bloque.
+
+En nuestro codigo tenemos este problema que nos explica el por que estamos utilizando un <div> aparentemente innecesario.
+
+```javascript
+   return (
+      <div>
+         <Header />
+         <main>...
+         </main>
+      </div>
+   );
+}
+```
+
+El <div> lo podemos reemplazar con el componente <Fragment>, pero de manera mas moderna simplemente con la etiqueta vacia <>:
+
+```javascript
+import {useState, Fragment} from 'react';
+
+   return (
+      <Fragment>
+         <Header />
+         <main>...
+         </main>
+      </Fragment>
+   );
+}
+```
+
+```javascript
+   return (
+      <>
+         <Header />
+         <main>...
+         </main>
+      </>
+   );
+}
+```
+
+**Ejercicio**
+
+Considere el siguiente trozo de codigo React:
+
+```javascript
+function Summary({ text }) {
+   return null;
+}
+
+function App() {
+   return (
+      <div id="app" data-testid="app">
+         <Summary text="Fragments help you avoid unnecessary HTML elements." />
+      </div>
+   );
+}
+
+export default App;
+```
+
+Su tarea es editar el componente Summary existente de modo que genere el siguiente contenido:
+
+```javascript
+<h1>Resumen</h1>
+<p>{texto}</p>
+```
+
+Respuesta:
+
+```javascript
+function Summary({ text }) {
+   return (
+      <>
+         <h1>Summary</h1>
+         <p>{text}</p>
+      </>
+   );
+}
+
+function App() {
+   return (
+      <div id="app" data-testid="app">
+         <Summary text="Fragments help you avoid unnecessary HTML elements." />
+      </div>
+   );
+}
+
+export default App;
+```
+
+
+
+
+
+
+
+
+
+
 
 En React, un componente es una pieza reutilizable y autónoma de código que define una parte de la interfaz de usuario. Los componentes son los bloques de construcción fundamentales de una aplicación React. 
 
