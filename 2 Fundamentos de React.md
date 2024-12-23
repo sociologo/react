@@ -4,7 +4,7 @@
 
 # REACT: elementos del framework
 
-Sección 4
+Sección 3
 
 ## Índice
 
@@ -58,80 +58,36 @@ Sección 4
     
 ***
 
+35
+
+36
+
 # 1 Componentes
-
-
-
-
-
-
-
-
-
-
-
-
 
 En React, un componente es una pieza reutilizable y autónoma de código que define una parte de la interfaz de usuario. Los componentes son los bloques de construcción fundamentales de una aplicación React. 
 
-## 11 Caracteristicas
+Son bloques de codigo pequenos y potencialmente reutilizables. Los elementos relacionados de HTML, JS y CSS se almacenan en archivos todfos juntos, lo que favorece ademas, una separacion de competencias.
 
-- Reutilizable y Autónomo: Un componente es una unidad de código que puede ser reutilizada en diferentes partes de una aplicación o incluso en diferentes proyectos. Cada componente es autónomo, lo que significa que maneja su propio estado y lógica.
+37
 
-- Declarativo: React adopta un enfoque declarativo para construir interfaces de usuario. En lugar de manipular el DOM directamente, describes cómo debería verse la interfaz de usuario en función del estado de la aplicación, y React se encarga de actualizar el DOM para que coincida con esta descripción.
+38
 
-- Jerarquía de Componentes: Los componentes pueden ser pequeños, como un botón, o grandes, como una página completa. Puedes combinar componentes pequeños para formar componentes más grandes, creando una jerarquía de componentes que define la estructura de la interfaz de usuario.
+## 11 La extension JSX.
 
-## 12 Tipos de Componentes
+Los componentes en React se almacenan como archivos JSX. Los componentes son simplemente funciones JS.
 
-- Componentes Funcionales: Son funciones de JavaScript que aceptan props (propiedades) como argumento y devuelven elementos de React. Son más simples y se utilizan comúnmente con hooks para manejar el estado y los efectos secundarios.
+JSX, o JavaScript XML, es una extensión de sintaxis para JavaScript que permite a los desarrolladores escribir código que se asemejan al HTML dentro de un archivo JavaScript. Se utiliza para describir y crar elementos en JS de una manera declarativa. No es soportada por los navegadores, por lo que requiere de un proceso de transformacion tras bambalinas antes de que llegue al navegador.
 
-```JavaScript
-function Greeting(props) {
-  return <h1>Hello, {props.name}!</h1>;
-}
-```
+## 12 Reglas de un JSX
 
-- Componentes de Clase: Son clases de JavaScript que extienden React.Component y tienen un método render que devuelve elementos de React. Aunque siguen siendo válidos, los componentes funcionales son más comunes en las aplicaciones modernas de React.
+Un componente de React debe seguir las siguientes reglas:
 
-```JavaScript
-class Greeting extends React.Component {
-  render() {
-    return <h1>Hello, {this.props.name}!</h1>;
-  }
-}
-```
+1 El nombre de la funcion debe comenzar con una mayuscula
 
-## 13 Ejemplo
+2 La funcion debe retornar un contenido renderizable, esto es, contenido que react pueda desplegar en el navegador.
 
-Ejemplo simple de un componente funcional en React:
 
-```JavaScript
-function WelcomeMessage({ name }) {
-  return <h1>Welcome, {name}!</h1>;
-}
-
-// Uso del componente
-<WelcomeMessage name="Max" />
-```
-
-En este ejemplo:
-
-WelcomeMessage es un componente funcional que acepta una prop name.
-
-El componente devuelve un elemento h1 que muestra un mensaje de bienvenida utilizando la prop name.
-
-## 14 Ventajas de Usar Componentes
-
-- Reutilización: Puedes reutilizar componentes en diferentes partes de tu aplicación, lo que reduce la duplicación de código.
-
-- Mantenimiento: Los componentes autónomos y bien definidos facilitan el mantenimiento y la actualización del código.
-
-- Composición: Puedes combinar componentes pequeños para crear interfaces de usuario complejas de manera modular y organizada.
-
-En resumen, los componentes en React te permiten construir interfaces de usuario de manera eficiente y organizada, aprovechando la reutilización y la modularidad del código.
-
-## 15 Nuestro primer componente
+## 13 Nuestro primer componente
 
 ```JavaScript
 function Header() {
@@ -154,13 +110,7 @@ function Header() {
 
 ![image](https://github.com/user-attachments/assets/699b69b9-a6b5-4620-bb6c-ae2831a0a510)
 
-## 16 Reglas
 
-Un componente de React debe seguir las siguientes reglas:
-
-1 El nombre de la funcion debe comenzar con una mayuscula
-
-2 La funcion debe retornar un contenido renderizable, esto es, contenido que react pueda desplegar en el navegador.
 
 # Digresion Contenido dinamico en una web
 
