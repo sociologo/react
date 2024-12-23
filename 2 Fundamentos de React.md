@@ -125,7 +125,7 @@ export default App;
 
 **40**
 
-23-12-2024/
+23-12-2024\
 17:01
 
 **Ejercicio**
