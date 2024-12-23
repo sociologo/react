@@ -105,7 +105,7 @@ En nuestro codigo tenemos este problema que nos explica el por que estamos utili
 }
 ```
 
-El <div> lo podemos reemplazar con el componente <Fragment>, pero de manera mas moderna simplemente con la etiqueta vacia <>:
+El `<div>` lo podemos reemplazar con el componente <Fragment>, pero de manera mas moderna simplemente con la etiqueta vacia `<>`:
 
 ```javascript
 import {useState, Fragment} from 'react';
