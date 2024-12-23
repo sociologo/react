@@ -58,9 +58,9 @@ Sección 3
     
 ***
 
-35
+**35**
 
-36
+**36**
 
 # 1 Componentes
 
@@ -68,9 +68,9 @@ En React, un componente es una pieza reutilizable y autónoma de código que def
 
 Son bloques de codigo pequenos y potencialmente reutilizables. Los elementos relacionados de HTML, JS y CSS se almacenan en archivos todfos juntos, lo que favorece ademas, una separacion de competencias.
 
-37
+**37**
 
-38
+**38**
 
 ## 11 La extension JSX.
 
@@ -86,29 +86,50 @@ Un componente de React debe seguir las siguientes reglas:
 
 2 La funcion debe retornar un contenido renderizable, esto es, contenido que react pueda desplegar en el navegador.
 
+**39**
 
 ## 13 Nuestro primer componente
 
+**En React puedes usar las funciones de componentes como elementos regulares HTML dentro del codigo JSX en forma de etiquetas** Es asi como utilizaremos nuestro primer componente personalizado Header():
+
+App.jsx
+
 ```JavaScript
 function Header() {
-
-   const description = reactDescriptions[genRandomInt(2)];
-
    return (
       <header>
-         <img src={reactImg} alt="Stylized atom" />
+         <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
          <h1>
             React Essentials
          </h1>
          <p>
-            {description} Fundamental React concepts you will need for almost any app you are going to build!
+            Fundamental React concepts you will need for almost any app you are going to build!
          </p>
       </header>
    );
 }
+
+function App() {
+   return (
+      <div>
+         <Header />
+         <main>
+            <h2> Tiem to get started! </h2>
+         <main>
+      <div>
+   );
+}
+
+export default App;
 ```
 
-![image](https://github.com/user-attachments/assets/699b69b9-a6b5-4620-bb6c-ae2831a0a510)
+**40**
+
+23-12-2024/
+17:01
+
+**Ejercicio**
+
 
 
 
