@@ -60,126 +60,7 @@ Sección 4
 
 # 1 Componentes
 
-**60**
 
-**Un proyecto React no necesita obligatoriamente de codigo JSX. Puede ser construido exclusivamente con codigo standard JavaScript.**
-
-JSX se utiliza solo por razones de conveniencia. Es de esta manera que los dos codigos escritos en JSX y lenguaje standart JavaScript que se muestran a continuacion son equivalentes:
-
-```javascript
-<div id="content">
-   <p>Hola mundo!</p>
-</div>
-```
-
-```javascript
-React.createElement(
-   'div',
-   {id: 'content'},
-   React.createElement(
-      'p',
-      null,
-      'Hello World'
-   )
-);
-```
-
-JSX no es una caracteristica standard, no esta soportado por el navegador, por lo que el codigo JSX no es el que se ve directamente en el navegador. JSX necesita de un **proceso de compilacion** que trabaja tras bambalinas que lo cambia y optimiza para que pueda ser renderizable.
-
-**61**
-
-**Las expresiones JSX deben tener un elemento padre**
-
-En JavaScript no es posible retornar dos valores en una funcion, tampoco en JSX. Se deben agrupar en un solo bloque.
-
-En nuestro codigo tenemos este problema que nos explica el por que estamos utilizando un <div> aparentemente innecesario.
-
-```javascript
-   return (
-      <div>
-         <Header />
-         <main>...
-         </main>
-      </div>
-   );
-}
-```
-
-El `<div>` lo podemos reemplazar con el componente <Fragment>, pero de manera mas moderna simplemente con la etiqueta vacia `<>`:
-
-```javascript
-import {useState, Fragment} from 'react';
-
-   return (
-      <Fragment>
-         <Header />
-         <main>...
-         </main>
-      </Fragment>
-   );
-}
-```
-
-```javascript
-   return (
-      <>
-         <Header />
-         <main>...
-         </main>
-      </>
-   );
-}
-```
-
-**Ejercicio**
-
-Considere el siguiente trozo de codigo React:
-
-```javascript
-function Summary({ text }) {
-   return null;
-}
-
-function App() {
-   return (
-      <div id="app" data-testid="app">
-         <Summary text="Fragments help you avoid unnecessary HTML elements." />
-      </div>
-   );
-}
-
-export default App;
-```
-
-Su tarea es editar el componente Summary existente de modo que genere el siguiente contenido:
-
-```javascript
-<h1>Resumen</h1>
-<p>{texto}</p>
-```
-
-Respuesta:
-
-```javascript
-function Summary({ text }) {
-   return (
-      <>
-         <h1>Summary</h1>
-         <p>{text}</p>
-      </>
-   );
-}
-
-function App() {
-   return (
-      <div id="app" data-testid="app">
-         <Summary text="Fragments help you avoid unnecessary HTML elements." />
-      </div>
-   );
-}
-
-export default App;
-```
 
 
 
@@ -1642,58 +1523,124 @@ export default function App() {
 ***
 ***
 
-60-69
 
-# el JSX es reemplazable
 
-JSX es una caracteristica no standard, no esta soportado por el browser, por lo que JSX necesita de un **proceso de construccion** antes de desplegarse que ocurre entre bastidores que transforma y potencialmente optimiza nuestro codigo para que funciones en el browser.
+**60**
 
-Debes saber que en teoria se pueden escribir aplicaciones en React que no utilicen JSX, sino solo caracteristicas standard de javascript.
+**Un proyecto React no necesita obligatoriamente de codigo JSX. Puede ser construido exclusivamente con codigo standard JavaScript.**
 
-Sin embargo, JSX es preferible
+JSX se utiliza solo por razones de conveniencia. Es de esta manera que los dos codigos escritos en JSX y lenguaje standart JavaScript que se muestran a continuacion son equivalentes:
 
-# Las expresiones JSX deben tener un elemento padre
-
-A primera vista nuestra etiqueta <div> puede parecer redundante. Tener elementos adicionales en el DOM es redundante.
-
-Lo que sucede es que en el frangmento de nuestro codigo envuelto supuestamente innecesariamente por un <div>, estamos devolviendo varios valores. Recordemos de que en JavaScript, una función no puede devolver directamente dos valores como tampoco en React. 
-
-Para solucionar esto, podemos reeemplezar el div innecesario con una etiqueta Fragment o una etiqueta vacia, la cual no devuelve error alguno.
-
-```JavaScript
-<Fragment>
-<Fragment>
-<>
-</>
+```javascript
+<div id="content">
+   <p>Hola mundo!</p>
+</div>
 ```
 
-# Ejercicio. Usando Fragments
+```javascript
+React.createElement(
+   'div',
+   {id: 'content'},
+   React.createElement(
+      'p',
+      null,
+      'Hello World'
+   )
+);
+```
 
-Su tarea es editar el componente `Summary` existente de modo que genere el siguiente contenido:
+JSX no es una caracteristica standard, no esta soportado por el navegador, por lo que el codigo JSX no es el que se ve directamente en el navegador. JSX necesita de un **proceso de compilacion** que trabaja tras bambalinas que lo cambia y optimiza para que pueda ser renderizable.
 
-<h1>Summary</h1>
-<p>{text}</p>
+**61**
 
-¡Dentro del componente `Summary`, este contenido no debe estar incluido en ningún otro elemento HTML!
+**Las expresiones JSX deben tener un elemento padre**
 
-Por ejemplo, este código sería incorrecto:
+En JavaScript no es posible retornar dos valores en una funcion, tampoco en JSX. Se deben agrupar en un solo bloque.
 
-<div>
-  <h1>Summary</h1>
-  <p>{text}</p>
-</div>
+En nuestro codigo tenemos este problema que nos explica el por que estamos utilizando un <div> aparentemente innecesario.
 
-```JavaScript
+```javascript
+   return (
+      <div>
+         <Header />
+         <main>...
+         </main>
+      </div>
+   );
+}
+```
+
+El `<div>` lo podemos reemplazar con el componente <Fragment>, pero de manera mas moderna simplemente con la etiqueta vacia `<>`:
+
+```javascript
+import {useState, Fragment} from 'react';
+
+   return (
+      <Fragment>
+         <Header />
+         <main>...
+         </main>
+      </Fragment>
+   );
+}
+```
+
+```javascript
+   return (
+      <>
+         <Header />
+         <main>...
+         </main>
+      </>
+   );
+}
+```
+
+**Ejercicio**
+
+Considere el siguiente trozo de codigo React:
+
+```javascript
 function Summary({ text }) {
-  return null;
+   return null;
 }
 
 function App() {
-  return (
-    <div id="app" data-testid="app">
-      <Summary text="Fragments help you avoid unnecessary HTML elements." />
-    </div>
-  );
+   return (
+      <div id="app" data-testid="app">
+         <Summary text="Fragments help you avoid unnecessary HTML elements." />
+      </div>
+   );
+}
+
+export default App;
+```
+
+Su tarea es editar el componente Summary existente de modo que genere el siguiente contenido:
+
+```javascript
+<h1>Resumen</h1>
+<p>{texto}</p>
+```
+
+Respuesta:
+
+```javascript
+function Summary({ text }) {
+   return (
+      <>
+         <h1>Summary</h1>
+         <p>{text}</p>
+      </>
+   );
+}
+
+function App() {
+   return (
+      <div id="app" data-testid="app">
+         <Summary text="Fragments help you avoid unnecessary HTML elements." />
+      </div>
+   );
 }
 
 export default App;
