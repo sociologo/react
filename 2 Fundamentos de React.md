@@ -125,19 +125,185 @@ export default App;
 
 **40**
 
-23-12-2024\
-17:01
+Una mirada más cercana: componentes y extensiones de archivos
+
+En este punto, ha creado un primer componente personalizado y, por supuesto, también trabajó con el componente de la aplicación.
+
+Por el momento, ambos componentes se almacenan en el archivo App.jsx (aunque esto cambiará más adelante).
+
+`.jsx` es una extensión de archivo que no es compatible con el navegador! Está funcionando porque estás trabajando en un proyecto de React que admite esta extensión especial. Porque esta extensión "le dice" al proceso de compilación subyacente (que se ejecuta detrás de escena cuando se ejecuta el servidor de desarrollo) que un archivo contiene código JSX (que tampoco es compatible con los navegadores).
+
+Es importante comprender que en realidad es sólo el proceso de construcción el que se preocupa por esta extensión.
+
+Y, por lo tanto, también encontrará proyectos de React que no usan .jsx sino solo .js como extensión de archivo. Y en esos archivos .js, también encontrarás código JSX. Porque simplemente depende del proceso de compilación subyacente qué extensión se espera al usar esta sintaxis JSX en un archivo.
+
+Dado que no funciona en el navegador de ninguna manera, no existe una regla estricta al respecto. En su lugar, encontrará proyectos que requieren .jsx (como la configuración de proyecto que usamos en este curso) y encontrará proyectos que también admiten .js (con código JSX dentro).
+
+Estoy enfatizando esto aquí para que no se confunda si encuentra proyectos de React que no usan archivos .jsx.
+
+Además, también encontrará proyectos que requieren la extensión de archivo como parte de la importación de archivos (por ejemplo, importar aplicación desde './App.jsx') y encontrará otros proyectos que no la requieren (es decir, hay , podrías simplemente usar importar aplicación desde './App').
+
+Esto, nuevamente, no tiene nada que ver con el navegador o el "JavaScript estándar"; en cambio, simplemente depende de los requisitos del proceso de creación de código que forma parte de la configuración del proyecto que eligió.
 
 **Ejercicio**
 
+Su tarea es crear un nuevo componente `MainGoal` que genere un párrafo de texto que describa el objetivo principal del curso (por ejemplo, "Mi objetivo principal: aprender React en profundidad y desde cero").
 
+Tendrás que crear este nuevo componente desde cero y luego usarlo dentro del código JSX del componente de la aplicación.
 
+La aplicación terminada podría verse así:
 
-# Digresion Contenido dinamico en una web
+![image](https://github.com/user-attachments/assets/b3ba17ab-8447-4b2c-af6c-8b5cc0819c5f)
+
+(observe el texto "Mi objetivo principal: aprender a reaccionar desde cero" en la parte inferior)
+
+Importante: Para garantizar que las comprobaciones automáticas detecten correctamente su solución, su componente debe llamarse MainGoal y también debe exportarse. Para hacer eso, simplemente agregue la palabra clave export delante de su componente MainGoal.
+
+El componente MainGoal también debe contener el texto "Mi objetivo principal:" (seguido del objetivo principal del curso).
+
+```JavaScript
+import React from 'react';
+
+// DEFINE YOUR COMPONENT HERE
+// IMPORTANT: Add "export" in front of your component - otherwise the automated tests won't work
+// ...
+
+// DO NOT EDIT THE APP COMPONENT NAME OR CONTENT
+// Except for outputting your custom component
+
+function App() {
+  return (
+    <div id="app">
+      <h1>Time to Practice!</h1>
+      <p>
+        Build a <code>&lt;MainGoal&gt;</code> component and insert it below this
+        text.
+      </p>
+      <p>
+        Your <code>&lt;MainGoal&gt;</code> component should simply output some
+        text that describes your main course goal (e.g., &quot;My main goal:
+        Learn React in great detail&quot;).
+      </p>
+      <p>
+        <strong>Important:</strong> You custom component must contain the text
+        &quot;My main goal:&quot;
+      </p>
+      <p>
+        <strong>Also important:</strong> For the automatic checks to succeed,
+        you <strong>must export</strong> your custom component function! Not as
+        a default but simply by adding the <code>export</code> keyword in front
+        of your function (e.g., <code>export function YOUR_COMPONENT_NAME</code>
+        ).
+      </p>
+      {/* DON'T CHANGE THE TEXT / CONTENT ABOVE */}
+      {/* OUTPUT YOUR COMPONENT HERE */}
+    </div>
+  );
+}
+
+export default App;
+```
+
+Respuesta:
+
+```JavaScript
+import React from 'react';
+
+// DEFINE YOUR COMPONENT HERE
+// IMPORTANT: Add "export" in front of your component - otherwise the automated tests won't work
+export function MainGoal() {
+  return (
+    <p>My main goal: Learn react from the ground up</p>
+  );
+}
+
+// DO NOT EDIT THE APP COMPONENT NAME OR CONTENT
+// Except for outputting your custom component
+
+function App() {
+  return (
+    <div id="app">
+      <h1>Time to Practice!</h1>
+      <p>
+        Build a <code>&lt;MainGoal&gt;</code> component and insert it below this
+        text.
+      </p>
+      <p>
+        Your <code>&lt;MainGoal&gt;</code> component should simply output some
+        text that describes your main course goal (e.g., "My main goal: Learn React in great detail").
+      </p>
+      <p>
+        <strong>Important:</strong> You custom component must contain the text
+        "My main goal:"
+      </p>
+      <p>
+        <strong>Also important:</strong> For the automatic checks to succeed,
+        you <strong>must export</strong> your custom component function! Not as
+        a default but simply by adding the <code>export</code> keyword in front
+        of your function (e.g., <code>export function YOUR_COMPONENT_NAME</code>
+        ).
+      </p>
+      {/* DON'T CHANGE THE TEXT / CONTENT ABOVE */}
+      {/* OUTPUT YOUR COMPONENT HERE */}
+      <MainGoal />
+    </div>
+  );
+}
+
+export default App;
+```
+
+19:01\
+23-12-2024
+
+**41**
+
+Teorico: Como React maneja los componentes y como construye un arbol de componentes.
+
+**42 y 43**
+
+**La sintaxis especial de llaves nos permite agregar contenido dinamico a una pagina web y configurar dinámicamente atributos HTML y carga de archivos de imagen**
 
 ![image](https://github.com/user-attachments/assets/bae63692-bffe-42ca-9fb2-ebea39f3f166)
 
 La función Math.random() en JavaScript devuelve un número de coma flotante pseudo-aleatorio comprendido en el rango de 0 (incluido) a 1 (excluido). Esto significa que el valor devuelto puede ser 0, pero siempre será menor que 1.
+
+App.jsx
+
+```JavaScript
+function Header() {
+   return (
+      <header>
+         <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+         <h1>
+            React Essentials
+         </h1>
+         <p>
+            Fundamental React concepts you will need for almost any app you are going to build!
+         </p>
+      </header>
+   );
+}
+
+function App() {
+   return (
+      <div>
+         <Header />
+         <main>
+            <h2> Tiem to get started! </h2>
+         <main>
+      <div>
+   );
+}
+
+export default App;
+```
+
+
+
+
+
+
 
 # 2 Props
 
