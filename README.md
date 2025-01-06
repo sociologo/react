@@ -2,13 +2,13 @@
 
 https://react.new/
 
-Una unica vez se debe instalar:
+Cuando importas un proyecto, lo primero que debes hacer por única vez es instalar todas las librerías necesarias con: 
 
 ```bash
 PS C:\Users\chris\OneDrive\Documentos\GitHub\react\01-starting-project> npm install 
 ```
 
-Para levantar el proyecto:
+Luego, para levantar el proyecto:
 
 ```bash
 cd \Users\chris\OneDrive\Documentos\GitHub\react\01-starting-project
