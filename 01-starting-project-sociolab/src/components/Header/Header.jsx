@@ -1,5 +1,8 @@
+
+import './Header.css';
+
 const reactDescriptions = ['Estudiamos', 'Analizamos', 'Comprendemos'];
-import reactImg from '../assets/react-core-concepts.png';
+import reactImg from '../../assets/sociolab.png';
 function genRandomInt(max) {
    return Math.floor(Math.random() * (max + 1));
 }
