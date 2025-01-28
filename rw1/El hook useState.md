@@ -1,4 +1,4 @@
-Deseamos darle funcionalidad a la barra de navegador en tre menus establecido en Navbar.jsx.
+Deseamos darle funcionalidad a la barra del navegador entre menus establecida en Navbar.jsx.
 
 Para ello importamos el hook useState:
 
