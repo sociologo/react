@@ -1,4 +1,6 @@
-´´´j́avascript
+Este componente muestra una lista de testimonios que el usuario puede navegar usando botones de flecha. Cada testimonio incluye una imagen, una cita, el nombre y el trabajo de la persona que dio el testimonio. El componente utiliza estado para manejar qué testimonio se muestra actualmente y funciones para cambiar entre ellos.
+
+´´´javascript
 import { useState } from "react"
 import SectionHead from "./SectionHead"
 import {ImQuotesLeft} from 'react-icons/im'
