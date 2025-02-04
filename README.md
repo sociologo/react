@@ -23,11 +23,11 @@ React es una biblioteca de JavaScript desarrollada por Facebook para construir i
 
 agrega en package.json:\
   "scripts": {\
-    "start": "react-scripts start",/
-    "build": "react-scripts build",/
-    "test": "react-scripts test",/
-    "eject": "react-scripts eject",/
-    **"dev": "react-scripts start"**/
+    "start": "react-scripts start",\
+    "build": "react-scripts build",\
+    "test": "react-scripts test",\
+    "eject": "react-scripts eject",\
+    **"dev": "react-scripts start"**\
   },
 
   luego en la terminal:
