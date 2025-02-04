@@ -1,4 +1,4 @@
-´´j́avascript
+´´´j́avascript
 import { useState } from "react"
 import SectionHead from "./SectionHead"
 import {ImQuotesLeft} from 'react-icons/im'
