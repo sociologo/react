@@ -22,6 +22,7 @@ React es una biblioteca de JavaScript desarrollada por Facebook para construir i
 ## Para ubuntu:
 
 agrega en package.json:\
+
   "scripts": {\
     "start": "react-scripts start",\
     "build": "react-scripts build",\
