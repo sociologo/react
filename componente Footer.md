@@ -72,7 +72,7 @@ footer {
 }
 ```
 
-**footer {**: Esto indica que los estilos que siguen se aplicarán a todos los elementos <footer> en la página.
+**footer {**: Esto indica que los estilos que siguen se aplicarán a todos los elementos **footer** en la página.
 
 **background**: var(--color-primary);: Aquí se establece el color de fondo del footer. En lugar de usar un color directamente (como #ffffff o red), se utiliza una variable CSS llamada --color-primary. Esto significa que el color de fondo se define en otra parte del archivo CSS o en un archivo de variables, lo que permite un manejo más consistente y fácil de cambiar los colores en todo el sitio.
 
