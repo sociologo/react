@@ -61,7 +61,7 @@ export default Footer
 
 en home.css
 
-
+```css
 /* ===================== FOOTER ===================== */
 footer {
     background: var(--color-primary);
@@ -70,10 +70,7 @@ footer {
     font-size: 0.9rem;
     color: var(--color-gray-100);
 }
-
-
 ```
-
 
 **footer {**: Esto indica que los estilos que siguen se aplicarán a todos los elementos <footer> en la página.
 
