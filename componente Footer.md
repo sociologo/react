@@ -71,6 +71,24 @@ footer {
     color: var(--color-gray-100);
 }
 
+/* 
+
+**footer {**: Esto indica que los estilos que siguen se aplicarán a todos los elementos <footer> en la página.
+
+**background**: var(--color-primary);: Aquí se establece el color de fondo del footer. En lugar de usar un color directamente (como #ffffff o red), se utiliza una variable CSS llamada --color-primary. Esto significa que el color de fondo se define en otra parte del archivo CSS o en un archivo de variables, lo que permite un manejo más consistente y fácil de cambiar los colores en todo el sitio.
+
+**margin-top**: 7rem;: Esto añade un margen superior de 7 rem (unidad relativa al tamaño de la fuente del elemento raíz) al footer. Esto significa que habrá un espacio de 7 rem entre el footer y el elemento que está encima de él.
+
+**padding-top**: 7rem;: Esto añade un relleno superior de 7 rem dentro del footer. El relleno es el espacio entre el contenido del footer y su borde superior. Esto puede ser útil para crear un espacio interno dentro del footer.
+
+**font-size**: 0.9rem;: Esto establece el tamaño de la fuente del texto dentro del footer a 0.9 rem, que es un poco más pequeño que el tamaño de fuente predeterminado.
+
+**color**: var(--color-gray-100);: Aquí se define el color del texto dentro del footer. Al igual que con el fondo, se utiliza una variable CSS llamada --color-gray-100 para definir el color. Esto permite un manejo consistente de los colores en todo el sitio.
+
+**}**: Esto cierra el bloque de estilos para el footer.
+
+*/
+
 .footer__container {
     display: grid;
     grid-template-columns: 26rem 1fr 1fr 1fr;
