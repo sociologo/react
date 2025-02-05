@@ -61,7 +61,7 @@ export default Footer
 
 en home.css
 
-```css
+
 /* ===================== FOOTER ===================== */
 footer {
     background: var(--color-primary);
@@ -71,7 +71,9 @@ footer {
     color: var(--color-gray-100);
 }
 
-/* 
+
+```
+
 
 **footer {**: Esto indica que los estilos que siguen se aplicarán a todos los elementos <footer> en la página.
 
@@ -87,8 +89,10 @@ footer {
 
 **}**: Esto cierra el bloque de estilos para el footer.
 
-*/
 
+
+
+```css
 .footer__container {
     display: grid;
     grid-template-columns: 26rem 1fr 1fr 1fr;
