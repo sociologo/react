@@ -68,6 +68,7 @@ export default Header
 }
 ```
 
+**About.jsx**
 
 ```javascript
 import Header from '../../components/Header'
@@ -76,8 +77,6 @@ import StoryImage from '../../images/about1.jpg'
 import VisionImage from '../../images/about2.jpg'
 import MissionImage from '../../images/about3.jpg'
 import './about.css'
-
-
 
 const About = () => {
   return (
