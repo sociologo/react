@@ -1,3 +1,6 @@
+
+Al componente Header se le dan estilos en el archivo **index.css**
+
 ```javascript
 const Header = ({title, image, children}) => {
   return (
