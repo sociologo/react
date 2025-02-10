@@ -1,9 +1,9 @@
 1 En la terminal de vsc, instalados dentro de la capeta donde desarrollaremos nuestro proyecto:
 
 
-npm create-react-app ./ /
-npm install react-icons /
-npm install react-router-dom /
+npm create-react-app ./ \
+npm install react-icons \
+npm install react-router-dom \
 npm install web-vitals
 
 2 Borramos todo dentro de las carpetas public y src.
