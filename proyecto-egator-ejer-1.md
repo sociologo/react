@@ -496,12 +496,13 @@ export default Navbar
 ```
 
 17 Queremos darle una animacion a la barra del componente Navbar.jsx, por lo que usamos el hook state en Navbar.jsx agregando un operador ternario al tag <nav__links> y dandole funcionalidad a una funcion onClick al boton con la etiqueta <nav__toggle-btn>.
-
-import { useState } from 'react'\
-const [isNavShowing, setIsNavShowing] = useState(false);\
+```javascript
+import { useState } from 'react'
+const [isNavShowing, setIsNavShowing] = useState(false);
 <ul className={`nav__links ${isNavShowing ? 'show__nav' : 'hide__Nav'}`}>
+```
 
-que esta asociado en el navbar.css a show__nav:
+que esta asociado en el navbar.css a .show__nav:
 
 ```javascript
    .show__nav {
