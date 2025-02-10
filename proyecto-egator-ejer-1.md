@@ -32,6 +32,7 @@ Con "doc"-tab:
 components
 images
 pages
+UI
 
 6 en la carpeta src creamos el archivo index.js:
 
@@ -127,7 +128,7 @@ const App = () => {
 export default App
 ```
 
-11 Creamos el componente **Navbar.jsx** y su asociado **Navbar.css** dentro de la carpeta **components**, asociandole en contenido de Data,js que importamos dentro de la carpeta UI, desestructurando sus elementos. Agregamos un boton que solo sera visible en tablets y telefonos celulares.
+11 Creamos el componente **Navbar.jsx** y su asociado **Navbar.css** dentro de la carpeta **components**, asociandole en contenido de **data.js** que importamos dentro de la carpeta **UI**, desestructurando sus elementos. Agregamos un boton que solo sera visible en tablets y telefonos celulares.
 
 ---**Navbar.jsx**
 ```javascript
