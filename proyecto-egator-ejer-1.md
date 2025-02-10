@@ -557,7 +557,9 @@ const Navbar = () => {
 export default Navbar
 ```
 
+18 Agregamos una logica para cambiar el boton una vez que se presiona en la barra de navegaci[on asociada al componente Navbar:
 
+1:11:43
 
 
 
