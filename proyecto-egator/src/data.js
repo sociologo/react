@@ -1,5 +1,7 @@
 import {SiOpenaigym} from 'react-icons/si'
 
+
+
 export const links = [
     {
         name: "Home",
@@ -253,7 +255,7 @@ export const plans = [
             {feature: 'Tenth Feature', available: true},
             {feature: 'Eleventh Feature', available: true}
         ]
-    }
+    },
 ]
 
 
@@ -314,5 +316,5 @@ export const trainers = [
         name: 'Wayne Carter',
         job: 'Physical Intelligence Trainer',
         socials: ['https://instagram.com/', 'https://twitter.com/', 'https://facebook.com/', 'https://linkedin.com/']
-    }
+    },
 ]

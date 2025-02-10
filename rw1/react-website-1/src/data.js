@@ -1,28 +1,30 @@
 import {SiOpenaigym} from 'react-icons/si'
 
+
+
 export const links = [
     {
-        name: "Home",
+        name: "Inicio",
         path: '/'
     },
     {
-        name: "About",
+        name: "Sobre nosotros",
         path: '/about'
     },
     {
-        name: "Gallery",
+        name: "Small Area Estimation",
         path: '/gallery'
     },
     {
-        name: "Plans",
+        name: "Capacitaciones en R",
         path: '/plans'
     },
     {
-        name: "Trainers",
+        name: "Capacitaciones en React y Django",
         path: '/trainers'
     },
     {
-        name: "Contact",
+        name: "Contacto",
         path: '/contact'
     }
 ]
@@ -37,34 +39,37 @@ export const programs = [
     {
         id: 1,
         icon: <SiOpenaigym/>,
-        title: "Program One",
+        title: "SAE: geográfica aplicada sobre la Casen con la potencia de los datos del Censo.",
         info: "This is the day that the lord has made. We will rejoice!",
         path: "/programs/111"
     },
     {
         id: 2,
         icon: <SiOpenaigym/>,
-        title: "Program Two",
+        title: "SAE: Tablas de contingencia sobre datos Casen",
         info: "This is the day that the lord has made. We will rejoice!",
         path: "/programs/222"
     },
     {
         id: 3,
         icon: <SiOpenaigym/>,
-        title: "Program Three",
-        info: "This is the day that the lord has made. We will rejoice!",
+        title: "Aplicaciones para servicios de salud",
+        info: "Constamos con un mantenedor de servicios de administración de medicamentos para pacientes crónicos",
         path: "/programs/333"
     },
     {
         id: 4,
         icon: <SiOpenaigym/>,
-        title: "Program Four",
-        info: "This is the day that the lord has made. We will rejoice!",
+        title: "Gentrificación",
+        info: `La gentrificación es un proceso urbano en el que un barrio o 
+            área deteriorada experimenta una transformación significativa debido 
+            a la llegada de residentes de mayor poder adquisitivo. Este fenómeno 
+            suele ir acompañado de la renovación de viviendas, la mejora de infraestructuras 
+            y la apertura de nuevos negocios, lo que puede aumentar el valor de las 
+            propiedades y cambiar el carácter del vecindario.`,
         path: "/programs/444"
     }
 ]
-
-
 
 
 
@@ -75,14 +80,14 @@ export const values = [
     {
         id: 1,
         icon: <SiOpenaigym/>,
-        title: "Value One",
+        title: "Conciencia social",
         desc: "Placeat quidem facere dicta modi? Pariatur exercitationem illum."
     },
     {
         id: 2,
         icon: <SiOpenaigym/>,
-        title: "Value Two",
-        desc: "Placeat quidem facere dicta modi? Pariatur exercitationem illum."
+        title: "Compromiso con la verdad",
+        desc: "Nuestra metodología estadística se publica en papers que garantizan su reproductibilidad."
     },
     {
         id: 3,
@@ -109,8 +114,14 @@ export const values = [
 export const faqs = [
     {
         id: 1,
-        question: "How often should I exercise?",
-        answer: "Consectetur adipisicing elit. Non ipsa dolorem, rem consequatur eum omnis ex, fuga temporibus qui nesciunt odio aliquam commodi culpa inventore ut similique repellendus perferendis sint!"
+        question: "Por qué es importante comprender las razones de la pobreza y la desigualdad?",
+        answer: `Comprender las razones de la pobreza y la desigualdad es crucial por varias razones:
+
+Formulación de Políticas Efectivas: Conocer las causas subyacentes permite a los gobiernos y organizaciones diseñar políticas y programas que aborden los problemas de manera más efectiva y específica.
+Justicia Social: Identificar y entender las desigualdades ayuda a promover la justicia social y a garantizar que todos los individuos tengan acceso a oportunidades y recursos.
+Desarrollo Económico: Reducir la pobreza y la desigualdad puede impulsar el crecimiento económico, ya que una población más equitativa y próspera contribuye de manera más significativa a la economía.
+Estabilidad Social: Abordar las causas de la pobreza y la desigualdad puede reducir la tensión social y los conflictos, promoviendo una sociedad más cohesionada y estable.
+Salud y Bienestar: La pobreza y la desigualdad están estrechamente relacionadas con problemas de salud y bienestar. Comprender estas relaciones puede mejorar la calidad de vida de las personas afectadas.`
     },
     {
         id: 2,
@@ -253,7 +264,7 @@ export const plans = [
             {feature: 'Tenth Feature', available: true},
             {feature: 'Eleventh Feature', available: true}
         ]
-    }
+    },
 ]
 
 
@@ -314,5 +325,5 @@ export const trainers = [
         name: 'Wayne Carter',
         job: 'Physical Intelligence Trainer',
         socials: ['https://instagram.com/', 'https://twitter.com/', 'https://facebook.com/', 'https://linkedin.com/']
-    }
+    },
 ]
