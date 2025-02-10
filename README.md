@@ -19,6 +19,26 @@ Tengo vinculada mi cuenta GitHub a la cuenta codesandbox.
 
 React es una biblioteca de JavaScript desarrollada por Facebook para construir interfaces de usuario (UI). Se utiliza principalmente para desarrollar aplicaciones web de una sola página (SPA) y aplicaciones móviles. React permite a los desarrolladores crear componentes reutilizables que gestionan su propio estado, lo que facilita la construcción de interfaces de usuario complejas y dinámicas.
 
+## Para ubuntu:
+
+agrega en package.json:\
+
+  "scripts": {\
+    "start": "react-scripts start",\
+    "build": "react-scripts build",\
+    "test": "react-scripts test",\
+    "eject": "react-scripts eject",\
+    **"dev": "react-scripts start"**\
+  },
+
+  luego en la terminal:
+
+  npm install
+
+  y luego
+
+  npm start
+
 ## Diferencias entre React y JavaScript
 
 - Propósito:\
