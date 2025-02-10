@@ -203,6 +203,9 @@ const App = () => {
 export default App
 ```
 
+13 Le damos estilos al index.css
+
+
 
 
 
