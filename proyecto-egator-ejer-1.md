@@ -503,15 +503,20 @@ const [isNavShowing, setIsNavShowing] = useState(false);\
 
 que esta asociado en el navbar.css a show__nav:
 
+```javascript
    .show__nav {
        display: flex;
    }
+```
 
+```javascript
    .hide__nav {
        display: none;
    }
+```
 
 ---Navbar.jsx
+
 ```javascript
 import { useState } from 'react'
 import {Link, NavLink} from 'react-router-dom'
