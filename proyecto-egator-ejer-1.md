@@ -128,14 +128,14 @@ const App = () => {
 export default App
 ```
 
-11 Creamos el componente **Navbar.jsx** y su asociado **Navbar.css** dentro de la carpeta **components**, asociandole en contenido de **data.js** que importamos dentro de la carpeta **UI**, desestructurando sus elementos. Agregamos un boton que solo sera visible en tablets y telefonos celulares.
+11 Creamos el componente **Navbar.jsx** y su asociado **Navbar.css** dentro de la carpeta **components**, asociandole en contenido de **data.js** que importamos dentro de la carpeta **src**, desestructurando sus elementos. Agregamos un boton que solo sera visible en tablets y telefonos celulares.
 
 ---**Navbar.jsx**
 ```javascript
 import {Link, NavLink} from 'react-router-dom'
 import Logo from '../images/logo.png'
 import {links} from '../data'
-import {GoThreeBars} from 'react-icons/go'
+import { FaBars } from "react-icons/fa";
 import './navbar.css'
 
 const Navbar = () => {
@@ -145,7 +145,7 @@ const Navbar = () => {
             <Link to="/" className='logo'>
                 <img src={Logo} alt="Nav Logo" />
             </Link>
-            <ul className={`nav__links'>
+            <ul className='nav__links'>
                 {
                     links.map(({name, path}, index) => {
                         return (
@@ -157,7 +157,7 @@ const Navbar = () => {
                 }
             </ul>
             <button className="nav__toggle-btn">
-               <GoThreeBars/>
+               <FaBars/>
             </button>
         </div>
     </nav>
