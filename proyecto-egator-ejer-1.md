@@ -495,7 +495,7 @@ const Navbar = () => {
 export default Navbar
 ```
 
-17 Queremos darle una animacion a la barra del componente Navbar.jsx, por lo que usamos el hook state en Navbar.jsx.
+17 Queremos darle una animacion a la barra del componente Navbar.jsx, por lo que usamos el hook state en Navbar.jsx agregando un operador ternario al tag <nav__links> y dandole funcionalidad a una funcion onClick al boton con la etiqueta <nav__toggle-btn>.
 
 import { useState } from 'react'\
 const [isNavShowing, setIsNavShowing] = useState(false);\
@@ -517,36 +517,34 @@ import { useState } from 'react'
 import {Link, NavLink} from 'react-router-dom'
 import Logo from '../images/logo.png'
 import {links} from '../data'
-import {GoThreeBars} from 'react-icons/go'
+import { FaBars } from "react-icons/fa";
 import './navbar.css'
 
 const Navbar = () => {
-    const [isNavShowing, setIsNavShowing] = useState(false);
+   const [isNavShowing, setIsNavShowing] = useState(false);
 
   return (
-    <nav>
-        <div className="container nav__container">
-            <Link to="/" className='logo'>
-                <img src={Logo} alt="Nav Logo" />
-            </Link>
-            <ul className={`nav__links ${isNavShowing ? 'show__nav' : 'hide__Nav'}`}>
-                {
-                    links.map(({name, path}, index) => {
-                        return (
-                            <li key={index}>
-                                <NavLink to={path} className={({isActive}) => isActive ? 'active-nav' : ''}>{name}</NavLink>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-            <button className="nav__toggle-btn">
-                {
-                    <GoThreeBars/>
-                }
-            </button>
-        </div>
-    </nav>
+      <nav>
+         <div className="container nav__container">
+               <Link to="/" className='logo'>
+                  <img src={Logo} alt="Nav Logo" />
+               </Link>
+               <ul className={`nav__links ${isNavShowing ? 'show__nav' : 'hide__nav'}`}>
+                  {
+                     links.map(({name, path}, index) => {
+                           return (
+                              <li>
+                                 <NavLink to={path} className={({isActive}) => isActive ? 'active-nav' : ''}>{name}</NavLink>
+                              </li>
+                           )
+                     })
+                  }
+               </ul>
+               <button className="nav__toggle-btn" onClick={() => setIsNavShowing(!isNavShowing)}>
+                  <FaBars/>
+               </button>
+         </div>
+      </nav>
   )
 }
 
