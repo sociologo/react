@@ -93,12 +93,6 @@ export default about
 ```
 ---
 
-10 
-
-28' aca voy.
-
-*** 25 minutos
-
 10 Importamos todas nuestras pages a App.jsx
 
 ```javascript
