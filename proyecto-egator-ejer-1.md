@@ -10,7 +10,7 @@ npm install web-vitals
 2 Borramos todo dentro de las carpetas public y src.
 
 3 Creamos el archivo index.html en la carpeta public.
-Con "doc"-tab:
+Con la combinación de teclas **"doc"+tab** creamos automáticamente el siguiente trozo de código:
 
 ```html
 <html lang="en">
@@ -28,11 +28,11 @@ Con "doc"-tab:
 
 4 Llevamos images a la carpeta src
 
-5 en la carpeta src creamos las siguientes otras tres carpetas:
+5 en la carpeta src creamos las siguientes otras cuatro carpetas:
 
-components
-images
-pages
+components\
+images\
+pages\
 UI
 
 6 en la carpeta src creamos el archivo index.js:
