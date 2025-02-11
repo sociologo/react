@@ -698,13 +698,32 @@ export default home
 
 1 20'
 
+21 Debemos hacer unos ajustes en el css. En la pagina de inicio algunos componentes aparecen tapados por el Navbar. Entonces en Navbar debemos comentar la siguiente linea
 
 
+/* position: fixed; */
 
+22 en el componnete App.jsx eliminemos los elementos envueltos por el tag <BrowserRouter> dejando solo el componente <Navbar />. Creamos estos elementos ahora con la ayuda de los tags <Routes> y <Route>.
 
-
-
-
+```javascript
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route index element={<Home/>}/>
+        <Route path='about' element={<About/>}/>
+        <Route path='contact' element={<Contact/>}/>
+        <Route path='gallery' element={<Gallery/>}/>
+        <Route path='plans' element={<Plans/>}/>
+        <Route path='trainers' element={<Trainers/>}/>
+        <Route path='*' element={<NotFound/>}/>
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
+  )
+}
+```
 
 
 
