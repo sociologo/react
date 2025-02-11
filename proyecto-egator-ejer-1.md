@@ -667,28 +667,47 @@ const Navbar = () => {
 export default Navbar
 ```
 
-20 Trabajaremos en la cabecera de nuestra pagina, que estara ubicado bajo la barra de navegación Navbar. Para ello construimos un componente **Header.jsx** dentro de la carpeta **components** (lo importamos dentro del componente **Home.jsx**) cuyo css será **home.css** 
+20 Trabajaremos en la cabecera de nuestra pagina, que estara ubicado bajo la barra de navegación Navbar. Para ello construimos un componente **MainHeader.jsx** dentro de la carpeta **components** (lo importamos dentro del componente **Home.jsx**) cuyo css será **home.css** 
 
 ```javascript
-const Header = () => {
-   return (
-      <div>
-         Header
+import {Link} from 'react-router-dom'
+import Image from '../images/main_header.png'
+
+
+const MainHeader = () => {
+  return (
+    <header className="main__header">
+      <div className="container main__header-container">
+        <div className="main__header-left">
+          <h4>#100DaysOfWorkOut</h4>
+          <h1>Join The Legends Of The Fitness World</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam excepturi similique eius optio. Dolorum, quaerat.
+          </p>
+          <Link to="/plans" className='btn lg'>Get Started</Link>
+        </div>
+        <div className="main__header-right">
+          <div className="main__header-circle"></div>
+          <div className="main__header-image">
+            <img src={Image} alt="Main Header Image" />
+          </div>
+        </div>
       </div>
-   )
+    </header>
+  )
 }
 
-export default Header
+export default MainHeader
 ```
 
 ```javascript
-import Header from "../../components/Header"
+import MainHeader from "../../components/MainHeader"
 import './home.css'
 
 const home = () => {
    return (
       <div>
-         <Header />
+         <MainHeader />
       </div>
    )
 }
@@ -696,14 +715,11 @@ const home = () => {
 export default home
 ```
 
-1 20'
-
 21 Debemos hacer unos ajustes en el css. En la pagina de inicio algunos componentes aparecen tapados por el Navbar. Entonces en Navbar debemos comentar la siguiente linea
-
 
 /* position: fixed; */
 
-22 en el componnete App.jsx eliminemos los elementos envueltos por el tag <BrowserRouter> dejando solo el componente <Navbar />. Creamos estos elementos ahora con la ayuda de los tags <Routes> y <Route>.
+22 en el componente App.jsx eliminemos los elementos envueltos por el tag <BrowserRouter> dejando solo el componente <Navbar />. Creamos estos elementos ahora con la ayuda de los tags <Routes> y <Route>.
 
 ```javascript
 const App = () => {
@@ -724,6 +740,9 @@ const App = () => {
   )
 }
 ```
+
+23 
+
 
 
 
