@@ -942,7 +942,7 @@ className={card ${className}}: Aplica las clases CSS al elemento article. Combin
 
 export default Card: Exporta el componente Card como la exportación predeterminada del módulo, lo que permite que este componente se importe en otros archivos.
 
-26 Ahora a la seccion **programs** le damos estilos dentro del archivo **index.css**:
+26 Ahora a los componentes **SectionHead** y **Card** le damos estilos dentro del archivo **index.css**:
 
 ```css
 section {
