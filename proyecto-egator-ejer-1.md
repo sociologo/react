@@ -942,31 +942,66 @@ className={card ${className}}: Aplica las clases CSS al elemento article. Combin
 
 export default Card: Exporta el componente Card como la exportación predeterminada del módulo, lo que permite que este componente se importe en otros archivos.
 
-26 Ahora a la seccion **programs** le damos estilos dentro del archivo **home.css**:
+26 Ahora a la seccion **programs** le damos estilos dentro del archivo **index.css**:
 
 ```css
-/* ===================== PROGRAMS ===================== */
-.programs {
-    margin-top: 4rem;
+section {
+    margin-top: 10rem;
 }
 
-.programs__wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-    margin-top: 4rem;
-}
-
-.programs__program a {
-    margin-top: 2.5rem;
+.section__head {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 1rem;
 }
 
-.programs__program:hover a {
+.section__head span {
+    background: var(--color-gray-500);
+    padding: 0.8rem;
+    border-radius: 1rem;
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+}
+
+.card {
+    background: var(--color-gray-500);
+    border: 2px solid transparent;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 0 3rem 0 3rem;
+    transition: var(--transition);
+}
+
+.card:hover {
+    background: transparent;
+    border-color: var(--color-gray-400);
+    cursor: default;
+}
+
+.card span {
+    width: 3rem;
+    height: 3rem;
+    background: var(--color-primary);
+    color: var(--color-gray-100);
+    font-size: 1.5rem;
+    padding: 0.8rem;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1.5rem;
+    margin-inline: auto;
+    border-radius: 1rem;
+    transition: var(--transition);
+}
+
+.card:hover span {
     background: var(--color-secondary);
     color: var(--color-gray-600);
+}
+
+.card small {
+    margin-top: 1rem;
+    display: block;
+    font-weight: 300;
 }
 ```
 
