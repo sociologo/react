@@ -834,8 +834,16 @@ Para ello vamos a editar en el archivo **index.css** y agregamos:
 }
 ```
 
+24 Trabajaremos sobre la seccion **programs**
+
+Creamos el componente **Programs.jsx** dentro de la carpeta **components**:
 
 
+
+Y lo agregamos al componente **Home.jsx**:
+
+
+1 46'
 
 
 
