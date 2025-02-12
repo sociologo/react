@@ -791,7 +791,7 @@ const App = () => {
 .main__header-image {
     position: relative;
 }
-```javascript
+```
 
 23 Le damos formato al boton de la pagina de inicio: "Get Started"
 
