@@ -1,3 +1,11 @@
+
+# Índice
+
+* [1 En la terminal de vsc](#1-En-la-terminal-de-vsc)
+
+
+## 1 En la terminal de vsc
+
 1 En la terminal de vsc, instalados dentro de la carpeta donde desarrollaremos nuestro proyecto, ejecutamos:
 
 ```shell
