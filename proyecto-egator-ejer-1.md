@@ -928,6 +928,21 @@ const Card = ({className, children}) => {
 export default Card
 ```
 
+const Card: Define una constante llamada Card, que es una función de componente funcional en React.
+
+({ className, children }): Utiliza la desestructuración de objetos para acceder a las propiedades className y children que se pasan al componente Card. Esto significa que el componente Card espera recibir estos dos props.
+
+return: Devuelve un elemento JSX que representa el contenido que se renderizará en la interfaz de usuario.
+
+<article>: Un elemento HTML que se utiliza para representar contenido independiente que tiene su propio significado. En este caso, se usa para representar una tarjeta o Card.
+
+className={card ${className}}: Aplica las clases CSS al elemento article. Combina la clase card con cualquier clase adicional que se pase a través de la prop className. Por ejemplo, si className tiene el valor highlight, el className resultante será card highlight.
+
+{children}: Es un placeholder que representa cualquier contenido anidado dentro del componente Card. children es una prop especial en React que permite pasar elementos secundarios al componente.
+
+export default Card: Exporta el componente Card como la exportación predeterminada del módulo, lo que permite que este componente se importe en otros archivos.
+
+
 1 46'
 
 
