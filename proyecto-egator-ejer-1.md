@@ -715,11 +715,7 @@ const home = () => {
 export default home
 ```
 
-21 Debemos hacer unos ajustes en el css. En la pagina de inicio algunos componentes aparecen tapados por el Navbar. Entonces en Navbar debemos comentar la siguiente linea
-
-/* position: fixed; */
-
-22 en el componente App.jsx eliminemos los elementos envueltos por el tag <BrowserRouter> dejando solo el componente <Navbar />. Creamos estos elementos ahora con la ayuda de los tags <Routes> y <Route>.
+21 en el componente App.jsx eliminemos los elementos envueltos por el tag <BrowserRouter> dejando solo el componente <Navbar />. Creamos estos elementos ahora con la ayuda de los tags <Routes> y <Route>.
 
 ```javascript
 const App = () => {
@@ -741,7 +737,7 @@ const App = () => {
 }
 ```
 
-23 Comenzamos a darle estilos a **MainHeader.jsx** en **home.css**: 
+22 Comenzamos a darle estilos a **MainHeader.jsx** en **home.css**: 
 
 ```css
 .main__header {
@@ -797,7 +793,43 @@ const App = () => {
 }
 ```javascript
 
-1 30'
+23 Le damos formato al boton de la pagina de inicio: "Get Started"
+
+Para ello vamos a editar en el archivo **index.css** y agregamos:
+
+```css
+.btn {
+    color: var(--color-gray-100);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.9rem 2rem;
+    background: var(--color-primary);
+    border-radius: 1.5rem;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--color-secondary);
+    color: var(--color-gray-600);
+}
+
+.btn.lg {
+    padding: 1.2rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+}
+
+.btn.sm {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+.btn.sm:hover {
+    background: var(--color-gray-100);
+}
+```
+
+
 
 
 
