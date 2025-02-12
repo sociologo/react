@@ -942,6 +942,35 @@ className={card ${className}}: Aplica las clases CSS al elemento article. Combin
 
 export default Card: Exporta el componente Card como la exportación predeterminada del módulo, lo que permite que este componente se importe en otros archivos.
 
+26 Ahora a la seccion **programs** le damos estilos dentro del archivo **home.css**:
+
+```css
+/* ===================== PROGRAMS ===================== */
+.programs {
+    margin-top: 4rem;
+}
+
+.programs__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.programs__program a {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.programs__program:hover a {
+    background: var(--color-secondary);
+    color: var(--color-gray-600);
+}
+```
+
+
 
 1 46'
 
