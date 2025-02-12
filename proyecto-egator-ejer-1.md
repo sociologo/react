@@ -795,7 +795,6 @@ const App = () => {
 .main__header-right:hover .main__header-circle {
    filter: blur(15px);
 }
-
 ```
 
 23 Le damos formato al boton de la pagina de inicio: "Get Started"
@@ -838,10 +837,67 @@ Para ello vamos a editar en el archivo **index.css** y agregamos:
 
 Creamos el componente **Programs.jsx** dentro de la carpeta **components**:
 
+```javascript
+import {FaCrown} from 'react-icons/fa'
+import SectionHead from './SectionHead'
+import {programs} from '../data'
+import Card from '../UI/Card'
+import {Link} from 'react-router-dom'
+import {AiFillCaretRight} from 'react-icons/ai'
 
+
+const Programs = () => {
+  return (
+    <section className="programs">
+        <div className="container programs__container">
+            <SectionHead icon={<FaCrown/>} title="Programs"/>
+        <div className="programs__wrapper">
+            {
+                programs.map(({id, icon, title, info, path}) => {
+                    return (
+                        <Card className="programs__program" key={id}>
+                            <span>{icon}</span>
+                            <h4>{title}</h4>
+                            <small>{info}</small>
+                            <Link to={path} className="btn sm">Learn More <AiFillCaretRight/></Link>
+                        </Card>
+                    )
+                })
+            }
+        </div>
+        </div>
+    </section>
+  )
+}
+
+export default Programs
+```
 
 Y lo agregamos al componente **Home.jsx**:
 
+```javascript
+import FAQs from '../../components/FAQs'
+import Footer from '../../components/Footer'
+import MainHeader from '../../components/MainHeader'
+import Programs from '../../components/Programs'
+import Testimonials from '../../components/Testimonials'
+import Values from '../../components/Values'
+
+import './home.css'
+const Home = () => {
+  return (
+    <>
+    <MainHeader/>
+    <Programs/>
+    <Values/>
+    <FAQs/>
+    <Testimonials/>
+    </>
+  )
+}
+
+export default Home
+```
 
 1 46'
 
