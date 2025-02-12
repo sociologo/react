@@ -899,6 +899,35 @@ const Home = () => {
 export default Home
 ```
 
+25 Dentro del componente **Programs.jsx** tenemos otros dos componentes. Uno llamado **SectionHead** que construimos dentro de la carpeta **components**:
+
+```javascript
+const SectionHead = ({icon, title, className}) => {
+  return (
+    <div className={`section__head ${className}`}>
+        <span>{icon}</span>
+        <h2>{title}</h2>
+    </div>
+  )
+}
+
+export default SectionHead
+```
+
+Y otro llamado **Card** que construimos dentro de la carpeta **UI**:
+
+```javascript
+const Card = ({className, children}) => {
+  return (
+    <article className={`card ${className}`}>
+        {children}
+    </article>
+  )
+}
+
+export default Card
+```
+
 1 46'
 
 
