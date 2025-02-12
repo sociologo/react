@@ -791,6 +791,11 @@ const App = () => {
 .main__header-image {
     position: relative;
 }
+
+.main__header-right:hover .main__header-circle {
+   filter: blur(15px);
+}
+
 ```
 
 23 Le damos formato al boton de la pagina de inicio: "Get Started"
