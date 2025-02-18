@@ -2,6 +2,7 @@
 
 ## Lo que queda en este repositorio.
 
+1 01-starting-project-sociolab: Colores y formatos para mi pagina Sociolab.
 
 ## Lo que se va de este repositorio.
 
