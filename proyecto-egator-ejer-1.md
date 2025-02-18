@@ -1034,7 +1034,7 @@ section {
 }
 ```
 
-2 00'
+2 06' Seccion: values.
 
 
 
