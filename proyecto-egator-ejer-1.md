@@ -1015,7 +1015,7 @@ section {
 
 27 Ahora a la seccion **programs** le damos formato en **home.css**
 
-```javascript
+```css
 /* ===================== PROGRAMS ===================== */
 .programs {
    margin-top: 4rem;
