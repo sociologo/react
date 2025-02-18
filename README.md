@@ -12,9 +12,8 @@
 3 componente Testimonios.md\
 4 react-website-1\
 5 react-website-1 (1).zip
----
 
-https://react.new/
+## https://react.new/
 
 Cuando importas un proyecto, lo primero que debes hacer por única vez es instalar todas las librerías necesarias con: 
 
