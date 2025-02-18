@@ -2,10 +2,16 @@
 
 ## Lo que queda en este repositorio.
 
-1 01-starting-project-sociolab: Colores y formatos para mi pagina Sociolab.
+1 01-starting-project-sociolab: Colores y formatos para mi pagina Sociolab.\
+2 proyecto-egator-ejer-1.md: Es el estudio que llevo paso a paso en un primer ejercicio del proyecto egator.
 
 ## Lo que se va de este repositorio.
 
+1 componente Footer.md\
+2 componente Header.md\
+3 componente Testimonios.md\
+4 react-website-1\
+5 react-website-1 (1).zip
 ---
 
 https://react.new/
