@@ -1,5 +1,12 @@
 # REACT
 
+## Lo que queda en este repositorio.
+
+
+## Lo que se va de este repositorio.
+
+---
+
 https://react.new/
 
 Cuando importas un proyecto, lo primero que debes hacer por única vez es instalar todas las librerías necesarias con: 
