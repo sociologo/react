@@ -907,7 +907,7 @@ const Home = () => {
 export default Home
 ```
 
-25 Dentro del componente **Programs.jsx** tenemos otros dos componentes. Uno llamado **SectionHead** que construimos dentro de la carpeta **components**:
+25 Dentro del componente **Programs.jsx** tenemos otros dos componentes. Uno llamado **SectionHead.jsx** que construimos dentro de la carpeta **components**:
 
 ```javascript
 const SectionHead = ({icon, title, className}) => {
@@ -922,7 +922,7 @@ const SectionHead = ({icon, title, className}) => {
 export default SectionHead
 ```
 
-Y otro llamado **Card** que construimos dentro de la carpeta **UI**:
+Y otro llamado **Card.jsx** que construimos dentro de la carpeta **UI**:
 
 ```javascript
 const Card = ({className, children}) => {
