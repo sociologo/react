@@ -4,6 +4,7 @@
 
 1 *01-starting-project-sociolab*: Colores y formatos para mi pagina Sociolab.\
 2 *proyecto-egator-ejer-1.md*: Es el estudio que llevo paso a paso en un primer ejercicio del proyecto egator.
+3 proyecto-egator: Es el proyecto original de egator.
 
 ## Lo que se va de este repositorio.
 
@@ -12,6 +13,10 @@
 3 componente Testimonios.md\
 4 react-website-1\
 5 react-website-1 (1).zip
+
+6 00-starting-js-proj: proyectos originales de react udemy para pruebas 
+7 01-starting-project-sociolab: proyectos originales de react udemy para pruebas
+8 01-starting-project: proyectos originales de react udemy para pruebas
 
 ## https://react.new/
 
