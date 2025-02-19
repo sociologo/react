@@ -2,7 +2,7 @@
 
 C:\Users\chris\Documentos\GitHub
 
-cd /
+cd / \
 cd \Users\chris\Documentos\GitHub\react\proyecto udemy 1
 C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm install
 C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
