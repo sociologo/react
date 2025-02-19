@@ -2,20 +2,12 @@
 
 C:\Users\chris\Documentos\GitHub
 
+cd /
+cd \Users\chris\Documentos\GitHub\react\proyecto udemy 1
+C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm install
+C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
+
 ## https://react.new/
-
-Cuando importas un proyecto, lo primero que debes hacer por única vez es instalar todas las librerías necesarias con: 
-
-```bash
-PS C:\Users\chris\OneDrive\Documentos\GitHub\react\01-starting-project> npm install 
-```
-
-Luego, para levantar el proyecto:
-
-```bash
-cd \Users\chris\OneDrive\Documentos\GitHub\react\01-starting-project
-\Users\chris\OneDrive\Documentos\GitHub\react\01-starting-project> npm run dev
-```
 
 Tengo vinculada mi cuenta GitHub a la cuenta codesandbox.
 
