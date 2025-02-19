@@ -4,6 +4,7 @@
 
 1 *01-starting-project-sociolab*: Colores y formatos para mi pagina Sociolab.\
 2 *proyecto-egator-ejer-1.md*: Es el estudio que llevo paso a paso en un primer ejercicio del proyecto egator.
+3 proyecto-egator: Es el proyecto original de egator.
 
 ## Lo que se va de este repositorio.
 
