@@ -14,9 +14,10 @@
 4 react-website-1\
 5 react-website-1 (1).zip
 
-6 00-starting-js-proj: proyectos originales de react udemy para pruebas 
-7 01-starting-project-sociolab: proyectos originales de react udemy para pruebas
-8 01-starting-project: proyectos originales de react udemy para pruebas
+6 00-starting-js-proj: proyectos originales de react udemy para pruebas\
+7 01-starting-project-sociolab: proyectos originales de react udemy para pruebas\
+8 01-starting-project: proyectos originales de react udemy para pruebas\
+9 Portfolio-React: un proyecto de la web que no me sirvió.
 
 ## https://react.new/
 
