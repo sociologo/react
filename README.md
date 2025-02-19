@@ -1,5 +1,7 @@
 # REACT
 
+C:\Users\chris\Documentos\GitHub
+
 ## https://react.new/
 
 Cuando importas un proyecto, lo primero que debes hacer por única vez es instalar todas las librerías necesarias con: 
