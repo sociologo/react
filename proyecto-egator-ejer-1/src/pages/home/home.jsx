@@ -1,11 +1,14 @@
-import './home.css'
+import MainHeader from '../../components/MainHeader'
+import Programs from '../../components/Programs'
 
-const home = () => {
+import './home.css'
+const Home = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+    <MainHeader/>
+    <Programs/>
+    </>
   )
 }
 
-export default home
+export default Home
