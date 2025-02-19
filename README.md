@@ -14,6 +14,10 @@
 4 react-website-1\
 5 react-website-1 (1).zip
 
+6 00-starting-js-proj: proyectos originales de react udemy para pruebas 
+7 01-starting-project-sociolab: proyectos originales de react udemy para pruebas
+8 01-starting-project: proyectos originales de react udemy para pruebas
+
 ## https://react.new/
 
 Cuando importas un proyecto, lo primero que debes hacer por única vez es instalar todas las librerías necesarias con: 
