@@ -251,8 +251,10 @@ function App() {
 export default App;
 ```
 
-19:01\
-23-12-2024
+---
+Estoy comenzando la leccion 41
+19 de Febrero
+---
 
 **41**
 
