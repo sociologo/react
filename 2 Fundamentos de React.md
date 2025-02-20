@@ -252,8 +252,10 @@ export default App;
 ```
 
 ---
-Estoy comenzando la leccion 41
+
+Estoy comenzando la leccion 41\
 19 de Febrero
+
 ---
 
 **41**
