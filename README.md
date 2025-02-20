@@ -3,17 +3,17 @@
 C:\Users\chris\Documentos\GitHub
 ---
 Proyecto Udemy:\
-C:\Users\chris>cd / \
+C:\Users\chris> cd / \
 C:\> cd \Users\chris\Documentos\GitHub\react\proyecto udemy 1 \
 C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm install \
 C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
 
 ---
 Proyecto Egator:\
-C:\Users\chris>cd / \
+C:\Users\chris> cd / \
 C:\> cd \Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1
 C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm install \
-C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm run dev
+C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm start
 
 
 ## https://react.new/
