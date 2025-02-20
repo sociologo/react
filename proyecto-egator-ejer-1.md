@@ -1228,7 +1228,41 @@ const FAQ = ({question, answer}) => {
 export default FAQ
 ```
 
+34 Le damos formato en el archivo **home.css**:
 
+```css
+/* ===================== FAQs ===================== */
+.faqs__wrapper {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 5rem;
+    align-items: flex-start;
+}
+
+.faq {
+    background: var(--color-gray-500);
+    padding: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.faq div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq__icon {
+    background: transparent;
+    color: var(--color-gray-100);
+    font-size: 1.5rem;
+}
+
+.faq p {
+    margin-top: 1.5rem;
+}
+```
 
 
 
