@@ -1034,6 +1034,8 @@ section {
 }
 ```
 
+## Seccion Values
+
 28 Creamos el componente **Values.jsx** dentro de la carpeta **components**
 
 ```javascript
@@ -1077,7 +1079,7 @@ const Values = () => {
 export default Values
 ```
 
-29 Integramos en componente **Values.jsx** al componente **Home.jsx**
+29 Integramos el componente **Values.jsx** dentro del componente **Home.jsx**
 
 ```javascript
 import MainHeader from '../../components/MainHeader'
@@ -1139,9 +1141,14 @@ export default Home
 }
 ```
 
+Aca voy 19 de febrero
+2:18
 
+## Seccion FAQs
 
+31 Creamos el componente **FAQs.jsx** dentro de la carpeta **components**
 
+32 Integramos el componente **FAQs.jsx** dentro del componente **Home.jsx**
 
 
 
