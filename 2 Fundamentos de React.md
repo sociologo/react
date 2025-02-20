@@ -1,8 +1,6 @@
-
-
 # REACT: elementos del framework
 
-Sección 3
+inicio en **la lección 35** Sección 3
 
 ## Índice
 
@@ -56,19 +54,11 @@ Sección 3
     
 ***
 
-**35**
-
-**36**
-
 # 1 Componentes
 
 En React, un componente es una pieza reutilizable y autónoma de código que define una parte de la interfaz de usuario. Los componentes son los bloques de construcción fundamentales de una aplicación React. 
 
 Son bloques de codigo pequenos y potencialmente reutilizables. Los elementos relacionados de HTML, JS y CSS se almacenan en archivos todfos juntos, lo que favorece ademas, una separacion de competencias.
-
-**37**
-
-**38**
 
 ## 11 La extension JSX.
 
@@ -83,8 +73,6 @@ Un componente de React debe seguir las siguientes reglas:
 1 El nombre de la funcion debe comenzar con una mayuscula
 
 2 La funcion debe retornar un contenido renderizable, esto es, contenido que react pueda desplegar en el navegador.
-
-**39**
 
 ## 13 Nuestro primer componente
 
@@ -120,8 +108,6 @@ function App() {
 
 export default App;
 ```
-
-**40**
 
 Una mirada más cercana: componentes y extensiones de archivos
 
@@ -251,48 +237,13 @@ function App() {
 export default App;
 ```
 
-**41**
-
-Teorico: Como React maneja los componentes y como construye un arbol de componentes.
-
-**42 y 43**
-
 **La sintaxis especial de llaves nos permite agregar contenido dinamico a una pagina web y configurar dinámicamente atributos HTML y carga de archivos de imagen**
 
 ![image](https://github.com/user-attachments/assets/bae63692-bffe-42ca-9fb2-ebea39f3f166)
 
 La función Math.random() en JavaScript devuelve un número de coma flotante pseudo-aleatorio comprendido en el rango de 0 (incluido) a 1 (excluido). Esto significa que el valor devuelto puede ser 0, pero siempre será menor que 1.
 
-App.jsx
-
-```JavaScript
-function Header() {
-   return (
-      <header>
-         <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
-         <h1>
-            React Essentials
-         </h1>
-         <p>
-            Fundamental React concepts you will need for almost any app you are going to build!
-         </p>
-      </header>
-   );
-}
-
-function App() {
-   return (
-      <div>
-         <Header />
-         <main>
-            <h2> Time to get started! </h2>
-         <main>
-      <div>
-   );
-}
-
-export default App;
-```
+**Ejercicio**
 
 falta ingresar el ejercicio de valores dinamicos con {}
 
