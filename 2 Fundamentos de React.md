@@ -251,13 +251,6 @@ function App() {
 export default App;
 ```
 
----
-
-Estoy comenzando la leccion 41\
-19 de Febrero
-
----
-
 **41**
 
 Teorico: Como React maneja los componentes y como construye un arbol de componentes.
@@ -292,7 +285,7 @@ function App() {
       <div>
          <Header />
          <main>
-            <h2> Tiem to get started! </h2>
+            <h2> Time to get started! </h2>
          <main>
       <div>
    );
@@ -301,11 +294,10 @@ function App() {
 export default App;
 ```
 
+falta ingresar el ejercicio de valores dinamicos con {}
 
-
-
-
-
+Estoy comenzando la leccion 44\
+20 de Febrero
 
 # 2 Props
 
