@@ -1148,15 +1148,85 @@ Aca voy 19 de febrero
 
 31 Creamos el componente **FAQs.jsx** dentro de la carpeta **components**
 
+```javascript
+import SectionHead from './SectionHead'
+import {FaQuestion} from 'react-icons/fa'
+import {faqs} from '../data'
+import FAQ from './FAQ'
+
+
+const FAQs = () => {
+  return (
+    <section className="faqs">
+        <div className="container faqs__container">
+            <SectionHead icon={<FaQuestion/>} title="FAQs" />
+            <div className="faqs__wrapper">
+                {
+                    faqs.map(({id, question, answer}) => {
+                        return <FAQ key={id} question={question} answer={answer}/>
+                    })
+                }
+            </div>
+        </div>
+    </section>
+  )
+}
+
+export default FAQs
+```
+
 32 Integramos el componente **FAQs.jsx** dentro del componente **Home.jsx**
 
+```javascript
+import FAQs from '../../components/FAQs'
+import MainHeader from '../../components/MainHeader'
+import Programs from '../../components/Programs'
+import Values from '../../components/Values'
+
+import './home.css'
+const Home = () => {
+  return (
+    <>
+    <MainHeader/>
+    <Programs/>
+    <Values/>
+    <FAQs/>
+    </>
+  )
+}
+
+export default Home
+```
+
+33 Construimos un componente **FAQ.jsx**
+
+```javascript
+import { useState } from 'react'
+import {AiOutlinePlus} from 'react-icons/ai'
+import {AiOutlineMinus} from 'react-icons/ai'
 
 
+const FAQ = ({question, answer}) => {
+    const [isAnswerShowing, setIsAnswerShowing] = useState(false);
 
 
+  return (
+    <article className="faq" onClick={() => setIsAnswerShowing(prev => !prev)}>
+        <div>
+            <h4>{question}</h4>
+            <button className="faq__icon">
+                {
+                    isAnswerShowing ? <AiOutlineMinus/> : <AiOutlinePlus/>
+                }
+            </button>
+        </div>
+        {isAnswerShowing && <p>{answer}</p>}
+    </article>
+  )
+}
 
-
-
+export default FAQ
+```
 
 
 
