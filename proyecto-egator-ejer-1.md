@@ -1034,7 +1034,135 @@ section {
 }
 ```
 
-2 06' Seccion: values.
+28 Creamos el componente **Values.jsx** dentro de la carpeta **components**
+
+```javascript
+import Image from '../images/values.jpg'
+import SectionHead from './SectionHead'
+import {GiCutDiamond} from 'react-icons/gi'
+import {values} from '../data'
+import Card from '../UI/Card'
+
+const Values = () => {
+  return (
+    <section className='values'>
+        <div className="container values__container">
+            <div className="values__left">
+                <div className="values__image">
+                    <img src={Image} alt="Values Image" />
+                </div>
+            </div>
+            <div className="values__right">
+                <SectionHead icon={<GiCutDiamond/>} title="Values"/>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quidem aperiam sapiente?
+                </p>
+                <div className="values__wrapper">
+                    {
+                        values.map(({id, icon, title, desc}) => {
+                            return <Card key={id} className="values__value">
+                                <span>{icon}</span>
+                                <h4>{title}</h4>
+                                <small>{desc}</small>
+                            </Card>
+                        })
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+  )
+}
+
+export default Values
+```
+
+29 Integramos en componente **Values.jsx** al componente **Home.jsx**
+
+```javascript
+import MainHeader from '../../components/MainHeader'
+import Programs from '../../components/Programs'
+import Values from '../../components/Values'
+
+import './home.css'
+const Home = () => {
+  return (
+    <>
+    <MainHeader/>
+    <Programs/>
+    <Values/>
+    </>
+  )
+}
+
+export default Home
+```
+
+30 Le damos formato al componente **Values.jsx** en el archivo **home.css**
+
+```css
+/* ===================== VALUES ===================== */
+.values__container {
+    display: grid;
+    grid-template-columns: 38% 50%;
+    gap: 12%;
+}
+
+.values__image {
+    filter: saturate(0.25);
+    transition: var(--transition);
+}
+
+.values__image:hover {
+    filter: saturate(1);
+}
+
+.values__right > p {
+    margin: 1.5rem 0 5rem;
+}
+
+.values__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.4rem 2.4rem;
+}
+
+.card.values__value {
+    padding-top: 3.5rem;
+    text-align: left;
+    position: relative;
+}
+
+.card.values__value span {
+    position: absolute;
+    top: -1.5rem;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
