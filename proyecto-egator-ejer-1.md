@@ -1141,9 +1141,6 @@ export default Home
 }
 ```
 
-Aca voy 19 de febrero
-2:18
-
 ## Seccion FAQs
 
 31 Creamos el componente **FAQs.jsx** dentro de la carpeta **components**
@@ -1418,6 +1415,10 @@ cursor: pointer;
 }
 ```
 
+---
+aca voy 20 de febrero
+2 49'
+---
 
 
 
