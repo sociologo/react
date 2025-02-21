@@ -415,7 +415,7 @@ el proyecto luce asi:
 ![image](https://github.com/user-attachments/assets/06a6366f-bd76-456a-9cd3-0ef0d1677b3d)
 
 
-Ejercicio de codificacion %. Revisar que algo no anda bien:
+Ejercicio de codificación 5. Revisar que algo no anda bien:
 
 ```javascript
 export function CourseGoal({TITLE, DESCRIPTION}) {
