@@ -1573,6 +1573,11 @@ footer {
 }
 ```
 
+---
+3 02'
+21 febrero
+---
+
 41 Estilos para la visualizacion de nuestra pagina en tablets y moviles.
 
 Esta configuración la hacemos en nuestro archivo **index.css**:
