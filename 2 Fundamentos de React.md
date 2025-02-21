@@ -656,6 +656,12 @@ export default Card;
 
 ***
 
+---
+Termine la leccion 49 me falta empezar a hacer el ejercicio de codificacion
+21 febrero
+
+---
+
 ## 43 Composición de componentes
 
 50
