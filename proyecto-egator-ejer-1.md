@@ -1325,7 +1325,32 @@ const Testimonials = () => {
 export default Testimonials
 ```
 
-36 Le damos formato en el archivo home.css:
+36 Integramos el componente **Testimonials.jsx** dentro del componente **Home.jsx**
+
+```javascript
+import FAQs from '../../components/FAQs'
+import MainHeader from '../../components/MainHeader'
+import Programs from '../../components/Programs'
+import Values from '../../components/Values'
+import Testimonials from '../../components/Testimonials'
+
+import './home.css'
+const Home = () => {
+  return (
+    <>
+    <MainHeader/>
+    <Programs/>
+    <Values/>
+    <FAQs/>
+    <Testimonials/>
+    </>
+  )
+}
+
+export default Home
+```
+
+37 Le damos formato en el archivo home.css:
 
 ```css
 /* ===================== TESTIMONIALS ===================== */
