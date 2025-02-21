@@ -1347,7 +1347,7 @@ const Home = () => {
 export default Home
 ```
 
-37 Le damos formato en el archivo home.css:
+37 Le damos formato en el archivo **home.css**:
 
 ```css
 /* ===================== TESTIMONIALS ===================== */
@@ -1415,10 +1415,6 @@ cursor: pointer;
 }
 ```
 
----
-aca voy 20 de febrero
-2 49'
----
 ## Seccion Footer
 
 38 Creamos el componente **Footer.jsx** dentro de la carpeta **components**
@@ -1509,9 +1505,72 @@ const Home = () => {
 export default Home
 ```
 
+40 Le damos formato en el archivo **home.css**:
 
+```css
+/* ===================== FOOTER ===================== */
+footer {
+    background: var(--color-primary);
+    margin-top: 7rem;
+    padding-top: 7rem;
+    font-size: 0.9rem;
+    color: var(--color-gray-100);
+}
 
+.footer__container {
+    display: grid;
+    grid-template-columns: 26rem 1fr 1fr 1fr;
+    gap: 6rem;
+}
 
+.footer__container article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
+}
+
+.footer__container article p {
+    margin-top: 0.5rem;
+}
+
+.footer__container article h4 {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+}
+
+.footer__socials {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footer__socials a {
+    background: var(--color-gray-100);
+    padding: 0.7rem;
+    border: 1px solid transparent;
+    border-radius: 0.6rem;
+    transition: var(--transition);
+}
+
+.footer__socials a svg {
+    color: var(--color-gray-600);
+}
+
+.footer__socials a:hover {
+    border-color: var(--color-gray-100);
+    background: transparent;
+}
+
+.footer__copyright {
+    color: var(--color-gray-100);
+    text-align: center;
+    padding: 1.5rem 0;
+    border-top: 2px solid var(--color-primary-variant);
+    margin-top: 5rem;
+}
+```
 
 
 
