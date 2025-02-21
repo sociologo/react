@@ -414,6 +414,41 @@ el proyecto luce asi:
 
 ![image](https://github.com/user-attachments/assets/06a6366f-bd76-456a-9cd3-0ef0d1677b3d)
 
+
+Ejercicio de codificacion %. Revisar que algo no anda bien:
+
+```javascript
+export function CourseGoal({TITLE, DESCRIPTION}) {
+  return (
+    <li>
+      <h2>{TITLE}</h2>
+      <p>{DESCRIPTION}</p>
+    </li>
+  );
+}
+
+function App() {
+  return (
+    <div id="app" data-testid="app">
+      <h1>Time to Practice</h1>
+      <p>One course, many goals! 🎯</p>
+      <ul>
+        <CourseGoal 
+            TITLE = "Learn React"
+            DESCRIPTION = "In-depth"
+        />
+        <CourseGoal
+            TITLE = "algo"
+            DESCRIPTION = "algo"
+        />
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+```
+
 # 3 Correcta organización de Componentes y CSS
 
 ## 31 Componentes
