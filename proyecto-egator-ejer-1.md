@@ -1573,11 +1573,6 @@ footer {
 }
 ```
 
----
-3 02'
-21 febrero
----
-
 41 Estilos para la visualizacion de nuestra pagina en tablets y moviles.
 
 Esta configuración la hacemos en nuestro archivo **index.css**:
@@ -1634,6 +1629,28 @@ Esta configuración la hacemos en nuestro archivo **index.css**:
    }
 }
 ```
+
+42 Estilos para la visualizacion de nuestra pagina en tablets y moviles en **home.css**.
+
+```css
+/* MEDIA QUERIES (medium screens) */
+@media screen and (max-width: 1024px) {
+/* MAIN HEADER */
+.main__header {
+    height: fit-content;
+    padding: 12rem 0;
+}
+
+.main__header-container {
+    gap: 0;
+}
+
+.main__header-circle {
+    width: 16rem;
+    height: 16rem;
+}
+```
+
 
 
 
