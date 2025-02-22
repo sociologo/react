@@ -1866,7 +1866,8 @@ const About = () => {
 export default About
 ```
 
-
+3 20'
+21 de febrero
 
 
 
