@@ -1909,4 +1909,59 @@ export default About
 .header__content p {
     color: rgba(255, 255, 255, 0.7)
 }
+
+/* MEDIA QUERIES (medium screens) */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    section {
+            /* this margin was added outside tutorial */
+
+        margin-top: 8rem;
+    }
+
+    .header__content {
+        width: 76%;
+    }
+}
+
+
+
+
+
+/* MEDIA QUERIES (small screens) */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+
+    section {
+        margin-top: 7rem;
+    }
+
+    .header {
+            /* the code below was added outside tutorial */
+        max-height: 15rem;
+    }
+
+    .header__content {
+        width: var(--container-width-md);
+        padding: 3rem 0;
+    }
+
+    .header__content p {
+        font-size: 0.85rem;
+    }
+}
 ```
