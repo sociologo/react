@@ -739,7 +739,6 @@ const App = () => {
         <Route path='trainers' element={<Trainers/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
-      <Footer/>
     </BrowserRouter>
   )
 }
@@ -1960,3 +1959,9 @@ export default About
     }
 }
 ```
+
+46 Agregamos el componente Footer a App.jsx
+
+
+
+
