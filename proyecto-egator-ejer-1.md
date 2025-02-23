@@ -1866,8 +1866,47 @@ const About = () => {
 export default About
 ```
 
-3 20'
-21 de febrero
+45 Le damos formato en el archivo **index.css**:
 
+```css
+.header {
+    margin-top: 5rem;
+    height: 20rem;
+    overflow: hidden;
+    border-bottom: 2px solid var(--color-gray-400);
+}
 
+.header__container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background: black;    
+}
 
+.header__container-bg {
+    position: absolute;
+    width: 100%;
+}
+
+.header__container-bg img {
+    opacity: 0.5;
+}
+
+.header__content {
+    position: relative;
+    width: 44%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-gray-100);
+}
+
+.header__content h2 {
+    margin-bottom: 1rem;
+}
+
+.header__content p {
+    color: rgba(255, 255, 255, 0.7)
+}
+```
