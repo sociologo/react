@@ -1866,7 +1866,7 @@ const About = () => {
 export default About
 ```
 
-45 Le damos formato en el archivo **index.css**:
+45 Le damos formato en al componente header en el archivo **index.css**:
 
 ```css
 .header {
@@ -1934,10 +1934,6 @@ export default About
         width: 76%;
     }
 }
-
-
-
-
 
 /* MEDIA QUERIES (small screens) */
 @media screen and (max-width: 600px) {
