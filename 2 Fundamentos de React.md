@@ -703,11 +703,11 @@ document.querySelector('button').addEventListener('click', () => {})
 
 No queremos código imperativo como éste, no queremos interactuar con el DOM pues queremos que React lo haga. Es por ello que escribimos código declarativo.
 
-## 44 Pasar funciones como valores a las **props**
+## 44 Pasar funciones como valores a las **props**.
 
 51
 
-Hemos dicho de que la función **handleClick** que se declarara dentro de la función de componente irá sin los paréntesis pues la necesitamos como valor. Requeriremos de ésta propiedad pues ahora queremos cambiar el contenido desplegado debajo de la fila de botones para acceder a uno distinto cada vez que se selecciona un botón. 
+Hemos dicho que la función **handleClick** que se declarará dentro de la función de componente irá sin los paréntesis pues la necesitamos como valor. Requeriremos de ésta propiedad pues ahora queremos cambiar el contenido desplegado debajo de la fila de botones para acceder a distintos contenidos cada vez que se seleccionemos distintos botones. 
 
 Para ello necesitamos escuchar los clicks dentro de nuestro componente personalizado **TabButton**, porque debes manejar el evento en el componente que también administra los datos que se deben cambiar.
 
@@ -715,7 +715,7 @@ La pregunta es, cómo le damos poder de acción, capacidad de ejecutar algo a la
 
 Luego pasaremos 'el puntero' **handSelect** a la prop **onSelect**.
 
-La funcion onSelect se activara cuando el boton sea clickeado y es la que le dara vida al componente dinamico.
+La función onSelect se activará cuando el botón sea clickeado y es la que le dará vida al componente dinámico.
 
 ```Javascript
 export default function TabButton({children, onSelect}) {
@@ -770,7 +770,7 @@ Ahora estamos preparados para cambiar la data en el contenido dinamico.
 
 ## 45 Ejemplo de reacción a eventos
 
-Trabajaras sobre el componente "User Login" que ya ha sido preparado por un colega.
+Trabajarás sobre el componente "User Login" que ya ha sido preparado por un colega.
 
 El objetivo es actualizar los datos almacenados en el objeto `user` ya existente con algunos datos ficticios una vez que se presiona el botón "Login" en el componente `App`.
 
