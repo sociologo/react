@@ -588,11 +588,9 @@ import TabButton from './components/TabButton.jsx';
 
 ## 42 Ejercicio de composición de componentes.
 
-Tu tarea es crear un componente Card reutilizable que tome un nombre como entrada y, además, pueda incluirse en cualquier código JSX.
+Tu tarea es crear un componente `Card` reutilizable que tome un `name` como entrada y, además, pueda incluirse en cualquier código JSX.
 
-Utilice el archivo Card.js ya existente para crear el componente Card allí. 
-
-El nombre **prop** debe aparecer como un título dentro del componente Card, el código JSX empaquetado debe aparecer debajo de ese título.
+El prop `name` debe aparecer como un título dentro del componente Card, el código JSX empaquetado debe aparecer debajo de ese título.
 
 App.js
 ```Javascript
