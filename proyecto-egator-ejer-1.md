@@ -2147,6 +2147,13 @@ fuente de la raíz del documento (generalmente, el tamaño de la fuente <html>).
 
 48 Desarrollamos el componente **Contact.jsx** dentro de la carpeta **components**:
 
+1 <section className="contact">: Este elemento <section> actúa como un contenedor 
+para la sección de contacto y tiene la clase contact.
+
+2 <div className="container contact__container">: Este <div> contiene otra clase contact__container, que probablemente se utiliza para aplicar estilos específicos a este contenedor de contacto dentro de la sección.
+
+3 <div className="contact__wrapper">: Este <div> agrupa los enlaces de contacto y tiene la clase contact__wrapper, que podría usarse para aplicar estilos de diseño a estos elementos.
+
 ```python
 import Header from '../../components/Header'
 import HeaderImage from '../../images/header_bg_2.jpg'
