@@ -2000,6 +2000,17 @@ export default App
 47 Le damos formato al componente **About.jsx** en **About.css**
 
 ```css
+
+/*
+1 border-radius: 50%;: Aplica un radio de borde del 50%, lo que convierte la imagen en una forma circular si es cuadrada, o en una elipse si es rectangular.
+
+2 overflow: hidden;: Oculta cualquier contenido que se desborde más allá de los límites del elemento. Esto es útil para asegurar que la imagen mantenga su forma redondeada y no muestre partes que sobresalgan.
+
+3 transform: skew(15deg);: Aplica una transformación de inclinación (skew) de 15 grados a la imagen, lo que la hace parecer inclinada en el eje horizontal.
+
+4 transition: var(--transition);: Aplica una transición suave a las propiedades especificadas. var(--transition) es una variable CSS que debe estar definida en otro lugar de tu hoja de estilos y que probablemente especifica la duración y el tipo de transición a utilizar.
+*/
+
 .about__section-image {
    border-radius: 50%;
    overflow: hidden;
