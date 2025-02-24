@@ -2069,11 +2069,22 @@ del contenedor con la clase about__section-image se incline
 }
 
 /*
-1 display: grid;: Esto establece el contenedor como un contenedor de cuadrícula (grid). Un contenedor de cuadrícula permite organizar elementos hijos en una cuadrícula, proporcionando un control preciso sobre el diseño y la colocación de los elementos.
+1 display: grid;: Esto establece el contenedor como un
+contenedor de cuadrícula (grid). Un contenedor de cuadrícula
+permite organizar elementos hijos en una cuadrícula,
+proporcionando un control preciso sobre el diseño y la
+colocación de los elementos.
 
-2 grid-template-columns: 50% 40%;: Define la estructura de las columnas dentro del contenedor de cuadrícula. En este caso, se especifican dos columnas: la primera columna ocupará el 50% del ancho del contenedor, y la segunda columna ocupará el 40% del ancho del contenedor. Esto deja un 10% de espacio, que se distribuye por la propiedad gap.
+2 grid-template-columns: 50% 40%;: Define la estructura de
+las columnas dentro del contenedor de cuadrícula. En este
+caso, se especifican dos columnas: la primera columna ocupará
+el 50% del ancho del contenedor, y la segunda columna ocupará
+el 40% del ancho del contenedor. Esto deja un 10% de espacio,
+que se distribuye por la propiedad gap.
 
-3 gap: 10%;: Establece un espacio (gap) del 10% entre las columnas de la cuadrícula. Este espacio se aplica entre todos los elementos de la cuadrícula, tanto horizontal como verticalmente.
+3 gap: 10%;: Establece un espacio (gap) del 10% entre las
+columnas de la cuadrícula. Este espacio se aplica entre todos
+los elementos de la cuadrícula, tanto horizontal como verticalmente.
 */
 
 .about__vision-container {
@@ -2132,9 +2143,39 @@ fuente de la raíz del documento (generalmente, el tamaño de la fuente <html>).
 }
 ```
 
+## Pagina Contact
 
+48 Desarrollamos el componente **Contact.jsx**:
 
+```
+import Header from '../../components/Header'
+import HeaderImage from '../../images/header_bg_2.jpg'
+import {MdEmail} from 'react-icons/md'
+import {BsMessenger} from 'react-icons/bs'
+import {IoLogoWhatsapp} from 'react-icons/io'
+import './contact.css'
 
+const Contact = () => {
+  return (
+    <>
+    <Header title="Get In Touch" image={HeaderImage}>
+    Fruga itaque ducimus, ad amet praesentium suscipit sit, assumenda nihil officia totam, animi culpa nobis nemo natus doloremque?
+    </Header>
+    <section className="contact">
+      <div className="container contact__container">
+        <div className="contact__wrapper">
+          <a href="mailto:support@egattor.com" target="_blank" rel="noreferrer noopener"><MdEmail/></a>
+          <a href="http://m.me/ernest_achiever" target="_blank" rel="noreferrer noopener"><BsMessenger/></a>
+          <a href="https://wa.me/+123456789" target="_blank" rel="noreferrer noopener"><IoLogoWhatsapp/></a>
+        </div>
+      </div>
+    </section>
+    </>
+  )
+}
+
+export default Contact
+```
 
 
 
