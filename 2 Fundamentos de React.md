@@ -656,12 +656,6 @@ export default Card;
 
 ***
 
----
-Termine la leccion 49 me falta empezar a hacer el ejercicio de codificacion
-21 febrero
-
----
-
 ## 43 Composición de componentes
 
 50
@@ -670,7 +664,7 @@ Necesitamos ahora darle poder al click en los botones para que ejecuten la acci�
 
 `onClick` es un evento en React que se utiliza para manejar las acciones de clic del usuario en un elemento. Es similar al evento onclick en JavaScript, pero se usa dentro de componentes de React. 
 
-Modificaremos nuestro componente para añadir el prop receptor de eventos **onClick** al elemento button entregandole la funcion onSelect que se declarara dentro de la funcion de componente sin los parentesis pues la necesitamos como valor:
+Modificaremos nuestro componente para añadir el prop receptor de eventos **onClick** al elemento button entregándole la función handleClick() que se declarara dentro de la función de componente sin los paréntesis pues la necesitamos como valor:
 
 ```Javascript
 export default function TabButton({children}) {
