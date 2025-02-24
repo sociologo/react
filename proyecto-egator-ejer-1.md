@@ -2029,6 +2029,23 @@ especifica la duración y el tipo de transición a utilizar.
    transition: var(--transition);
 }
 
+/*
+Esta regla CSS aplica un estilo específico al segundo hijo
+de un elemento padre con la clase about__section-image.
+
+1 .about__section-image:nth-child(2): Esta parte del selector
+CSS selecciona el segundo elemento hijo dentro de un
+contenedor padre que tiene la clase about__section-image.
+La pseudoclase :nth-child(2) especifica que el estilo se
+aplicará únicamente al segundo hijo.
+
+2 transform: skew(-15deg);: Esta propiedad CSS aplica una
+transformación de inclinación (skew) de -15 grados al
+elemento seleccionado. Esto hace que el segundo hijo dentro
+del contenedor con la clase about__section-image se incline
+15 grados en sentido contrario al eje horizontal.
+*/
+
 .about__section-image:nth-child(2) {
    transform: skew(-15deg);
 }
