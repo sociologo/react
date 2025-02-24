@@ -2290,8 +2290,10 @@ const Gallery = () => {
 export default Gallery
 ```
 
+51 Le damos estilos al componente **Gallery.jsx** en el archivo **Gallery.css**.
 
-
+aca voy
+3 52'
 
 
 
