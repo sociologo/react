@@ -2235,7 +2235,7 @@ export default Contact
 
 ## Pagina Gallery
 
-50 Desarrollamos el componente **Contact.jsx** dentro de la carpeta **components**:
+50 Desarrollamos el componente **Gallery.jsx** dentro de la carpeta **components**:
 
 ```javascript
 import Header from '../../components/Header'
