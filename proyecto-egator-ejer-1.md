@@ -2237,6 +2237,21 @@ export default Contact
 
 50 Desarrollamos el componente **Gallery.jsx** dentro de la carpeta **components**:
 
+El código define una función de componente de React llamada Gallery. Dentro de esta 
+función, se crea una variable galleryLength que tiene el valor 15, lo que indica la 
+longitud de la galería, es decir, cuántas imágenes habrá. Luego, se declara un arreglo 
+vacío llamado images que almacenará las rutas de las imágenes.
+
+El bucle for se utiliza para iterar desde 1 hasta el valor de galleryLength (en este 
+caso, 15). En cada iteración, la función require se usa para importar una imagen 
+desde una ruta específica (../../images/gallery${i}.jpg), donde ${i} se sustituye por 
+el valor actual del iterador, creando rutas como ../../images/gallery1.jpg, ../../images/gallery2.jpg, y así sucesivamente, hasta ../../images/gallery15.jpg. 
+Cada imagen importada se agrega al arreglo images mediante el método push.
+
+El propósito de este código es generar dinámicamente un arreglo de 15 imágenes que 
+se pueden utilizar posteriormente en el componente Gallery para mostrar una galería 
+de imágenes.
+
 ```javascript
 import Header from '../../components/Header'
 import HeaderImage from '../../images/header_bg_3.jpg'
