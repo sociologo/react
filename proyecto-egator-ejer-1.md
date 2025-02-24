@@ -2068,6 +2068,14 @@ del contenedor con la clase about__section-image se incline
    gap: 10%;
 }
 
+/*
+1 display: grid;: Esto establece el contenedor como un contenedor de cuadrícula (grid). Un contenedor de cuadrícula permite organizar elementos hijos en una cuadrícula, proporcionando un control preciso sobre el diseño y la colocación de los elementos.
+
+2 grid-template-columns: 50% 40%;: Define la estructura de las columnas dentro del contenedor de cuadrícula. En este caso, se especifican dos columnas: la primera columna ocupará el 50% del ancho del contenedor, y la segunda columna ocupará el 40% del ancho del contenedor. Esto deja un 10% de espacio, que se distribuye por la propiedad gap.
+
+3 gap: 10%;: Establece un espacio (gap) del 10% entre las columnas de la cuadrícula. Este espacio se aplica entre todos los elementos de la cuadrícula, tanto horizontal como verticalmente.
+*/
+
 .about__vision-container {
    display: grid;
    grid-template-columns: 50% 40%;
@@ -2079,6 +2087,14 @@ del contenedor con la clase about__section-image se incline
    .about__section-image {
        width: 60%;
    }
+
+/*
+Este bloque de código CSS aplica un estilo a los elementos <h1> que están dentro de un contenedor con la clase about__section-content.
+
+1 .about__section-content h1: Este selector CSS selecciona todos los elementos <h1> que son hijos de un elemento con la clase about__section-content. En otras palabras, aplica estilos a todos los títulos <h1> dentro de ese contenedor específico.
+
+2 margin-bottom: 1.2rem;: Esta propiedad CSS establece el margen inferior del elemento <h1> en 1.2rem. El valor 1.2rem se basa en el tamaño de la fuente raíz del documento. Un rem (root em) es una unidad relativa de medida en CSS que corresponde al tamaño de la fuente de la raíz del documento (generalmente, el tamaño de la fuente <html>).
+*/
 
    .about__section-content h1 {
        margin-bottom: 1.2rem;
