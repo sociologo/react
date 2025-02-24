@@ -2145,7 +2145,7 @@ fuente de la raíz del documento (generalmente, el tamaño de la fuente <html>).
 
 ## Pagina Contact
 
-48 Desarrollamos el componente **Contact.jsx**:
+48 Desarrollamos el componente **Contact.jsx** dentro de la carpeta **components**:
 
 ```python
 import Header from '../../components/Header'
