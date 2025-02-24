@@ -867,6 +867,13 @@ function App() {
 export default App;
 ```
 
+---
+aca voy
+24 febrero 
+realizando el ejercicio de codificacion 7
+
+---
+
 ## 46 Pasando argumentos personalizados a funciones de eventos.
 
 52
