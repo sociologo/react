@@ -2089,11 +2089,19 @@ del contenedor con la clase about__section-image se incline
    }
 
 /*
-Este bloque de código CSS aplica un estilo a los elementos <h1> que están dentro de un contenedor con la clase about__section-content.
+Este bloque de código CSS aplica un estilo a los elementos <h1> que
+están dentro de un contenedor con la clase about__section-content.
 
-1 .about__section-content h1: Este selector CSS selecciona todos los elementos <h1> que son hijos de un elemento con la clase about__section-content. En otras palabras, aplica estilos a todos los títulos <h1> dentro de ese contenedor específico.
+1 .about__section-content h1: Este selector CSS selecciona todos los
+elementos <h1> que son hijos de un elemento con la clase
+about__section-content. En otras palabras, aplica estilos a todos
+los títulos <h1> dentro de ese contenedor específico.
 
-2 margin-bottom: 1.2rem;: Esta propiedad CSS establece el margen inferior del elemento <h1> en 1.2rem. El valor 1.2rem se basa en el tamaño de la fuente raíz del documento. Un rem (root em) es una unidad relativa de medida en CSS que corresponde al tamaño de la fuente de la raíz del documento (generalmente, el tamaño de la fuente <html>).
+2 margin-bottom: 1.2rem;: Esta propiedad CSS establece el margen
+inferior del elemento <h1> en 1.2rem. El valor 1.2rem se basa en el
+tamaño de la fuente raíz del documento. Un rem (root em) es una
+unidad relativa de medida en CSS que corresponde al tamaño de la
+fuente de la raíz del documento (generalmente, el tamaño de la fuente <html>).
 */
 
    .about__section-content h1 {
