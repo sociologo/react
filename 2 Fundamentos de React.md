@@ -810,7 +810,8 @@ export const user = {
  
 export default App;
 ```
-Respuesta:/
+Respuesta:
+
 debes ingresar el siguiente codigo debajo de `function App() {`:
 
 ```JavaScript
