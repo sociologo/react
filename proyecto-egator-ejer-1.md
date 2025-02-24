@@ -2156,8 +2156,8 @@ otra clase contact__container, que probablemente se utiliza para aplicar
 estilos específicos a este contenedor de contacto dentro de la sección.
 
 3 <div className="contact__wrapper">: Este <div> agrupa los enlaces de
-contacto y tiene la clase contact__wrapper, que podría usarse para aplicar
-estilos de diseño a estos elementos.
+contacto y tiene la clase contact__wrapper, que podría usarse para
+aplicar estilos de diseño a estos elementos.
 ```
 
 ```python
