@@ -1163,12 +1163,14 @@ import {EXAMPLES} from './data.js';
 > const [selectedTopic, setSelectedTopic] = useState('components');
 
 
-Aca voy comenzxando la leccion 56
 
+---
 <br>
 <br>
 <br>
 <br>
+---
+Aca voy comenzando la leccion 56
 <br>
 <br>
 <br>
