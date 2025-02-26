@@ -1355,8 +1355,6 @@ Para esta tarea, debes reaccionar a los clics en ambos elementos `<button>` que 
 
 Depende de usted si desea utilizar una expresión ternaria o almacenar el código JSX que se muestra de manera condicional en una variable.
 
-Importante: en este editor de código de Udemy, puede recibir un error si utiliza useState(). ¡Use React.useState() en su lugar!
-
 ```JavaScript
 import React from 'react';
 // don't change the Component name "App"
