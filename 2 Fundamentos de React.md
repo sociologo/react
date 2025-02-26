@@ -1262,7 +1262,7 @@ const [selectedTopic, setSelectedTopic] = useState();
 )}
 ```
 
-- 3 Utilizando el operador y lógico de javascript
+- 3 Utilizando el operador `y` lógico de javascript
   
 Si la expresión a la izquierda del && es true, entonces el elemento a la derecha del && se renderiza. Si la expresión a la izquierda es false, el elemento a la derecha no se renderiza.
 
