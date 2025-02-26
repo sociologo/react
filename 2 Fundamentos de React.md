@@ -1347,7 +1347,7 @@ Y esta interfaz de usuario, una vez que se hizo clic en el botón:
 
 ![image](https://github.com/user-attachments/assets/6ddd080e-01ae-4fad-8a64-40162411b41a)
 
-Una vez que se hizo clic en el botón "Continuar", el cuadro de advertencia debe eliminarse nuevamente:
+Una vez que se hizo clic en el botón "Proceed", el cuadro de advertencia debe eliminarse nuevamente:
 
 ![image](https://github.com/user-attachments/assets/ff33e1ce-5ff5-4848-ac7c-2a6eb9a788c8)
 
