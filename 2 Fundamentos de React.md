@@ -767,7 +767,7 @@ Ahora estamos preparados para cambiar la data en el contenido dinamico.
 
 ## 45 Ejemplo de reacción a eventos
 
-Trabajarás sobre el componente "User Login" que ya ha sido preparado por un colega.
+Supón un componente que ya ha sido preparado por un colega.
 
 El objetivo es actualizar los datos almacenados en el objeto `user` ya existente con algunos datos ficticios una vez que se presiona el botón "Login" en el componente `App`.
 
@@ -807,6 +807,9 @@ export const user = {
  
 export default App;
 ```
+
+![image](https://github.com/user-attachments/assets/5829d312-3cf9-40dc-9c30-108dec3003b4)
+
 Respuesta:
 
 debes ingresar el siguiente codigo debajo de `function App() {`:
@@ -864,23 +867,29 @@ function App() {
 export default App;
 ```
 
----
-aca voy
-24 febrero 
-realizando el ejercicio de codificacion 7
-
----
-
 ## 46 Pasando argumentos personalizados a funciones de eventos.
 
 52
 
-Ahora, dependiendo sobre qué botón hagamos el click es que queremos que se despliegue el contenido dinámico.
+Ahora, dependiendo sobre qué botón hagamos el click es que queremos que se despliegue el contenido dinámico. Para ello establecemos cuatro strings que identifiquen a cada uno de los botones components, jsx, props y state.
+
+La función flecha anónima será ahora el valor que se le pasa **como valor** al parámetro onSelect del gatillador **onClick**.
+
+La línea de código `() => handleSelect('components')` es una función flecha en JavaScript que se utiliza como un manejador de eventos. No toma ningún argumento (por eso los paréntesis vacíos ()).
+
+- Llamada a la Función: Dentro de la función flecha, se llama a la función handleSelect con el argumento 'components'.
+
+- Propósito: Esta función flecha se pasa como el manejador de eventos `onClick` para el botón en el componente `TabButton`. **Sólo cuando en el botón se hace click**, la función flecha se ejecuta, llamando a handleSelect('components').
+
+- Efecto: La función handleSelect toma el argumento selectedButton (por ejemplo, 'components') y lo pasa a `setSelectedTopic`, que actualiza el estado del componente con el nuevo tema seleccionado.
 
 ```JavaScript
-function handleSelect(selectedButton) {
-   console.log(selectedButton);
-}
+<menu>
+   <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
+   <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+   <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
+   <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
+</menu>
 ```
 
 ```JavaScript
@@ -895,25 +904,10 @@ export default function TabButton({children, onSelect}) {
 }
 ```
 
-La función flecha anónima será ahora el valor que se le pasa **como valor** al parametro onSelect del gatillador **onClick**.
-
-La línea de código `() => handleSelect('components')` es una función flecha en JavaScript que se utiliza como un manejador de eventos.
-
-- Función Flecha: `() => handleSelect('components')` es una función flecha que no toma ningún argumento (por eso los paréntesis vacíos ()).
-
-- Llamada a la Función: Dentro de la función flecha, se llama a la función handleSelect con el argumento 'components'.
-
-- Propósito: Esta función flecha se pasa como el manejador de eventos `onClick` para el botón en el componente `TabButton`. **Sólo cuando en el botón se hace click**, la función flecha se ejecuta, llamando a handleSelect('components').
-
-- Efecto: La función handleSelect toma el argumento selectedButton (en este caso, 'components') y lo pasa a `setSelectedTopic`, que actualiza el estado del componente con el nuevo tema seleccionado.
-
 ```JavaScript
-<menu>
-   <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
-   <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-   <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-   <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
-</menu>
+function handleSelect(selectedButton) {
+   console.log(selectedButton);
+}
 ```
 
 ## 47 Ejemplo Configuración de Manejadores de Eventos
@@ -923,6 +917,9 @@ Tu tarea es editar `<button>` en el componente `App` de manera que la función y
 Por lo tanto, no debes codificar directamente el valor que se debe asignar a `user.name` en la función `handleCreateUser`, sino que debes pasarlo como un valor para el parámetro `name` cuando ocurra un evento de clic en el `<button>`.
 
 No tienes que preocuparte por ningún valor que pueda ingresarse en el campo `<input>` - está ahí solo con fines decorativos.
+
+![image](https://github.com/user-attachments/assets/a69447d9-266c-4af9-8fb9-248bd7d4093f)
+
 
 ```JavaScript
 export const user = {
@@ -963,7 +960,7 @@ Debes reemplazar la siguiente línea:
 
 ## 51 El problema.
 
-Necesitamos un componente dinamico que cambie cada vez que damos click en la funcion **onSelect** del componente **TabButton**
+Necesitamos un componente dinámico que cambie cada vez que damos click en la funcion **onSelect** del componente **TabButton**
 
 Hagamos el intento de cargar contenido dinámico declarando una variable dentro de nuestro componente funcional **App**. Declaremos la variable `tabContent` (En React, así como en JavaScript en general, `let` es una palabra clave utilizada para declarar variables que pueden ser reasignadas. A diferencia de var, que tiene un alcance de función, let tiene un alcance de bloque, lo que significa que la variable solo está disponible dentro del bloque en el que se declara (por ejemplo, dentro de un if, for, o cualquier otro bloque de código delimitado por llaves {}).
 
@@ -993,13 +990,13 @@ lo que en teoria deberia dar contenido dinamico a {tabContent} en:
 </section>
 ```
 
-Así, cada vez que se selecciona un boton se deberia desplegar correspondientemente 'components', 'jsx', 'props' o 'state', pero el texto será: 'Selecciona un boton' y no cambiará. Sin embargo, si verificas en la consola presionando los diferentes botones (por `console.log(tabContent);`) ver[as que la funcion SI se esta ejecutando.
+Así, cada vez que se selecciona un botón se deberia desplegar correspondientemente 'components', 'jsx', 'props' o 'state', pero el texto será: 'Selecciona un boton' y no cambiará. Sin embargo, si verificas en la consola presionando los diferentes botones (por `console.log(tabContent);`) verás que la funcion SI se está ejecutando.
 
-El problema es que por defecto, los componentes en React solo se ejecutan una sola vez, cuando encuetra por primera vez un componente en el codigo.
+El problema es que por defecto, los componentes en React solo se ejecutan una sola vez: **cuando encuentra por primera vez un componente en el código**.
 
-> LOS COMPONENTES ENREACT, POR DEFECTO SOLO SE EJECUTAN UNA SOLA VEZ.
+> LOS COMPONENTES EN REACT, POR DEFECTO SOLO SE EJECUTAN UNA SOLA VEZ.
 
-El codigo en:
+El código en:
 
 ```JavaScript
 <section id = "examples">
@@ -1016,7 +1013,7 @@ El codigo en:
 
 no se reevalua.
 
-> Para solucionar este problema utilizamos el objeto **state** y su funcion hook: **useState()** y  .
+> Para solucionar este problema utilizamos el objeto **state** y su función hook: **useState()**.
 
 En React, el **state** es un objeto que permite a los componentes mantener y gestionar datos que pueden cambiar a lo largo del tiempo. A diferencia de las props, que son inmutables y se pasan desde componentes padres a hijos, el **state** es mutable y es local a cada componente.
 
@@ -1038,9 +1035,9 @@ function App() {
    function handleSelect(selectedButton) {
       setSelectedTopic(selectedButton);
    }
-```
 
-```JavaScript
+/* ... */
+
 <section id = "examples">
    <h2>Ejemplos</h2>
    <menu>
@@ -1082,6 +1079,8 @@ export default function App() {
 }
 ```
 
+RespuestaÑ
+
 ```JavaScript
 import React from 'react';
 export default function App() {
@@ -1114,17 +1113,17 @@ export const EXAMPLES = {
       code: ,
    },
    jsx: {
-      title: 'Components',
+      title: 'JSX',
       description: ,
       code: ,
    },
    props: {
-      title: 'Components',
+      title: 'Props',
       description: ,
       code: ,
    },
    state: {
-      title: 'Components',
+      title: 'State',
       description: ,
       code: ,
    },
@@ -1134,6 +1133,8 @@ export const EXAMPLES = {
 ```JavaScript
 import {EXAMPLES} from './data.js';
 
+/* ... */
+
 <section id = "examples">
    <h2>Ejemplos</h2>
    <menu>
@@ -1142,24 +1143,37 @@ import {EXAMPLES} from './data.js';
       <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
       <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
    </menu>
-      <div id = 'tab-content'>
-         <h3>
-            {EXAMPLES[selectedTopic].title}
-         </h3>
-         <p>
-            {EXAMPLES[selectedTopic].description}
-         </p>
-         <pre>
-            <code>
-               {EXAMPLES[selectedTopic].code}
-            </code>
-         </pre>
-      </div>
+   <div id = 'tab-content'>
+      <h3>
+         {EXAMPLES[selectedTopic].title}
+      </h3>
+      <p>
+         {EXAMPLES[selectedTopic].description}
+      </p>
+      <pre>
+         <code>
+            {EXAMPLES[selectedTopic].code}
+         </code>
+      </pre>
+   </div>
 </section>
 ```
 
-> Debemos ahora inicializar el estado con un parametro valido. Lo cambiamos a 
+> Debemos ahora inicializar el estado con un parametro válido. Lo cambiamos a 
 > const [selectedTopic, setSelectedTopic] = useState('components');
+
+
+Aca voy comenzxando la leccion 56
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+---
 
 # 5 Renderización de contenido de forma condicional
 
