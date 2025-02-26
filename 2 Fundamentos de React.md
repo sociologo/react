@@ -1192,7 +1192,7 @@ Queremos que se despliegue al inicio: 'Por favor, selecciona un item'.
 
 Tenemos varias alternativas:
 
-## 51 Utilizando dos operadores ternarios dejando useState vacío
+- Codigo original:
   
 ```JavaScript
 <div id = 'tab-content'>
@@ -1237,7 +1237,7 @@ const [selectedTopic, setSelectedTopic] = useState();
 ) : null}
 ```
 
-## 52 Integrando la funcionalidad en un solo operador tenario
+- 2 Integrando la funcionalidad en un solo operador tenario
 
 ```JavaScript
 const [selectedTopic, setSelectedTopic] = useState();
@@ -1262,7 +1262,7 @@ const [selectedTopic, setSelectedTopic] = useState();
 )}
 ```
 
-## 53 Utilizando el operador y lógico de javascript
+- 3 Utilizando el operador y lógico de javascript
   
 Si la expresión a la izquierda del && es true, entonces el elemento a la derecha del && se renderiza. Si la expresión a la izquierda es false, el elemento a la derecha no se renderiza.
 
@@ -1290,7 +1290,7 @@ const [selectedTopic, setSelectedTopic] = useState();
 )}
 ```  
 
-## 54 Utilizando una variable const 
+- 4 Utilizando una variable const 
 
 Recordemos que en react el codigo jsx puede ser usado como variable o constante.
 
