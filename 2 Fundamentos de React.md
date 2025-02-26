@@ -1162,21 +1162,6 @@ import {EXAMPLES} from './data.js';
 > Debemos ahora inicializar el estado con un parametro válido. Lo cambiamos a 
 > const [selectedTopic, setSelectedTopic] = useState('components');
 
-
-
----
-<br>
-<br>
-<br>
-<br>
----
-Aca voy comenzando la leccion 56
-<br>
-<br>
-<br>
-<br>
----
-
 # 5 Renderización de contenido de forma condicional
 
 Ocurre un problema al iniciar la aplicación. Lo que sucede es que queremos que se despliegue el contenido dinámico sólo y sólo si hemos presionado un botón para aquello. Si no es así, queremos que se despliegue otro contendido o ninguno. 
@@ -1401,6 +1386,22 @@ export default function App() {
 ```
 
 # 6 Entregando estilos en forma condicional
+
+
+
+---
+<br>
+<br>
+<br>
+<br>
+---
+Aca voy comenzando la leccion 57
+26 de Febrero
+<br>
+<br>
+<br>
+<br>
+---
 
 Queremos entregarle un estilo a cada boton una vez haya sido seleccionado, 
 
