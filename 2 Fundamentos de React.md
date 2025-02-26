@@ -1372,6 +1372,8 @@ export default function App() {
 }
 ```
 
+Respuesta:
+
 ```JavaScript
 import React, { useState } from 'react'; 
 
