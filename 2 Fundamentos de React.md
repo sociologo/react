@@ -247,9 +247,6 @@ La función Math.random() en JavaScript devuelve un número de coma flotante pse
 
 falta ingresar el ejercicio de valores dinamicos con {}
 
-Estoy comenzando la leccion 44\
-20 de Febrero
-
 # 2 Props
 
 lecciones 44 y 45
