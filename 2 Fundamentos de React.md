@@ -1335,7 +1335,7 @@ if (selectedTopic) {
 
 ## 55 Ejercicio
 
-Estás trabajando en una parte de una aplicación web que es responsable de mostrar una advertencia cuando un usuario está a punto de realizar una acción peligrosa.
+Estás trabajando en una parte de una aplicación web que es responsable de mostrar una advertencia cuando un usuario esté a punto de realizar una acción peligrosa.
 
 Por lo tanto, tu tarea es mostrar condicionalmente un cuadro de advertencia una vez que un usuario haya hecho clic en un botón específico. Dentro de ese cuadro de diálogo de advertencia, otro botón permite a los usuarios descartar la advertencia (es decir, eliminar el cuadro de advertencia de la pantalla).
 
