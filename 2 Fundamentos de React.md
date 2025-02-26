@@ -1179,7 +1179,16 @@ Aca voy comenzando la leccion 56
 
 # 5 Renderización de contenido de forma condicional
 
-Ocurre un problema al iniciar la aplicación. Lo que sucede es que queremos que se despliegue el contenido dinámico sólo y sólo si hemos presionado un botón para aquello. Si no es así, queremos que se despliegue otro contendido o ninguno. Queremos que se despliegue al inicio: 'Por favor, selecciona un item'.
+Ocurre un problema al iniciar la aplicación. Lo que sucede es que queremos que se despliegue el contenido dinámico sólo y sólo si hemos presionado un botón para aquello. Si no es así, queremos que se despliegue otro contendido o ninguno. 
+
+La siguientes líneas hacen que el programa se caiga:
+
+```javascript
+const [selectedTopic, setSelectedTopic] = useState('');
+const [selectedTopic, setSelectedTopic] = useState();
+```
+
+Queremos que se despliegue al inicio: 'Por favor, selecciona un item'.
 
 Tenemos varias alternativas:
 
