@@ -1686,34 +1686,21 @@ export default function App() {
 }
 ```
 
-# 10 
+# 10 Topicos sobre JSX
 
----
-<br>
-<br>
-<br>
-<br>
----
-Aca voy comenzando la leccion 60
+## 10.1 JSX no es necesario para construir un proyecto React
 
-26 de Febrero
+En teoría, JSX no es necesario para construir un proyecto React.
 
-<br>
-<br>
-<br>
-<br>
----
-
-
-**Un proyecto React no necesita obligatoriamente de codigo JSX. Puede ser construido exclusivamente con codigo standard JavaScript.**
-
-JSX se utiliza solo por razones de conveniencia. Es de esta manera que los dos codigos escritos en JSX y lenguaje standart JavaScript que se muestran a continuacion son equivalentes:
+Este codigo JSX:
 
 ```javascript
 <div id="content">
    <p>Hola mundo!</p>
 </div>
 ```
+
+Puede ser reemplazado por este, el cual no requiere de un proceso especial de construcción y transformación:
 
 ```javascript
 React.createElement(
@@ -1722,20 +1709,16 @@ React.createElement(
    React.createElement(
       'p',
       null,
-      'Hello World'
+      Hola mundo!
    )
 );
 ```
 
-JSX no es una caracteristica standard, no esta soportado por el navegador, por lo que el codigo JSX no es el que se ve directamente en el navegador. JSX necesita de un **proceso de compilacion** que trabaja tras bambalinas que lo cambia y optimiza para que pueda ser renderizable.
+## 10.2 Las expresiones JSX deben tener un elemento padre
 
-**61**
+En JavaScript no es posible retornar dos valores en una función, tampoco en JSX. Se deben agrupar en un solo bloque.
 
-**Las expresiones JSX deben tener un elemento padre**
-
-En JavaScript no es posible retornar dos valores en una funcion, tampoco en JSX. Se deben agrupar en un solo bloque.
-
-En nuestro codigo tenemos este problema que nos explica el por que estamos utilizando un <div> aparentemente innecesario.
+En nuestro código tenemos este problema que nos explica el por que estamos utilizando un <div> aparentemente innecesario.
 
 ```javascript
    return (
@@ -1748,7 +1731,7 @@ En nuestro codigo tenemos este problema que nos explica el por que estamos utili
 }
 ```
 
-El `<div>` lo podemos reemplazar con el componente <Fragment>, pero de manera mas moderna simplemente con la etiqueta vacia `<>`:
+El `<div>` lo podemos reemplazar con el componente <Fragment>, y de manera mas moderna, simplemente con la etiqueta vacia `<>`:
 
 ```javascript
 import {useState, Fragment} from 'react';
@@ -1774,9 +1757,9 @@ import {useState, Fragment} from 'react';
 }
 ```
 
-**Ejercicio**
+## 10.3 Ejercicio Utilizando Fragments
 
-Considere el siguiente trozo de codigo React:
+Considere el siguiente trozo de código React:
 
 ```javascript
 function Summary({ text }) {
@@ -1796,10 +1779,7 @@ export default App;
 
 Su tarea es editar el componente Summary existente de modo que genere el siguiente contenido:
 
-```javascript
-<h1>Resumen</h1>
-<p>{texto}</p>
-```
+![image](https://github.com/user-attachments/assets/453b8a42-35da-48ff-8e1b-1d22f328f04b)
 
 Respuesta:
 
@@ -1824,7 +1804,27 @@ function App() {
 export default App;
 ```
 
-# Dividir una App entre sus diferentes responsabilidades
+
+
+
+---
+<br>
+<br>
+<br>
+<br>
+---
+Aca voy comenzando la leccion 63
+
+26 de Febrero
+
+<br>
+<br>
+<br>
+<br>
+---
+
+
+# 11 Dividir una App entre sus diferentes responsabilidades
 
 63-64-65-66
 
@@ -1838,7 +1838,7 @@ Queremos tener la capacidad de identificar buenos lugares para nuestros componen
 
 Tenemos dos grandes bloques de código en los que podemos separar componentes. El primero, la sección de los core concepts y el de abajo que despliega botones y les entrega funcionalidad dinámica a los ejemplos. Para ello construiremos los nuevos componentes llamados **CoreConcepts.jsx** y **Examples.jsx** respectivamente:
 
-## El componente CoreConcepts.jsx
+**El componente CoreConcepts.jsx**
 
 ```JavaScript
 import Coreconcepts from './CoreConcepts.jsx';
@@ -1886,10 +1886,11 @@ Reemplazando la sección que hemos quitado con el tag <CoreConcepts />
                <menu>            
 ```
 
-## El componente Examples.jsx
+**El componente Examples.jsx**
 
-Haremos algo similar al construir la funcion Examples a la que debemos añadir la funcion handleSelect, el manejo del State:
+Haremos algo similar al construir la función Examples a la que debemos añadir la función handleSelect, el manejo del State:
 
+```javascript
 export default function Examples() {
 <section id = "examples">
    <h2>Ejemplos</h2>
@@ -1914,6 +1915,11 @@ export default function Examples() {
       </div>
 </section>
 }
+```
+
+
+
+
 
 # Los props no se reenvían automaticamente
 
