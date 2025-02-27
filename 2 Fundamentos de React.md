@@ -1804,44 +1804,22 @@ function App() {
 export default App;
 ```
 
-
-
-
----
-<br>
-<br>
-<br>
-<br>
----
-Aca voy comenzando la leccion 63
-
-26 de Febrero
-
-<br>
-<br>
-<br>
-<br>
----
-
-
 # 11 Dividir una App entre sus diferentes responsabilidades
 
-63-64-65-66
-
-Observemos que dentro de nuestra aplicación App.js tenemos múltiples reponsabilidades trabajando simultáneamente:
+Observemos que dentro de nuestra aplicación **App.js** tenemos múltiples reponsabilidades trabajando simultáneamente:
 
 - 1 Despliega los CORE_CONCEPTS y
 - 2 Administra los botones responsables del despliegue del contenido dinámico (los ejemplos).
-- 3 También tiene la particularidad de cambiar el componente aleatorio del título {description} cada vez que damos click a un botón. Esto ocurre porque estamos utilizando el State **selectedTopic** en el componente **App**.
+- 3 También tiene la particularidad de cambiar el componente aleatorio del título {description} cada vez que damos click a un botón. Esto ocurre porque estamos utilizando el State **selectedTopic** que aplica a todo el componente **App**.
 
-Queremos tener la capacidad de identificar buenos lugares para nuestros componentes en forma separada. Debemos ser capaces de dividir los componentes con responsabilidades específicas.
+Queremos tener la capacidad de identificar buenos lugares para nuestros componentes en forma separada. Debemos ser capaces de dividir los componentes con responsabilidades diferentes.
 
-Tenemos dos grandes bloques de código en los que podemos separar componentes. El primero, la sección de los core concepts y el de abajo que despliega botones y les entrega funcionalidad dinámica a los ejemplos. Para ello construiremos los nuevos componentes llamados **CoreConcepts.jsx** y **Examples.jsx** respectivamente:
+Tenemos dos grandes bloques de código en los que podemos separar componentes. El primero, la sección de los core concepts y la seccion de abajo que despliega botones y les entrega funcionalidad dinámica a los ejemplos. Para ello construiremos los nuevos componentes llamados **CoreConcepts.jsx** y **Examples.jsx** respectivamente:
 
 **El componente CoreConcepts.jsx**
 
 ```JavaScript
-import Coreconcepts from './CoreConcepts.jsx';
+import Coreconcept from './CoreConcepts.jsx';
 import {CORE_CONCEPTS} from '../data.js';
 
 export default function CoreConcepts() {
@@ -1860,10 +1838,10 @@ export default function CoreConcepts() {
 }
 ```
 
-En la componente App.jsx obviamente quitamos las lineas:
+En la componente **App.jsx** obviamente quitamos las lineas:
 
 ```JavaScript
-import Coreconcepts from './components/CoreConcepts.jsx';
+import Coreconcept from './components/CoreConcepts.jsx';
 import {CORE_CONCEPTS} from './data.js';
 ```
 
@@ -1891,33 +1869,99 @@ Reemplazando la sección que hemos quitado con el tag <CoreConcepts />
 Haremos algo similar al construir la función Examples a la que debemos añadir la función handleSelect, el manejo del State:
 
 ```javascript
+
+import { useState } from 'react';
+import TabButton from './TabButton.jsx';
+import {EXAMPLES} from '../data.js';
+
 export default function Examples() {
-<section id = "examples">
-   <h2>Ejemplos</h2>
-   <menu>
-      <TabButton onSelect={() => handleSelect('components')}>Components</TabButton>
-      <TabButton onSelect={() => handleSelect('jsx')}>JSX</TabButton>
-      <TabButton onSelect={() => handleSelect('props')}>Props</TabButton>
-      <TabButton onSelect={() => handleSelect('state')}>State</TabButton>                  
-   </menu>
-      <div id = 'tab-content'>
-         <h3>
-            {EXAMPLES[selectedTopic].title}
-         </h3>
-         <p>
-            {EXAMPLES[selectedTopic].description}
-         </p>
-         <pre>
-            <code>
-               {EXAMPLES[selectedTopic].code}
-            </code>
-         </pre>
-      </div>
-</section>
-}
+   const [selectedTopic, setSelectedTopic] = useState('Selecciona un boton');
+
+   function handleSelect(selectedButton) {
+      setSelectedTopic(selectedButton);
+   }
+
+   let tabContent = <p>Por favor, selecciona un item.</p>;
+   
+   if (selectedTopic) {
+      tabContent = (
+         <div id = 'tab-content'>
+            <p>Por favor, selecciona un item</p>
+            <h3>
+               {EXAMPLES[selectedTopic].title}
+            </h3>
+            <p>
+               {EXAMPLES[selectedTopic].description}
+            </p>
+            <pre>
+               <code>
+                  {EXAMPLES[selectedTopic].code}
+               </code>
+            </pre>
+         </div>
+      );
+   }
+
+   return (
+   <section id = "examples">
+      <h2>Ejemplos</h2>
+      <menu>
+         <TabButton isSelected = {selectedTopic === "components"}
+            onSelect={() => handleSelect('components')}
+         > Components </TabButton>
+         <TabButton isSelected = {selectedTopic === "jsx"}
+            onSelect={() => handleSelect('jsx')}
+            >JSX</TabButton>
+         <TabButton isSelected = {selectedTopic === "props"}
+            onSelect={() => handleSelect('props')}
+            >Props</TabButton>
+         <TabButton isSelected = {selectedTopic === "state"}
+            onSelect={() => handleSelect('state')}
+            >State</TabButton>                  
+      </menu>
+      {tabContent}
+   </section>
+   );
+
+```
+
+Y nuestro componente App.jsx queda simplemente como:
+
+```JavaScript
+import Header from './components/Header/Header.jsx';
+import CoreConcepts from './components/CoreConcepts.jsx';
+import Examples from './components/Examples.jsx';
+
+function App() {
+
+   return (
+      <>
+         <Header />
+         <main>
+            <Coreconcepts />
+            <Examples />
+         </main>
+      </>
+   );
+}  
 ```
 
 
+---
+<br>
+<br>
+<br>
+<br>
+---
+Aca voy comenzando la leccion 65
+
+27 de Febrero
+
+<br>
+<br>
+<br>
+<br>
+---
 
 
 
