@@ -1456,7 +1456,11 @@ La clase debe aplicarse cuando se hace clic en el botón `<button>` por primera 
 
 Así es como debería verse la aplicación terminada ANTES de hacer clic en el botón:
 
+![image](https://github.com/user-attachments/assets/f232310c-0369-48ee-aa17-fbec8614d149)
+
 Así es como debería verse DESPUÉS de hacer clic en el botón:
+
+![image](https://github.com/user-attachments/assets/e964b1a3-c57b-4579-bfd4-57c695e8f6ae)
 
 Importante: usa React.useState() en lugar de solo useState(), ya que este último puede causar problemas en este entorno de código de Udemy.
 
