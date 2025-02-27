@@ -1703,6 +1703,11 @@ export default function App() {
 }
 ```
 
+# 10 Componentes
+
+
+
+
 **Un proyecto React no necesita obligatoriamente de codigo JSX. Puede ser construido exclusivamente con codigo standard JavaScript.**
 
 JSX se utiliza solo por razones de conveniencia. Es de esta manera que los dos codigos escritos en JSX y lenguaje standart JavaScript que se muestran a continuacion son equivalentes:
