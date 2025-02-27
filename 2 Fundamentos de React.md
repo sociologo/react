@@ -56,29 +56,29 @@ inicio en **la lección 35** Sección 3
 
 # 1 Componentes
 
-En React, un componente es una pieza reutilizable y autónoma de código que define una parte de la interfaz de usuario. Los componentes son los bloques de construcción fundamentales de una aplicación React. 
+En React, un componente es una pieza reutilizable y autónoma de código que define una parte de la interfaz de usuario. Los componentes son los bloques de construcción fundamentales de una aplicación React. Son bloques de código pequeños y potencialmente reutilizables. 
 
-Son bloques de codigo pequenos y potencialmente reutilizables. Los elementos relacionados de HTML, JS y CSS se almacenan en archivos todfos juntos, lo que favorece ademas, una separacion de competencias.
+Como buena práctica los elementos HTML, JS y CSS relacionados se almacenan en archivos contiguos, lo que favorece una separación de competencias.
 
 ## 11 La extension JSX.
 
-Los componentes en React se almacenan como archivos JSX. Los componentes son simplemente funciones JS.
+Los componentes en React se almacenan como archivos JSX, los cuales son simplemente funciones JS.
 
-JSX, o JavaScript XML, es una extensión de sintaxis para JavaScript que permite a los desarrolladores escribir código que se asemejan al HTML dentro de un archivo JavaScript. Se utiliza para describir y crar elementos en JS de una manera declarativa. No es soportada por los navegadores, por lo que requiere de un proceso de transformacion tras bambalinas antes de que llegue al navegador.
+JSX, o JavaScript XML, es una extensión de sintaxis para JavaScript que permite a los desarrolladores escribir código que se asemeja al HTML dentro de un archivo JavaScript. Se utiliza para describir y crear elementos en JS de una manera declarativa. No es soportada por los navegadores, por lo que requiere de un proceso de transformación tras bambalinas antes de que llegue al navegador.
 
 ## 12 Reglas de un JSX
 
 Un componente de React debe seguir las siguientes reglas:
 
-1 El nombre de la funcion debe comenzar con una mayuscula
+1 El nombre de la función debe comenzar con una mayúscula.
 
-2 La funcion debe retornar un contenido renderizable, esto es, contenido que react pueda desplegar en el navegador.
+2 La función debe retornar un contenido renderizable, esto es, contenido que react pueda desplegar en el navegador.
 
 ## 13 Nuestro primer componente
 
-**En React puedes usar las funciones de componentes como elementos regulares HTML dentro del codigo JSX en forma de etiquetas** Es asi como utilizaremos nuestro primer componente personalizado Header():
+**En React puedes usar las funciones de componentes como etiquetas regulares HTML dentro del código JSX**. Observe el componente personalizado `Header()`:
 
-App.jsx
+**App.jsx**
 
 ```JavaScript
 function Header() {
@@ -109,31 +109,17 @@ function App() {
 export default App;
 ```
 
-Una mirada más cercana: componentes y extensiones de archivos
-
-En este punto, ha creado un primer componente personalizado y, por supuesto, también trabajó con el componente de la aplicación.
-
 Por el momento, ambos componentes se almacenan en el archivo App.jsx (aunque esto cambiará más adelante).
 
-`.jsx` es una extensión de archivo que no es compatible con el navegador! Está funcionando porque estás trabajando en un proyecto de React que admite esta extensión especial. Porque esta extensión "le dice" al proceso de compilación subyacente (que se ejecuta detrás de escena cuando se ejecuta el servidor de desarrollo) que un archivo contiene código JSX (que tampoco es compatible con los navegadores).
-
-Es importante comprender que en realidad es sólo el proceso de construcción el que se preocupa por esta extensión.
-
-Y, por lo tanto, también encontrará proyectos de React que no usan .jsx sino solo .js como extensión de archivo. Y en esos archivos .js, también encontrarás código JSX. Porque simplemente depende del proceso de compilación subyacente qué extensión se espera al usar esta sintaxis JSX en un archivo.
-
-Dado que no funciona en el navegador de ninguna manera, no existe una regla estricta al respecto. En su lugar, encontrará proyectos que requieren .jsx (como la configuración de proyecto que usamos en este curso) y encontrará proyectos que también admiten .js (con código JSX dentro).
+Encontrará proyectos de React que no usan .jsx sino sólo .js como extensión. Y en ésos archivos .js, también encontrars código JSX. Porque simplemente depende del proceso de compilación subyacente qué extensión se espera al usar esta sintaxis JSX en un archivo. No existe una regla estricta al respecto. En su lugar, encontrará proyectos que requieren .jsx (como la configuración de proyecto que usamos en este curso) y encontrará proyectos que también admiten .js (con código JSX dentro).
 
 Estoy enfatizando esto aquí para que no se confunda si encuentra proyectos de React que no usan archivos .jsx.
 
-Además, también encontrará proyectos que requieren la extensión de archivo como parte de la importación de archivos (por ejemplo, importar aplicación desde './App.jsx') y encontrará otros proyectos que no la requieren (es decir, hay , podrías simplemente usar importar aplicación desde './App').
+Además, también encontrará proyectos que requieren la extensión de archivo como parte de la importación de archivos (por ejemplo, importar aplicación desde './App.jsx') y encontrará otros proyectos que no la requieren (es decir, podría simplemente usar importar aplicación desde './App').
 
-Esto, nuevamente, no tiene nada que ver con el navegador o el "JavaScript estándar"; en cambio, simplemente depende de los requisitos del proceso de creación de código que forma parte de la configuración del proyecto que eligió.
+## 14 Ejercicio 1
 
-**Ejercicio**
-
-Su tarea es crear un nuevo componente `MainGoal` que genere un párrafo de texto que describa el objetivo principal del curso (por ejemplo, "Mi objetivo principal: aprender React en profundidad y desde cero").
-
-Tendrás que crear este nuevo componente desde cero y luego usarlo dentro del código JSX del componente de la aplicación.
+Su tarea es crear un nuevo componente `MainGoal` que genere un párrafo de texto que describa el objetivo principal del curso (por ejemplo, "Mi objetivo principal: aprender React en profundidad y desde cero"). Tendrás que crear este nuevo componente desde cero y luego usarlo dentro del código JSX del componente de la aplicación.
 
 La aplicación terminada podría verse así:
 
@@ -141,19 +127,10 @@ La aplicación terminada podría verse así:
 
 (observe el texto "Mi objetivo principal: aprender a reaccionar desde cero" en la parte inferior)
 
-Importante: Para garantizar que las comprobaciones automáticas detecten correctamente su solución, su componente debe llamarse MainGoal y también debe exportarse. Para hacer eso, simplemente agregue la palabra clave export delante de su componente MainGoal.
-
-El componente MainGoal también debe contener el texto "Mi objetivo principal:" (seguido del objetivo principal del curso).
-
 ```JavaScript
 import React from 'react';
 
-// DEFINE YOUR COMPONENT HERE
-// IMPORTANT: Add "export" in front of your component - otherwise the automated tests won't work
-// ...
-
-// DO NOT EDIT THE APP COMPONENT NAME OR CONTENT
-// Except for outputting your custom component
+// DEFINA EL COMPONENTE ACA
 
 function App() {
   return (
@@ -179,8 +156,9 @@ function App() {
         of your function (e.g., <code>export function YOUR_COMPONENT_NAME</code>
         ).
       </p>
-      {/* DON'T CHANGE THE TEXT / CONTENT ABOVE */}
-      {/* OUTPUT YOUR COMPONENT HERE */}
+
+      {/* DE SALIDA A SU COMPONENTE ACA */}
+
     </div>
   );
 }
@@ -237,7 +215,9 @@ function App() {
 export default App;
 ```
 
-**La sintaxis especial de llaves nos permite agregar contenido dinamico a una pagina web y configurar dinámicamente atributos HTML y carga de archivos de imagen**
+## 15 Agregar contenido dinámico a una página web. 
+
+La sintaxis especial de llaves nos permite agregar contenido dinámico a una página web y configurar dinámicamente atributos HTML y la carga de archivos de imágenes.
 
 ![image](https://github.com/user-attachments/assets/bae63692-bffe-42ca-9fb2-ebea39f3f166)
 
@@ -249,13 +229,11 @@ falta ingresar el ejercicio de valores dinamicos con {}
 
 # 2 Props
 
-lecciones 44 y 45
+## 21 Introducción
 
-## 21 Intro
+En React, los **props** (abreviatura de “properties”) son una forma de pasar datos de un componente a otro. **Los props** permiten que los componentes sean reutilizables y dinámicos, ya que puedes cambiar su comportamiento y apariencia según los datos que les pases.
 
-En React, los props (abreviatura de “properties”) son una forma de pasar datos de un componente a otro. Los props permiten que los componentes sean reutilizables y dinámicos, ya que puedes cambiar su comportamiento y apariencia según los datos que les pases.
-
-Los props se utilizan para pasar datos desde un componente padre a un componente hijo. Esto permite que el componente hijo acceda a esos datos y los utilice para renderizar contenido dinámico. Los props son inmutables, lo que significa que un componente no puede cambiar sus propios props. Esto asegura que los datos fluyan en una sola dirección, de arriba hacia abajo, lo que se conoce como “flujo de datos unidireccional”.
+Los **props** se utilizan para pasar datos desde un componente padre a un componente hijo. Esto permite que el componente hijo acceda a esos datos y los utilice para renderizar contenido dinámico. Los **props** son inmutables, lo que significa que un componente no puede cambiar sus propios **props**. Esto asegura que los datos fluyan en una sola dirección, de arriba hacia abajo, lo que se conoce como “flujo de datos unidireccional”.
 
 Los props poseeen una sintaxis similar a HTML. 
 
@@ -267,9 +245,9 @@ Ventajas de Usar Props
 
 **Los props son fundamentales en React porque permiten que los componentes sean flexibles y reutilizables. Al pasar datos a través de props, puedes crear componentes genéricos que se adapten a diferentes situaciones y datos.**
 
-## 22 CSS
+## 22 Inyectando data a un componente
 
-El archivo **App.jsx** define dos componentes principales: **CoreConcept** y **App**. El componente **CoreConcept** es un componente funcional que recibe props (propiedades) como parámetros y los utiliza para renderizar un ítem de lista (`<li>`) con una imagen, un título y una descripción. Este componente es reutilizable y se puede personalizar pasando diferentes valores de props.
+El archivo **App.jsx** define dos componentes principales: **CoreConcept** y **App**. El componente **CoreConcept** es un componente funcional que recibe **props** como parámetros y los utiliza para renderizar un ítem de lista (`<li>`) con una imagen, un título y una descripción. Este componente es reutilizable y se puede personalizar pasando diferentes valores de props.
 
 El componente **App** es el componente principal de la aplicación. Dentro de este componente, se estructura la página con un encabezado (`<Header />`), una sección principal (`<main>`) y una subsección específica para los **Core Concepts**. En esta subsección, se utiliza una lista (`<ul>`) para mostrar varios componentes **CoreConcept**, cada uno con diferentes datos provenientes de un array llamado **CORE_CONCEPTS**.
 
@@ -359,13 +337,31 @@ export const CORE_CONCEPTS = [
 ];
 ```
 
-En los componentes CoreConcept1 y CoreConcept2, la diferencia principal radica en cómo se manejan las propiedades (props).
+## 23 Desestructurando props
 
-En CoreConcept1, las propiedades se agrupan en un solo objeto llamado props. Dentro del componente, se accede a cada propiedad utilizando la notación de punto, es decir, props.propertyName. Este enfoque puede ser menos intuitivo y más verboso, ya que requiere referirse constantemente al objeto props para acceder a cada propiedad individual.
+---
+<br>
+<br>
+<br>
+<br>
+---
+Aca voy comenzando la leccion 58
 
-Por otro lado, en CoreConcept2, las propiedades se **desestructuran** directamente en los parámetros de la función. Esto significa que las propiedades se extraen del objeto props y se pueden usar directamente sin necesidad de prefijos adicionales. Este método es más limpio y conciso, facilitando la lectura y el mantenimiento del código. La desestructuración de props en los parámetros de la función es una práctica recomendada en React, ya que mejora la claridad y la simplicidad del código.
+26 de Febrero
 
-En resumen, mientras que CoreConcept1 utiliza un enfoque más tradicional y explícito para manejar props, CoreConcept2 adopta una técnica más moderna y eficiente mediante la **desestructuración**, lo que resulta en un código más claro y fácil de entender.
+<br>
+<br>
+<br>
+<br>
+---
+
+En los componentes CORE_CONCEPTS[0] y CORE_CONCEPTS[1], la diferencia principal radica en cómo se manejan las propiedades (props).
+
+En CORE_CONCEPTS[0], las propiedades se agrupan en un solo objeto llamado props. Dentro del componente, se accede a cada propiedad utilizando la notación de punto, es decir, props.propertyName. Este enfoque puede ser menos intuitivo y más engorroso, ya que requiere referirse constantemente al objeto props para acceder a cada propiedad individual.
+
+Por otro lado, en CORE_CONCEPTS[1], las propiedades se **desestructuran** directamente en los parámetros de la función. Esto significa que las propiedades se extraen del objeto props y se pueden usar directamente sin necesidad de prefijos adicionales. Este método es más limpio y conciso, facilitando la lectura y el mantenimiento del código. La desestructuración de **props** en los parámetros de la función es una práctica recomendada en React, ya que mejora la claridad y la simplicidad del código.
+
+En resumen, mientras que CORE_CONCEPTS[0] utiliza un enfoque más tradicional y explícito para manejar props, CORE_CONCEPTS[1] adopta una técnica más moderna y eficiente mediante la **desestructuración**, lo que resulta en un código más claro y fácil de entender.
 
 ```Javascript
 function CoreConcept1({props}){
