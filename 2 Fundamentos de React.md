@@ -1387,23 +1387,66 @@ export default function App() {
 
 # 6 Entregando estilos en forma condicional
 
+Queremos que al ser seleccionado un boton de la pestana, este se marque con un color distintivo.
 
+Para ello debemos agregar la clase **className** como nuevo parametro al tag `button` en el componente **TabButton.jsx** para asociarlo con un bloque css:
 
----
-<br>
-<br>
-<br>
-<br>
----
-Aca voy comenzando la leccion 57
-26 de Febrero
-<br>
-<br>
-<br>
-<br>
----
+```JavaScript
+export default function TabButton({children, onSelect}) {
+   return (
+      <li>
+         <button className = "active" onClick = {onSelect}>
+            {children}
+         </button>
+      </li>
+   );
+}
+```
 
-Queremos entregarle un estilo a cada boton una vez haya sido seleccionado, 
+```css
+#examples menu button.active {
+   background-color: #7925d3;
+   color: #ebe7ef;
+```
+
+De esta manera todos los botones se marcaran como activos con un color distintivo.
+
+Lo que queremos es destacar uno solo, el que sea seleccionado, de forma dinamica. Esto lo logramos anadiendo un nuevo parametro booleano llamado `isSelected` al componente:
+
+```JavaScript
+export default function TabButton({children, onSelect, isSelected}) {
+   return (
+      <li>
+         <button className = {isSelected ? "active" : undefined} onClick = {onSelect}>
+            {children}
+         </button>
+      </li>
+   );
+}
+```
+
+El parametro es enviado mediante un argumento del tag TabButton del componente App.jsx:
+
+```javascript
+<section id = "examples">
+   <h2>Ejemplos</h2>
+   <menu>
+      <TabButton isSelected = {selectedTopic === "components"}
+         onSelect={() => handleSelect('components')}
+      > Components </TabButton>
+      <TabButton isSelected = {selectedTopic === "jsx"}
+         onSelect={() => handleSelect('jsx')}
+         >JSX</TabButton>
+      <TabButton isSelected = {selectedTopic === "props"}
+         onSelect={() => handleSelect('props')}
+         >Props</TabButton>
+      <TabButton isSelected = {selectedTopic === "state"}
+         onSelect={() => handleSelect('state')}
+         >State</TabButton>                  
+   </menu>
+   {tabContent}
+</section>
+```
 
 ## 61 Ejercicio
 
@@ -1469,6 +1512,23 @@ export default function App() {
    );
 }
 ```
+
+---
+<br>
+<br>
+<br>
+<br>
+---
+Aca voy comenzando la leccion 57
+
+26 de Febrero
+
+<br>
+<br>
+<br>
+<br>
+---
+
 
 # 7 Generación dinámica de datos de listas El método map
 
