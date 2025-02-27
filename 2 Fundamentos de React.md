@@ -1530,13 +1530,9 @@ Aca voy comenzando la leccion 58
 ---
 
 
-# 7 Generación dinámica de datos de listas El método map
+# 7 Generación dinámica de datos de listas. El método map
 
 Nos encontramos con unos problemas en el siguiente bloque:
-
-![image](https://github.com/user-attachments/assets/f470c85f-7b7c-4a72-965a-a97170771b3f)
-
-Aparte de estar repitiendo tres veces una línea de código, sucede que si modificamos en algo la estructura de datos de data.js, nuestra página web se rompe. 
 
 ```JavaScript
 <section id = 'core-concepts'>
@@ -1556,33 +1552,13 @@ Aparte de estar repitiendo tres veces una línea de código, sucede que si modif
 </section>
 ```
 
-Sería ideal si el número de elementos **CoreConcepts** pudiese derivarse dinamicamente del numero de elementos del array CORE_CONCEPTS. JSX es capaz de producir un array de elementos html, por lo que podemos transformar el array de elementos del array CORE_CONCEPTS en un array de elementos JSX. Eso lo podemos lograr con la ayuda de la funcion map de JavaScript.
+![image](https://github.com/user-attachments/assets/f470c85f-7b7c-4a72-965a-a97170771b3f)
 
-## 71 El metodo map
+Aparte de estar repitiendo código tres veces, si modificamos en algo la estructura de datos de **data.js**, nuestra página web se rompe. 
 
-El método **map()** en JavaScript es una función de los arrays que permite crear un nuevo array con los resultados de aplicar una función a cada uno de los elementos del array original. Es una herramienta muy poderosa y comúnmente utilizada en la programación funcional.
+Lo que necesitamos es derivar dinámicamente el subindice del array de objetos CORE_CONCEPTS[0].
 
-Características del método map()
-
-- 1 No modifica el array original: **map()** crea un nuevo array y no cambia el array sobre el que se llama.
-
-- 2 Función de callback: Toma una función de callback como argumento. Esta función se ejecuta una vez por cada elemento del array.
-
-- 3 Nuevo array: Devuelve un nuevo array con los resultados de aplicar la función de callback a cada elemento del array original.
-
-Recordemos el componente **CoreConcept**:
-
-```JavaScript
-export default function CoreConcept({image, title, description}){
-   return (
-      <li>
-         <img src = {image} alt = {title} />
-         <h3>{title}</h3>
-         <p>{description}</p>
-      </li>
-   );
-}
-```
+Como JSX es capaz de producir un array de elementos JSX, podemos transformar el array de objetos en un array de elementos JSX. En React (y en JavaScript en general), el método **map** se utiliza para transformar arrays. Básicamente, map toma un array, aplica una función a cada uno de sus elementos y devuelve un nuevo array con los resultados.
 
 Podemos reemplazar el codigo:
 
@@ -1640,12 +1616,12 @@ Comportamiento
 
 * Una función de callback es una función que se pasa como argumento a otra función y se ejecuta después de que la función principal haya completado su tarea. Las funciones de callback son una característica fundamental en JavaScript y se utilizan ampliamente para manejar operaciones asíncronas, como llamadas a APIs, temporizadores y eventos.
 
-** En JavaScript, el operador de propagación, conocido como "spread operator", se representa con tres puntos (...). Se utiliza para expandir elementos de un iterable (como un array o un objeto) en lugares donde se esperan múltiples elementos. Es una herramienta muy útil y versátil en la programación moderna de JavaScript.
+** En JavaScript, el operador de propagación, conocido como "spread operator", se representa con tres puntos (...) Se utiliza para expandir elementos de un iterable (como un array o un objeto) en lugares donde se esperan múltiples elementos. Es una herramienta muy útil y versátil en la programación moderna de JavaScript.
 
 
-## 72 Añadiendo la prop key
+## 8 La prop key
 
-Aparece un problema. En la consola al ejecutar este codigo aparece el error: **'cada child en una lista deberia tener una unica prop 'key''**. Le añadimos una:
+Aparece un problema. En la consola al ejecutar este codigo aparece el error: **'cada child en una lista debería tener una unica prop 'key''**. Le añadimos una con un valor que sea único para cada elemento:
 
 ```JavaScript
 <section id = 'core-concepts'>
@@ -1660,8 +1636,7 @@ Aparece un problema. En la consola al ejecutar este codigo aparece el error: **'
 </section>
 ```
 
-
-## 73 Ejercicio Contenido de lista dinámica
+## 9 Ejercicio Contenido de lista dinámica
 
 Estás trabajando en una aplicación web de "Lista de tareas pendientes" y tu tarea es generar una lista de elementos de tareas pendientes ficticios de forma dinámica. Para esta tarea, se ha preparado un componente de tareas pendientes, aunque aún debes agregarle algo de código para recibir y generar el texto de la tarea pendiente.
 
@@ -1720,21 +1695,13 @@ export const DUMMY_TODOS = [
 export default function App() {
   return (
     <ul>
-      {DUMMY_TODOS.map((todo, index) => (
+      {DUMMY_TODOS.map((Todo, index) => (
         <Todo key={index} texto={todo} />
       ))}
     </ul>
   );
 }
 ```
-
-***
-***
-***
-
-
-
-**60**
 
 **Un proyecto React no necesita obligatoriamente de codigo JSX. Puede ser construido exclusivamente con codigo standard JavaScript.**
 
