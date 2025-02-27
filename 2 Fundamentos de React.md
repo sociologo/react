@@ -1695,7 +1695,7 @@ export const DUMMY_TODOS = [
 export default function App() {
   return (
     <ul>
-      {DUMMY_TODOS.map((Todo, index) => (
+      {DUMMY_TODOS.map((todo, index) => (
         <Todo key={index} texto={todo} />
       ))}
     </ul>
