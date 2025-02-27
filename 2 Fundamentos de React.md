@@ -1450,9 +1450,9 @@ El parametro es enviado mediante un argumento del tag TabButton del componente A
 
 ## 61 Ejercicio
 
-Tu tarea es aplicar dinámicamente una clase CSS (activa) al elemento <p>Style me</p> en la aplicación React proporcionada.
+Tu tarea es aplicar dinámicamente una clase CSS (activa) al elemento `<p>Style me</p>` en la aplicación React proporcionada.
 
-La clase debe aplicarse cuando se hace clic en el botón <button> por primera vez.
+La clase debe aplicarse cuando se hace clic en el botón `<button>` por primera vez.
 
 Así es como debería verse la aplicación terminada ANTES de hacer clic en el botón:
 
