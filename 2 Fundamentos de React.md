@@ -339,22 +339,6 @@ export const CORE_CONCEPTS = [
 
 ## 23 Desestructurando props
 
----
-<br>
-<br>
-<br>
-<br>
----
-Aca voy comenzando la leccion 58
-
-26 de Febrero
-
-<br>
-<br>
-<br>
-<br>
----
-
 En los componentes CORE_CONCEPTS[0] y CORE_CONCEPTS[1], la diferencia principal radica en cómo se manejan las propiedades (props).
 
 En CORE_CONCEPTS[0], las propiedades se agrupan en un solo objeto llamado props. Dentro del componente, se accede a cada propiedad utilizando la notación de punto, es decir, props.propertyName. Este enfoque puede ser menos intuitivo y más engorroso, ya que requiere referirse constantemente al objeto props para acceder a cada propiedad individual.
@@ -406,7 +390,6 @@ En resumen, la primera instancia pasa las propiedades de manera explícita y det
 el proyecto luce asi:
 
 ![image](https://github.com/user-attachments/assets/06a6366f-bd76-456a-9cd3-0ef0d1677b3d)
-
 
 Ejercicio de codificación 5. Revisar que algo no anda bien:
 
