@@ -1513,23 +1513,6 @@ export default function App() {
 }
 ```
 
----
-<br>
-<br>
-<br>
-<br>
----
-Aca voy comenzando la leccion 58
-
-26 de Febrero
-
-<br>
-<br>
-<br>
-<br>
----
-
-
 # 7 Generación dinámica de datos de listas. El método map
 
 Nos encontramos con unos problemas en el siguiente bloque:
@@ -1703,9 +1686,23 @@ export default function App() {
 }
 ```
 
-# 10 Componentes
+# 10 
 
+---
+<br>
+<br>
+<br>
+<br>
+---
+Aca voy comenzando la leccion 60
 
+26 de Febrero
+
+<br>
+<br>
+<br>
+<br>
+---
 
 
 **Un proyecto React no necesita obligatoriamente de codigo JSX. Puede ser construido exclusivamente con codigo standard JavaScript.**
