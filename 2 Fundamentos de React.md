@@ -1936,9 +1936,11 @@ function App() {
 <br>
 <br>
 ---
-Aca voy comenzando la leccion 65
 
-27 de Febrero
+Estudiando las lecciones 65-69
+Con esto termino acá
+
+28 de Febrero
 
 <br>
 <br>
