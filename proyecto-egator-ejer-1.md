@@ -2292,9 +2292,6 @@ export default Gallery
 
 51 Le damos estilos al componente **Gallery.jsx** en el archivo **Gallery.css**.
 
-aca voy
-3 52'
-
 ```css
 .gallery__container {
    display: grid;
@@ -2457,12 +2454,120 @@ export default Plans
 }
 ```
 
+## Pagina Trainers
 
+56 Desarrollamos el componente **Trainers.jsx** dentro de la carpeta **components**:
 
+```javascript
+import Header from '../../components/Header'
+import HeaderImage from '../../images/header_bg_5.jpg'
+import {trainers} from '../../data'
+import {BsInstagram} from 'react-icons/bs'
+import {AiOutlineTwitter} from 'react-icons/ai'
+import {FaFacebookF} from 'react-icons/fa'
+import {FaLinkedinIn} from 'react-icons/fa'
+import Trainer from '../../components/Trainer'
+import './trainers.css'
 
+const Trainers = () => {
+  return (
+    <>
+    <Header title="Our Trainers" image={HeaderImage}>
+    Facilis, iusto numquam unde laboriosam expedita qui exercitationem? Dicta vero accusantium est aut molestiae fugit doloremque suscipit quod.
+    </Header>
+    <section className="trainers">
+      <div className="container trainers__container">
+        {
+          trainers.map(({id, image, name, job, socials}) => {
+            return <Trainer key={id} image={image} name={name} job={job} socials={
+              [
+                {icon: <BsInstagram/>, link: socials[0]},
+                {icon: <AiOutlineTwitter/>, link: socials[1]},
+                {icon: <FaFacebookF/>, link: socials[2]},
+                {icon: <FaLinkedinIn/>, link: socials[3]}
+              ]
+            }/>
+          })
+        }
+      </div>
+    </section>
+    </>
+  )
+}
 
+export default Trainers
+```
 
+55 Le damos estilos al componente **Trainers.jsx** en el archivo **Trainers.css**.
 
+```css
+.trainers__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.card.trainer {
+    padding: 1rem;
+}
+
+.trainer__img {
+    border-radius: 0 2rem;
+    overflow: hidden;
+}
+
+.trainer h3 {
+    margin-top: 2rem;
+}
+
+.trainer p {
+    margin-top: 0.5rem;
+}
+
+.trainer__socials {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.trainer__socials a {
+    font-size: 0.7rem;
+    background: var(--color-gray-600);
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    transition: var(--transition);
+}
+
+.trainer:hover a {
+    background: var(--color-gray-500)
+}
+
+/* MEDIA QUERIES (medium screens) */
+@media screen and (max-width: 1024px) {
+    .trainers__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+}
+
+/* MEDIA QUERIES (small screens) */
+@media screen and (max-width: 600px) {
+    .trainers__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .card.trainer {
+        width: 90%;
+        margin-inline: auto;
+    }
+}
+```
+
+aca voy
+4 07'
 
 
 
