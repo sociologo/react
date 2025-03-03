@@ -1948,6 +1948,53 @@ Con esto termino acá
 <br>
 ---
 
+# 4 conceptos cruciales
+
+## Forwarded props
+
+Nos encontramos con el caso de componentes que tienen en forma repetida la estructura de un titulo seguido de un contenido. En este caso podemos construir otro componente que contenga en forma general esta estructura.
+
+En React, forwarded props (o "props reenviadas") se refieren a la técnica de reenviar propiedades (props) de un componente a otro, generalmente cuando estás trabajando con componentes que envuelven elementos o tienen lógica adicional.
+
+Para utilizarlos debemos tomar como argumento del componente con el que se generaliza un nombre cualquiera con tres puntos antecediendolo (por ejemplo...props), con el que enviamos todos los props extra que necesitemos.
+
+
+
+Ejercicio:
+
+export default function Input({ richText, ...props }) {
+    // Conditional rendering based on the richText prop
+    return richText ? <textarea {...props}></textarea> : <input {...props} />;
+}
+
+
+## Slots adicionales
+
+podriamos necesitar un componente de pestanas reutilizable.
+
+## Props como wrappers
+
+## Valores de props por defecto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Los props no se reenvían automaticamente
