@@ -1930,24 +1930,6 @@ function App() {
 ```
 
 
----
-<br>
-<br>
-<br>
-<br>
----
-
-Estudiando las lecciones 65-69
-Con esto termino acá
-
-28 de Febrero
-
-<br>
-<br>
-<br>
-<br>
----
-
 # 4 conceptos cruciales
 
 ## Forwarded props
@@ -1958,9 +1940,18 @@ En React, forwarded props (o "props reenviadas") se refieren a la técnica de re
 
 Para utilizarlos debemos tomar como argumento del componente con el que se generaliza un nombre cualquiera con tres puntos antecediendolo (por ejemplo...props), con el que enviamos todos los props extra que necesitemos.
 
+```javascript
+export default function Section({ title, children}) {
+   return (
+      <section>
+         <h2>{title}</h2>
+         {children}
+      </section>
+   );
+}   
+```
 
-
-Ejercicio:
+## Ejercicio:
 
 export default function Input({ richText, ...props }) {
     // Conditional rendering based on the richText prop
@@ -1981,6 +1972,26 @@ podriamos necesitar un componente de pestanas reutilizable.
 
 
 
+
+
+
+---
+<br>
+<br>
+<br>
+<br>
+---
+
+Estudiando las lecciones 65-69
+Con esto termino acá
+
+28 de Febrero
+
+<br>
+<br>
+<br>
+<br>
+---
 
 
 
