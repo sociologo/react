@@ -2330,3 +2330,63 @@ aca voy
    }
 }
 ```
+
+
+## Pagina NotFound
+
+52 Desarrollamos el componente **NotFound.jsx** dentro de la carpeta **components**:
+
+```javascript
+import {Link} from 'react-router-dom'
+import './notFound.css'
+
+const NotFound = () => {
+  return (
+    <section>
+      <div className="container notfound__container">
+        <h2>Page Not Found</h2>
+        <Link to="/" className='btn'>Go Back Home</Link>
+      </div>
+    </section>
+  )
+}
+
+export default NotFound
+```
+
+53 Le damos estilos al componente **NotFound.jsx** en el archivo **NotFound.css**.
+
+```css
+.notfound__container {
+    text-align: center;
+    padding-top: 8rem;
+}
+
+.notfound__container .btn {
+    margin-top: 2rem;
+    display: inline-block;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
