@@ -1977,9 +1977,31 @@ export default function Section({ title, children, ...props}) {
 }   
 ```
 
+Tambien podemos aplicar esta tecnica aqui:
 
+```javascript
+export default function TabButton({children, onSelect, isSelected}) {
+   return (
+      <li>
+         <button className = {isSelected ? "active" : undefined} onClick = {onSelect}>
+            {children}
+         </button>
+      </li>
+   );
+}
+```
 
-
+```javascript
+export default function TabButton({children, isSelected, ...props}) {
+   return (
+      <li>
+         <button className = {isSelected ? "active" : undefined} {...props}>
+            {children}
+         </button>
+      </li>
+   );
+}
+```
 
 ## Ejercicio:
 
@@ -2013,9 +2035,10 @@ podriamos necesitar un componente de pestanas reutilizable.
 ---
 
 Estudiando las lecciones 65-69
+debo hacer 68-69
 Con esto termino acá
 
-28 de Febrero
+3 de marzo
 
 <br>
 <br>
