@@ -2331,7 +2331,6 @@ aca voy
 }
 ```
 
-
 ## Pagina NotFound
 
 52 Desarrollamos el componente **NotFound.jsx** dentro de la carpeta **components**:
@@ -2368,9 +2367,95 @@ export default NotFound
 }
 ```
 
+## Pagina Plans
 
+54 Desarrollamos el componente **Plans.jsx** dentro de la carpeta **components**:
 
+```javascript
+import Header from '../../components/Header'
+import HeaderImage from '../../images/header_bg_4.jpg'
+import Card from '../../UI/Card'
+import {plans} from '../../data'
+import './plans.css'
 
+const Plans = () => {
+  return (
+    <>
+    <Header title="Membership Plans" image={HeaderImage}>
+    Assumenda perspiciatis asperiores deserunt quisquam, sit iusto consectetur vero similique aliquam.
+    </Header>
+    <section className="plans">
+      <div className="container plans__container">
+        {
+          plans.map(({id, name, desc, price, features}) => {
+            return <Card key={id} className='plan'>
+              <h3>{name}</h3>
+              <small>{desc}</small>
+              <h1>{`$${price}`}</h1><h2>/mo</h2>
+              <h4>Features</h4>
+              {
+                features.map(({feature, available}, index) => {
+                  return <p key={index} className={!available ? 'disabled' : ''}>{feature}</p>
+                })
+              }
+              <button className='btn lg'>Choose Plan</button>
+            </Card>
+          })
+        }
+      </div>
+    </section>
+    </>
+  )
+}
+
+export default Plans
+```
+
+55 Le damos estilos al componente **Plans.jsx** en el archivo **Plans.css**.
+
+```css
+.plans__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.plan h3 {
+    margin-bottom: 0.8rem;
+}
+
+.plan small {
+    margin-bottom: 2rem;
+}
+
+.plan h1 {
+    color: var(--color-primary-variant);
+    display: inline;
+}
+
+.plan h2 {
+    display: inline;
+    color: var(--color-gray-400);
+}
+
+.plan h4 {
+    margin-top: 2rem;
+}
+
+.plan p {
+    margin-top: 1rem;
+    color: var(--color-gray-100)
+}
+
+.plan p.disabled {
+    color: var(--color-gray-400);
+}
+
+.plan button {
+    margin-top: 3rem;
+    cursor: pointer;
+}
+```
 
 
 
