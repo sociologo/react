@@ -1951,6 +1951,12 @@ export default function Section({ title, children}) {
 }   
 ```
 
+pero perdemos las reglas de estilo asociadas al tag id.
+
+
+
+
+
 ## Ejercicio:
 
 export default function Input({ richText, ...props }) {
