@@ -1951,7 +1951,31 @@ export default function Section({ title, children}) {
 }   
 ```
 
-pero perdemos las reglas de estilo asociadas al tag id.
+pero perdemos las reglas de estilo asociadas al tag id. Podemos solucionar esto desestructurando así:
+
+```javascript
+export default function Section({ title, id, children}) {
+   return (
+      <section id = {id}>
+         <h2>{title}</h2>
+         {children}
+      </section>
+   );
+}   
+```
+
+pero eventualmente nos llenariamos de props. Utilizamos solo un prop extra con la tecnica de los forwarded props y su propiedad Rest, la que nos permite agrupar todas las propiedades restantes en un nuevo objeto:
+
+```javascript
+export default function Section({ title, children, ...props}) {
+   return (
+      <section ...props{}>
+         <h2>{title}</h2>
+         {children}
+      </section>
+   );
+}   
+```
 
 
 
