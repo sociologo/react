@@ -2029,7 +2029,7 @@ podriamos necesitar un componente de pestanas reutilizable.
 
 ## 4.5 Valores de props por defecto
 
-
+## 4.6 Ejercicio: Creando componentes flexibles 
 
 
 
