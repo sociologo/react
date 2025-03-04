@@ -1,4 +1,12 @@
 
+Script de arranque:
+
+```
+C:\Users\chris> cd /
+C:> cd \Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1 C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm install
+C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm start
+```
+
 # Índice
 
 * [1 En la terminal de vsc](#1-En-la-terminal-de-vsc)
