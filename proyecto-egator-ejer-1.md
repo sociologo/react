@@ -84,14 +84,17 @@ const App = () => {
 export default App
 ```
 
+Aca voy 4 de marzo
+
+
 9 dentro de la carpeta pages creamos carpetas para cada una de las paginas de nuestra aplicacion web y dentro de cada una de ellas un jsx  un css:
 
-about
-contact
-gallery
-home
-notFound
-plans
+about\
+contact\
+gallery\
+home\
+notFound\
+plans\
 trainers
 
 Es importante siempre nombrar los componentes siempre con mayusculas.
