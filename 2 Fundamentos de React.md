@@ -1987,25 +1987,17 @@ export default function Section({ title, children}) {
 
 reemplazando el tag por defecto por nuestro componente personalizado en el componente **Examples.jsx**:
 
-```
+**Examples.jsx**
+
+```javascript
 return (
- <Section id = "examples">
+ <Section title = "Examples" id = "examples">
 
  /* Some code...*/
 
  </Section>
  );
 ```
-
-
-
-
-
-
-
-Para utilizarlos debemos tomar como argumento en el componente con el que se generaliza un nombre cualquiera con tres puntos antecediéndolo (por ejemplo...props), con el que enviamos todos los props extra que necesitemos.
-
-
 
 pero perdemos las reglas de estilo asociadas al tag id. Podemos solucionar esto desestructurando así:
 
@@ -2020,7 +2012,7 @@ export default function Section({ title, id, children}) {
 }   
 ```
 
-pero eventualmente nos llenariamos de props. Utilizamos solo un prop extra con la tecnica de los forwarded props y su propiedad Rest, la que nos permite agrupar todas las propiedades restantes en un nuevo objeto:
+pero eventualmente nos llenariamos de props. Utilizamos solo un prop extra con la tecnica de los forwarded props y su propiedad Rest, la que nos permite agrupar todas las propiedades restantes en un nuevo objeto. Para utilizarlos debemos tomar como argumento en el componente con el que se generaliza un nombre cualquiera con tres puntos antecediéndolo (por ejemplo...props), con el que enviamos todos los props extra que necesitemos.
 
 ```javascript
 export default function Section({ title, children, ...props}) {
