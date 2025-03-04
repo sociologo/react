@@ -2605,7 +2605,18 @@ const Trainer = ({image, name, job, socials}) => {
 export default Trainer
 ```
 
+57 El siguiente trozo de codigo en **index.css** nos entrega textura a nuestro background:
 
+```css
+/* GENERAL STYLES */
+body {
+   font-family: 'Montserrat', sans-serif;
+   color: var(--color-gray-200);
+   line-height: 1.7;
+   overflow-x: hidden;
+   background: var(--color-gray-600) url('./images/bg_texture.png');
+}
+```
 
 
 
