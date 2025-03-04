@@ -2025,7 +2025,7 @@ export default function Input({ richText, ...props }) {
 
 podriamos necesitar un componente de pestanas reutilizable.
 
-## 4.4 Props como wrappers
+## 4.4 Elementos identificadores como props
 
 ## 4.5 Valores de props por defecto
 
