@@ -2057,17 +2057,62 @@ export default function TabButton({children, isSelected, ...props}) {
 }
 ```
 
+en cuyo caso debemos cambiar lo siguiente en Examples.jsx:
+
+```javascript
+<TabButton isSelected = {selectedTopic === "components"}
+   onSelect={() => handleSelect('components')}
+> Components </TabButton>
+```
+
+```javascript
+<TabButton isSelected = {selectedTopic === "components"}
+   onClick={() => handleSelect('components')}
+> Components </TabButton>
+```
+
 ## 4.2  Ejercicio:
 
+Tu tarea es trabajar en el componente de entrada de modo que devuelva un elemento `<textarea>` o un elemento `<input>`, dependiendo de si una propiedad richText establecida en la entrada es verdadera o falsa.
+
+Es decir, si se utiliza de esta manera:
+
+`<Input richText />`
+el componente de entrada debe mostrar un `<textarea>`. De lo contrario, debe mostrar un `<input>`.
+
+Además, el componente de entrada debe reenviar todas las demás propiedades directamente a los elementos `<textarea>` o `<input>` devueltos.
+
+```javascript
+import Input from './Input';
+
+function App() {
+  return (
+    <div id="content">
+      <Input type="text" placeholder="Your name" />
+      <Input richText placeholder="Your message" />
+    </div>
+  );
+}
+```
+
+```javascript
+export default function Input() {
+   // devuelve un <textarea> si una propiedad richText es verdadera
+   // devuelve un <input> en caso contrario
+   // reenvía/establece las propiedades recibidas en los elementos devueltos
+}
+```
+
+**Respuesta:**
+```javascript
 export default function Input({ richText, ...props }) {
-    // Conditional rendering based on the richText prop
     return richText ? <textarea {...props}></textarea> : <input {...props} />;
 }
-
+```
 
 ## 4.3 Slots adicionales
 
-podriamos necesitar un componente de pestanas reutilizable.
+Podríamos necesitar un componente de pestanas reutilizable.
 
 ## 4.4 Elementos identificadores como props
 
