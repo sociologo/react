@@ -2112,7 +2112,53 @@ export default function Input({ richText, ...props }) {
 
 ## 4.3 Slots adicionales
 
-Podríamos necesitar un componente de pestanas reutilizable.
+En el componente Examples.jsx observemos que tenemos un elemento `<menu>` agrupando los botones. Quisiéramos generalizar esta estructura mediante un componente con el objetivo de volver a utilizarla si la necesitáramos
+
+```javascript
+return (
+<section id = "examples">
+   <h2>Ejemplos</h2>
+   <menu>
+      <TabButton isSelected = {selectedTopic === "components"}
+         onSelect={() => handleSelect('components')}
+      > Components </TabButton>
+      <TabButton isSelected = {selectedTopic === "jsx"}
+         onSelect={() => handleSelect('jsx')}
+         >JSX</TabButton>
+      <TabButton isSelected = {selectedTopic === "props"}
+         onSelect={() => handleSelect('props')}
+         >Props</TabButton>
+      <TabButton isSelected = {selectedTopic === "state"}
+         onSelect={() => handleSelect('state')}
+         >State</TabButton>                  
+   </menu>
+   {tabContent}
+</section>
+);
+```
+
+para ellos construimos el componente **Tabs.jsx**:
+
+---
+<br>
+<br>
+<br>
+<br>
+---
+
+
+voy en la leccion 67 1 38'
+4 de marzo
+
+<br>
+<br>
+<br>
+<br>
+---
+
+
+
+
 
 ## 4.4 Elementos identificadores como props
 
@@ -2126,24 +2172,7 @@ Podríamos necesitar un componente de pestanas reutilizable.
 
 
 
----
-<br>
-<br>
-<br>
-<br>
----
 
-Estudiando las lecciones 65-69
-debo hacer 68-69
-Con esto termino acá
-
-3 de marzo
-
-<br>
-<br>
-<br>
-<br>
----
 
 
 
