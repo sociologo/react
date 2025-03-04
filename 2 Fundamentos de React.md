@@ -2116,7 +2116,7 @@ En el componente Examples.jsx observemos que tenemos un elemento `<menu>` agrupa
 
 ```javascript
 return (
-<section id = "examples">
+<Section title = "Examples" id = "examples">
    <h2>Ejemplos</h2>
    <menu>
       <TabButton isSelected = {selectedTopic === "components"}
@@ -2133,12 +2133,102 @@ return (
          >State</TabButton>                  
    </menu>
    {tabContent}
-</section>
+</Section>
 );
 ```
 
-para ellos construimos el componente **Tabs.jsx**:
+para ellos construimos el componente **Tabs.jsx**, el cual podemos llamar un componente de "envoltura":
 
+```javascript
+export default function Tabs({children, buttons}) {
+   return <>
+      <menu>
+         {buttons}
+      <menu>
+      {children}
+      </>
+}
+```
+
+y modificar el componente: 
+
+```javascript
+return (
+<Section title = "Examples" id = "examples">
+
+   <Tabs buttons={
+      <>
+         <TabButton isSelected = {selectedTopic === "components"}
+            onSelect={() => handleSelect('components')}
+         > Components </TabButton>
+         <TabButton isSelected = {selectedTopic === "jsx"}
+            onSelect={() => handleSelect('jsx')}
+            >JSX</TabButton>
+         <TabButton isSelected = {selectedTopic === "props"}
+            onSelect={() => handleSelect('props')}
+            >Props</TabButton>
+         <TabButton isSelected = {selectedTopic === "state"}
+            onSelect={() => handleSelect('state')}
+            >State</TabButton>}>
+         </>
+   {tabContent}
+   </Tabs>
+
+   <menu>
+               
+   </menu>
+   {tabContent}
+</Section>
+);
+```
+
+Con esta estructura establecemos dos diferentes slots aqui:
+
+```javascript
+export default function Tabs({children, buttons}) {
+   return <>
+      <menu>
+         {buttons}
+      <menu>
+      {children}
+      </>
+}
+```
+
+podemos establecer mas props y consecutivamente mas slots si asi lo necesitáramos.
+
+## 4.4 Elementos identificadores como props
+
+Es posible que quisiéramos el siguiente componente aún más flexible:
+
+```javascript
+export default function Tabs({children, buttons}) {
+   return <>
+      <menu>
+         {buttons}
+      <menu>
+      {children}
+      </>
+}
+```
+
+para ser capaces de utilizar diferentes elementos de envoltura alrededor de `{buttons}` en vez de `<menu>`, como `<ul>` o `<div>`.
+
+Para ello debemos utilizar la siguiente estructura:
+
+```javascript
+export default function Tabs({children, buttons, buttonsContainer}) {
+
+   const ButtonsContainer = buttonsContainer;
+
+   return <>
+      <ButtonsContainer>
+         {buttons}
+      <ButtonsContainer>
+      {children}
+      </>
+}
+```
 ---
 <br>
 <br>
@@ -2147,7 +2237,7 @@ para ellos construimos el componente **Tabs.jsx**:
 ---
 
 
-voy en la leccion 67 1 38'
+inicio la leccion 68
 4 de marzo
 
 <br>
@@ -2155,12 +2245,6 @@ voy en la leccion 67 1 38'
 <br>
 <br>
 ---
-
-
-
-
-
-## 4.4 Elementos identificadores como props
 
 ## 4.5 Valores de props por defecto
 
