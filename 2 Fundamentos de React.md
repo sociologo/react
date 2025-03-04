@@ -1944,7 +1944,9 @@ function App() {
 
 ## 4.1 Forwarded props
 
-Nos encontramos con el caso de componentes que tienen en forma repetida la estructura de un titulo seguido de un contenido. En este caso podemos construir otro componente que contenga en forma general esta estructura.
+En React, forwarded props (o "props reenviadas") se refiere a la técnica de reenviar propiedades (props) de un componente a otro, generalmente cuando estás trabajando con componentes que envuelven elementos o tienen lógica adicional.
+
+Tenemos el caso de componentes que tienen una estructura repetida en forma de título-contenido.
 
 **CoreConcepts.jsx**
 
@@ -1968,9 +1970,9 @@ export default function CoreConcepts() {
 }
 ```
 
-En React, forwarded props (o "props reenviadas") se refieren a la técnica de reenviar propiedades (props) de un componente a otro, generalmente cuando estás trabajando con componentes que envuelven elementos o tienen lógica adicional.
+En este caso podemos construir otro componente que contenga en forma general esta estructura.
 
-Para utilizarlos debemos tomar como argumento del componente con el que se generaliza un nombre cualquiera con tres puntos antecediendolo (por ejemplo...props), con el que enviamos todos los props extra que necesitemos.
+**Section.jsx**
 
 ```javascript
 export default function Section({ title, children}) {
@@ -1982,6 +1984,17 @@ export default function Section({ title, children}) {
    );
 }   
 ```
+
+reemplazando el tag por defecto por nuestro componente personalizado:
+
+
+
+
+
+
+Para utilizarlos debemos tomar como argumento en el componente con el que se generaliza un nombre cualquiera con tres puntos antecediéndolo (por ejemplo...props), con el que enviamos todos los props extra que necesitemos.
+
+
 
 pero perdemos las reglas de estilo asociadas al tag id. Podemos solucionar esto desestructurando así:
 
