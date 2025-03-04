@@ -11,7 +11,10 @@ C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm start
 # Índice
 
 * [1 Levantando el cimiento de la aplicación](#1-Levantando-el-cimiento-de-la-aplicación)
-
+* [2 La barra de navegación entre páginas](#2-La-barra-de-navegación-entre-páginas)
+* [3 La cabecera](#3-La-cabecera)
+* [4 La página de presentación](#4-La-página-de-presentación)
+   
 ## 1 Levantando el cimiento de la aplicación
 
 1 En la terminal de vsc, instalados dentro de la carpeta donde desarrollaremos nuestro proyecto, ejecutamos:
@@ -108,6 +111,9 @@ const about = () => {
 export default about
 ```
 ---
+
+## 2 La barra de navegación entre páginas
+
 
 10 Importamos todas nuestras pages a App.jsx
 
@@ -572,7 +578,7 @@ const Navbar = () => {
 export default Navbar
 ```
 
-18 El codigo que permite se ejecute la animacion de despliegue del menu en formatos de pantalla peque;os se encuentra en el siguiente fragmento: 
+18 El código que permite se ejecute la animación de despliegue del menu en formatos de pantalla pequeños se encuentra en el siguiente fragmento: 
 
 ```css
  .nav__links li {
@@ -631,15 +637,21 @@ Notese la perspectiva que le entregamos al siguiente elemento:
 
 19 Queremos que al elegir una pagina de la barra de navegador (en pantallas medianas y pequeñas), ésta se cierre automaticamente como tambien que se cierre cuando hacemos click sobre el logo.
 
-para ello agregamos la funcion:\
+para ello agregamos la funcion:
+
+```javascript
 onClick={() => setIsNavShowing(prev => !prev)}\
 tanto al tag <Button> como al tag <NavLink>
+```
 
 y
 
-agregamos \
+agregamos 
+
+```javascript
 onClick={() => setIsNavShowing(false)}\
 al tag Link del logo
+```
 
 ```javascript
 import { useState } from 'react'
@@ -682,6 +694,10 @@ const Navbar = () => {
 
 export default Navbar
 ```
+
+***
+
+## 3 La cabecera
 
 20 Trabajaremos en la cabecera de nuestra pagina, que estara ubicado bajo la barra de navegación Navbar. Para ello construimos un componente **MainHeader.jsx** dentro de la carpeta **components** (lo importamos dentro del componente **Home.jsx**) cuyo css será **home.css** 
 
@@ -811,6 +827,8 @@ const App = () => {
    filter: blur(15px);
 }
 ```
+
+## 4 La página de presentación
 
 23 Le damos formato al boton de la pagina de inicio: "Get Started"
 
