@@ -17,7 +17,7 @@ C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm start
 1 En la terminal de vsc, instalados dentro de la carpeta donde desarrollaremos nuestro proyecto, ejecutamos:
 
 ```shell
-npm create-react-app ./ 
+npx create-react-app ./ 
 npm install react-icons 
 npm install react-router-dom 
 npm install web-vitals
