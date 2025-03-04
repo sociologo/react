@@ -2017,7 +2017,7 @@ pero eventualmente nos llenariamos de props. Utilizamos solo un prop extra con l
 ```javascript
 export default function Section({ title, children, ...props}) {
    return (
-      <section ...props{}>
+      <section ...props>
          <h2>{title}</h2>
          {children}
       </section>
@@ -2025,7 +2025,13 @@ export default function Section({ title, children, ...props}) {
 }   
 ```
 
-Tambien podemos aplicar esta tecnica aqui:
+> en `export default function Section({ title, children, ...props})` agrupamos los elementos con ...props.
+
+>en `<section ...props>` expandimos los elementos con ...props.
+
+Tambien podemos aplicar la técnica aqui:
+
+**TabButton.jsx**
 
 ```javascript
 export default function TabButton({children, onSelect, isSelected}) {
