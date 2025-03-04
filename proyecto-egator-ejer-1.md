@@ -43,12 +43,11 @@ Con la combinación de teclas **"doc"+tab** creamos automáticamente el siguient
 </html>
 ```
 
-4 Llevamos images a la carpeta src
+4 Llevamos la carpeta **images** a la carpeta **src**
 
-5 en la carpeta src creamos las siguientes otras cuatro carpetas:
+5 en la carpeta src creamos las siguientes otras tres carpetas:
 
 components\
-images\
 pages\
 UI
 
