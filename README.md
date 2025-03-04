@@ -1,5 +1,8 @@
 # REACT
 
+**proyecto-egator-ejer-1**: es un proyecto construido de cero siguiendo las instrucciones del manual 
+
+
 C:\Users\chris\Documentos\GitHub
 ---
 Proyecto Udemy:\
