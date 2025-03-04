@@ -2,9 +2,9 @@
 Script de arranque:
 
 ```bash
-C:\Users\chris> cd /
-C:> cd \Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1 /
-C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm install /
+C:\Users\chris> cd 
+C:> cd \Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1 
+C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm install 
 C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm start
 ```
 
