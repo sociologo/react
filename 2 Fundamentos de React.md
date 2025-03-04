@@ -1942,7 +1942,7 @@ function App() {
 
 # 4 conceptos cruciales
 
-## Forwarded props
+## 4.1 Forwarded props
 
 Nos encontramos con el caso de componentes que tienen en forma repetida la estructura de un titulo seguido de un contenido. En este caso podemos construir otro componente que contenga en forma general esta estructura.
 
@@ -2013,7 +2013,7 @@ export default function TabButton({children, isSelected, ...props}) {
 }
 ```
 
-## Ejercicio:
+## 4.2  Ejercicio:
 
 export default function Input({ richText, ...props }) {
     // Conditional rendering based on the richText prop
@@ -2021,13 +2021,13 @@ export default function Input({ richText, ...props }) {
 }
 
 
-## Slots adicionales
+## 4.3 Slots adicionales
 
 podriamos necesitar un componente de pestanas reutilizable.
 
-## Props como wrappers
+## 4.4 Props como wrappers
 
-## Valores de props por defecto
+## 4.5 Valores de props por defecto
 
 
 
@@ -2055,120 +2055,6 @@ Con esto termino acá
 <br>
 <br>
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Los props no se reenvían automaticamente
-
-Debido a esto los estilos se pireden.
-
-Añadiremos un componente Section.jsx con el que manipularemos la seccion de ejemplos.
-
-Pero existe un propblema : el atributo id se nos pierde. Debemos usar un patron proxy props (...props), que aseguren que todos los props siguientes no sean anadidos manualmente.
-
-## Los proxy props
-
-Utilizamos el operador spread (...props)
-
-### ejercicio Forwarding Props
-
-Su tarea es trabajar en el componente de `Input` de modo que devuelva un elemento `<textarea>` o un elemento `<input>`, dependiendo de si un prop `richText` sea establecido en `Input` como verdadero o falso.
-
-Es decir, si se usa así:
-
-<Input richText />
-
-el componente `Input` debería representar un `<textarea>`. De lo contrario, debería representar un `<input>`.
-
-Además, el componente de entrada debe reenviar todos los demás accesorios directamente a los elementos `<textarea>` o `<input>` devueltos.
-
-Es decir, debería poder usarse así:
-
-<Input type="text" placeholder="Your name" />
-
-(como se ve en el archivo App.js existente)
-
-La interfaz de usuario final debería verse así:
-
-
-# Trabajando con multiples slots JSX. Estableciendo tipos de componentes dinamicamente
-
-67
-
-El problema surge aca cuando nos vemos en la necesidad de utilizar multiples children. Para ello necesitamos un nuevo slot, que logramos estableciendo codigo jsx dentro de etiquetas.
-
-
-
-
-
-# Estableciendo valores de props por defecto
-
-68
-
-La idea es hacer componentes altament reutilizables. 
-
-## Ejercicio Crear componentes flexibles
-
-Tu tarea es crear un componente de botón personalizado y altamente reutilizable que se pueda usar de las siguientes maneras (consulte también el código en el archivo App.js):
-
-**"Filled" mode (default)**:
-
-<Button>Default</Button>
-
-or
-
-<Button mode="filled">Filled</Button>
-
-should yield buttons that looks like this:
-
-**"Outline" mode**:
-
-<Button mode="outline">Outline</Button>
-
-should yield a button that looks like this:
-
-**"Text-only" mode**:
-
-<Button mode="text">Text</Button>
-should yield a button that looks like this:
-
-**With Icon**:
-
-<Button Icon={HomeIcon}>Home</Button>
-or
-
-<Button Icon={PlusIcon} mode="text">
-  Add
-</Button>
-should yield buttons that look like this:
-
-Sugerencia: Para asegurarse de que el ícono se vuelva visible (si se pasa correctamente al componente y se usa allí), ajuste el componente del ícono en el botón con un <span> que tenga la clase "icono de botón".
-
-¡También envuelve el accesorio infantil con un <span>!
-
-¡Encontrará todos los estilos (clases CSS) necesarios para crear un botón que admita estos diferentes "modos" en el archivo index.css proporcionado!
-
-Todos los botones necesitan una clase CSS de botón y luego, dependiendo de su modo, clases adicionales.
-
-Además, el componente Botón personalizado debe aceptar todos los accesorios estándar que se puedan configurar en el <botón> integrado. Estos accesorios deben reenviarse al elemento <button> predeterminado que se utilizará en el componente Botón personalizado.
-
-Por lo tanto, su tarea es trabajar en el componente Button proporcionado en el archivo Button.js. No agregue varios componentes personalizados, en su lugar trabaje en ese componente proporcionado y asegúrese de que admita todos estos modos y funciones diferentes. También asegúrese de que, si no se establece ningún modo, el modo "lleno" se asume como predeterminado.
-
-
-
 
 
 
