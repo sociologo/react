@@ -1,6 +1,6 @@
 # REACT
 
-**proyecto-egator-ejer-1**: es un proyecto construido de cero siguiendo las instrucciones del manual 
+**proyecto-egator-ejer-1**: es un proyecto construido de cero siguiendo las instrucciones del manual **proyecto-egator-ejer-1.md**. A modo de ejercicio se construyen proyectos siguiendo la misma nomenclatura: **proyecto-egator-ejer-n**
 
 
 C:\Users\chris\Documentos\GitHub
