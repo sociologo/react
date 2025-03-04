@@ -1987,6 +1987,17 @@ export default function Section({ title, children}) {
 
 reemplazando el tag por defecto por nuestro componente personalizado:
 
+```
+return (
+ <Section id = "examples">
+
+ /* Some code...*/
+
+ </Section>
+ );
+```
+
+
 
 
 
