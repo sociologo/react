@@ -1940,7 +1940,7 @@ function App() {
 ```
 
 
-# 4 conceptos cruciales
+# 10 Cuatro conceptos cruciales
 
 ## 4.1 Forwarded props
 
