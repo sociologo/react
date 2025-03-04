@@ -10,10 +10,9 @@ C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm start
 
 # Índice
 
-* [1 En la terminal de vsc](#1-En-la-terminal-de-vsc)
+* [1 Levantando el cimiento de la aplicación](#1-Levantando-el-cimiento-de-la-aplicación)
 
-
-## 1 En la terminal de vsc
+## 1 Levantando el cimiento de la aplicación
 
 1 En la terminal de vsc, instalados dentro de la carpeta donde desarrollaremos nuestro proyecto, ejecutamos:
 
@@ -24,9 +23,10 @@ npm install react-router-dom
 npm install web-vitals
 ```
 
-2 Borramos todo dentro de las carpetas public y src.
+2 Borramos todo dentro de las carpetas **public** y **src**.
 
 3 Creamos el archivo index.html en la carpeta public.
+
 Con la combinación de teclas **"doc"+tab** creamos automáticamente el siguiente trozo de código:
 
 ```html
