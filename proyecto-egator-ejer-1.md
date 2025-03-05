@@ -68,7 +68,7 @@ root.render(<App/>)
 
 8 en la carpeta src creamos el archivo App.jsx:
 
-y con "rafce" enter:
+y con **rafce** + enter:
 
 ```javascript
 import React from 'react'
