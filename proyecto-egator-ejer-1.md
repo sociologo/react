@@ -87,7 +87,7 @@ export default App
 Aca voy 4 de marzo
 
 
-9 Dentro de la carpeta pages creamos carpetas para cada una de las páginas de nuestra aplicación y dentro de cada una de ellas un jsx con un css:
+9 Dentro de la carpeta pages creamos carpetas para cada una de las páginas de nuestra aplicación y dentro de cada una de ellas un jsx con un css (por el momento dejemos el css vacío). Toma como ejemplo About.jsx cuya estructura debe ser semejante en todas las carpetas:
 
 about\
 ___About.jsx\
@@ -99,7 +99,7 @@ notFound\
 plans\
 trainers
 
-Es importante siempre nombrar los componentes siempre con mayusculas.
+Es importante nombrar los componentes siempre con mayúsculas.
 
 ---About.jsx---
 ```javascript
@@ -118,7 +118,6 @@ export default about
 ---
 
 ## 2 La barra de navegación entre páginas
-
 
 10 Importamos todas nuestras pages a App.jsx
 
