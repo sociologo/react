@@ -2203,12 +2203,14 @@ Es posible que quisiéramos el siguiente componente aún más flexible:
 
 ```javascript
 export default function Tabs({children, buttons}) {
-   return <>
-      <menu>
-         {buttons}
-      <menu>
-      {children}
+   return (
+      <>
+         <menu>
+            {buttons}
+         <menu>
+         {children}
       </>
+   );
 }
 ```
 
