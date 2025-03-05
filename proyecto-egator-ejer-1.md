@@ -188,6 +188,20 @@ const Navbar = () => {
 export default Navbar
 ```
 
+> Comentario: recorremos un arreglo llamado "links" que contiene objetos con dos propiedades: "name" y "path". Durante el recorrido, estás generando elementos de una lista no ordenada (como una lista de navegación). Para cada objeto en el arreglo, estás creando un nuevo elemento de la lista que incluye un enlace asociado al valor de la propiedad "path" y muestra el texto de la propiedad "name".
+
+```javascript
+{
+  links.map(({name, path}, index) => {
+      return (
+          <li>
+              <NavLink to={path}>{name}</NavLink>
+          </li>
+      )
+  })
+}
+```
+
 12 Envolvemos nuestra **App.jsx** con el tag BrouserRouter e importamos en ella nuestro componente Navbar:
 
 ---**App.jsx**
