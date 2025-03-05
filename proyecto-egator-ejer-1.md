@@ -87,9 +87,11 @@ export default App
 Aca voy 4 de marzo
 
 
-9 dentro de la carpeta pages creamos carpetas para cada una de las paginas de nuestra aplicacion web y dentro de cada una de ellas un jsx  un css:
+9 Dentro de la carpeta pages creamos carpetas para cada una de las páginas de nuestra aplicación y dentro de cada una de ellas un jsx con un css:
 
 about\
+   About.jsx\
+   about.css\
 contact\
 gallery\
 home\
