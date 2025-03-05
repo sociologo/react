@@ -2214,23 +2214,112 @@ export default function Tabs({children, buttons}) {
 }
 ```
 
-para ser capaces de utilizar diferentes elementos de envoltura alrededor de `{buttons}` en vez de `<menu>`, como `<ul>` o `<div>`.
+para ser capaces de utilizar diferentes elementos de envoltura alrededor de `{buttons}` en vez de `<menu>`, como `<ul>` o `<div>` si el componente Tabs se utilizara en diferentes lugares de una aplicacion.
 
-Para ello debemos utilizar la siguiente estructura:
+Para ello debemos utilizar la siguiente estructura con la que le entregamos al componente elementos de envoltorio dinamicos:
 
 ```javascript
 export default function Tabs({children, buttons, buttonsContainer}) {
 
    const ButtonsContainer = buttonsContainer;
 
-   return <>
-      <ButtonsContainer>
-         {buttons}
-      <ButtonsContainer>
-      {children}
+   return (
+      <>
+         <ButtonsContainer>
+            {buttons}
+         <ButtonsContainer>
+         {children}
       </>
+   );
 }
 ```
+
+Anadiendo el elemento "menu" aqui:
+
+```javascript
+return (
+<Section title = "Examples" id = "examples">
+
+   <Tabs
+      buttons={
+      buttonsContainer = "menu"
+
+      /* si Section fuera un componente la sintaxis seria:     */
+      /* buttonsContainer = {Section}                          */
+
+         <>
+            <TabButton isSelected = {selectedTopic === "components"}
+               onClick={() => handleSelect('components')}
+            > Components </TabButton>
+            <TabButton isSelected = {selectedTopic === "jsx"}
+               onClick={() => handleSelect('jsx')}
+               >JSX</TabButton>
+            <TabButton isSelected = {selectedTopic === "props"}
+               onClick={() => handleSelect('props')}
+               >Props</TabButton>
+            <TabButton isSelected = {selectedTopic === "state"}
+               onClick={() => handleSelect('state')}
+               >State</TabButton>}>
+            </>
+   {tabContent}
+   </Tabs>
+
+   <menu>
+               
+   </menu>
+   {tabContent}
+</Section>
+);
+```
+
+Un atajo podria haber sido:
+
+```javascript
+export default function Tabs({children, buttons, ButtonsContainer}) {
+   return (
+      <>
+         <ButtonsContainer>
+            {buttons}
+         <ButtonsContainer>
+         {children}
+      </>
+   );
+}
+```
+ 
+```javascript
+return (
+<Section title = "Examples" id = "examples">
+
+   <Tabs
+      buttons={
+      ButtonsContainer = "menu"
+         <>
+            <TabButton isSelected = {selectedTopic === "components"}
+               onClick={() => handleSelect('components')}
+            > Components </TabButton>
+            <TabButton isSelected = {selectedTopic === "jsx"}
+               onClick={() => handleSelect('jsx')}
+               >JSX</TabButton>
+            <TabButton isSelected = {selectedTopic === "props"}
+               onClick={() => handleSelect('props')}
+               >Props</TabButton>
+            <TabButton isSelected = {selectedTopic === "state"}
+               onClick={() => handleSelect('state')}
+               >State</TabButton>}>
+            </>
+   {tabContent}
+   </Tabs>
+
+   <menu>
+               
+   </menu>
+   {tabContent}
+</Section>
+);
+```
+
+
 ---
 <br>
 <br>
@@ -2250,14 +2339,155 @@ inicio la leccion 68
 
 ## 4.5 Valores de props por defecto
 
+Supongamos que siempre vamos a querer utilizar el elemento "menu" como envoltorio por defecto en este componente.
+
+```javascript
+/* export default function Tabs({children, buttons, ButtonsContainer = Section}) { */
+export default function Tabs({children, buttons, ButtonsContainer = "menu"}) {
+   return (
+      <>
+         <ButtonsContainer>
+            {buttons}
+         <ButtonsContainer>
+         {children}
+      </>
+   );
+}
+```
+
+
 ## 4.6 Ejercicio: Creando componentes flexibles 
 
+Tu tarea es crear un componente `Button` personalizado y altamente reutilizable que se pueda usar de todas las siguientes maneras (consulte también el código en el archivo App.js):
+
+**App.js**
+```
+import Button from './Button';
+import HomeIcon from './HomeIcon';
+import PlusIcon from './PlusIcon';
+
+function App() {
+  return (
+     <div id="app">
+      <section>
+        <h2>Filled Button (Default)</h2>
+        <p>
+          <Button>Default</Button>
+        </p>
+        <p>
+          <Button mode="filled">Filled (Default)</Button>
+        </p>
+      </section>
+      <section>
+        <h2>Button with Outline</h2>
+        <p>
+          <Button mode="outline">Outline</Button>
+        </p>
+      </section>
+      <section>
+        <h2>Text-only Button</h2>
+        <p>
+          <Button mode="text">Text</Button>
+        </p>
+      </section>
+      <section>
+        <h2>Button with Icon</h2>
+        <p>
+          <Button Icon={HomeIcon}>Home</Button>
+        </p>
+        <p>
+          <Button Icon={PlusIcon} mode="text">
+            Add
+          </Button>
+        </p>
+      </section>
+      <section>
+        <h2>Buttons Should Support Any Props</h2>
+        <p>
+          <Button mode="filled" disabled>
+            Disabled
+          </Button>
+        </p>
+        <p>
+          <Button onClick={() => console.log('Clicked!')}>Click me</Button>
+        </p>
+      </section>
+    </div>
+  );
+}
+
+export default App;
+```
+
+1 Modo "Relleno" (predeterminado):
+
+`<Button>Default</Button>` o `<Button mode="filled">Relleno</Button>`
+
+debería generar botones que se vean así:
+
+![image](https://github.com/user-attachments/assets/a1dd4030-6c1f-4bcf-87a2-b0b3c62fdff2)
 
 
+2 Modo "Esquema":
 
+`<Button mode="outline">`Esquema`</Button>`
 
+debería generar un botón que se vea así:
 
+![image](https://github.com/user-attachments/assets/71158a59-8a4c-4e82-a91c-4517a7e380d6)
 
+3 Modo "Solo texto":
+
+`<Button mode="text">`Texto`</Button>`
+
+debería generar un botón que se vea así:
+
+![image](https://github.com/user-attachments/assets/a6c662b6-1635-4232-b116-6da120c67cab)
+
+4 Con ícono:
+
+`<Button Icon={HomeIcon}>`Inicio`</Button>` o 
+
+`<Button Icon={PlusIcon} mode="text">`
+Agregar
+`</Button>`
+
+debería generar botones que se vean así:
+
+![image](https://github.com/user-attachments/assets/03845a77-ac14-4dc5-bad7-9b4542f30986)
+
+Sugerencia: para asegurarse de que el ícono se vuelva visible (si se pasa correctamente al componente y se usa allí), envuelva el componente de ícono en el botón con un <span> que tenga la clase "button-icon" en él.
+
+¡También envuelva la propiedad children con un <span>!
+
+¡Encontrará todos los estilos (clases CSS) que se requieren para crear un botón que admita estos diferentes "modos" en el archivo index.css provisto!
+
+Todos los botones necesitan una clase CSS de botón y, luego, según su modo, clases adicionales.
+
+Además, el componente Button personalizado debe aceptar todas las propiedades estándar que se pueden configurar en el <button> integrado. Estas propiedades se deben reenviar al elemento <button> predeterminado que se utilizará en el componente Button personalizado.
+
+Por lo tanto, su tarea es trabajar en el componente Button proporcionado en el archivo Button.js. No agregue varios componentes personalizados, en su lugar trabaje en ese componente proporcionado y asegúrese de que admita todos estos diferentes modos y funciones. Asegúrese también de que, si no se configura ningún modo, se asuma el modo "lleno" como predeterminado.
+
+Respuesta:
+
+```javascript
+export default function Button({ mode = 'filled', Icon, children, ...props }) {
+  const buttonClass = `button ${
+    mode === 'outline' ? 'outline-button' : mode === 'text' ? 'text-button' : 'filled-button'
+  } ${Icon ? 'icon-button' : ''}`.trim();
+
+  return (
+    <button className={buttonClass} {...props}>
+      {Icon && (
+        <span className="button-icon">
+          <Icon />
+        </span>
+      )}
+      <span className="button-text">{children}</span>
+    </button>
+  );
+}
+```
 
 
 
