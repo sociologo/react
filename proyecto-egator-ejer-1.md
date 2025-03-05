@@ -122,7 +122,7 @@ export default about
 
 ## 2 La barra de navegación entre páginas
 
-10 Importamos todas nuestras pages a App.jsx
+10 Importamos todos nuestros componentes a **App.jsx**:
 
 ```javascript
 import About from './pages/about/About.jsx'
