@@ -99,18 +99,21 @@ notFound\
 plans\
 trainers
 
+![image](https://github.com/user-attachments/assets/9e12d339-51d2-416d-8116-24d88b86dde9)
+
 Es importante nombrar los componentes siempre con mayúsculas.
 
----About.jsx---
+**About.jsx**
+
 ```javascript
 import './about.css'
 
 const about = () => {
-  return (
-    <div>
-      About
-    </div>
-  )
+   return (
+      <div>
+         About
+      </div>
+   )
 }
 
 export default about
