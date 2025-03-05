@@ -202,6 +202,35 @@ export default Navbar
 }
 ```
 
+```javascript
+export const links = [
+    {
+        name: "Home",
+        path: '/'
+    },
+    {
+        name: "About",
+        path: '/about'
+    },
+    {
+        name: "Gallery",
+        path: '/gallery'
+    },
+    {
+        name: "Plans",
+        path: '/plans'
+    },
+    {
+        name: "Trainers",
+        path: '/trainers'
+    },
+    {
+        name: "Contact",
+        path: '/contact'
+    }
+]
+```
+
 12 Envolvemos nuestra **App.jsx** con el tag BrouserRouter e importamos en ella nuestro componente Navbar:
 
 ---**App.jsx**
