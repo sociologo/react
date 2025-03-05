@@ -2642,9 +2642,6 @@ export default Trainers
 }
 ```
 
-aca voy
-4 07'
-
 56 Construyamos el componente **Trainer.jsx** que guardaremos en la carpeta **components**.
 
 ```javascript
