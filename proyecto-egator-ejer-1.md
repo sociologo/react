@@ -84,9 +84,6 @@ const App = () => {
 export default App
 ```
 
-Aca voy 4 de marzo
-
-
 9 Dentro de la carpeta pages creamos carpetas para cada una de las páginas de nuestra aplicación y dentro de cada una de ellas un jsx con un css (por el momento dejemos el css vacío). Toma como ejemplo About.jsx cuya estructura debe ser semejante en todas las carpetas:
 
 about\
@@ -301,6 +298,9 @@ img {
    width: 100%;
 }
 ```
+
+**Aca voy 4 de marzo**
+
 
 14 Llevamos el link de los estilos de fuentes al archivo index.html:
 
