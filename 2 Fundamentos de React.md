@@ -18,7 +18,6 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
   * [13 Nuestro primer componente](#13-Nuestro-primer-componente)
   * [14 Ejercicio 1 Crear y usar un componente](#14-Ejercicio-1-Crear-y-usar-un-componente)
   * [15 Agregar contenido dinámico a una página web](#15-Agregar-contenido-dinámico-a-una-página-web)
-  
 * [2 Props](#2-Props)
   * [21 Intro](#21-Intro)
   * [22 Ejemplo](#22-Ejemplo)
