@@ -449,7 +449,7 @@ el proyecto luce asi:
 
 ## 24 Ejercicio 3 Trabajando con props
 
-Tu tarea es hacer que el componente `CourseGoal` sea reutilizable y configurable. Debe aceptar una entrada de "título" y una "descripción" y generar los datos recibidos entre las etiquetas <h2> (título) y <p> (descripción).
+Tu tarea es hacer que el componente `CourseGoal` sea reutilizable y configurable. Debe aceptar una entrada de "título" y una "descripción" y generar los datos recibidos entre las etiquetas `<h2>` (título) y `<p>` (descripción).
 
 El componente App debe mostrar al menos dos instancias del componente CourseGoal.
 
