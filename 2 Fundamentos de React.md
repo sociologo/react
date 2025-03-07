@@ -18,17 +18,19 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
   * [13 Nuestro primer componente](#13-Nuestro-primer-componente)
   * [14 Ejercicio 1 Crear y usar un componente](#14-Ejercicio-1-Crear-y-usar-un-componente)
   * [15 Agregar contenido dinámico a una página web](#15-Agregar-contenido-dinámico-a-una-página-web)
+  * [16 Ejercicio 2 Generación de contenido dinámico](#16-Ejercicio-2-Generación-de-contenido-dinámico)
 * [2 Props](#2-Props)
   * [21 Introducción](#21-Introducción)
   * [22 Inyectando data a un componente](#22-Inyectando-data-a-un-componente)
   * [23 Desestructurando props](#23-Desestructurando-props)
-  * [22 Ejemplo](#22-Ejemplo)
-
+  * [24 Ejercicio 3 Trabajando con props](#24-Ejercicio-3-Trabajando-con-props)
 * [3 Correcta organización de Componentes y CSS](#3-Correcta-organización-de-Componentes-y-CSS)
   * [31 Componentes](#31-Componentes)
   * [32 CSS](#32-CSS)
-    
-* [4 El concepto de children](#4-El-concepto-de-children)
+* [4 Composición de componentes y el concepto children](#4-Composición-de-componentes-y-el-concepto-children)
+
+
+
   * [41 Introducción](#41-Introducción)
   * [42 Ejercicio de composición de componentes](#42-Ejercicio-de-composición-de-componentes)
   * [43 Composición de componentes](#43-Composición-de-componentes)
@@ -392,13 +394,13 @@ export const CORE_CONCEPTS = [
 
 Considera el siguiente ejemplo:
 
-En los componentes `CORE_CONCEPTS[0]` y `CORE_CONCEPTS[1]`, la diferencia principal radica en cómo se manejan las propiedades (props).
+En los componentes `CoreConcept1` y `CoreConcept2`, la diferencia principal radica en cómo se manejan las propiedades (props).
 
-En CORE_CONCEPTS[0], las propiedades se agrupan en un solo objeto llamado props. Dentro del componente, se accede a cada propiedad utilizando la notación de punto, es decir, props.propertyName. Este enfoque puede ser menos intuitivo y más engorroso, ya que requiere referirse constantemente al objeto props para acceder a cada propiedad individual.
+En `CoreConcept1`, las propiedades se agrupan en un solo objeto llamado props. Dentro del componente, se accede a cada propiedad utilizando la notación de punto. Este enfoque puede ser menos intuitivo y más engorroso, ya que requiere referirse constantemente al objeto props para acceder a cada propiedad individual.
 
-Por otro lado, en CORE_CONCEPTS[1], las propiedades se **desestructuran** directamente en los parámetros de la función. Esto significa que las propiedades se extraen del objeto props y se pueden usar directamente sin necesidad de prefijos adicionales. Este método es más limpio y conciso, facilitando la lectura y el mantenimiento del código. La desestructuración de **props** en los parámetros de la función es una práctica recomendada en React, ya que mejora la claridad y la simplicidad del código.
+Por otro lado, en `CoreConcept2`, las propiedades se **desestructuran** directamente en los parámetros de la función. Esto significa que las propiedades se extraen del objeto props y se pueden usar directamente sin necesidad de prefijos adicionales. Este método es más limpio y conciso, facilitando la lectura y el mantenimiento del código. La desestructuración de **props** en los parámetros de la función es una práctica recomendada en React, ya que mejora la claridad y la simplicidad del código.
 
-En resumen, mientras que CORE_CONCEPTS[0] utiliza un enfoque más tradicional y explícito para manejar props, CORE_CONCEPTS[1] adopta una técnica más moderna y eficiente mediante la **desestructuración**, lo que resulta en un código más claro y fácil de entender.
+En resumen, mientras que `CoreConcept1` utiliza un enfoque más tradicional y explícito para manejar props, `CoreConcept2` adopta una técnica más moderna y eficiente mediante la **desestructuración**, lo que resulta en un código más claro y fácil de entender.
 
 ```Javascript
 function CoreConcept1({props}){
@@ -421,11 +423,11 @@ function CoreConcept2({image, title, description}){
 }
 ```
 
-Se están creando instancias del componente CoreConcept y se están pasando propiedades (props) de dos maneras diferentes.
+En el código de la sección 22 se están creando instancias del componente CoreConcept y se están pasando propiedades (props) de dos maneras diferentes.
 
 1 Primera instancia de CoreConcept: Aquí, las propiedades title, description e image se pasan explícitamente al componente CoreConcept utilizando valores específicos del array `CORE_CONCEPTS`. Cada propiedad se asigna individualmente a partir del primer objeto en el array (`CORE_CONCEPTS[0]`).
 
-2 Siguientes instancias de CoreConcept: En las siguientes tres instancias, se utiliza la sintaxis de desestructuración con el operador de propagación (...). Esto significa que todas las propiedades del objeto correspondiente en el array `CORE_CONCEPTS` se pasan automáticamente al componente CoreConcept. Por ejemplo, {`...CORE_CONCEPTS[1]`} pasa todas las propiedades del segundo objeto en el array (`CORE_CONCEPTS[1]`) al componente CoreConcept.
+2 Siguientes instancias de CoreConcept: En las siguientes tres instancias, se utiliza la sintaxis de desestructuración con el operador de propagación (...). Esto significa que todas las propiedades del objeto correspondiente en el array `CORE_CONCEPTS` se pasan automáticamente al componente CoreConcept. Por ejemplo, {`...CORE_CONCEPTS[1]`} pasa todas las propiedades del segundo objeto en el array (`CORE_CONCEPTS`) al componente CoreConcept.
 
 En resumen, la primera instancia pasa las propiedades de manera explícita y detallada, mientras que las siguientes instancias utilizan la desestructuración para pasar todas las propiedades de los objetos correspondientes de manera más concisa y eficiente. Esto hace que el código sea más limpio y fácil de mantener, especialmente cuando se trabaja con múltiples propiedades.
 
@@ -444,14 +446,21 @@ el proyecto luce asi:
 
 ![image](https://github.com/user-attachments/assets/06a6366f-bd76-456a-9cd3-0ef0d1677b3d)
 
-Ejercicio de codificación 5. Revisar que algo no anda bien:
 
-```javascript
-export function CourseGoal({TITLE, DESCRIPTION}) {
+## 24 Ejercicio 3 Trabajando con props
+
+Tu tarea es hacer que el componente `CourseGoal` sea reutilizable y configurable. Debe aceptar una entrada de "título" y una "descripción" y generar los datos recibidos entre las etiquetas <h2> (título) y <p> (descripción).
+
+El componente App debe mostrar al menos dos instancias del componente CourseGoal.
+
+Uno de esos componentes CourseGoal debe recibir un título de "Aprender React" y una descripción de "En profundidad". Los demás títulos y descripciones dependen completamente de ti.
+
+```python
+export function CourseGoal() {
   return (
     <li>
-      <h2>{TITLE}</h2>
-      <p>{DESCRIPTION}</p>
+      <h2>TITLE</h2>
+      <p>DESCRIPTION</p>
     </li>
   );
 }
@@ -462,14 +471,8 @@ function App() {
       <h1>Time to Practice</h1>
       <p>One course, many goals! 🎯</p>
       <ul>
-        <CourseGoal 
-            TITLE = "Learn React"
-            DESCRIPTION = "In-depth"
-        />
-        <CourseGoal
-            TITLE = "algo"
-            DESCRIPTION = "algo"
-        />
+        {/* OUTPUT AT LEAST TWO CourseGoal components here */}
+        {/* One of them should have a title of “Learn React” and a description of “In-depth” */}
       </ul>
     </div>
   );
@@ -478,11 +481,38 @@ function App() {
 export default App;
 ```
 
+Respuesta:
+
+```javascript
+export function CourseGoal({ title, description }) {
+  return (
+    <li>
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </li>
+  );
+}
+
+function App() {
+  return (
+    <div id="app" data-testid="app">
+      <h1>Time to Practice</h1>
+      <p>One course, many goals! 🎯</p>
+      <ul>
+        <CourseGoal title="Learn React" description="In-depth" />
+        <CourseGoal title="Practice JavaScript" description="With real projects" />
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+
+```
+
 # 3 Correcta organización de Componentes y CSS
 
 ## 31 Componentes
-
-leccion 47
 
 Idealmente cada componente debe estar en un archivo independiente. No se recomienda tener todos los componentes de una aplicación React en un mismo archivo por varias razones:
 
@@ -513,19 +543,15 @@ Debemos añadir la declaración de exportacion **export default** para poder imp
 
 ## 32 CSS
 
-leccion 48
+En React, es conveniente organizar los archivos CSS en carpetas por las mismas razones que lo hacemos con los componentes.
 
-En React, es conveniente organizar los archivos CSS en carpetas por las mismas razones que lo hacemos con los componentes: 
-
-Crearemos una carpeta Header dentro de la carpeta components en la que almacenaremos tanto el componente como el css relacionado al header, ajustando las rutas de importacion en **App.jsx**.
+Crearemos una carpeta Header dentro de la carpeta **components** en la que almacenaremos tanto el componente como el css relacionado al Header, ajustando las rutas de importacion en **App.jsx**.
 
 ![image](https://github.com/user-attachments/assets/5a412976-536a-4ef4-95a5-e61afefe6b3c)
 ![image](https://github.com/user-attachments/assets/1ae3035f-aeec-4dcd-8c30-89ad6d27f23f)
 ![image](https://github.com/user-attachments/assets/b89c56ed-46f1-4da5-ab0f-544ef4dbec27)
 
 # 4 Composición de componentes y el concepto children
-
-leccion 48
 
 ## 41 Introducción
 
