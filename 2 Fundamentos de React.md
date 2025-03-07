@@ -22,11 +22,6 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
   * [21 Introducción](#21-Introducción)
   * [22 Inyectando data a un componente](#22-Inyectando-data-a-un-componente)
   * [23 Desestructurando props](#23-Desestructurando-props)
-
-
-
-
-
   * [22 Ejemplo](#22-Ejemplo)
 
 * [3 Correcta organización de Componentes y CSS](#3-Correcta-organización-de-Componentes-y-CSS)
