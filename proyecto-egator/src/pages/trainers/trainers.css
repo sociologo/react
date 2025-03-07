@@ -41,11 +41,6 @@
     background: var(--color-gray-500)
 }
 
-
-
-
-
-
 /* MEDIA QUERIES (medium screens) */
 @media screen and (max-width: 1024px) {
     .trainers__container {
@@ -53,7 +48,6 @@
         gap: 2.5rem;
     }
 }
-
 
 /* MEDIA QUERIES (small screens) */
 @media screen and (max-width: 600px) {
