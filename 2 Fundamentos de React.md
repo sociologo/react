@@ -18,20 +18,6 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
   * [13 Nuestro primer componente](#13-Nuestro-primer-componente)
   * [14 Ejercicio 1 Crear y usar un componente](#14-Ejercicio-1-Crear-y-usar-un-componente)
   * [15 Agregar contenido dinámico a una página web](#15-Agregar-contenido-dinámico-a-una-página-web)
- 
-    
-
-
-
-
-
-  * [11 Características](#11-Caracteristicas)
-  * [12 Tipos de Componentes](#12-Tipos-de-Componentes)
-  * [13 Ejemplo](#13-Ejemplo)
-  * [14 Ventajas de Usar Componentes](#14-Ventajas-de-Usar-Componentes)
-  * [15 Nuestro primer componente](#15-Nuestro-primer-componente)
-  * [16 Reglas](#16-Reglas)
-* [Digresion Contenido dinamico en una web](#Digresion-Contenido-dinamico-en-una-web)
   
 * [2 Props](#2-Props)
   * [21 Intro](#21-Intro)
