@@ -33,10 +33,9 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
   * [43 El evento onClick](#43-El-evento-onClick)
   * [44 Pasar funciones como valores a las props](#44-Pasar-funciones-como-valores-a-las-props)
   * [45 Ejercicio 5 Reaccionando a eventos](#45-Ejercicio-5-Reaccionando-a-eventos)
-  * [43 Composición de componentes](#43-Composición-de-componentes)
-  * [44 Pasar funciones como valores a las props](#44-Pasar-funciones-como-valores-a-las-props)
-  * [45 Ejemplo de reacción a eventos](#45-Ejemplo-de-reacción-a-eventos)
   * [46 Pasando argumentos personalizados a funciones de eventos](#46-Pasando-argumentos-personalizados-a-funciones-de-eventos)
+
+
   * [47 Ejemplo Configuración de Manejadores de Eventos](#47-Ejemplo-Configuración-de-Manejadores-de-Eventos)
     
 * [5 El concepto de State y Hook](#4-El-concepto-de-State-y-Hook)
@@ -823,9 +822,9 @@ Supón un componente que ya ha sido preparado por un colega.
 
 El objetivo es actualizar los datos almacenados en el objeto `user` ya existente con algunos datos ficticios una vez que se presiona el botón "Login" en el componente `App`.
 
-Las propiedades email y password en el objeto user deben establecerse con cualquier valor de cadena no vacío. El campo loggedIn debe establecerse en verdadero.
+Las propiedades email y password en el objeto user deben establecerse con cualquier valor de cadena no vacío. El campo `loggedIn` debe establecerse en verdadero.
 
-Debe cambiar los valores de email, password y loggedIn cuando se presiona el botón en el componente App.
+Debes cambiar los valores de email, password y loggedIn cuando se presiona el botón en el componente App.
 
 ```JavaScript
 export const user = {
@@ -919,9 +918,20 @@ function App() {
 export default App;
 ```
 
-## 46 Pasando argumentos personalizados a funciones de eventos.
+---
+---
+<br>
+<br>
+<br>
+***Aca voy 7 de marzo***
+<br>
+<br>
+<br>
+---
+---
 
-52
+
+## 46 Pasando argumentos personalizados a funciones de eventos
 
 Ahora, dependiendo sobre qué botón hagamos el click es que queremos que se despliegue el contenido dinámico. Para ello establecemos cuatro strings que identifiquen a cada uno de los botones components, jsx, props y state.
 
