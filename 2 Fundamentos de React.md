@@ -13,7 +13,7 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
 # Índice
 
 * [1 Componentes](#1-Componentes)
-  * [11 La extensión JSX](#11-La-extensión-JSX)
+  * [11 La extensión JSX](#11-La-extension-JSX)
   * [12 Reglas de un JSX](#12-Reglas-de-un-JSX)
   * [13 Nuestro primer componente](#13-Nuestro-primer-componente)
   * [14 Ejercicio 1 Crear y usar un componente](#14-Ejercicio-1-Crear-y-usar-un-componente)
