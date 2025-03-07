@@ -28,11 +28,11 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
   * [31 Componentes](#31-Componentes)
   * [32 CSS](#32-CSS)
 * [4 Composición de componentes y el concepto children](#4-Composición-de-componentes-y-el-concepto-children)
-
-
-
   * [41 Introducción](#41-Introducción)
-  * [42 Ejercicio de composición de componentes](#42-Ejercicio-de-composición-de-componentes)
+  * [42 Ejercicio 4 Composición de componentes](#42-Ejercicio-4-Composición-de-componentes)
+  * [43 El evento onClick](#43-El-evento-onClick)
+  * [44 Pasar funciones como valores a las props](#44-Pasar-funciones-como-valores-a-las-props)
+  * [45 Ejercicio 5 Reaccionando a eventos](#45-Ejercicio-5-Reaccionando-a-eventos)
   * [43 Composición de componentes](#43-Composición-de-componentes)
   * [44 Pasar funciones como valores a las props](#44-Pasar-funciones-como-valores-a-las-props)
   * [45 Ejemplo de reacción a eventos](#45-Ejemplo-de-reacción-a-eventos)
@@ -535,7 +535,6 @@ Llamamos a nuestro componente así:
 
 ![image](https://github.com/user-attachments/assets/9ac3143b-5ed5-427b-86d8-2e83b2968233)
 
-
 **CoreConcepts.jsx** \
 ![image](https://github.com/user-attachments/assets/31a1d1da-d517-48e0-8974-3f113cb845cc)
 
@@ -561,10 +560,11 @@ Construiremos una sección interactiva, por lo que daremos contenido dinámico a
 
 Comenzaremos construyendo el botón y su funcionalidad.
 
-
 En React, **children** es una **prop** especial que permite a los componentes anidar otros dentro de ellos. En React, la prop **children** es una forma poderosa de componer componentes. Permite que un componente padre pase contenido a sus componentes hijos. Esto es especialmente útil para crear componentes reutilizables y flexibles. Básicamente, **children** representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente, contenido que puede ser una compleja estructura html que podemos llamar múltiples veces con tal solo utilizar una sola etiqueta html. 
 
-- 1 El componente `TabButton.jsx` (desestructurando):
+- 1 El componente `TabButton`
+
+**TabButton.jsx**
 
 ```Javascript
 export default function TabButton({children}) {
@@ -596,7 +596,7 @@ export default function TabButton({props}) {
 
 - Dentro del componente, se retorna un elemento `<li>` que contiene un botón (`<button>`).
 
-- `{.children}` se coloca dentro del botón, lo que permite que cualquier contenido pasado como `children` se muestre dentro del botón.
+- `{children}` se coloca dentro del botón, lo que permite que cualquier contenido pasado como `children` se muestre dentro del botón.
 
 - 2 El componente `TabButton` en `App.jsx`:
 
@@ -619,7 +619,7 @@ import TabButton from './components/TabButton.jsx';
 
 **Con `children` estamos ahorrando repetir líneas de código html.**
 
-Existe otra forma de hacer esto y también debes conocerla, la cual tiene sentido si tienes múltiples pequeñas piezas de información que deben ser pasadas a un componente. Añadiendo props extra en vez de solo envolver el contenido con los tags componentes significa mas trabajo.
+Existe otra forma de hacer esto y también debes conocerla, la cual tiene sentido si tienes múltiples pequeñas piezas de información que deben ser pasadas a un componente. El añadir **props** extra en vez de solo envolver el contenido con los tags componentes significa mas trabajo.
 
 ```Javascript
 export default function TabButton({label}) {
@@ -637,11 +637,11 @@ App.jsx
 ```Javascript
 import TabButton from './components/TabButton.jsx';
 <menu>
-  <TabButton label = 'Components'>Components</TabButton>                 
+  <TabButton label = '<Components'>Components</TabButton>                 
 </menu>
 ```
 
-## 42 Ejercicio de composición de componentes.
+## 42 Ejercicio 4 Composición de componentes
 
 Tu tarea es crear un componente `Card` reutilizable que tome un `name` como entrada y, además, pueda incluirse en cualquier código JSX.
 
@@ -707,15 +707,11 @@ const Card = ({ name, children }) => {
 export default Card;
 ```
 
-***
-
-## 43 El atributo onClick
-
-50
+## 43 El evento onClick
 
 Necesitamos ahora darle poder al click en los botones para que ejecuten la acción de mostrarnos un cuadro dinámico. 
 
-`onClick` es un evento en React que se utiliza para manejar las acciones de clic del usuario en un elemento. Es similar al evento onclick en JavaScript, pero se usa dentro de componentes de React. 
+`onClick` es un evento en React que se utiliza para manejar las acciones de click del usuario en un elemento. Es similar al evento `onclick` en JavaScript, pero se usa dentro de componentes de React. 
 
 Modificaremos nuestro componente para añadir el prop receptor de eventos **onClick** al elemento button entregándole la función handleClick() que se declarara dentro de la función de componente sin los paréntesis pues la necesitamos como valor:
 
@@ -758,19 +754,17 @@ document.querySelector('button').addEventListener('click', () => {})
 
 No queremos código imperativo como éste, no queremos interactuar con el DOM pues queremos que React lo haga. Es por ello que escribimos código declarativo.
 
-## 44 Pasar funciones como valores a las **props**.
+## 44 Pasar funciones como valores a las props
 
-51
-
-Hemos dicho que la función **handleClick** que se declarará dentro de la función de componente irá sin los paréntesis pues la necesitamos como valor. Requeriremos de ésta propiedad pues ahora queremos cambiar el contenido desplegado debajo de la fila de botones para acceder a distintos contenidos cada vez que se seleccionemos distintos botones. 
+Hemos dicho que la función **handleClick** que se declarará dentro de la función de componente irá sin los paréntesis pues la necesitamos como valor. Requeriremos de ésta propiedad pues ahora queremos cambiar el contenido desplegado debajo de la fila de botones para acceder a distintos contenidos cada vez que seleccionemos distintos botones. 
 
 Para ello necesitamos escuchar los clicks dentro de nuestro componente personalizado **TabButton**, porque debes manejar el evento en el componente que también administra los datos que se deben cambiar.
 
-La pregunta es, cómo le damos poder de acción, capacidad de ejecutar algo a la selección del botón? La respuesta es entregándole una **función como valor** al elemento **onClick** del componente (**handleClick**). Esto lo lograremon ingresando un segundo parámetro **prop** a la función de componente **TabButton** llamado **onSelect**.
+La pregunta es, ¿cómo le damos poder de acción, capacidad de ejecutar algo a la selección del botón? La respuesta es entregándole una **función como valor** al elemento **onClick** del componente (**handleClick**). Esto lo lograremon ingresando un segundo parámetro **prop** a la función de componente **TabButton** llamado **onSelect**.
 
 Luego pasaremos 'el puntero' **handSelect** a la prop **onSelect**.
 
-La función onSelect se activará cuando el botón sea clickeado y es la que le dará vida al componente dinámico.
+La función **onSelect** se activará cuando el botón sea clickeado y es la que le dará vida al componente dinámico.
 
 ```Javascript
 export default function TabButton({children, onSelect}) {
@@ -821,9 +815,9 @@ function App() {
 
 export default App;
 ```
-Ahora estamos preparados para cambiar la data en el contenido dinamico.
+Ahora estamos preparados para cambiar la data en el contenido dinámico.
 
-## 45 Ejemplo de reacción a eventos
+## 45 Ejercicio 5 Reaccionando a eventos
 
 Supón un componente que ya ha sido preparado por un colega.
 
