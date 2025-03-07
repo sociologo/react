@@ -1,7 +1,5 @@
 # REACT: elementos del framework
 
-inicio en **la lección 35** Sección 3
-
 script de arranque:
 
 ```bash
@@ -12,9 +10,21 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm install
 C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
 ```
 
-## Índice
+# Índice
 
 * [1 Componentes](#1-Componentes)
+  * [11 La extensión JSX](#11-La-extensión-JSX)
+  * [12 Reglas de un JSX](#12-Reglas-de-un-JSX)
+  * [13 Nuestro primer componente](#13-Nuestro-primer-componente)
+  * [14 Ejercicio 1 Crear y usar un componente](#14-Ejercicio-1-Crear-y-usar-un-componente)
+  * [15 Agregar contenido dinámico a una página web](#15-Agregar-contenido-dinámico-a-una-página-web)
+ 
+    
+
+
+
+
+
   * [11 Características](#11-Caracteristicas)
   * [12 Tipos de Componentes](#12-Tipos-de-Componentes)
   * [13 Ejemplo](#13-Ejemplo)
@@ -66,27 +76,27 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
 
 # 1 Componentes
 
-En React, un componente es una pieza reutilizable y autónoma de código que define una parte de la interfaz de usuario. Los componentes son los bloques de construcción fundamentales de una aplicación React. Son bloques de código pequeños y potencialmente reutilizables. 
+En React, un componente es una pieza pequeña, reutilizable y autónoma de código que define una parte de la interfaz de usuario. Los componentes son los bloques de construcción fundamentales de una aplicación React. 
 
-Como buena práctica los elementos HTML, JS y CSS relacionados se almacenan en archivos contiguos, lo que favorece una separación de competencias.
+Como buena práctica, los elementos HTML, JS y CSS relacionados se almacenan en archivos contiguos, lo que favorece la separación de competencias.
 
-## 11 La extension JSX.
+## 11 La extension JSX
 
-Los componentes en React se almacenan como archivos JSX, los cuales son simplemente funciones JS.
+Los componentes en React se almacenan como archivos JSX, los cuales son simplemente funciones en JavaScript.
 
-JSX, o JavaScript XML, es una extensión de sintaxis para JavaScript que permite a los desarrolladores escribir código que se asemeja al HTML dentro de un archivo JavaScript. Se utiliza para describir y crear elementos en JS de una manera declarativa. No es soportada por los navegadores, por lo que requiere de un proceso de transformación tras bambalinas antes de que llegue al navegador.
+JSX, o JavaScript XML, es una extensión de sintaxis para JavaScript que permite a los desarrolladores escribir código que se asemeja al HTML dentro de un archivo JavaScript. Se utiliza para describir y crear elementos en JS de una manera **declarativa**. No es soportada por los navegadores, por lo que requiere de un proceso de transformación tras bambalinas antes de renderizarse en ellos.
 
 ## 12 Reglas de un JSX
 
 Un componente de React debe seguir las siguientes reglas:
 
-1 El nombre de la función debe comenzar con una mayúscula.
+1 Su nombre debe comenzar con una mayúscula.
 
-2 La función debe retornar un contenido renderizable, esto es, contenido que react pueda desplegar en el navegador.
+2 El componente debe retornar un contenido renderizable, esto es, contenido que React pueda desplegar en el navegador.
 
 ## 13 Nuestro primer componente
 
-**En React puedes usar las funciones de componentes como etiquetas regulares HTML dentro del código JSX**. Observe el componente personalizado `Header()`:
+**En React puedes usar las funciones de componentes como etiquetas regulares HTML dentro del código JSX**. Observa el componente personalizado `Header()`:
 
 **App.jsx**
 
@@ -108,7 +118,7 @@ function Header() {
 function App() {
    return (
       <div>
-         <Header />
+         <Header/>
          <main>
             <h2> Time to get started! </h2>
          <main>
@@ -121,53 +131,41 @@ export default App;
 
 Por el momento, ambos componentes se almacenan en el archivo App.jsx (aunque esto cambiará más adelante).
 
-Encontrará proyectos de React que no usan .jsx sino sólo .js como extensión. Y en ésos archivos .js, también encontrars código JSX. Porque simplemente depende del proceso de compilación subyacente qué extensión se espera al usar esta sintaxis JSX en un archivo. No existe una regla estricta al respecto. En su lugar, encontrará proyectos que requieren .jsx (como la configuración de proyecto que usamos en este curso) y encontrará proyectos que también admiten .js (con código JSX dentro).
+Encontrarás proyectos de React que no usan .jsx sino sólo .js como extensión. Y en ésos archivos .js, también encontrars código JSX. Porque simplemente depende del proceso de compilación subyacente qué extensión se espera al usar esta sintaxis JSX en un archivo. No existe una regla estricta al respecto. En su lugar, encontrarás proyectos que requieren .jsx (como la configuración de proyecto que usamos en este curso) y proyectos que también admiten .js (con código JSX dentro).
 
-Estoy enfatizando esto aquí para que no se confunda si encuentra proyectos de React que no usan archivos .jsx.
+Además, también encontrarás proyectos que requieren la extensión de archivo como parte de la importación de archivos (por ejemplo, importar aplicación desde './App.jsx') y encontrarás otros que no la requieren (es decir, podrías simplemente importar la aplicación desde './App').
 
-Además, también encontrará proyectos que requieren la extensión de archivo como parte de la importación de archivos (por ejemplo, importar aplicación desde './App.jsx') y encontrará otros proyectos que no la requieren (es decir, podría simplemente usar importar aplicación desde './App').
+## 14 Ejercicio 1 Crear y usar un componente
 
-## 14 Ejercicio 1
+Debes crear un nuevo componente `MainGoal` que genere un párrafo de texto que despliegue un texto.
 
-Su tarea es crear un nuevo componente `MainGoal` que genere un párrafo de texto que describa el objetivo principal del curso (por ejemplo, "Mi objetivo principal: aprender React en profundidad y desde cero"). Tendrás que crear este nuevo componente desde cero y luego usarlo dentro del código JSX del componente de la aplicación.
+describa el objetivo principal del curso (por ejemplo, "Mi objetivo principal: aprender React en profundidad y desde cero"). 
 
-La aplicación terminada podría verse así:
-
-![image](https://github.com/user-attachments/assets/b3ba17ab-8447-4b2c-af6c-8b5cc0819c5f)
-
-(observe el texto "Mi objetivo principal: aprender a reaccionar desde cero" en la parte inferior)
+Tendrás que crear este nuevo componente desde cero y luego usarlo dentro del código JSX del componente de la `App`.
 
 ```JavaScript
 import React from 'react';
 
-// DEFINA EL COMPONENTE ACA
+// DEFINE EL COMPONENTE ACA
 
 function App() {
   return (
     <div id="app">
-      <h1>Time to Practice!</h1>
+      <h1>Texto</h1>
       <p>
-        Build a <code>&lt;MainGoal&gt;</code> component and insert it below this
-        text.
+        Texto
       </p>
       <p>
-        Your <code>&lt;MainGoal&gt;</code> component should simply output some
-        text that describes your main course goal (e.g., &quot;My main goal:
-        Learn React in great detail&quot;).
+        Texto
       </p>
       <p>
-        <strong>Important:</strong> You custom component must contain the text
-        &quot;My main goal:&quot;
+        Texto
       </p>
       <p>
-        <strong>Also important:</strong> For the automatic checks to succeed,
-        you <strong>must export</strong> your custom component function! Not as
-        a default but simply by adding the <code>export</code> keyword in front
-        of your function (e.g., <code>export function YOUR_COMPONENT_NAME</code>
-        ).
+        Texto
       </p>
 
-      {/* DE SALIDA A SU COMPONENTE ACA */}
+      {/* DA SALIDA A TU COMPONENTE ACA */}
 
     </div>
   );
@@ -181,43 +179,31 @@ Respuesta:
 ```JavaScript
 import React from 'react';
 
-// DEFINE YOUR COMPONENT HERE
-// IMPORTANT: Add "export" in front of your component - otherwise the automated tests won't work
 export function MainGoal() {
   return (
-    <p>My main goal: Learn react from the ground up</p>
+    <p>Texto</p>
   );
 }
-
-// DO NOT EDIT THE APP COMPONENT NAME OR CONTENT
-// Except for outputting your custom component
 
 function App() {
   return (
     <div id="app">
-      <h1>Time to Practice!</h1>
+      <h1>Texto</h1>
       <p>
-        Build a <code>&lt;MainGoal&gt;</code> component and insert it below this
-        text.
+        Texto
       </p>
       <p>
-        Your <code>&lt;MainGoal&gt;</code> component should simply output some
-        text that describes your main course goal (e.g., "My main goal: Learn React in great detail").
+        Texto
       </p>
       <p>
-        <strong>Important:</strong> You custom component must contain the text
-        "My main goal:"
+        Texto
       </p>
       <p>
-        <strong>Also important:</strong> For the automatic checks to succeed,
-        you <strong>must export</strong> your custom component function! Not as
-        a default but simply by adding the <code>export</code> keyword in front
-        of your function (e.g., <code>export function YOUR_COMPONENT_NAME</code>
-        ).
+        Texto
       </p>
-      {/* DON'T CHANGE THE TEXT / CONTENT ABOVE */}
-      {/* OUTPUT YOUR COMPONENT HERE */}
-      <MainGoal />
+
+      <MainGoal/>
+
     </div>
   );
 }
@@ -225,7 +211,7 @@ function App() {
 export default App;
 ```
 
-## 15 Agregar contenido dinámico a una página web. 
+## 15 Agregar contenido dinámico a una página web
 
 La sintaxis especial de llaves nos permite agregar contenido dinámico a una página web y configurar dinámicamente atributos HTML y la carga de archivos de imágenes.
 
