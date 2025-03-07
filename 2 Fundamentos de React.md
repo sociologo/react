@@ -19,7 +19,14 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
   * [14 Ejercicio 1 Crear y usar un componente](#14-Ejercicio-1-Crear-y-usar-un-componente)
   * [15 Agregar contenido dinámico a una página web](#15-Agregar-contenido-dinámico-a-una-página-web)
 * [2 Props](#2-Props)
-  * [21 Intro](#21-Intro)
+  * [21 Introducción](#21-Introducción)
+  * [22 Inyectando data a un componente](#22-Inyectando-data-a-un-componente)
+  * [23 Desestructurando props](#23-Desestructurando-props)
+
+
+
+
+
   * [22 Ejemplo](#22-Ejemplo)
 
 * [3 Correcta organización de Componentes y CSS](#3-Correcta-organización-de-Componentes-y-CSS)
@@ -140,15 +147,6 @@ function App() {
       <p>
         Texto
       </p>
-      <p>
-        Texto
-      </p>
-      <p>
-        Texto
-      </p>
-      <p>
-        Texto
-      </p>
 
       {/* DA SALIDA A TU COMPONENTE ACA */}
 
@@ -177,15 +175,6 @@ function App() {
       <p>
         Texto
       </p>
-      <p>
-        Texto
-      </p>
-      <p>
-        Texto
-      </p>
-      <p>
-        Texto
-      </p>
 
       <MainGoal/>
 
@@ -198,15 +187,85 @@ export default App;
 
 ## 15 Agregar contenido dinámico a una página web
 
-La sintaxis especial de llaves nos permite agregar contenido dinámico a una página web y configurar dinámicamente atributos HTML y la carga de archivos de imágenes.
+La sintaxis especial de llaves nos permite agregar contenido dinámico a una página web. Veamos el siguiente ejemplo:
 
 ![image](https://github.com/user-attachments/assets/bae63692-bffe-42ca-9fb2-ebea39f3f166)
 
-La función Math.random() en JavaScript devuelve un número de coma flotante pseudo-aleatorio comprendido en el rango de 0 (incluido) a 1 (excluido). Esto significa que el valor devuelto puede ser 0, pero siempre será menor que 1.
+La función `Math.random()` en JavaScript devuelve un número de coma flotante pseudo-aleatorio comprendido en el rango de 0 (incluido) a 1 (excluido). Esto significa que el valor devuelto puede ser 0, pero siempre será menor que 1. Este número hace que cargue aleatoriamente el valor del índice del arreglo que contiene tres palabras, que cargarán azarosamente cada vez que se despliegue la página.
 
-**Ejercicio**
+## 16 Ejercicio 2 Generación de contenido dinámico
 
-falta ingresar el ejercicio de valores dinamicos con {}
+Debes generar el nombre y apellido del usuario almacenados en el objeto `userData`, dentro del elemento <h2> del componente `User`. Además, debes generar el título (también almacenado en `userData`) en el elemento <p> dentro del componente User.
+
+```python
+import React from 'react';
+
+export const userData = {
+   firstName: 'Christian', 
+   lastName: 'Castro',
+   title: 'Instructor', 
+};
+
+export function User() {
+   return (
+      <div id="user" data-testid="user">
+         <h2>
+           TODO: FIRST NAME LAST NAME
+         </h2>
+         <p>TODO: TITLE</p>
+      </div>
+   );
+}
+
+// DON'T edit the App component code
+function App() {
+  return (
+    <div id="app">
+      <h1>Texto</h1>
+      <p>Texto</p>
+      <User />
+    </div>
+  );
+}
+
+export default App;
+```
+
+Respuesta:
+
+```python
+import React from 'react';
+
+export const userData = {
+   firstName: 'Christian', 
+   lastName: 'Castro', 
+   title: 'Instructor', 
+};
+
+export function User() {
+   return (
+      <div id="user" data-testid="user">
+         <h2>
+            {userData.firstName} {userData.lastName}
+         </h2>
+         <p>{userData.title}</p>
+      </div>
+   );
+}
+
+// DON'T edit the App component code
+function App() {
+  return (
+    <div id="app">
+      <h1>Texto</h1>
+      <p>Texto</p>
+      <User />
+    </div>
+  );
+}
+
+export default App;
+```
 
 # 2 Props
 
@@ -216,7 +275,7 @@ En React, los **props** (abreviatura de “properties”) son una forma de pasar
 
 Los **props** se utilizan para pasar datos desde un componente padre a un componente hijo. Esto permite que el componente hijo acceda a esos datos y los utilice para renderizar contenido dinámico. Los **props** son inmutables, lo que significa que un componente no puede cambiar sus propios **props**. Esto asegura que los datos fluyan en una sola dirección, de arriba hacia abajo, lo que se conoce como “flujo de datos unidireccional”.
 
-Los props poseeen una sintaxis similar a HTML. 
+Los **props** poseeen una sintaxis similar a HTML. 
 
 Ventajas de Usar Props
 
@@ -243,7 +302,23 @@ import {CORE_CONCEPTS} from "./data.js";
 import reactImg from './assets/react-core-concepts.png';
 import componentsImg from './assets/components.png';
 
-// ... (código omitido)
+const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
+
+function genRandomInt(max) {
+  return Math.floor(Math.random() * (max + 1));
+}
+
+function Header() {
+  return (
+    <header>
+      <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+      <h1>React Essentials</h1>
+      <p>
+        Fundamental React concepts you will need for almost any app you are going to build!
+      </p>
+    </header>
+  );
+}
 
 function CoreConcept({image, title, description}){
    return (
@@ -258,7 +333,7 @@ function CoreConcept({image, title, description}){
 function App() {
    return (
       <div>
-         <Header />
+         <Header/>
          <main>
             <section id = 'core-concepts'>
                <h2>
@@ -320,7 +395,9 @@ export const CORE_CONCEPTS = [
 
 ## 23 Desestructurando props
 
-En los componentes CORE_CONCEPTS[0] y CORE_CONCEPTS[1], la diferencia principal radica en cómo se manejan las propiedades (props).
+Considera el siguiente ejemplo:
+
+En los componentes `CORE_CONCEPTS[0]` y `CORE_CONCEPTS[1]`, la diferencia principal radica en cómo se manejan las propiedades (props).
 
 En CORE_CONCEPTS[0], las propiedades se agrupan en un solo objeto llamado props. Dentro del componente, se accede a cada propiedad utilizando la notación de punto, es decir, props.propertyName. Este enfoque puede ser menos intuitivo y más engorroso, ya que requiere referirse constantemente al objeto props para acceder a cada propiedad individual.
 
@@ -351,9 +428,9 @@ function CoreConcept2({image, title, description}){
 
 Se están creando instancias del componente CoreConcept y se están pasando propiedades (props) de dos maneras diferentes.
 
-Primera instancia de CoreConcept: Aquí, las propiedades title, description e image se pasan explícitamente al componente CoreConcept utilizando valores específicos del array CORE_CONCEPTS. Cada propiedad se asigna individualmente a partir del primer objeto en el array (CORE_CONCEPTS[0]).
+1 Primera instancia de CoreConcept: Aquí, las propiedades title, description e image se pasan explícitamente al componente CoreConcept utilizando valores específicos del array `CORE_CONCEPTS`. Cada propiedad se asigna individualmente a partir del primer objeto en el array (`CORE_CONCEPTS[0]`).
 
-Siguientes instancias de CoreConcept: En las siguientes tres instancias, se utiliza la sintaxis de desestructuración con el operador de propagación (...). Esto significa que todas las propiedades del objeto correspondiente en el array CORE_CONCEPTS se pasan automáticamente al componente CoreConcept. Por ejemplo, {...CORE_CONCEPTS[1]} pasa todas las propiedades del segundo objeto en el array (CORE_CONCEPTS[1]) al componente CoreConcept.
+2 Siguientes instancias de CoreConcept: En las siguientes tres instancias, se utiliza la sintaxis de desestructuración con el operador de propagación (...). Esto significa que todas las propiedades del objeto correspondiente en el array `CORE_CONCEPTS` se pasan automáticamente al componente CoreConcept. Por ejemplo, {`...CORE_CONCEPTS[1]`} pasa todas las propiedades del segundo objeto en el array (`CORE_CONCEPTS[1]`) al componente CoreConcept.
 
 En resumen, la primera instancia pasa las propiedades de manera explícita y detallada, mientras que las siguientes instancias utilizan la desestructuración para pasar todas las propiedades de los objetos correspondientes de manera más concisa y eficiente. Esto hace que el código sea más limpio y fácil de mantener, especialmente cuando se trabaja con múltiples propiedades.
 
