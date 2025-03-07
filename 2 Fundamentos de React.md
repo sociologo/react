@@ -192,7 +192,7 @@ La función `Math.random()` en JavaScript devuelve un número de coma flotante p
 
 ## 16 Ejercicio 2 Generación de contenido dinámico
 
-Debes generar el nombre y apellido del usuario almacenados en el objeto `userData`, dentro del elemento <h2> del componente `User`. Además, debes generar el título (también almacenado en `userData`) en el elemento <p> dentro del componente User.
+Debes generar el nombre y apellido del usuario almacenados en el objeto `userData`, dentro del elemento `<h2>` del componente `User`. Además, debes generar el título (también almacenado en `userData`) en el elemento <p> dentro del componente `User`.
 
 ```python
 import React from 'react';
