@@ -272,7 +272,7 @@ const App = () => {
 export default App
 ```
 
-13 Le damos estilos al index.css
+13 Le damos estilos al **index.css**:
 
 ```css
 *, *::before, *::after {
@@ -366,7 +366,7 @@ img {
 **Aca voy 4 de marzo**
 
 
-14 Llevamos el link de los estilos de fuentes al archivo index.html:
+14 Llevamos el link de los estilos de fuentes al archivo **index.html**:
 
 ```html
 <html lang="en">
@@ -384,7 +384,7 @@ img {
 </html>
 ```
 
-15 Le damos estilos al archivo navbar.css:
+15 Le damos estilos al archivo **navbar.css**:
 
 ```css
 nav {
@@ -459,6 +459,11 @@ nav {
    bottom: -0.5rem;
 }
 
+/*Este fragmento de código CSS utiliza una media query para aplicar estilos
+específicos a dispositivos con un ancho de pantalla de 1024 píxeles o menos.
+Lo hacemos para darle un efecto de despliegue animado del menu al navegador
+de páginas cuando la pantalla se haga más pequeña:*/
+
 /* MEDIA QUERIES (medium and small screens) */
 @media screen and (max-width: 1024px) {
    .nav__toggle-btn {
@@ -480,6 +485,12 @@ nav {
        gap: 0;
        perspective: 400px;
    }
+
+/*este fragmento de CSS asegura que tanto el elemento con la clase
+active-nav como su pseudo-elemento ::after no se muestren en la página.
+Este tipo de regla es útil, por ejemplo, en menús de navegación
+dinámicos donde se desea ocultar ciertos elementos bajo condiciones
+específicas.*/
 
    .active-nav, .active-nav::after {
        display: none;
@@ -545,7 +556,7 @@ nav {
 }
 ```
 
-16 Agregamos la prop isActive al tag <NavLink> del componente Navbar.jsx:
+16 Agregamos la prop isActive al tag `<NavLink>` del componente **Navbar.jsx**:
 
 ```javascript
 import {Link, NavLink} from 'react-router-dom'
