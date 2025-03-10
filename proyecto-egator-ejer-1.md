@@ -496,37 +496,6 @@ específicas.*/
        display: none;
    }
 
-<!--Este código CSS crea una animación fluida y dinámica para elementos de
-una lista (li) dentro de `.nav__links`. Voy a desglosar lo que hace cada parte:
-Estilos generales para `.nav__links li`
-`height`: 4rem; y width: 100%;: Cada elemento de lista tiene una altura de
-4 rems y ocupa el 100% del ancho de su contenedor.
-`box-shadow`: -2rem 2rem 5rem rgba(0, 0, 0, 0.5);: Agrega una sombra al
-elemento para darle profundidad, simulando un efecto tridimensional.
-animation: navAnimation 600ms ease forwards;: Aplica una animación
-personalizada llamada navAnimation que dura 600 milisegundos, con una
-transición suave gracias a ease. La propiedad forwards asegura que el
-estilo final de la animación se mantenga después de que esta termine.
-transform: rotateX(90deg);: Inicialmente, cada elemento se rota 90 grados
-en el eje X, haciéndolo invisible desde esa perspectiva.
-opacity: 0;: Los elementos empiezan completamente transparentes.
-transform-origin: top;: Establece que la rotación ocurra desde la parte
-superior de cada elemento.
-Animaciones secuenciales con nth-child
-Las reglas para nth-child asignan un retraso (animation-delay) distinto
-para cada elemento de la lista. Esto significa que las animaciones de
-los elementos se reproducen en secuencia:
-El segundo elemento se anima con un retraso de 200 ms.
-El tercero, con 400 ms, y así sucesivamente.
-Esto crea un efecto escalonado, perfecto para menús desplegables o
-transiciones elegantes.
-Definición de la animación @keyframes navAnimation
-to { transform: rotateX(0); opacity: 1; }: Esta regla define el estado
-final de la animación:
-Los elementos terminan sin rotación (rotateX(0)).
-La opacidad se establece en 1, haciendo que los elementos sean
-completamente visibles.-->
-
    .nav__links li {
        height: 4rem;
        width: 100%;
@@ -585,6 +554,89 @@ completamente visibles.-->
        display: none;
    }
 }
+```
+
+>Este código CSS crea una animación fluida y dinámica para elementos de
+una lista (li) dentro de `.nav__links`. Voy a desglosar lo que hace cada parte:
+Estilos generales para `.nav__links li`
+`height`: 4rem; y width: 100%;: Cada elemento de lista tiene una altura de
+4 rems y ocupa el 100% del ancho de su contenedor.
+`box-shadow`: -2rem 2rem 5rem rgba(0, 0, 0, 0.5);: Agrega una sombra al
+elemento para darle profundidad, simulando un efecto tridimensional.
+animation: navAnimation 600ms ease forwards;: Aplica una animación
+personalizada llamada navAnimation que dura 600 milisegundos, con una
+transición suave gracias a ease. La propiedad forwards asegura que el
+estilo final de la animación se mantenga después de que esta termine.
+transform: rotateX(90deg);: Inicialmente, cada elemento se rota 90 grados
+en el eje X, haciéndolo invisible desde esa perspectiva.
+opacity: 0;: Los elementos empiezan completamente transparentes.
+transform-origin: top;: Establece que la rotación ocurra desde la parte
+superior de cada elemento.
+Animaciones secuenciales con nth-child
+Las reglas para nth-child asignan un retraso (animation-delay) distinto
+para cada elemento de la lista. Esto significa que las animaciones de
+los elementos se reproducen en secuencia:
+El segundo elemento se anima con un retraso de 200 ms.
+El tercero, con 400 ms, y así sucesivamente.
+Esto crea un efecto escalonado, perfecto para menús desplegables o
+transiciones elegantes.
+Definición de la animación @keyframes navAnimation
+to { transform: rotateX(0); opacity: 1; }: Esta regla define el estado
+final de la animación:
+Los elementos terminan sin rotación (rotateX(0)).
+La opacidad se establece en 1, haciendo que los elementos sean
+completamente visibles.
+```
+   .nav__links li {
+       height: 4rem;
+       width: 100%;
+       box-shadow: -2rem 2rem 5rem rgba(0, 0, 0, 0.5);
+       animation: navAnimation 600ms ease forwards;
+       transform: rotateX(90deg);
+       opacity: 0;
+       transform-origin: top;
+   }
+
+   .nav__links li:nth-child(2) {
+       animation-delay: 200ms;
+   }
+
+   .nav__links li:nth-child(3) {
+       animation-delay: 400ms;
+   }
+
+   .nav__links li:nth-child(4) {
+       animation-delay: 600ms;
+   }
+
+   .nav__links li:nth-child(5) {
+       animation-delay: 800ms;
+   }
+
+   .nav__links li:nth-child(6) {
+       animation-delay: 1s;
+   }
+
+   .nav__links li:nth-child(7) {
+       animation-delay: 1.2s;
+   }
+
+   @keyframes navAnimation {
+       to {
+           transform: rotateX(0);
+           opacity: 1;
+       }
+   }
+
+   .nav__links li a {
+       background-color: var(--color-primary);
+       height: 100%;
+       width: 100%;
+       display: flex;
+       align-items: center;
+       padding: 1rem 5rem 1rem 3rem;
+   }
+
 ```
 
 16 Agregamos la prop isActive al tag `<NavLink>` del componente **Navbar.jsx**:
