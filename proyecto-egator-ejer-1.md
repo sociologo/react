@@ -20,7 +20,7 @@ C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm start
    
 ## 1 Levantando el cimiento de la aplicación
 
-1 En la terminal de vsc, instalados dentro de la carpeta donde desarrollaremos nuestro proyecto, ejecutamos:
+1 En la terminal de vsc, instalados dentro de la carpeta donde desarrollaremos nuestro proyecto, creamos el proyecto base:
 
 ```shell
 npx create-react-app ./ 
