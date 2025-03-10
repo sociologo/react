@@ -8,9 +8,6 @@ C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm install
 C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm start
 ```
 
-
-
-
 # Índice
 
 * [1 Levantando el cimiento de la aplicación](#1-Levantando-el-cimiento-de-la-aplicación)
@@ -691,7 +688,7 @@ const Navbar = () => {
 export default Navbar
 ```
 
-17 Queremos darle una animacion a la barra del componente Navbar.jsx, por lo que usamos el hook **useState** en Navbar.jsx agregando un operador ternario al tag <nav__links> (no olvidar agregarle una key al tag <li> que lo envuelve) y dandole funcionalidad a una funcion onClick al boton con la etiqueta <nav__toggle-btn>. Agregamos una logica para cambiar el boton una vez que se presiona en la barra de navegación asociada al componente Navbar: para ello importamos el icono MdOutlineClose y le agregamos una logica al contenido del tag <button>
+17 Queremos darle una animacion a la barra del componente **Navbar.jsx**, por lo que usamos el hook **useState** en **Navbar.jsx** agregando un operador ternario al tag `<nav__links>` (no olvidar agregarle una key al tag `<li>` que lo envuelve) y dándole funcionalidad al boton `onClick` con la etiqueta `<nav__toggle-btn>`. Agregamos una lógica para cambiar el botón una vez que se presiona en la barra de navegación asociada al componente Navbar, para ello importamos el icono `MdOutlineClose` y le agregamos una lógica al contenido del tag `<button>`.
 
 ```javascript
 import { useState } from 'react'
@@ -713,7 +710,7 @@ que esta asociado en el navbar.css a .show__nav:
    }
 ```
 
----Navbar.jsx
+**Navbar.jsx**
 
 ```javascript
 import { useState } from 'react'
@@ -757,80 +754,29 @@ const Navbar = () => {
 export default Navbar
 ```
 
-18 El código que permite se ejecute la animación de despliegue del menu en formatos de pantalla pequeños se encuentra en el siguiente fragmento: 
 
-```css
- .nav__links li {
-       height: 4rem;
-       width: 100%;
-       box-shadow: -2rem 2rem 5rem rgba(0, 0, 0, 0.5);
-       animation: navAnimation 600ms ease forwards;
-       transform: rotateX(90deg);
-       opacity: 0;
-       transform-origin: top;
-   }
 
-   .nav__links li:nth-child(2) {
-       animation-delay: 200ms;
-   }
+18 Queremos que al elegir una página de la barra de navegador (en pantallas medianas y pequeñas), ésta se cierre automáticamente como también que se cierre cuando hacemos click sobre el logo.
 
-   .nav__links li:nth-child(3) {
-       animation-delay: 400ms;
-   }
-
-   .nav__links li:nth-child(4) {
-       animation-delay: 600ms;
-   }
-
-   .nav__links li:nth-child(5) {
-       animation-delay: 800ms;
-   }
-
-   .nav__links li:nth-child(6) {
-       animation-delay: 1s;
-   }
-
-   .nav__links li:nth-child(7) {
-       animation-delay: 1.2s;
-   }
-
-   @keyframes navAnimation {
-       to {
-           transform: rotateX(0);
-           opacity: 1;
-       }
-   }
-```
-Notese la perspectiva que le entregamos al siguiente elemento:
-
-```css
-   .nav__links {
-       position: absolute;
-       top: 100%;
-       right: 0;
-       flex-direction: column;
-       gap: 0;
-       perspective: 400px;
-   }
-```
-
-19 Queremos que al elegir una pagina de la barra de navegador (en pantallas medianas y pequeñas), ésta se cierre automaticamente como tambien que se cierre cuando hacemos click sobre el logo.
-
-para ello agregamos la funcion:
+para ello agregamos la función:
 
 ```javascript
-onClick={() => setIsNavShowing(prev => !prev)}\
-tanto al tag <Button> como al tag <NavLink>
+onClick={() => setIsNavShowing(prev => !prev)}
 ```
+
+tanto al tag `<Button>` como al tag `<NavLink>`
 
 y
 
 agregamos 
 
 ```javascript
-onClick={() => setIsNavShowing(false)}\
-al tag Link del logo
+onClick={() => setIsNavShowing(false)}
 ```
+
+al tag Link del logo
+
+**Navbar.jsx**
 
 ```javascript
 import { useState } from 'react'
@@ -874,7 +820,19 @@ const Navbar = () => {
 export default Navbar
 ```
 
-***
+---
+---
+<br>
+<br>
+<br>
+
+Aca voy 10 de Marzo
+
+<br>
+<br>
+<br>
+---
+---
 
 ## 3 La cabecera
 
