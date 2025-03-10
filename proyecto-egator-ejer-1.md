@@ -49,7 +49,7 @@ Con la combinación de teclas **"doc"+tab** creamos automáticamente el siguient
 </html>
 ```
 
-4 Llevamos la carpeta **images** a la carpeta **src**
+4 Creamos y cargamos con contenido la carpeta **images** en la carpeta **src**
 
 5 en la carpeta src creamos las siguientes otras tres carpetas:
 
