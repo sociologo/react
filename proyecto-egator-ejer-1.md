@@ -152,7 +152,7 @@ const App = () => {
 export default App
 ```
 
-11 Creamos el componente **Navbar.jsx** y su asociado **Navbar.css** dentro de la carpeta **components**, asociándole el contenido de **data.js** que importamos dentro de la carpeta **src**, desestructurando sus elementos. Agregamos un botón.
+11 Creamos el componente **Navbar.jsx** y su asociado **Navbar.css** dentro de la carpeta **components**, asociándole el contenido de **data.js** que importamos dentro de la carpeta **src**, desestructurando sus elementos. Agregamos un botón. El código asociará a cada elemento componente de la barra de navegación una ruta url.
 
 **Navbar.jsx**
 
