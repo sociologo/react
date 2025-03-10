@@ -1,43 +1,41 @@
 # REACT: elementos del framework
 
-inicio en **la lección 35** Sección 3
-
 script de arranque:
 
 ```bash
 Proyecto Udemy:
 C:\Users\chris> cd /
-C:> cd \Users\chris\Documentos\GitHub\react\proyecto udemy 1
+C:> cd \Users\chris\Documentos\GitHub\react\proyecto inicial 1
 C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm install
 C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
 ```
 
-## Índice
+# Índice
 
 * [1 Componentes](#1-Componentes)
-  * [11 Características](#11-Caracteristicas)
-  * [12 Tipos de Componentes](#12-Tipos-de-Componentes)
-  * [13 Ejemplo](#13-Ejemplo)
-  * [14 Ventajas de Usar Componentes](#14-Ventajas-de-Usar-Componentes)
-  * [15 Nuestro primer componente](#15-Nuestro-primer-componente)
-  * [16 Reglas](#16-Reglas)
-* [Digresion Contenido dinamico en una web](#Digresion-Contenido-dinamico-en-una-web)
-  
+  * [11 La extensión JSX](#11-La-extension-JSX)
+  * [12 Reglas de un JSX](#12-Reglas-de-un-JSX)
+  * [13 Nuestro primer componente](#13-Nuestro-primer-componente)
+  * [14 Ejercicio 1 Crear y usar un componente](#14-Ejercicio-1-Crear-y-usar-un-componente)
+  * [15 Agregar contenido dinámico a una página web](#15-Agregar-contenido-dinámico-a-una-página-web)
+  * [16 Ejercicio 2 Generación de contenido dinámico](#16-Ejercicio-2-Generación-de-contenido-dinámico)
 * [2 Props](#2-Props)
-  * [21 Intro](#21-Intro)
-  * [22 Ejemplo](#22-Ejemplo)
-
+  * [21 Introducción](#21-Introducción)
+  * [22 Inyectando data a un componente](#22-Inyectando-data-a-un-componente)
+  * [23 Desestructurando props](#23-Desestructurando-props)
+  * [24 Ejercicio 3 Trabajando con props](#24-Ejercicio-3-Trabajando-con-props)
 * [3 Correcta organización de Componentes y CSS](#3-Correcta-organización-de-Componentes-y-CSS)
   * [31 Componentes](#31-Componentes)
   * [32 CSS](#32-CSS)
-    
-* [4 El concepto de children](#4-El-concepto-de-children)
+* [4 Composición de componentes y el concepto children](#4-Composición-de-componentes-y-el-concepto-children)
   * [41 Introducción](#41-Introducción)
-  * [42 Ejercicio de composición de componentes](#42-Ejercicio-de-composición-de-componentes)
-  * [43 Composición de componentes](#43-Composición-de-componentes)
+  * [42 Ejercicio 4 Composición de componentes](#42-Ejercicio-4-Composición-de-componentes)
+  * [43 El evento onClick](#43-El-evento-onClick)
   * [44 Pasar funciones como valores a las props](#44-Pasar-funciones-como-valores-a-las-props)
-  * [45 Ejemplo de reacción a eventos](#45-Ejemplo-de-reacción-a-eventos)
+  * [45 Ejercicio 5 Reaccionando a eventos](#45-Ejercicio-5-Reaccionando-a-eventos)
   * [46 Pasando argumentos personalizados a funciones de eventos](#46-Pasando-argumentos-personalizados-a-funciones-de-eventos)
+
+
   * [47 Ejemplo Configuración de Manejadores de Eventos](#47-Ejemplo-Configuración-de-Manejadores-de-Eventos)
     
 * [5 El concepto de State y Hook](#4-El-concepto-de-State-y-Hook)
@@ -66,27 +64,27 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
 
 # 1 Componentes
 
-En React, un componente es una pieza reutilizable y autónoma de código que define una parte de la interfaz de usuario. Los componentes son los bloques de construcción fundamentales de una aplicación React. Son bloques de código pequeños y potencialmente reutilizables. 
+En React, un componente es una pieza pequeña, reutilizable y autónoma de código que define una parte de la interfaz de usuario. Los componentes son los bloques de construcción fundamentales de una aplicación React. 
 
-Como buena práctica los elementos HTML, JS y CSS relacionados se almacenan en archivos contiguos, lo que favorece una separación de competencias.
+Como buena práctica, los elementos HTML, JS y CSS relacionados se almacenan en archivos contiguos, lo que favorece la separación de competencias.
 
-## 11 La extension JSX.
+## 11 La extension JSX
 
-Los componentes en React se almacenan como archivos JSX, los cuales son simplemente funciones JS.
+Los componentes en React se almacenan como archivos JSX, los cuales son simplemente funciones en JavaScript.
 
-JSX, o JavaScript XML, es una extensión de sintaxis para JavaScript que permite a los desarrolladores escribir código que se asemeja al HTML dentro de un archivo JavaScript. Se utiliza para describir y crear elementos en JS de una manera declarativa. No es soportada por los navegadores, por lo que requiere de un proceso de transformación tras bambalinas antes de que llegue al navegador.
+JSX, o JavaScript XML, es una extensión de sintaxis para JavaScript que permite a los desarrolladores escribir código que se asemeja al HTML dentro de un archivo JavaScript. Se utiliza para describir y crear elementos en JS de una manera **declarativa**. No es soportada por los navegadores, por lo que requiere de un proceso de transformación tras bambalinas antes de renderizarse en ellos.
 
 ## 12 Reglas de un JSX
 
 Un componente de React debe seguir las siguientes reglas:
 
-1 El nombre de la función debe comenzar con una mayúscula.
+1 Su nombre debe comenzar con una mayúscula.
 
-2 La función debe retornar un contenido renderizable, esto es, contenido que react pueda desplegar en el navegador.
+2 El componente debe retornar un contenido renderizable, esto es, contenido que React pueda desplegar en el navegador.
 
 ## 13 Nuestro primer componente
 
-**En React puedes usar las funciones de componentes como etiquetas regulares HTML dentro del código JSX**. Observe el componente personalizado `Header()`:
+**En React puedes usar las funciones de componentes como etiquetas regulares HTML dentro del código JSX**. Observa el componente personalizado `Header()`:
 
 **App.jsx**
 
@@ -108,7 +106,7 @@ function Header() {
 function App() {
    return (
       <div>
-         <Header />
+         <Header/>
          <main>
             <h2> Time to get started! </h2>
          <main>
@@ -121,53 +119,32 @@ export default App;
 
 Por el momento, ambos componentes se almacenan en el archivo App.jsx (aunque esto cambiará más adelante).
 
-Encontrará proyectos de React que no usan .jsx sino sólo .js como extensión. Y en ésos archivos .js, también encontrars código JSX. Porque simplemente depende del proceso de compilación subyacente qué extensión se espera al usar esta sintaxis JSX en un archivo. No existe una regla estricta al respecto. En su lugar, encontrará proyectos que requieren .jsx (como la configuración de proyecto que usamos en este curso) y encontrará proyectos que también admiten .js (con código JSX dentro).
+Encontrarás proyectos de React que no usan .jsx sino sólo .js como extensión. Y en ésos archivos .js, también encontrars código JSX. Porque simplemente depende del proceso de compilación subyacente qué extensión se espera al usar esta sintaxis JSX en un archivo. No existe una regla estricta al respecto. En su lugar, encontrarás proyectos que requieren .jsx (como la configuración de proyecto que usamos en este curso) y proyectos que también admiten .js (con código JSX dentro).
 
-Estoy enfatizando esto aquí para que no se confunda si encuentra proyectos de React que no usan archivos .jsx.
+Además, también encontrarás proyectos que requieren la extensión de archivo como parte de la importación de archivos (por ejemplo, importar aplicación desde './App.jsx') y encontrarás otros que no la requieren (es decir, podrías simplemente importar la aplicación desde './App').
 
-Además, también encontrará proyectos que requieren la extensión de archivo como parte de la importación de archivos (por ejemplo, importar aplicación desde './App.jsx') y encontrará otros proyectos que no la requieren (es decir, podría simplemente usar importar aplicación desde './App').
+## 14 Ejercicio 1 Crear y usar un componente
 
-## 14 Ejercicio 1
+Debes crear un nuevo componente `MainGoal` que genere un párrafo de texto que despliegue un texto.
 
-Su tarea es crear un nuevo componente `MainGoal` que genere un párrafo de texto que describa el objetivo principal del curso (por ejemplo, "Mi objetivo principal: aprender React en profundidad y desde cero"). Tendrás que crear este nuevo componente desde cero y luego usarlo dentro del código JSX del componente de la aplicación.
+describa el objetivo principal del curso (por ejemplo, "Mi objetivo principal: aprender React en profundidad y desde cero"). 
 
-La aplicación terminada podría verse así:
-
-![image](https://github.com/user-attachments/assets/b3ba17ab-8447-4b2c-af6c-8b5cc0819c5f)
-
-(observe el texto "Mi objetivo principal: aprender a reaccionar desde cero" en la parte inferior)
+Tendrás que crear este nuevo componente desde cero y luego usarlo dentro del código JSX del componente de la `App`.
 
 ```JavaScript
 import React from 'react';
 
-// DEFINA EL COMPONENTE ACA
+// DEFINE EL COMPONENTE ACA
 
 function App() {
   return (
     <div id="app">
-      <h1>Time to Practice!</h1>
+      <h1>Texto</h1>
       <p>
-        Build a <code>&lt;MainGoal&gt;</code> component and insert it below this
-        text.
-      </p>
-      <p>
-        Your <code>&lt;MainGoal&gt;</code> component should simply output some
-        text that describes your main course goal (e.g., &quot;My main goal:
-        Learn React in great detail&quot;).
-      </p>
-      <p>
-        <strong>Important:</strong> You custom component must contain the text
-        &quot;My main goal:&quot;
-      </p>
-      <p>
-        <strong>Also important:</strong> For the automatic checks to succeed,
-        you <strong>must export</strong> your custom component function! Not as
-        a default but simply by adding the <code>export</code> keyword in front
-        of your function (e.g., <code>export function YOUR_COMPONENT_NAME</code>
-        ).
+        Texto
       </p>
 
-      {/* DE SALIDA A SU COMPONENTE ACA */}
+      {/* DA SALIDA A TU COMPONENTE ACA */}
 
     </div>
   );
@@ -181,43 +158,22 @@ Respuesta:
 ```JavaScript
 import React from 'react';
 
-// DEFINE YOUR COMPONENT HERE
-// IMPORTANT: Add "export" in front of your component - otherwise the automated tests won't work
 export function MainGoal() {
   return (
-    <p>My main goal: Learn react from the ground up</p>
+    <p>Texto</p>
   );
 }
-
-// DO NOT EDIT THE APP COMPONENT NAME OR CONTENT
-// Except for outputting your custom component
 
 function App() {
   return (
     <div id="app">
-      <h1>Time to Practice!</h1>
+      <h1>Texto</h1>
       <p>
-        Build a <code>&lt;MainGoal&gt;</code> component and insert it below this
-        text.
+        Texto
       </p>
-      <p>
-        Your <code>&lt;MainGoal&gt;</code> component should simply output some
-        text that describes your main course goal (e.g., "My main goal: Learn React in great detail").
-      </p>
-      <p>
-        <strong>Important:</strong> You custom component must contain the text
-        "My main goal:"
-      </p>
-      <p>
-        <strong>Also important:</strong> For the automatic checks to succeed,
-        you <strong>must export</strong> your custom component function! Not as
-        a default but simply by adding the <code>export</code> keyword in front
-        of your function (e.g., <code>export function YOUR_COMPONENT_NAME</code>
-        ).
-      </p>
-      {/* DON'T CHANGE THE TEXT / CONTENT ABOVE */}
-      {/* OUTPUT YOUR COMPONENT HERE */}
-      <MainGoal />
+
+      <MainGoal/>
+
     </div>
   );
 }
@@ -225,17 +181,87 @@ function App() {
 export default App;
 ```
 
-## 15 Agregar contenido dinámico a una página web. 
+## 15 Agregar contenido dinámico a una página web
 
-La sintaxis especial de llaves nos permite agregar contenido dinámico a una página web y configurar dinámicamente atributos HTML y la carga de archivos de imágenes.
+La sintaxis especial de llaves nos permite agregar contenido dinámico a una página web. Veamos el siguiente ejemplo:
 
 ![image](https://github.com/user-attachments/assets/bae63692-bffe-42ca-9fb2-ebea39f3f166)
 
-La función Math.random() en JavaScript devuelve un número de coma flotante pseudo-aleatorio comprendido en el rango de 0 (incluido) a 1 (excluido). Esto significa que el valor devuelto puede ser 0, pero siempre será menor que 1.
+La función `Math.random()` en JavaScript devuelve un número de coma flotante pseudo-aleatorio comprendido en el rango de 0 (incluido) a 1 (excluido). Esto significa que el valor devuelto puede ser 0, pero siempre será menor que 1. Este número hace que cargue aleatoriamente el valor del índice del arreglo que contiene tres palabras, que cargarán azarosamente cada vez que se despliegue la página.
 
-**Ejercicio**
+## 16 Ejercicio 2 Generación de contenido dinámico
 
-falta ingresar el ejercicio de valores dinamicos con {}
+Debes generar el nombre y apellido del usuario almacenados en el objeto `userData`, dentro del elemento `<h2>` del componente `User`. Además, debes generar el título (también almacenado en `userData`) en el elemento <p> dentro del componente `User`.
+
+```python
+import React from 'react';
+
+export const userData = {
+   firstName: 'Christian', 
+   lastName: 'Castro',
+   title: 'Instructor', 
+};
+
+export function User() {
+   return (
+      <div id="user" data-testid="user">
+         <h2>
+           TODO: FIRST NAME LAST NAME
+         </h2>
+         <p>TODO: TITLE</p>
+      </div>
+   );
+}
+
+// DON'T edit the App component code
+function App() {
+  return (
+    <div id="app">
+      <h1>Texto</h1>
+      <p>Texto</p>
+      <User />
+    </div>
+  );
+}
+
+export default App;
+```
+
+Respuesta:
+
+```python
+import React from 'react';
+
+export const userData = {
+   firstName: 'Christian', 
+   lastName: 'Castro', 
+   title: 'Instructor', 
+};
+
+export function User() {
+   return (
+      <div id="user" data-testid="user">
+         <h2>
+            {userData.firstName} {userData.lastName}
+         </h2>
+         <p>{userData.title}</p>
+      </div>
+   );
+}
+
+// DON'T edit the App component code
+function App() {
+  return (
+    <div id="app">
+      <h1>Texto</h1>
+      <p>Texto</p>
+      <User />
+    </div>
+  );
+}
+
+export default App;
+```
 
 # 2 Props
 
@@ -245,7 +271,7 @@ En React, los **props** (abreviatura de “properties”) son una forma de pasar
 
 Los **props** se utilizan para pasar datos desde un componente padre a un componente hijo. Esto permite que el componente hijo acceda a esos datos y los utilice para renderizar contenido dinámico. Los **props** son inmutables, lo que significa que un componente no puede cambiar sus propios **props**. Esto asegura que los datos fluyan en una sola dirección, de arriba hacia abajo, lo que se conoce como “flujo de datos unidireccional”.
 
-Los props poseeen una sintaxis similar a HTML. 
+Los **props** poseeen una sintaxis similar a HTML. 
 
 Ventajas de Usar Props
 
@@ -272,7 +298,23 @@ import {CORE_CONCEPTS} from "./data.js";
 import reactImg from './assets/react-core-concepts.png';
 import componentsImg from './assets/components.png';
 
-// ... (código omitido)
+const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
+
+function genRandomInt(max) {
+  return Math.floor(Math.random() * (max + 1));
+}
+
+function Header() {
+  return (
+    <header>
+      <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+      <h1>React Essentials</h1>
+      <p>
+        Fundamental React concepts you will need for almost any app you are going to build!
+      </p>
+    </header>
+  );
+}
 
 function CoreConcept({image, title, description}){
    return (
@@ -287,7 +329,7 @@ function CoreConcept({image, title, description}){
 function App() {
    return (
       <div>
-         <Header />
+         <Header/>
          <main>
             <section id = 'core-concepts'>
                <h2>
@@ -349,13 +391,15 @@ export const CORE_CONCEPTS = [
 
 ## 23 Desestructurando props
 
-En los componentes CORE_CONCEPTS[0] y CORE_CONCEPTS[1], la diferencia principal radica en cómo se manejan las propiedades (props).
+Considera el siguiente ejemplo:
 
-En CORE_CONCEPTS[0], las propiedades se agrupan en un solo objeto llamado props. Dentro del componente, se accede a cada propiedad utilizando la notación de punto, es decir, props.propertyName. Este enfoque puede ser menos intuitivo y más engorroso, ya que requiere referirse constantemente al objeto props para acceder a cada propiedad individual.
+En los componentes `CoreConcept1` y `CoreConcept2`, la diferencia principal radica en cómo se manejan las propiedades (props).
 
-Por otro lado, en CORE_CONCEPTS[1], las propiedades se **desestructuran** directamente en los parámetros de la función. Esto significa que las propiedades se extraen del objeto props y se pueden usar directamente sin necesidad de prefijos adicionales. Este método es más limpio y conciso, facilitando la lectura y el mantenimiento del código. La desestructuración de **props** en los parámetros de la función es una práctica recomendada en React, ya que mejora la claridad y la simplicidad del código.
+En `CoreConcept1`, las propiedades se agrupan en un solo objeto llamado props. Dentro del componente, se accede a cada propiedad utilizando la notación de punto. Este enfoque puede ser menos intuitivo y más engorroso, ya que requiere referirse constantemente al objeto props para acceder a cada propiedad individual.
 
-En resumen, mientras que CORE_CONCEPTS[0] utiliza un enfoque más tradicional y explícito para manejar props, CORE_CONCEPTS[1] adopta una técnica más moderna y eficiente mediante la **desestructuración**, lo que resulta en un código más claro y fácil de entender.
+Por otro lado, en `CoreConcept2`, las propiedades se **desestructuran** directamente en los parámetros de la función. Esto significa que las propiedades se extraen del objeto props y se pueden usar directamente sin necesidad de prefijos adicionales. Este método es más limpio y conciso, facilitando la lectura y el mantenimiento del código. La desestructuración de **props** en los parámetros de la función es una práctica recomendada en React, ya que mejora la claridad y la simplicidad del código.
+
+En resumen, mientras que `CoreConcept1` utiliza un enfoque más tradicional y explícito para manejar props, `CoreConcept2` adopta una técnica más moderna y eficiente mediante la **desestructuración**, lo que resulta en un código más claro y fácil de entender.
 
 ```Javascript
 function CoreConcept1({props}){
@@ -378,11 +422,11 @@ function CoreConcept2({image, title, description}){
 }
 ```
 
-Se están creando instancias del componente CoreConcept y se están pasando propiedades (props) de dos maneras diferentes.
+En el código de la sección 22 se están creando instancias del componente CoreConcept y se están pasando propiedades (props) de dos maneras diferentes.
 
-Primera instancia de CoreConcept: Aquí, las propiedades title, description e image se pasan explícitamente al componente CoreConcept utilizando valores específicos del array CORE_CONCEPTS. Cada propiedad se asigna individualmente a partir del primer objeto en el array (CORE_CONCEPTS[0]).
+1 Primera instancia de CoreConcept: Aquí, las propiedades title, description e image se pasan explícitamente al componente CoreConcept utilizando valores específicos del array `CORE_CONCEPTS`. Cada propiedad se asigna individualmente a partir del primer objeto en el array (`CORE_CONCEPTS[0]`).
 
-Siguientes instancias de CoreConcept: En las siguientes tres instancias, se utiliza la sintaxis de desestructuración con el operador de propagación (...). Esto significa que todas las propiedades del objeto correspondiente en el array CORE_CONCEPTS se pasan automáticamente al componente CoreConcept. Por ejemplo, {...CORE_CONCEPTS[1]} pasa todas las propiedades del segundo objeto en el array (CORE_CONCEPTS[1]) al componente CoreConcept.
+2 Siguientes instancias de CoreConcept: En las siguientes tres instancias, se utiliza la sintaxis de desestructuración con el operador de propagación (...). Esto significa que todas las propiedades del objeto correspondiente en el array `CORE_CONCEPTS` se pasan automáticamente al componente CoreConcept. Por ejemplo, {`...CORE_CONCEPTS[1]`} pasa todas las propiedades del segundo objeto en el array (`CORE_CONCEPTS`) al componente CoreConcept.
 
 En resumen, la primera instancia pasa las propiedades de manera explícita y detallada, mientras que las siguientes instancias utilizan la desestructuración para pasar todas las propiedades de los objetos correspondientes de manera más concisa y eficiente. Esto hace que el código sea más limpio y fácil de mantener, especialmente cuando se trabaja con múltiples propiedades.
 
@@ -401,14 +445,21 @@ el proyecto luce asi:
 
 ![image](https://github.com/user-attachments/assets/06a6366f-bd76-456a-9cd3-0ef0d1677b3d)
 
-Ejercicio de codificación 5. Revisar que algo no anda bien:
 
-```javascript
-export function CourseGoal({TITLE, DESCRIPTION}) {
+## 24 Ejercicio 3 Trabajando con props
+
+Tu tarea es hacer que el componente `CourseGoal` sea reutilizable y configurable. Debe aceptar una entrada de "título" y una "descripción" y generar los datos recibidos entre las etiquetas `<h2>` (título) y `<p>` (descripción).
+
+El componente App debe mostrar al menos dos instancias del componente CourseGoal.
+
+Uno de esos componentes CourseGoal debe recibir un título de "Aprender React" y una descripción de "En profundidad". Los demás títulos y descripciones dependen completamente de ti.
+
+```python
+export function CourseGoal() {
   return (
     <li>
-      <h2>{TITLE}</h2>
-      <p>{DESCRIPTION}</p>
+      <h2>TITLE</h2>
+      <p>DESCRIPTION</p>
     </li>
   );
 }
@@ -419,14 +470,8 @@ function App() {
       <h1>Time to Practice</h1>
       <p>One course, many goals! 🎯</p>
       <ul>
-        <CourseGoal 
-            TITLE = "Learn React"
-            DESCRIPTION = "In-depth"
-        />
-        <CourseGoal
-            TITLE = "algo"
-            DESCRIPTION = "algo"
-        />
+        {/* OUTPUT AT LEAST TWO CourseGoal components here */}
+        {/* One of them should have a title of “Learn React” and a description of “In-depth” */}
       </ul>
     </div>
   );
@@ -435,11 +480,38 @@ function App() {
 export default App;
 ```
 
+Respuesta:
+
+```javascript
+export function CourseGoal({ title, description }) {
+  return (
+    <li>
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </li>
+  );
+}
+
+function App() {
+  return (
+    <div id="app" data-testid="app">
+      <h1>Time to Practice</h1>
+      <p>One course, many goals! 🎯</p>
+      <ul>
+        <CourseGoal title="Learn React" description="In-depth" />
+        <CourseGoal title="Practice JavaScript" description="With real projects" />
+      </ul>
+    </div>
+  );
+}
+
+export default App;
+
+```
+
 # 3 Correcta organización de Componentes y CSS
 
 ## 31 Componentes
-
-leccion 47
 
 Idealmente cada componente debe estar en un archivo independiente. No se recomienda tener todos los componentes de una aplicación React en un mismo archivo por varias razones:
 
@@ -462,7 +534,6 @@ Llamamos a nuestro componente así:
 
 ![image](https://github.com/user-attachments/assets/9ac3143b-5ed5-427b-86d8-2e83b2968233)
 
-
 **CoreConcepts.jsx** \
 ![image](https://github.com/user-attachments/assets/31a1d1da-d517-48e0-8974-3f113cb845cc)
 
@@ -470,19 +541,15 @@ Debemos añadir la declaración de exportacion **export default** para poder imp
 
 ## 32 CSS
 
-leccion 48
+En React, es conveniente organizar los archivos CSS en carpetas por las mismas razones que lo hacemos con los componentes.
 
-En React, es conveniente organizar los archivos CSS en carpetas por las mismas razones que lo hacemos con los componentes: 
-
-Crearemos una carpeta Header dentro de la carpeta components en la que almacenaremos tanto el componente como el css relacionado al header, ajustando las rutas de importacion en **App.jsx**.
+Crearemos una carpeta Header dentro de la carpeta **components** en la que almacenaremos tanto el componente como el css relacionado al Header, ajustando las rutas de importacion en **App.jsx**.
 
 ![image](https://github.com/user-attachments/assets/5a412976-536a-4ef4-95a5-e61afefe6b3c)
 ![image](https://github.com/user-attachments/assets/1ae3035f-aeec-4dcd-8c30-89ad6d27f23f)
 ![image](https://github.com/user-attachments/assets/b89c56ed-46f1-4da5-ab0f-544ef4dbec27)
 
 # 4 Composición de componentes y el concepto children
-
-leccion 48
 
 ## 41 Introducción
 
@@ -492,10 +559,11 @@ Construiremos una sección interactiva, por lo que daremos contenido dinámico a
 
 Comenzaremos construyendo el botón y su funcionalidad.
 
-
 En React, **children** es una **prop** especial que permite a los componentes anidar otros dentro de ellos. En React, la prop **children** es una forma poderosa de componer componentes. Permite que un componente padre pase contenido a sus componentes hijos. Esto es especialmente útil para crear componentes reutilizables y flexibles. Básicamente, **children** representa el contenido que se encuentra entre las etiquetas de apertura y cierre de un componente, contenido que puede ser una compleja estructura html que podemos llamar múltiples veces con tal solo utilizar una sola etiqueta html. 
 
-- 1 El componente `TabButton.jsx` (desestructurando):
+- 1 El componente `TabButton`
+
+**TabButton.jsx**
 
 ```Javascript
 export default function TabButton({children}) {
@@ -527,7 +595,7 @@ export default function TabButton({props}) {
 
 - Dentro del componente, se retorna un elemento `<li>` que contiene un botón (`<button>`).
 
-- `{.children}` se coloca dentro del botón, lo que permite que cualquier contenido pasado como `children` se muestre dentro del botón.
+- `{children}` se coloca dentro del botón, lo que permite que cualquier contenido pasado como `children` se muestre dentro del botón.
 
 - 2 El componente `TabButton` en `App.jsx`:
 
@@ -550,7 +618,7 @@ import TabButton from './components/TabButton.jsx';
 
 **Con `children` estamos ahorrando repetir líneas de código html.**
 
-Existe otra forma de hacer esto y también debes conocerla, la cual tiene sentido si tienes múltiples pequeñas piezas de información que deben ser pasadas a un componente. Añadiendo props extra en vez de solo envolver el contenido con los tags componentes significa mas trabajo.
+Existe otra forma de hacer esto y también debes conocerla, la cual tiene sentido si tienes múltiples pequeñas piezas de información que deben ser pasadas a un componente. El añadir **props** extra en vez de solo envolver el contenido con los tags componentes significa mas trabajo.
 
 ```Javascript
 export default function TabButton({label}) {
@@ -568,11 +636,11 @@ App.jsx
 ```Javascript
 import TabButton from './components/TabButton.jsx';
 <menu>
-  <TabButton label = 'Components'>Components</TabButton>                 
+  <TabButton label = '<Components'>Components</TabButton>                 
 </menu>
 ```
 
-## 42 Ejercicio de composición de componentes.
+## 42 Ejercicio 4 Composición de componentes
 
 Tu tarea es crear un componente `Card` reutilizable que tome un `name` como entrada y, además, pueda incluirse en cualquier código JSX.
 
@@ -638,15 +706,11 @@ const Card = ({ name, children }) => {
 export default Card;
 ```
 
-***
-
-## 43 El atributo onClick
-
-50
+## 43 El evento onClick
 
 Necesitamos ahora darle poder al click en los botones para que ejecuten la acción de mostrarnos un cuadro dinámico. 
 
-`onClick` es un evento en React que se utiliza para manejar las acciones de clic del usuario en un elemento. Es similar al evento onclick en JavaScript, pero se usa dentro de componentes de React. 
+`onClick` es un evento en React que se utiliza para manejar las acciones de click del usuario en un elemento. Es similar al evento `onclick` en JavaScript, pero se usa dentro de componentes de React. 
 
 Modificaremos nuestro componente para añadir el prop receptor de eventos **onClick** al elemento button entregándole la función handleClick() que se declarara dentro de la función de componente sin los paréntesis pues la necesitamos como valor:
 
@@ -689,19 +753,17 @@ document.querySelector('button').addEventListener('click', () => {})
 
 No queremos código imperativo como éste, no queremos interactuar con el DOM pues queremos que React lo haga. Es por ello que escribimos código declarativo.
 
-## 44 Pasar funciones como valores a las **props**.
+## 44 Pasar funciones como valores a las props
 
-51
-
-Hemos dicho que la función **handleClick** que se declarará dentro de la función de componente irá sin los paréntesis pues la necesitamos como valor. Requeriremos de ésta propiedad pues ahora queremos cambiar el contenido desplegado debajo de la fila de botones para acceder a distintos contenidos cada vez que se seleccionemos distintos botones. 
+Hemos dicho que la función **handleClick** que se declarará dentro de la función de componente irá sin los paréntesis pues la necesitamos como valor. Requeriremos de ésta propiedad pues ahora queremos cambiar el contenido desplegado debajo de la fila de botones para acceder a distintos contenidos cada vez que seleccionemos distintos botones. 
 
 Para ello necesitamos escuchar los clicks dentro de nuestro componente personalizado **TabButton**, porque debes manejar el evento en el componente que también administra los datos que se deben cambiar.
 
-La pregunta es, cómo le damos poder de acción, capacidad de ejecutar algo a la selección del botón? La respuesta es entregándole una **función como valor** al elemento **onClick** del componente (**handleClick**). Esto lo lograremon ingresando un segundo parámetro **prop** a la función de componente **TabButton** llamado **onSelect**.
+La pregunta es, ¿cómo le damos poder de acción, capacidad de ejecutar algo a la selección del botón? La respuesta es entregándole una **función como valor** al elemento **onClick** del componente (**handleClick**). Esto lo lograremon ingresando un segundo parámetro **prop** a la función de componente **TabButton** llamado **onSelect**.
 
 Luego pasaremos 'el puntero' **handSelect** a la prop **onSelect**.
 
-La función onSelect se activará cuando el botón sea clickeado y es la que le dará vida al componente dinámico.
+La función **onSelect** se activará cuando el botón sea clickeado y es la que le dará vida al componente dinámico.
 
 ```Javascript
 export default function TabButton({children, onSelect}) {
@@ -752,17 +814,17 @@ function App() {
 
 export default App;
 ```
-Ahora estamos preparados para cambiar la data en el contenido dinamico.
+Ahora estamos preparados para cambiar la data en el contenido dinámico.
 
-## 45 Ejemplo de reacción a eventos
+## 45 Ejercicio 5 Reaccionando a eventos
 
 Supón un componente que ya ha sido preparado por un colega.
 
 El objetivo es actualizar los datos almacenados en el objeto `user` ya existente con algunos datos ficticios una vez que se presiona el botón "Login" en el componente `App`.
 
-Las propiedades email y password en el objeto user deben establecerse con cualquier valor de cadena no vacío. El campo loggedIn debe establecerse en verdadero.
+Las propiedades email y password en el objeto user deben establecerse con cualquier valor de cadena no vacío. El campo `loggedIn` debe establecerse en verdadero.
 
-Debe cambiar los valores de email, password y loggedIn cuando se presiona el botón en el componente App.
+Debes cambiar los valores de email, password y loggedIn cuando se presiona el botón en el componente App.
 
 ```JavaScript
 export const user = {
@@ -856,9 +918,20 @@ function App() {
 export default App;
 ```
 
-## 46 Pasando argumentos personalizados a funciones de eventos.
+---
+---
+<br>
+<br>
+<br>
+***Aca voy 7 de marzo***
+<br>
+<br>
+<br>
+---
+---
 
-52
+
+## 46 Pasando argumentos personalizados a funciones de eventos
 
 Ahora, dependiendo sobre qué botón hagamos el click es que queremos que se despliegue el contenido dinámico. Para ello establecemos cuatro strings que identifiquen a cada uno de los botones components, jsx, props y state.
 
