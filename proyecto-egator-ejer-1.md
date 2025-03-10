@@ -496,7 +496,7 @@ específicas.*/
        display: none;
    }
 
-*/Este código CSS crea una animación fluida y dinámica para elementos de
+<!--Este código CSS crea una animación fluida y dinámica para elementos de
 una lista (li) dentro de .nav__links. Voy a desglosar lo que hace cada parte:
 Estilos generales para .nav__links li
 height: 4rem; y width: 100%;: Cada elemento de lista tiene una altura de
@@ -525,7 +525,7 @@ to { transform: rotateX(0); opacity: 1; }: Esta regla define el estado
 final de la animación:
 Los elementos terminan sin rotación (rotateX(0)).
 La opacidad se establece en 1, haciendo que los elementos sean
-completamente visibles./*
+completamente visibles.-->
 
    .nav__links li {
        height: 4rem;
