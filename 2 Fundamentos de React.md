@@ -187,7 +187,7 @@ La sintaxis especial de llaves nos permite agregar contenido dinámico a una pá
 
 ![image](https://github.com/user-attachments/assets/bae63692-bffe-42ca-9fb2-ebea39f3f166)
 
-La función `Math.random()` en JavaScript devuelve un número de coma flotante pseudo-aleatorio comprendido en el rango de 0 (incluido) a 1 (excluido). Esto significa que el valor devuelto puede ser 0, pero siempre será menor que 1. Este número hace que cargue aleatoriamente el valor del índice del arreglo que contiene tres palabras, que cargarán azarosamente cada vez que se despliegue la página.
+La función `Math.random()` en JavaScript devuelve un número de coma flotante pseudo-aleatorio comprendido en el rango de 0 (incluido) a 1 (excluido). La función `genRandomInt(2)` devuelve aleatoriamente 1, 2 o 3 cada vez que se despliegue la página.
 
 ## 16 Ejercicio 2 Generación de contenido dinámico
 
