@@ -121,7 +121,7 @@ Por el momento, ambos componentes se almacenan en el archivo App.jsx (aunque est
 
 Encontrarás proyectos de React que no usan .jsx sino sólo .js como extensión. Y en ésos archivos .js, también encontrars código JSX. Porque simplemente depende del proceso de compilación subyacente qué extensión se espera al usar esta sintaxis JSX en un archivo. No existe una regla estricta al respecto. En su lugar, encontrarás proyectos que requieren .jsx (como la configuración de proyecto que usamos en este curso) y proyectos que también admiten .js (con código JSX dentro).
 
-Además, también encontrarás proyectos que requieren la extensión de archivo como parte de la importación de archivos (por ejemplo, importar aplicación desde './App.jsx') y encontrarás otros que no la requieren (es decir, podrías simplemente importar la aplicación desde './App').
+Además, también encontrarás proyectos que requieren la extensión de archivo como parte de la importación de archivos (por ejemplo, import app from './App.jsx') y encontrarás otros que no la requieren (es decir, podrías simplemente import app from './App').
 
 ## 14 Ejercicio 1 Crear y usar un componente
 
