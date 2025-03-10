@@ -237,7 +237,8 @@ export const links = [
 
 12 Envolvemos nuestra **App.jsx** con el tag BrouserRouter e importamos en ella nuestro componente Navbar:
 
----**App.jsx**
+**App.jsx**
+
 ```javascript
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
