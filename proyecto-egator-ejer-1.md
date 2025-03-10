@@ -87,17 +87,17 @@ const App = () => {
 export default App
 ```
 
-9 Dentro de la carpeta pages creamos carpetas para cada una de las páginas de nuestra aplicación y dentro de cada una de ellas un jsx con un css (por el momento dejemos el css vacío). Toma como ejemplo About.jsx cuya estructura debe ser semejante en todas las carpetas:
+9 Dentro de la carpeta **pages** creada dentro de la carpeta **src** construímos carpetas para cada una de las páginas de nuestra aplicación y dentro de cada una de ellas un jsx con un css (por el momento dejemos los css vacíos). Toma como ejemplo About.jsx cuya estructura debe ser semejante en todas las carpetas:
 
-about\
-___About.jsx\
-___about.css\
-contact\
-gallery\
-home\
-notFound\
-plans\
-trainers
+- about\
+- ___About.jsx\
+- ___about.css\
+- contact\
+- gallery\
+- home\
+- notFound\
+- plans\
+- trainers
 
 ![image](https://github.com/user-attachments/assets/9e12d339-51d2-416d-8116-24d88b86dde9)
 
