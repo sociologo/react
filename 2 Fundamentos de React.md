@@ -642,6 +642,21 @@ import TabButton from './components/TabButton.jsx';
 </menu>
 ```
 
+---
+---
+<br>
+<br>
+<br>
+<br>
+**aca voy 10 marzo**
+<br>
+<br>
+<br>
+<br>
+---
+---
+
+
 ## 42 Ejercicio 4 Composición de componentes
 
 Tu tarea es crear un componente `Card` reutilizable que tome un `name` como entrada y, además, pueda incluirse en cualquier código JSX.
