@@ -49,15 +49,15 @@ Con la combinación de teclas **"doc"+tab** creamos automáticamente el siguient
 </html>
 ```
 
-4 Creamos y cargamos con contenido la carpeta **images** en la carpeta **src**
+4 Creamos y cargamos con contenido la carpeta **images** en la carpeta **src**.
 
 5 En la carpeta **src** creamos las siguientes otras tres carpetas:
 
--components
--pages
--UI
+- components
+- pages
+- UI
 
-6 en la carpeta src creamos el archivo index.js:
+6 En la carpeta src creamos el archivo index.js:
 
 ```javascript
 import ReactDOM from "react-dom/client"
