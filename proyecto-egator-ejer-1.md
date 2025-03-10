@@ -360,9 +360,6 @@ img {
 }
 ```
 
-**Aca voy 4 de marzo**
-
-
 14 Llevamos el link de los estilos de fuentes al archivo **index.html**:
 
 ```html
