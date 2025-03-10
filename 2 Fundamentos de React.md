@@ -543,7 +543,7 @@ Debemos añadir la declaración de exportacion **export default** para poder imp
 
 En React, es conveniente organizar los archivos CSS en carpetas por las mismas razones que lo hacemos con los componentes.
 
-Crearemos una carpeta Header dentro de la carpeta **components** en la que almacenaremos tanto el componente como el css relacionado al Header, ajustando las rutas de importacion en **App.jsx**.
+Crearemos una carpeta **Header** dentro de la carpeta **components** en la que almacenaremos tanto el componente como el css relacionado al **Header**, ajustando las rutas de importacion en **App.jsx**.
 
 ![image](https://github.com/user-attachments/assets/5a412976-536a-4ef4-95a5-e61afefe6b3c)
 ![image](https://github.com/user-attachments/assets/1ae3035f-aeec-4dcd-8c30-89ad6d27f23f)
