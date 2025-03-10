@@ -918,19 +918,6 @@ function App() {
 export default App;
 ```
 
----
----
-<br>
-<br>
-<br>
-***Aca voy 7 de marzo***
-<br>
-<br>
-<br>
----
----
-
-
 ## 46 Pasando argumentos personalizados a funciones de eventos
 
 Ahora, dependiendo sobre qué botón hagamos el click es que queremos que se despliegue el contenido dinámico. Para ello establecemos cuatro strings que identifiquen a cada uno de los botones components, jsx, props y state.
