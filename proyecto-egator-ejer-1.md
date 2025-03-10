@@ -497,11 +497,11 @@ específicas.*/
    }
 
 <!--Este código CSS crea una animación fluida y dinámica para elementos de
-una lista (li) dentro de .nav__links. Voy a desglosar lo que hace cada parte:
-Estilos generales para .nav__links li
-height: 4rem; y width: 100%;: Cada elemento de lista tiene una altura de
+una lista (li) dentro de `.nav__links`. Voy a desglosar lo que hace cada parte:
+Estilos generales para `.nav__links li`
+`height`: 4rem; y width: 100%;: Cada elemento de lista tiene una altura de
 4 rems y ocupa el 100% del ancho de su contenedor.
-box-shadow: -2rem 2rem 5rem rgba(0, 0, 0, 0.5);: Agrega una sombra al
+`box-shadow`: -2rem 2rem 5rem rgba(0, 0, 0, 0.5);: Agrega una sombra al
 elemento para darle profundidad, simulando un efecto tridimensional.
 animation: navAnimation 600ms ease forwards;: Aplica una animación
 personalizada llamada navAnimation que dura 600 milisegundos, con una
