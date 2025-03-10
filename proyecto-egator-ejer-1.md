@@ -154,7 +154,8 @@ export default App
 
 11 Creamos el componente **Navbar.jsx** y su asociado **Navbar.css** dentro de la carpeta **components**, asociándole el contenido de **data.js** que importamos dentro de la carpeta **src**, desestructurando sus elementos. Agregamos un botón que sólo sera visible en tablets y teléfonos celulares.
 
----**Navbar.jsx**
+**Navbar.jsx**
+
 ```javascript
 import {Link, NavLink} from 'react-router-dom'
 import Logo from '../images/logo.png'
