@@ -340,11 +340,21 @@ a {
    color: var(--color-gray-100);
 }
 
-/*display: block;: Cambia el comportamiento del elemento img para que se comporte como un elemento de bloque en lugar de uno en línea (que es su comportamiento por defecto). Esto significa que el elemento ocupará todo el ancho disponible y comenzará en una nueva línea.
+/*display: block;: Cambia el comportamiento del elemento img para que
+se comporte como un elemento de bloque en lugar de uno en línea (que
+es su comportamiento por defecto). Esto significa que el elemento
+ocupará todo el ancho disponible y comenzará en una nueva línea.
 
-object-fit: cover;: Este estilo controla cómo se ajusta el contenido de la imagen dentro de su contenedor. Con el valor cover, la imagen se escala para llenar completamente su contenedor mientras mantiene su proporción de aspecto original. Esto significa que partes de la imagen pueden recortarse si no encajan perfectamente en las dimensiones del contenedor.
+object-fit: cover;: Este estilo controla cómo se ajusta el contenido
+de la imagen dentro de su contenedor. Con el valor cover, la imagen
+se escala para llenar completamente su contenedor mientras mantiene
+su proporción de aspecto original. Esto significa que partes de la
+imagen pueden recortarse si no encajan perfectamente en las
+dimensiones del contenedor.
 
-width: 100%;: Establece que la imagen ocupe el 100% del ancho del contenedor padre. Esto garantiza que la imagen se ajuste siempre al ancho disponible.*/
+width: 100%;: Establece que la imagen ocupe el 100% del ancho del
+contenedor padre. Esto garantiza que la imagen se ajuste siempre al
+ancho disponible.*/
 
 img {
    display: block;
