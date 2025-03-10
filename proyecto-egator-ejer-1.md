@@ -57,7 +57,7 @@ Con la combinación de teclas **"doc"+tab** creamos automáticamente el siguient
 - pages
 - UI
 
-6 En la carpeta src creamos el archivo index.js:
+6 En la carpeta **src** creamos el archivo **index.js** con el siguiente contenido:
 
 ```javascript
 import ReactDOM from "react-dom/client"
@@ -67,9 +67,9 @@ const root = ReactDOM.createRoot(document.querySelector("#root"));
 root.render(<App/>)
 ```
 
-7 en la carpeta src creamos el archivo index.css:
+7 En la carpeta **src** creamos el archivo **index.css**.
 
-8 en la carpeta src creamos el archivo App.jsx:
+8 En la carpeta **src** creamos el archivo **App.jsx**:
 
 y con **rafce** + enter:
 
