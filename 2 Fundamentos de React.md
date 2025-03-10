@@ -70,9 +70,9 @@ Como buena práctica, los elementos HTML, JS y CSS relacionados se almacenan en 
 
 ## 11 La extension JSX
 
-Los componentes en React se almacenan como archivos JSX, los cuales son simplemente funciones en JavaScript.
+Los componentes en React se almacenan como archivos JSX.
 
-JSX, o JavaScript XML, es una extensión de sintaxis para JavaScript que permite a los desarrolladores escribir código que se asemeja al HTML dentro de un archivo JavaScript. Se utiliza para describir y crear elementos en JS de una manera **declarativa**. No es soportada por los navegadores, por lo que requiere de un proceso de transformación tras bambalinas antes de renderizarse en ellos.
+JSX, o JavaScript XML, es una extensión de sintaxis para JavaScript que permite a los desarrolladores escribir código que se asemeja al HTML dentro de una función JavaScript. Se utiliza para describir y crear elementos en JS de una manera **declarativa**. No es soportada por los navegadores, por lo que requiere de un proceso de transformación tras bambalinas antes de renderizarse en ellos.
 
 ## 12 Reglas de un JSX
 
