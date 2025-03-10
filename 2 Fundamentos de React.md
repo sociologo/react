@@ -638,7 +638,7 @@ App.jsx
 ```Javascript
 import TabButton from './components/TabButton.jsx';
 <menu>
-  <TabButton label = '<Components'>Components</TabButton>                 
+  <TabButton label = 'Components'></TabButton>                 
 </menu>
 ```
 
