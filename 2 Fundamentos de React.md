@@ -127,7 +127,7 @@ Además, también encontrarás proyectos que requieren la extensión de archivo 
 
 Debes crear un nuevo componente `MainGoal` que genere un párrafo de texto que despliegue un texto.
 
-describa el objetivo principal del curso (por ejemplo, "Mi objetivo principal: aprender React en profundidad y desde cero"). 
+Describe el objetivo principal del curso (por ejemplo, "Mi objetivo principal: aprender React en profundidad y desde cero"). 
 
 Tendrás que crear este nuevo componente desde cero y luego usarlo dentro del código JSX del componente de la `App`.
 
