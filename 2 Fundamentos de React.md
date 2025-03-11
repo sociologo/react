@@ -34,16 +34,12 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
   * [44 Pasar funciones como valores a las props](#44-Pasar-funciones-como-valores-a-las-props)
   * [45 Ejercicio 5 Reaccionando a eventos](#45-Ejercicio-5-Reaccionando-a-eventos)
   * [46 Pasando argumentos personalizados a funciones de eventos](#46-Pasando-argumentos-personalizados-a-funciones-de-eventos)
-
-
   * [47 Ejemplo Configuración de Manejadores de Eventos](#47-Ejemplo-Configuración-de-Manejadores-de-Eventos)
-    
 * [5 El concepto de State y Hook](#4-El-concepto-de-State-y-Hook)
   * [51 El problema](#41-El-problema)
   * [42 Reglas de los Hooks](#42-Reglas-de-los-Hooks)
   * [43 Ejemplo Trabajando con State](#43-Ejemplo-Trabajando-con-State)
   * [44 Entregando contenido de un datajs](#44-Entregando-contenido-de-un-datajs)
-
 * [5 Renderización de contenido de forma condicional](#5-Renderización-de-contenido-de-forma-condicional)
   * [51 Utilizando dos operadores ternarios dejando useState vacío](#51-Utilizando-dos-operadores-ternarios-dejando-useState-vacío)
   * [52 Integrando la funcionalidad en un solo operador tenario](#52-Integrando-la-funcionalidad-en-un-solo-operador-tenario)
@@ -1141,7 +1137,7 @@ function App() {
 </section>
 ```
 
-useState('Selecciona un boton') es el estado inicial.
+`useState('Selecciona un boton')` es el estado inicial.
 
 ## 42 Reglas de los Hooks
 
