@@ -817,20 +817,6 @@ const Navbar = () => {
 export default Navbar
 ```
 
----
----
-<br>
-<br>
-<br>
-
-Aca voy 10 de Marzo
-
-<br>
-<br>
-<br>
----
----
-
 ## 3 La pagina principal
 
 20 Trabajaremos en nuestra página principal. Para ello construímos un componente **MainHeader.jsx** dentro de la carpeta **components** (lo importamos al componente **Home.jsx**) cuyo css será **home.css** 
@@ -1092,6 +1078,23 @@ Usa una variable CSS (var(--transition) */
     background: var(--color-gray-100);
 }
 ```
+
+![image](https://github.com/user-attachments/assets/065495ab-2769-48d5-8fe2-a78775b7c664)
+
+---
+---
+<br>
+<br>
+<br>
+
+Aca voy 10 de Marzo
+
+<br>
+<br>
+<br>
+---
+---
+
 
 24 Trabajaremos sobre la seccion **programs**
 
