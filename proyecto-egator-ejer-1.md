@@ -12,7 +12,7 @@ C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm start
 
 * [1 Levantando el cimiento de la aplicación](#1-Levantando-el-cimiento-de-la-aplicación)
 * [2 La barra de navegación entre páginas](#2-La-barra-de-navegación-entre-páginas)
-* [3 La página principal](#3-La-pagina-principal)
+* [3 La página principal](#3-La-página-principal)
   * [31 Sección Programs](#31-Sección-Programs)
   * [32 Sección Values](#32-Sección-Values)
   * [33 Sección FAQs](#33-Sección-FAQs)
