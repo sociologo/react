@@ -1017,6 +1017,9 @@ elemento superior en el flujo del documento. */
 }
 ```
 
+![image](https://github.com/user-attachments/assets/7e6a587f-427b-49d6-bb6d-c24f347b0be5)
+
+
 ## 4 La página de presentación
 
 23 Le damos formato al boton de la pagina de inicio: "Get Started"
