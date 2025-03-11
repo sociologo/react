@@ -714,7 +714,7 @@ const Card = ({ name, children }) => {
       <div className="card">
          <h2>{name}</h2>
          <div className="card-content">
-         {children}
+            {children}
          </div>
       </div>
    );
@@ -723,7 +723,7 @@ const Card = ({ name, children }) => {
 export default Card;
 ```
 
-Podemos escribir el componente sin la funcion flecha como se indica a continuacion pero es preferirle usarla:
+Podemos escribir el componente sin la función flecha como se indica a continuación pero es preferirle usarla:
 
 ```javascript
 function Card({ name, children }) {
@@ -744,7 +744,7 @@ Necesitamos ahora darle poder al click en los botones para que ejecuten la acci�
 
 `onClick` es un evento en React que se utiliza para manejar las acciones de click del usuario en un elemento. Es similar al evento `onclick` en JavaScript, pero se usa dentro de componentes de React. 
 
-Modificaremos nuestro componente para añadir el prop receptor de eventos **onClick** al elemento button entregándole la función handleClick() que se declarara dentro de la función de componente sin los paréntesis pues la necesitamos como valor:
+Modificaremos nuestro componente para añadir el prop receptor de eventos `onClick` al elemento button entregándole la función `handleClick()` que se declarara dentro de la función de componente sin los paréntesis pues la necesitamos como valor:
 
 ```Javascript
 export default function TabButton({children}) {
