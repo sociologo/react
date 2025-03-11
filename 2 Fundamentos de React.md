@@ -37,8 +37,8 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
   * [47 Ejemplo Configuración de Manejadores de Eventos](#47-Ejemplo-Configuración-de-Manejadores-de-Eventos)
 * [5 El concepto de State y Hook](#5-El-concepto-de-State-y-Hook)
   * [51 El problema](#51-El-problema)
-  * [42 Reglas de los Hooks](#42-Reglas-de-los-Hooks)
-  * [43 Ejemplo Trabajando con State](#43-Ejemplo-Trabajando-con-State)
+  * [52 Reglas de los Hooks](#52-Reglas-de-los-Hooks)
+  * [53 Ejemplo Trabajando con State](#53-Ejemplo-Trabajando-con-State)
   * [44 Entregando contenido de un datajs](#44-Entregando-contenido-de-un-datajs)
 * [5 Renderización de contenido de forma condicional](#5-Renderización-de-contenido-de-forma-condicional)
   * [51 Utilizando dos operadores ternarios dejando useState vacío](#51-Utilizando-dos-operadores-ternarios-dejando-useState-vacío)
@@ -1043,7 +1043,7 @@ Debes reemplazar la siguiente línea:
 
 # 5 El concepto de State y Hook
 
-## 51 El problema.
+## 51 El problema
 
 Necesitamos un componente dinámico que cambie cada vez que damos click en la funcion **onSelect** del componente **TabButton**
 
@@ -1137,13 +1137,13 @@ function App() {
 
 `useState('Selecciona un boton')` es el estado inicial.
 
-## 42 Reglas de los Hooks
+## 52 Reglas de los Hooks
 
 1 Llamar hooks solo en el nivel superior: No llames hooks dentro de loops, condiciones o funciones anidadas.
 
 2 Llamar hooks solo desde funciones de React: Usa hooks solo en componentes funcionales o en tus propios hooks personalizados.
 
-## 43 Ejemplo Trabajando con State
+## 53 Ejemplo Trabajando con State
 
 Estás trabajando en una parte de una tienda en línea donde se debe mostrar un precio con descuento en la pantalla una vez que el usuario haga clic en un botón.
 
