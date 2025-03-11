@@ -905,6 +905,16 @@ const handleLogin = () => {
    };
 ```
 
+o análogamente:
+
+```JavaScript
+function handleLogin() { 
+      user.email = 'usuario@ejemplo.com'; 
+      user.password = 'contraseña123'; 
+      user.loggedIn = true; 
+   };
+```
+
 y modificar el button así:
 
 ```JavaScript
