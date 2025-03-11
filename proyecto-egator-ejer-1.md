@@ -833,7 +833,9 @@ Aca voy 10 de Marzo
 
 ## 3 La cabecera
 
-20 Trabajaremos en la cabecera de nuestra pagina, que estara ubicado bajo la barra de navegación Navbar. Para ello construimos un componente **MainHeader.jsx** dentro de la carpeta **components** (lo importamos dentro del componente **Home.jsx**) cuyo css será **home.css** 
+20 Trabajaremos en nuestra página principal. Para ello construímos un componente **MainHeader.jsx** dentro de la carpeta **components** (lo importamos al componente **Home.jsx**) cuyo css será **home.css** 
+
+**MainHeader.jsx**
 
 ```javascript
 import {Link} from 'react-router-dom'
@@ -841,30 +843,39 @@ import Image from '../images/main_header.png'
 
 
 const MainHeader = () => {
-  return (
-    <header className="main__header">
-      <div className="container main__header-container">
-        <div className="main__header-left">
-          <h4>#100DaysOfWorkOut</h4>
-          <h1>Join The Legends Of The Fitness World</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam excepturi similique eius optio. Dolorum, quaerat.
-          </p>
-          <Link to="/plans" className='btn lg'>Get Started</Link>
-        </div>
-        <div className="main__header-right">
-          <div className="main__header-circle"></div>
-          <div className="main__header-image">
-            <img src={Image} alt="Main Header Image" />
-          </div>
-        </div>
-      </div>
-    </header>
+   return (
+      <header className="main__header">
+         <div className="container main__header-container">
+            <div className="main__header-left">
+               <h4>
+                  #100DaysOfWorkOut
+               </h4>
+               <h1>
+                  Join The Legends Of The Fitness World
+               </h1>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam excepturi similique eius optio. Dolorum, quaerat.
+               </p>
+               <Link to="/plans" className='btn lg'>
+                  Get Started
+               </Link>
+            </div>
+            <div className="main__header-right">
+               <div className="main__header-circle">  
+               </div>
+               <div className="main__header-image">
+                  <img src={Image} alt="Main Header Image" />
+               </div>
+            </div>
+         </div>
+      </header>
   )
 }
 
 export default MainHeader
 ```
+
+**Home.jsx**
 
 ```javascript
 import MainHeader from "../../components/MainHeader"
@@ -873,7 +884,7 @@ import './home.css'
 const home = () => {
    return (
       <div>
-         <MainHeader />
+         <MainHeader/>
       </div>
    )
 }
@@ -881,25 +892,41 @@ const home = () => {
 export default home
 ```
 
-21 en el componente App.jsx eliminemos los elementos envueltos por el tag <BrowserRouter> dejando solo el componente <Navbar />. Creamos estos elementos ahora con la ayuda de los tags <Routes> y <Route>.
+21 En el componente **App.jsx** eliminemos los elementos envueltos por el tag `<BrowserRouter>` dejando solo el componente `<Navbar />`. Creamos estos elementos ahora con la ayuda de los tags <Routes> y <Route>.
 
 ```javascript
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
+import About from './pages/about/About.jsx'
+import Contact from './pages/contact/Contact.jsx'
+import Gallery from './pages/gallery/Gallery.jsx'
+import Home from './pages/home/Home.jsx'
+import NotFound from './pages/notFound/NotFound.jsx'
+import Plans from './pages/plans/Plans.jsx'
+import Trainers from './pages/trainers/Trainers.jsx'
+
+import Navbar from './components/Navbar'
+
+import React from 'react'
+
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route index element={<Home/>}/>
-        <Route path='about' element={<About/>}/>
-        <Route path='contact' element={<Contact/>}/>
-        <Route path='gallery' element={<Gallery/>}/>
-        <Route path='plans' element={<Plans/>}/>
-        <Route path='trainers' element={<Trainers/>}/>
-        <Route path='*' element={<NotFound/>}/>
-      </Routes>
-    </BrowserRouter>
-  )
-}
+   return (
+      <BrowserRouter>
+         <Navbar/>
+         <Routes>
+            <Route index element={<Home/>}/>
+            <Route path='about' element={<About/>}/>
+            <Route path='contact' element={<Contact/>}/>
+            <Route path='gallery' element={<Gallery/>}/>
+            <Route path='plans' element={<Plans/>}/>
+            <Route path='trainers' element={<Trainers/>}/>
+            <Route path='*' element={<NotFound/>}/>
+         </Routes>
+      </BrowserRouter>
+   )
+ }
+
+export default App
 ```
 
 22 Comenzamos a darle estilos a **MainHeader.jsx** en **home.css**: 
