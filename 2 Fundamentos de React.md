@@ -744,7 +744,7 @@ Necesitamos ahora darle poder al click en los botones para que ejecuten la acci�
 
 `onClick` es un evento en React que se utiliza para manejar las acciones de click del usuario en un elemento. Es similar al evento `onclick` en JavaScript, pero se usa dentro de componentes de React. 
 
-Modificaremos nuestro componente para añadir el prop receptor de eventos `onClick` al elemento button entregándole la función `handleClick()` que se declarara dentro de la función de componente sin los paréntesis pues la necesitamos como valor:
+Modificaremos nuestro componente **TabButton** para añadir el prop receptor de eventos `onClick` al elemento button entregándole la función `handleClick()` que se declarara dentro de la función de componente sin los paréntesis pues la necesitamos como valor:
 
 ```Javascript
 export default function TabButton({children}) {
@@ -777,7 +777,7 @@ export default function TabButton({children}) {
 }
 ```
 
-Notemos en en JavaScrip podriamos escribir:
+Notemos que en JavaScrip podríamos escribir:
 
 ```Javascript
 document.querySelector('button').addEventListener('click', () => {})
@@ -787,15 +787,15 @@ No queremos código imperativo como éste, no queremos interactuar con el DOM pu
 
 ## 44 Pasar funciones como valores a las props
 
-Hemos dicho que la función **handleClick** que se declarará dentro de la función de componente irá sin los paréntesis pues la necesitamos como valor. Requeriremos de ésta propiedad pues ahora queremos cambiar el contenido desplegado debajo de la fila de botones para acceder a distintos contenidos cada vez que seleccionemos distintos botones. 
+Hemos dicho que la función ``handleClick`` que se declarará dentro de la función de componente irá sin los paréntesis pues la necesitamos como valor. Requeriremos de ésta propiedad pues ahora queremos cambiar el contenido desplegado debajo de la fila de botones para acceder a distintos contenidos cada vez que seleccionemos distintos botones. 
 
-Para ello necesitamos escuchar los clicks dentro de nuestro componente personalizado **TabButton**, porque debes manejar el evento en el componente que también administra los datos que se deben cambiar.
+Para ello necesitamos escuchar los clicks dentro de nuestro componente personalizado ``TabButton``, porque debes manejar el evento en el componente que también administra los datos que se deben cambiar.
 
-La pregunta es, ¿cómo le damos poder de acción, capacidad de ejecutar algo a la selección del botón? La respuesta es entregándole una **función como valor** al elemento **onClick** del componente (**handleClick**). Esto lo lograremon ingresando un segundo parámetro **prop** a la función de componente **TabButton** llamado **onSelect**.
+La pregunta es, ¿cómo le damos poder de acción, capacidad de ejecutar algo a la selección del botón? La respuesta es entregándole una **función como valor** al elemento ``onClick`` del componente (``handleClick``). Esto lo lograremon ingresando un segundo parámetro ``prop`` a la función de componente ``TabButton`` llamado ``onSelect``.
 
-Luego pasaremos 'el puntero' **handSelect** a la prop **onSelect**.
+Luego pasaremos 'el puntero' ``handSelect`` a la prop ``onSelect``.
 
-La función **onSelect** se activará cuando el botón sea clickeado y es la que le dará vida al componente dinámico.
+La función ``onSelect`` se activará cuando el botón sea clickeado y es la que le dará vida al componente dinámico.
 
 ```Javascript
 export default function TabButton({children, onSelect}) {
