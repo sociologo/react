@@ -35,8 +35,8 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
   * [45 Ejercicio 5 Reaccionando a eventos](#45-Ejercicio-5-Reaccionando-a-eventos)
   * [46 Pasando argumentos personalizados a funciones de eventos](#46-Pasando-argumentos-personalizados-a-funciones-de-eventos)
   * [47 Ejemplo Configuración de Manejadores de Eventos](#47-Ejemplo-Configuración-de-Manejadores-de-Eventos)
-* [5 El concepto de State y Hook](#4-El-concepto-de-State-y-Hook)
-  * [51 El problema](#41-El-problema)
+* [5 El concepto de State y Hook](#5-El-concepto-de-State-y-Hook)
+  * [51 El problema](#51-El-problema)
   * [42 Reglas de los Hooks](#42-Reglas-de-los-Hooks)
   * [43 Ejemplo Trabajando con State](#43-Ejemplo-Trabajando-con-State)
   * [44 Entregando contenido de un datajs](#44-Entregando-contenido-de-un-datajs)
@@ -1042,8 +1042,6 @@ Debes reemplazar la siguiente línea:
 ```
 
 # 5 El concepto de State y Hook
-
-53-54-55
 
 ## 51 El problema.
 
