@@ -14,8 +14,9 @@ C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm start
 * [2 La barra de navegación entre páginas](#2-La-barra-de-navegación-entre-páginas)
 * [3 La pagina principal](#3-La-pagina-principal)
   * [31 Sección Programs](#31-Sección-Programs)
-  * [3 La pagina principal](#3-La-pagina-principal)
-* [4 La página de presentación](#4-La-página-de-presentación)
+  * [32 Sección Values](#32-Sección-Values)
+  * [33 Sección FAQs](#33-Sección-FAQs)
+* [4 Páginas](#4-Páginas)
    
 ## 1 Levantando el cimiento de la aplicación
 
@@ -1292,7 +1293,7 @@ section {
 }
 ```
 
-## Seccion Values
+## 32 Sección Values
 
 28 Creamos el componente **Values.jsx** dentro de la carpeta **components**
 
@@ -1399,7 +1400,7 @@ export default Home
 }
 ```
 
-## Seccion FAQs
+## 33 Sección FAQs
 
 31 Creamos el componente **FAQs.jsx** dentro de la carpeta **components**
 
@@ -1519,7 +1520,7 @@ export default FAQ
 }
 ```
 
-## Seccion Testimonials
+## 34 Sección Testimonials
 
 35 Creamos el componente **Testimonials.jsx** dentro de la carpeta **components**
 
@@ -1673,7 +1674,7 @@ cursor: pointer;
 }
 ```
 
-## Seccion Footer
+## 35 Sección Footer
 
 38 Creamos el componente **Footer.jsx** dentro de la carpeta **components**
 
@@ -1744,8 +1745,6 @@ import MainHeader from '../../components/MainHeader'
 import Programs from '../../components/Programs'
 import Testimonials from '../../components/Testimonials'
 import Values from '../../components/Values'
-
-
 
 import './home.css'
 const Home = () => {
@@ -2017,7 +2016,7 @@ footer {
 ```
 
 ---
-# Seccion de paginas
+# 4 Páginas
 
 ## Pagina About
 
