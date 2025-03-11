@@ -1115,7 +1115,7 @@ Cuando llamas a **useState**, obtienes dos elementos:
 - **Estado Actual**: Este es el valor actual del estado. Puedes usarlo para leer el estado en tu componente.
 - **Función para Actualizar el Estado**: Cuando la llamas con un nuevo valor, React vuelve a renderizar el componente con el nuevo estado.
 
-En nuestro ejercicio a la primera la llamaremos **selectedTopic** y a la segunda **setSelectedTopic** las que llamaremos por desestructuración. Con esto resolvemos el requerimiento para que la función handSelect vuelva a ser llamada.
+En nuestro ejercicio a la primera la llamaremos ``selectedTopic`` y a la segunda ``setSelectedTopic`` las que llamaremos por desestructuración. Con esto resolvemos el requerimiento para que la función ``handSelect`` vuelva a ser llamada.
 
 ```JavaScript
 import {useState} from 'react';
@@ -1170,7 +1170,7 @@ export default function App() {
 }
 ```
 
-RespuestaÑ
+Respuesta:
 
 ```JavaScript
 import React from 'react';
