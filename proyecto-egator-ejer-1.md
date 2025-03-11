@@ -932,61 +932,34 @@ export default App
 22 Comenzamos a darle estilos a **MainHeader.jsx** en **home.css**: 
 
 ```css
-.main__header {
-    width: 100vw;
-    height: calc(100vh - 3rem);
-    display: grid;
-    place-items: center;
-    margin-top: 3rem;
-}
+/* width: 100vw;
+Define el ancho del elemento como el 100% del viewport width 
+(ancho de la ventana gráfica del navegador).
+Garantiza que el elemento ocupe todo el ancho visible del navegador.
 
-.main__header-container {
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-content: space-between;
-    gap: 6rem;
-}
+height: calc(100vh - 3rem);
+Establece la altura del elemento utilizando la función calc().
+La altura es igual al 100% del viewport height (alto de la ventana 
+gráfica del navegador) menos 3 rem (donde 1 rem equivale 
+aproximadamente al tamaño de la fuente base del documento, por 
+lo general 16 píxeles). Esto crea un efecto donde el elemento 
+casi ocupa toda la altura 
+de la pantalla, pero deja un margen de 3 rem.
 
-.main__header-left {
-    margin-top: -3rem;
-}
+display: grid;
+Convierte el elemento en un contenedor de cuadrícula (grid 
+container). Esto es útil para centrar contenido y organizar elementos hijos 
+dentro del contenedor.
 
-.main__header-left h4 {
-    margin-bottom: 1rem;
-    color: var(--color-secondary);
-    font-weight: 400;
-}
+place-items: center;
+Centra tanto horizontal como verticalmente los elementos hijos 
+del grid dentro de este contenedor.
+Es una forma concisa de establecer align-items: center; y 
+justify-items: center; al mismo tiempo.
 
-.main__header-left p {
-    margin: 1rem 0 3.5rem;
-    font-size: 1.1rem;
-}
-
-.main__header-right {
-    display: grid;
-    place-items: center;
-    position: relative;
-}
-
-.main__header-circle {
-    width: 25rem;
-    height: 25rem;
-    background: linear-gradient(75deg, var(--color-secondary), transparent);
-    border-radius: 50%;
-    position: absolute;
-    filter: blur(15px);
-    transition: var(--transition);
-}
-
-.main__header-image {
-    position: relative;
-}
-
-.main__header-right:hover .main__header-circle {
-   filter: blur(15px);
-}
+margin-top: 3rem;
+Agrega un margen superior de 3 rem al contenedor, separándolo del 
+elemento superior en el flujo del documento. */
 ```
 
 ## 4 La página de presentación
