@@ -39,17 +39,15 @@ C:\Users\chris\Documentos\GitHub\react\proyecto udemy 1> npm run dev
   * [51 El problema](#51-El-problema)
   * [52 Reglas de los Hooks](#52-Reglas-de-los-Hooks)
   * [53 Ejemplo Trabajando con State](#53-Ejemplo-Trabajando-con-State)
-  * [44 Entregando contenido de un datajs](#44-Entregando-contenido-de-un-datajs)
+  * [54 Entregando contenido de un datajs](#54-Entregando-contenido-de-un-datajs)
 * [5 Renderización de contenido de forma condicional](#5-Renderización-de-contenido-de-forma-condicional)
   * [51 Utilizando dos operadores ternarios dejando useState vacío](#51-Utilizando-dos-operadores-ternarios-dejando-useState-vacío)
   * [52 Integrando la funcionalidad en un solo operador tenario](#52-Integrando-la-funcionalidad-en-un-solo-operador-tenario)
   * [53 Utilizando el operador y lógico de javascript](#53-Utilizando-el-operador-y-lógico-de-javascript)
   * [54 Utilizando una variable const](#54-Utilizando-una-variable-const)
   * [55 Ejercicio](#55-Ejercicio)
-
 * [6 Entregando estilos en forma condicional](#6-Entregando-estilos-en-forma-condicional)
   * [61 Ejercicio](#61-Ejercicio)
-
 * [7 Generación dinámica de datos de listas. El método map](#7-Generación-dinámica-de-datos-de-listas-El-método-map)
   * [71 El metodo map](#71-El-metodo-map)
   * [72 Añadiendo la prop key](#72-Añadiendo-la-prop-key)
@@ -441,7 +439,6 @@ el proyecto luce asi:
 
 ![image](https://github.com/user-attachments/assets/06a6366f-bd76-456a-9cd3-0ef0d1677b3d)
 
-
 ## 24 Ejercicio 3 Trabajando con props
 
 Tu tarea es hacer que el componente `CourseGoal` sea reutilizable y configurable. Debe aceptar una entrada de "título" y una "descripción" y generar los datos recibidos entre las etiquetas `<h2>` (título) y `<p>` (descripción).
@@ -637,21 +634,6 @@ import TabButton from './components/TabButton.jsx';
   <TabButton label = 'Components'></TabButton>                 
 </menu>
 ```
-
----
----
-<br>
-<br>
-<br>
-<br>
-**aca voy 10 marzo**
-<br>
-<br>
-<br>
-<br>
----
----
-
 
 ## 42 Ejercicio 4 Composición de componentes
 
@@ -1147,9 +1129,9 @@ function App() {
 
 Estás trabajando en una parte de una tienda en línea donde se debe mostrar un precio con descuento en la pantalla una vez que el usuario haga clic en un botón.
 
-Tu tarea es agregar un listener de eventos para escuchar los clics en el botón que ya está incluido en el componente App.
+Tu tarea es agregar un listener de eventos para escuchar los clicks en el botón que ya está incluido en el componente App.
 
-Al hacer clic en el botón, el precio debe cambiar de $100 a $75.
+Al hacer click en el botón, el precio debe cambiar de $100 a $75.
 
 Agrega un valor de **state** a la función del componente App existente y asegúrate de que el valor del **state** se actualice tanto al hacer clic en el botón como al mostrarse como parte del código JSX.
 
@@ -1186,7 +1168,23 @@ export default function App() {
 }
 ```
 
-## 44 Entregando contenido de un datajs
+---
+---
+<br>
+<br>
+<br>
+<br>
+
+**aca voy 11 marzo**
+<br>
+<br>
+<br>
+<br>
+---
+---
+
+
+## 54 Entregando contenido de un datajs
 
 Lo que deseamos ahora es entregarle a nuestra página web un contenido dinámico con más sentido. Para ello utilizaremos un archivo **data.js** estructurado de la siguiente manera:
 
