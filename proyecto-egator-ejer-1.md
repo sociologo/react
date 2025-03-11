@@ -1019,14 +1019,49 @@ elemento superior en el flujo del documento. */
 
 ![image](https://github.com/user-attachments/assets/7e6a587f-427b-49d6-bb6d-c24f347b0be5)
 
-
-## 4 La página de presentación
-
-23 Le damos formato al boton de la pagina de inicio: "Get Started"
+23 Le damos formato al botón de la página de inicio: "Get Started"
 
 Para ello vamos a editar en el archivo **index.css** y agregamos:
 
 ```css
+/* Some code...*/
+
+/* 1 color: var(--color-gray-100);
+Define el color del texto del botón.
+
+2 width: fit-content;
+El ancho del botón se ajusta automáticamente al tamaño de su contenido (el 
+texto o los elementos dentro del botón). Hace que el botón sea tan ancho 
+como sea necesario, sin excederse.
+
+3 margin: 0 auto;
+Aplica un margen superior e inferior de 0 y centra horizontalmente el botón 
+usando el margen automático (auto). Esto solo funciona si el elemento 
+tiene un contexto de bloque o está dentro 
+de un contenedor con un ancho definido.
+
+4 padding: 0.9rem 2rem;
+Define el espacio interno del botón.
+0.9rem establece el espacio arriba y abajo (vertical).
+2rem establece el espacio a la izquierda y derecha (horizontal).
+Este valor asegura que el botón tenga un tamaño cómodo y se vea bien 
+proporcionado.
+
+5 background: var(--color-primary);
+Establece el color de fondo del botón, utilizando otra variable CSS 
+(var(--color-primary)), posiblemente un color principal definido en la 
+paleta del proyecto.
+
+6 border-radius: 1.5rem;
+Hace que las esquinas del botón sean redondeadas.
+Un valor de 1.5rem significa que las esquinas tendrán una curva significativa, 
+dándole un diseño más moderno y estilizado.
+
+7 transition: var(--transition);
+Establece un efecto de transición suave para cualquier cambio visual en el 
+botón, como cambios de color al pasar el mouse o al hacer clic.
+Usa una variable CSS (var(--transition) */
+
 .btn {
     color: var(--color-gray-100);
     width: fit-content;
