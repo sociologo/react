@@ -12,7 +12,7 @@ C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm start
 
 * [1 Levantando el cimiento de la aplicación](#1-Levantando-el-cimiento-de-la-aplicación)
 * [2 La barra de navegación entre páginas](#2-La-barra-de-navegación-entre-páginas)
-* [3 La cabecera](#3-La-cabecera)
+* [3 La pagina principal](#3-La-pagina-principal)
 * [4 La página de presentación](#4-La-página-de-presentación)
    
 ## 1 Levantando el cimiento de la aplicación
@@ -831,7 +831,7 @@ Aca voy 10 de Marzo
 ---
 ---
 
-## 3 La cabecera
+## 3 La pagina principal
 
 20 Trabajaremos en nuestra página principal. Para ello construímos un componente **MainHeader.jsx** dentro de la carpeta **components** (lo importamos al componente **Home.jsx**) cuyo css será **home.css** 
 
