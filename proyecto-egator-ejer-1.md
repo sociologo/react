@@ -1084,25 +1084,9 @@ Usa una variable CSS (var(--transition) */
 
 ![image](https://github.com/user-attachments/assets/065495ab-2769-48d5-8fe2-a78775b7c664)
 
----
----
-<br>
-<br>
-<br>
-
-Aca voy 10 de Marzo
-
-<br>
-<br>
-<br>
----
----
-
-
-
 ## 31 Sección Programs
 
-Creamos el componente **Programs.jsx** dentro de la carpeta **components**:
+24 Creamos el componente **Programs.jsx** dentro de la carpeta **components**:
 
 ```javascript
 import {FaCrown} from 'react-icons/fa'
@@ -1111,7 +1095,6 @@ import {programs} from '../data'
 import Card from '../UI/Card'
 import {Link} from 'react-router-dom'
 import {AiFillCaretRight} from 'react-icons/ai'
-
 
 const Programs = () => {
    return (
@@ -1123,10 +1106,18 @@ const Programs = () => {
                      programs.map(({id, icon, title, info, path}) => {
                         return (
                            <Card className="programs__program" key={id}>
-                              <span>{icon}</span>
-                              <h4>{title}</h4>
-                              <small>{info}</small>
-                              <Link to={path} className="btn sm">Learn More <AiFillCaretRight/></Link>
+                              <span>
+                                 {icon}
+                              </span>
+                              <h4>
+                                 {title}
+                              </h4>
+                              <small>
+                                 {info}
+                              </small>
+                              <Link to={path} className="btn sm">
+                                 Learn More <AiFillCaretRight/>
+                              </Link>
                            </Card>
                         )
                      })
@@ -1143,20 +1134,20 @@ export default Programs
 Y lo agregamos al componente **Home.jsx**:
 
 ```javascript
-import MainHeader from '../../components/MainHeader'
+import MainHeader from "../../components/MainHeader"
+import './home.css'
 import Programs from '../../components/Programs'
 
-import './home.css'
-const Home = () => {
-  return (
-    <>
-    <MainHeader/>
-    <Programs/>
-    </>
-  )
+const home = () => {
+   return (
+      <div>
+         <MainHeader/>
+         <Programs/>
+      </div>
+   )
 }
 
-export default Home
+export default home
 ```
 
 25 Dentro del componente **Programs.jsx** tenemos otros dos componentes. Uno llamado **SectionHead.jsx** que construimos dentro de la carpeta **components**:
@@ -1174,7 +1165,7 @@ const SectionHead = ({icon, title, className}) => {
 export default SectionHead
 ```
 
-Y otro llamado **Card.jsx** que construimos dentro de la carpeta **UI**:
+26 Y otro llamado **Card.jsx** que construimos dentro de la carpeta **UI**:
 
 ```javascript
 const Card = ({className, children}) => {
@@ -1188,21 +1179,11 @@ const Card = ({className, children}) => {
 export default Card
 ```
 
-const Card: Define una constante llamada Card, que es una función de componente funcional en React.
+`<article>`: Un elemento HTML que se utiliza para representar contenido independiente que tiene su propio significado. En este caso, se usa para representar una tarjeta o Card.
 
-({ className, children }): Utiliza la desestructuración de objetos para acceder a las propiedades className y children que se pasan al componente Card. Esto significa que el componente Card espera recibir estos dos props.
+`className={card ${className}}`: Aplica las clases CSS al elemento article. Combina la clase card con cualquier clase adicional que se pase a través de la prop className. Por ejemplo, si className tiene el valor highlight, el className resultante será card highlight.
 
-return: Devuelve un elemento JSX que representa el contenido que se renderizará en la interfaz de usuario.
-
-<article>: Un elemento HTML que se utiliza para representar contenido independiente que tiene su propio significado. En este caso, se usa para representar una tarjeta o Card.
-
-className={card ${className}}: Aplica las clases CSS al elemento article. Combina la clase card con cualquier clase adicional que se pase a través de la prop className. Por ejemplo, si className tiene el valor highlight, el className resultante será card highlight.
-
-{children}: Es un placeholder que representa cualquier contenido anidado dentro del componente Card. children es una prop especial en React que permite pasar elementos secundarios al componente.
-
-export default Card: Exporta el componente Card como la exportación predeterminada del módulo, lo que permite que este componente se importe en otros archivos.
-
-26 Ahora a los componentes **SectionHead** y **Card** le damos estilos dentro del archivo **index.css**:
+27 Ahora a los componentes **SectionHead** y **Card** le damos estilos dentro del archivo **index.css**:
 
 ```css
 section {
@@ -1265,10 +1246,9 @@ section {
 }
 ```
 
-27 Ahora a la seccion **programs** le damos formato en **home.css**
+28 Ahora a la seccion **programs** le damos formato en **home.css**
 
 ```css
-/* ===================== PROGRAMS ===================== */
 .programs {
    margin-top: 4rem;
 }
@@ -1295,7 +1275,7 @@ section {
 
 ## 32 Sección Values
 
-28 Creamos el componente **Values.jsx** dentro de la carpeta **components**
+29 Creamos el componente **Values.jsx** dentro de la carpeta **components**
 
 ```javascript
 import Image from '../images/values.jpg'
@@ -1305,40 +1285,50 @@ import {values} from '../data'
 import Card from '../UI/Card'
 
 const Values = () => {
-  return (
-    <section className='values'>
-        <div className="container values__container">
+   return (
+      <section className='values'>
+         <div className="container values__container">
             <div className="values__left">
-                <div className="values__image">
-                    <img src={Image} alt="Values Image" />
-                </div>
+               <div className="values__image">
+                  <img src={Image} alt="Values Image" />
+               </div>
             </div>
             <div className="values__right">
-                <SectionHead icon={<GiCutDiamond/>} title="Values"/>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quidem aperiam sapiente?
-                </p>
-                <div className="values__wrapper">
-                    {
-                        values.map(({id, icon, title, desc}) => {
-                            return <Card key={id} className="values__value">
-                                <span>{icon}</span>
-                                <h4>{title}</h4>
-                                <small>{desc}</small>
-                            </Card>
-                        })
-                    }
-                </div>
+               <SectionHead icon={<GiCutDiamond/>} title="Values"/>
+               <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis quidem aperiam sapiente?
+               </p>
+               <div className="values__wrapper">
+                  {
+                     values.map(({id, icon, title, desc}) => {
+                        return <Card key={id} className="values__value">
+                           <span>{icon}</span>
+                           <h4>{title}</h4>
+                           <small>{desc}</small>
+                        </Card>
+                     })
+                  }
+               </div>
             </div>
-        </div>
-    </section>
-  )
+         </div>
+      </section>
+   )
 }
 
 export default Values
 ```
 
-29 Integramos el componente **Values.jsx** dentro del componente **Home.jsx**
+> El siguiente formato de Card y return no se debe modificar:
+
+```javascript
+return <Card key={id} className="values__value">
+   <span>{icon}</span>
+   <h4>{title}</h4>
+   <small>{desc}</small>
+</Card>
+```
+
+30 Integramos el componente **Values.jsx** dentro del componente **Home.jsx**
 
 ```javascript
 import MainHeader from '../../components/MainHeader'
@@ -1347,22 +1337,21 @@ import Values from '../../components/Values'
 
 import './home.css'
 const Home = () => {
-  return (
-    <>
-    <MainHeader/>
-    <Programs/>
-    <Values/>
-    </>
-  )
+   return (
+      <>
+      <MainHeader/>
+      <Programs/>
+      <Values/>
+      </>
+   )
 }
 
 export default Home
 ```
 
-30 Le damos formato al componente **Values.jsx** en el archivo **home.css**
+31 Le damos formato al componente **Values.jsx** en el archivo **home.css**
 
 ```css
-/* ===================== VALUES ===================== */
 .values__container {
     display: grid;
     grid-template-columns: 38% 50%;
@@ -1402,7 +1391,7 @@ export default Home
 
 ## 33 Sección FAQs
 
-31 Creamos el componente **FAQs.jsx** dentro de la carpeta **components**
+32 Creamos el componente **FAQs.jsx** dentro de la carpeta **components**
 
 ```javascript
 import SectionHead from './SectionHead'
@@ -1410,28 +1399,27 @@ import {FaQuestion} from 'react-icons/fa'
 import {faqs} from '../data'
 import FAQ from './FAQ'
 
-
 const FAQs = () => {
-  return (
-    <section className="faqs">
-        <div className="container faqs__container">
-            <SectionHead icon={<FaQuestion/>} title="FAQs" />
-            <div className="faqs__wrapper">
-                {
-                    faqs.map(({id, question, answer}) => {
-                        return <FAQ key={id} question={question} answer={answer}/>
-                    })
-                }
-            </div>
-        </div>
-    </section>
-  )
+   return (
+      <section className="faqs">
+         <div className="container faqs__container">
+               <SectionHead icon={<FaQuestion/>} title="FAQs" />
+               <div className="faqs__wrapper">
+                  {
+                     faqs.map(({id, question, answer}) => {
+                           return <FAQ key={id} question={question} answer={answer}/>
+                     })
+                  }
+               </div>
+         </div>
+      </section>
+   )
 }
 
 export default FAQs
 ```
 
-32 Integramos el componente **FAQs.jsx** dentro del componente **Home.jsx**
+33 Integramos el componente **FAQs.jsx** dentro del componente **Home.jsx**
 
 ```javascript
 import FAQs from '../../components/FAQs'
@@ -1441,30 +1429,47 @@ import Values from '../../components/Values'
 
 import './home.css'
 const Home = () => {
-  return (
-    <>
-    <MainHeader/>
-    <Programs/>
-    <Values/>
-    <FAQs/>
-    </>
-  )
+   return (
+      <>
+      <MainHeader/>
+      <Programs/>
+      <Values/>
+      <FAQs/>
+      </>
+   )
 }
 
 export default Home
 ```
 
-33 Construimos un componente **FAQ.jsx**
+
+---
+---
+<br>
+<br>
+<br>
+
+**Aca voy 11 de Marzo**
+
+<br>
+<br>
+<br>
+---
+---
+
+
+
+
+
+33 Construímos un componente **FAQ.jsx** en la carpeta **components**
 
 ```javascript
 import { useState } from 'react'
 import {AiOutlinePlus} from 'react-icons/ai'
 import {AiOutlineMinus} from 'react-icons/ai'
 
-
 const FAQ = ({question, answer}) => {
     const [isAnswerShowing, setIsAnswerShowing] = useState(false);
-
 
   return (
     <article className="faq" onClick={() => setIsAnswerShowing(prev => !prev)}>
