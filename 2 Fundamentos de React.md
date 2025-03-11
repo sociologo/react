@@ -661,7 +661,7 @@ import TabButton from './components/TabButton.jsx';
 
 Tu tarea es crear un componente `Card` reutilizable que tome un `name` como entrada y, además, pueda incluirse en cualquier código JSX.
 
-El prop `name` debe aparecer como un título dentro del componente Card, el código JSX empaquetado debe aparecer debajo de ese título.
+El prop `name` debe aparecer como un título dentro del componente Card; el código JSX empaquetado debe aparecer debajo de ese título.
 
 App.js
 ```Javascript
@@ -721,6 +721,21 @@ const Card = ({ name, children }) => {
 };
 
 export default Card;
+```
+
+Podemos escribir el componente sin la funcion flecha como se indica a continuacion pero es preferirle usarla:
+
+```javascript
+function Card({ name, children }) {
+   return (
+      <div className="card">
+         <h2>{name}</h2>
+         <div className="card-content">
+            {children}
+         </div>
+      </div>
+   );
+}
 ```
 
 ## 43 El evento onClick
