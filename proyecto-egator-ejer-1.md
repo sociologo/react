@@ -13,6 +13,8 @@ C:\Users\chris\Documentos\GitHub\react\proyecto-egator-ejer-1> npm start
 * [1 Levantando el cimiento de la aplicación](#1-Levantando-el-cimiento-de-la-aplicación)
 * [2 La barra de navegación entre páginas](#2-La-barra-de-navegación-entre-páginas)
 * [3 La pagina principal](#3-La-pagina-principal)
+  * [31 Sección Programs](#31-Sección-Programs)
+  * [3 La pagina principal](#3-La-pagina-principal)
 * [4 La página de presentación](#4-La-página-de-presentación)
    
 ## 1 Levantando el cimiento de la aplicación
@@ -1096,7 +1098,8 @@ Aca voy 10 de Marzo
 ---
 
 
-24 Trabajaremos sobre la seccion **programs**
+
+## 31 Sección Programs
 
 Creamos el componente **Programs.jsx** dentro de la carpeta **components**:
 
