@@ -1,3 +1,4 @@
+**Caché algo importante. Con digital ocean se pueden subir proyectos a la web con una url asiganada. El proceso de direccionarla a un dominio especifico es otro problema.**
 
 https://www.digitalocean.com/community/tutorials/deploy-react-application-with-nginx-on-ubuntu
 
