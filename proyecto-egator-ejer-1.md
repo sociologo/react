@@ -1458,8 +1458,15 @@ export default Home
 ---
 
 
-
-
+***
+***
+<br>
+<br>
+VOY AQUI
+<br>
+<br>
+***
+***
 
 33 Construímos un componente **FAQ.jsx** en la carpeta **components**
 
