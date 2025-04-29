@@ -1,6 +1,6 @@
 01-starting-project-sociolab: a borrar\
-Proyecto inicial: a borrar
-
+Proyecto inicial: a borrar\
+Proyecto inicial 1: a borrar\
 
 # REACT
 
