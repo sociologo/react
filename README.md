@@ -1,3 +1,7 @@
+01-starting-project-sociolab: a borrar
+
+
+
 # REACT
 
 **proyecto-egator-ejer-1**: es un proyecto construido de cero siguiendo las instrucciones del manual **proyecto-egator-ejer-1.md**. 
