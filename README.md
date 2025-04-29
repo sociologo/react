@@ -1,4 +1,4 @@
-01-starting-project-sociolab: a borrar
+01-starting-project-sociolab: a borrar\
 Proyecto inicial: a borrar
 
 
